@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/23 · May/June 2021 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/23 · May/June 2021 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q24">Q24</a> <a href="#q31">Q31</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Example
+  Explanation  Variable name  Data type
+  value
+
+  &quot;Wong&quot;  The preferred name of the  MemberName  STRING
+  member joining the
+  football club
+
+  FALSE  A value to indicate  FamilyMember  BOOLEAN
+  whether an existing
+  member of the club lives
+  at the same address
+
+  19/02/1983  When the member joined  StartDate  DATE
+  the football club
+
+  1345  The number of points a  Points  INTEGER
+  member has earned.
+  Members of the club earn
+  points for different
+  activities.
+
+  One mark for each appropriate variable name plus data type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<ol>
+<li>IF x = 3 OR 4 THEN                                incorrect operator //</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF x = 3 OR 4 THEN                                incorrect operator //</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Record</li>
+<li>Allows different data types</li>
+<li>to be stored under one identifier</li>
+<li>Two (1D) arrays</li>
+<li>One of string, one of integer</li>
+<li>Where same index links the name with the score</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Record</li><li>Allows different data types</li><li>to be stored under one identifier</li><li>Two (1D) arrays</li><li>One of string, one of integer</li><li>Where same index links the name with the score</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>All four boxes correctly labelled and positioned</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Procedure heading (including parameter) and ending</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function heading, including return type and function end</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Mention of variable for use as array index</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Mention of variable for use as array index</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+
+  One mark for:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Selection diamond (only on UpdateLoan and no iteration arrows)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>PROCEDURE LoanReturn (LoanID, BookID : STRING,  2
+  BYREF Fine : REAL)
+
+  One mark for each underlined part
+
+  2021  Page 5 of 16
+
+ 9618/23  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  6
+
+  One mark for each functional group as listed below:
+
+  2021  Page 6 of 16
+
+ 9618/23  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Explanation of mark points:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;i&#x27;
+
+  FALSE  &quot;∇I&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Loop counting spaces until word found or end of FNString</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Use of a loop (to check through the array)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Use of a loop (to check through the array)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Extract char from FNString and compare with SPACECHAR in a
+  loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>...extract char from FNString and compare with SPACECHAR in a
+  loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-08.jpg" alt="Paper page 8 for Q3"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Input 49 more values (or 50 values in total)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Data from the arrays is written to the files at the end of the day / before the</li>
+<li>Data can then be read from the files at the start of the next day and written to</li>
+<li>No need to (re-)enter the data manually // only need to enter data once</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Data from the arrays is written to the files at the end of the day / before the</li><li>Data can then be read from the files at the start of the next day and written to</li><li>No need to (re-)enter the data manually // only need to enter data once</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The data is retained when the program is terminated / after the computer is              1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The data is retained when the program is terminated / after the computer is              1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Data items are combined to form a single string / saved as a single line in the</li>
+<li>Data items are separated by a special character // make each data item a</li>
+<li>Convert all data items / &#x27;number of people&#x27; to strings</li>
+<li>Consecutive / each line stores a separate data item</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Data items are combined to form a single string / saved as a single line in the</li><li>Data items are separated by a special character // make each data item a</li><li>Convert all data items / &#x27;number of people&#x27; to strings</li><li>Consecutive / each line stores a separate data item</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>PROCEDURE Preview (ThisFile : STRING)  5
+  DECLARE LineNum : INTEGER
+  DECLARE ThisLine : STRING
+
+  OPENFILE ThisFile FOR READ
+  IF EOF(ThisFile) THEN
+  OUTPUT “Warning Message”
+  ELSE
+  LineNum ← 1
+  WHILE LineNum &lt; 6 AND NOT EOF(ThisFile)
+  READFILE Thisfile, ThisLine
+  OUTPUT ThisLine
+  LineNum ← LineNum + 1
+  ENDWHILE
+  ENDIF
+  CLOSEFILE ThisFile
+  ENDPROCEDURE
+
+  Marks as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check if file is empty and output a warning message if it is</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;n&#x27;
+
+  &quot;∇In&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Assign data value B to first node in free list / node pointed to by start
+  pointer of free list</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>extract a character from FNString in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If word is the same as the current array element then return FALSE /
+  set flag</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Save index of (first) unused element found</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Concatenate with NextWord if not SPACECHAR in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-10.jpg" alt="Paper page 10 for Q4"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+  Name  Flag  Index  NewName  ThisChar
+
+  &quot;∇in∇a∇∇Cup&quot;
+
+  TRUE  1  &quot;&quot;
+
+  &#x27;∇&#x27;
+
+  &quot;∇&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;∇&#x27;
+
+  TRUE  &quot;∇In∇&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Loop structure: A count-controlled loop  2
+
+  Justification: The number of iterations is known
+
+  One mark per point</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A couple of solutions:  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each:  2
+
+  Line number: 26
+
+  New position: Move to after line 27 / line 28
+
+  2021  Page 10 of 16
+
+ 9618/23  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correct swap of col1 array elements in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Pointer from A will be changed to point to node containing B (instead of
+  C)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>compare with SPACECHAR and increment count if equal in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If word not already in array, loop to find unused element (second loop)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If word is the same as the current array element then return FALSE /
+  set flag</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Exit loop when SPACECHAR encountered or when end of FNString
+  reached</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Exit loop when SPACECHAR encountered or when end of FNString
+  reached</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Set new MAX when Input value &gt; MAX in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;a&#x27;
+
+  FALSE  &quot;∇In∇A&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <ol>
+<li>UNTIL NoSwaps = TRUE</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>UNTIL NoSwaps = TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correct swap of col2 array elements in a loop (via loop or separate
+  statements)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Pointer from B will be changed to point to node containing C</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>compare count with WordNum - 1 (depending on initialisation
+  value) in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Store word in unused element and return TRUE, otherwise return
+  FALSE
+
+  VARIATION:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If word not already in array and unused element available, store word in
+  unused element and return TRUE otherwise return FALSE
+
+  Note: Max 4 marks
+
+  2021  Page 14 of 16
+
+ 9618/23  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Return NextWord (after reasonable attempt at forming, and must have
+  been initialised)
+
+  2021  Page 15 of 16
+
+ 9618/23  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Apply substring function and Return
+
+  2021  Page 16 of 16</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Sum all but largest (or subtract MAX from total), calculate and output
+  average</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;∇&#x27;
+
+  TRUE  &quot;∇In∇A∇&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;NoSwap&#x27; mechanism: Conditional outer loop including flag reset</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>An array (1D) to store the data and a second array (1D) to store the pointers</li>
+<li>An (integer) variable to hold the start pointer and an (integer) variable to store</li>
+<li>Define a record type comprising a data element and a pointer and declare an</li>
+<li>An integer variable to hold the start pointer and an integer variable to store</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>An array (1D) to store the data and a second array (1D) to store the pointers</li><li>An (integer) variable to hold the start pointer and an (integer) variable to store</li><li>Define a record type comprising a data element and a pointer and declare an</li><li>An integer variable to hold the start pointer and an integer variable to store</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>if equal then set flag or Index to ThisPos + 1 in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;∇&#x27;
+
+  &quot;∇In∇A∇∇&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;NoSwap&#x27; mechanism: Set flag in inner loop to indicate swap</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT SPACECHAR = &#x27; &#x27;</li>
+<li>IF WordNum = 1 THEN // if looking for word 1</li>
+<li>WHILE ThisPos &lt;= LENGTH(FNString) AND Index = -1</li>
+<li>IF ThisChar = SPACECHAR THEN</li>
+<li>IF NumFound = WordNum - 1 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT SPACECHAR = &#x27; &#x27;</li><li>IF WordNum = 1 THEN // if looking for word 1</li><li>WHILE ThisPos &lt;= LENGTH(FNString) AND Index = -1</li><li>IF ThisChar = SPACECHAR THEN</li><li>IF NumFound = WordNum - 1 THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Return Index (correctly in all cases / following a reasonable attempt)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Marks awarded for any reference to each of the following steps of the algorithm:  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT SPACECHAR = &#x27; &#x27;</li>
+<li>IF ThisChar = SPACECHAR OR Index = LENGTH(FNString) THEN</li>
+<li>UNTIL Done = TRUE</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT SPACECHAR = &#x27; &#x27;</li><li>IF ThisChar = SPACECHAR OR Index = LENGTH(FNString) THEN</li><li>UNTIL Done = TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT SPACECHAR = &#x27; &#x27;</li>
+<li>IF ThisChar = SPACECHAR OR NextPos =</li>
+<li>UNTIL Done = TRUE</li>
+<li>IF NextPos = LENGTH(FNString) THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT SPACECHAR = &#x27; &#x27;</li><li>IF ThisChar = SPACECHAR OR NextPos =</li><li>UNTIL Done = TRUE</li><li>IF NextPos = LENGTH(FNString) THEN</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;C&#x27;
+
+  FALSE  &quot;∇In∇A∇∇C&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Reducing Boundary in the outer loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;u&#x27;
+
+  &quot;∇In∇A∇∇Cu&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2>
+        <section class="part">
+          <p class="part-label">Part 10 — solution</p>
+          <div class="solution">
+            <ol>
+<li>One mark for each of columns 2 to 5 (condone missing final 11)</li>
+<li>One mark for final row all correct (including final 11)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One mark for each of columns 2 to 5 (condone missing final 11)</li><li>One mark for final row all correct (including final 11)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q24"><h2>Question 24</h2>
+        <section class="part">
+          <p class="part-label">Part 24 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>ThisChar ← LCASE(MID(Name, Index, 1)
+
+  ALTERNATIVE:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q31"><h2>Question 31</h2>
+        <section class="part">
+          <p class="part-label">Part 31 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>NewName ← NewName &amp; LCASE(ThisChar)
+
+  Ignore line number</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/23 · October/November 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/23 · October/November 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<ol>
+<li>IF Safe[Index] = TRUE THEN</li>
+<li>REPEAT UNTIL AllDone() = TRUE                                                </li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Safe[Index] = TRUE THEN</li><li>REPEAT UNTIL AllDone() = TRUE                                                </li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<div class='ms-raw'>3
+  Variable  Example data value  Data type
+
+  Available  TRUE  BOOLEAN
+
+  Received  &quot;18/04/2021&quot;  STRING
+
+  Index  100  INTEGER
+
+  One mark per row</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<div class='ms-raw'>3
+  Expression  Evaluates to
+
+  Available AND NOT(Index &gt; 100)  TRUE
+
+  Index MOD 30  10
+
+  NUM_TO_STR(Index + &quot;33&quot;)  ERROR
+
+  One mark per row
+
+ University Press &amp; Assessment 2024  Page 4 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP4 Test for value &gt; 0 // &gt;=1 in a loop</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP4 Test for value &gt; 0 // &gt;=1 in a loop</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Construct: Iteration / Repetition  2
+  MP2  Use: To loop through all 100 inputs // To loop 100 times
+
+  ALTERNATIVE:
+
+  MP1  Construct: Selection
+  MP2  Use: To test whether the value input is positive</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0 is not a valid array / List index value // No 0th element in the array  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+
+  Mark as follows:
+  MP1 Use of variable as array index and initialisation to 1 / to first element of
+  array
+  MP2 Loop for 199 / 200 iterations
+  MP3 Assign Index+1 to each pointer field in a loop
+  MP4 Assign 0 to 200th pointer field
+
+ University Press &amp; Assessment 2024  Page 6 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per step:  4
+
+  MP1  Assign HeadPointer to ThisPointer / Current Pointer // Identify
+  first node using headpointer
+
+  MP2  Loop the following until ThisPointer value is 0 (zero) / null pointer
+  reached
+
+  MP3  … Output data (field) from array element at index ThisPointer //
+  Output data (field) of the current node / array element
+
+  MP4  … Assign pointer field from current array element / index / to
+  ThisPointer / Current Pointer // Assign pointer field from current
+  node to ThisPointer / Current Pointer</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-08.jpg" alt="Paper page 8 for Q4"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Mark &gt;= Lower AND Mark &lt;= Upper THEN</li>
+<li>//IF Mark &lt;= Upper AND Mark &gt;= Lower THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Mark &gt;= Lower AND Mark &lt;= Upper THEN</li><li>//IF Mark &lt;= Upper AND Mark &gt;= Lower THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Use Mark as the index to the Check array // to specify an array  2
+  element
+
+  MP2  If value of indexed element is TRUE, then the paper will need to be
+  checked
+
+ University Press &amp; Assessment 2024  Page 7 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example:solution  6
+
+  PROCEDURE GBInitialise()
+  DECLARE GBIndex, GBMark, ThisIndex : INTEGER
+
+  FOR ThisIndex  0 TO 75
+  Check[ThisIndex]  FALSE // initialise all values
+  NEXT ThisIndex
+
+  FOR GBIndex  1 TO 5
+  GBMark  GB[GBIndex]
+  FOR ThisIndex  GBMark - 2 TO GBMark + 2
+  Check[ThisIndex]  TRUE //Set GBMark  2 to
+  TRUE
+  NEXT ThisIndex
+  NEXT GBIndex
+  ENDPROCEDURE
+
+  Mark as follows:
+  MP1 Procedure heading and ending
+  MP2 Initialise Check array to FALSE
+  MP3 Loop through GB array
+  MP4 Extract the GB mark
+  MP5 Loop for 5 elements across GBMark  2 // Check if within GBMark
+  2
+  MP6 Assign each element of Check array to TRUE
+
+  ALTERNATIVE – Example using selection Version 1
+
+  FOR ThisIndex  0 TO 75
+  CASE ThisIndex
+  GB[1] – 2 TO GB[1] + 2 : Check[ThisIndex]  TRUE
+  GB[2] – 2 TO GB[2] + 2 : Check[ThisIndex]  TRUE
+  GB[3] – 2 TO GB[3] + 2 : Check[ThisIndex]  TRUE
+  GB[4] – 2 TO GB[4] + 2 : Check[ThisIndex]  TRUE
+  GB[5] – 2 TO GB[5] + 2 : Check[ThisIndex]  TRUE
+  OTHERWISE: Check[ThisIndex]  FALSE
+  ENDCASE
+  NEXT ThisIndex
+
+ University Press &amp; Assessment 2024  Page 8 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF ThisIndex &gt;= Lower AND ThisIndex &lt;= Higher</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF ThisIndex &gt;= Lower AND ThisIndex &lt;= Higher</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked23/page-10.jpg" alt="Paper page 10 for Q5"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Name of life
+  Activity
+  cycle stage
+
+  A compiler is be used.  Coding
+
+  A program that has been released for general use
+  Maintenance
+  is modified
+
+  The dry run method is used.  Testing
+
+  The program structure is specified.  Design
+
+  One mark per row</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for method – two marks for the description  3
+
+  MP1 Stub testing
+  MP2 The modules Test_A() and Test_B()are replaced by dummy
+  modules
+  MP3 ... which return a known result // An output statement is displayed
+  when called (to check it works) // gives expected output
+
+ University Press &amp; Assessment 2024  Page 9 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF DAYINDEX(ThisDate) = 1 THEN</li>
+<li>UNTIL SundayCount = 3</li>
+<li>IF FirstDayIndex = 1 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF DAYINDEX(ThisDate) = 1 THEN</li><li>UNTIL SundayCount = 3</li><li>IF FirstDayIndex = 1 THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Mark as follows:
+  MP1 Function heading, parameter, ending and return type
+  MP2 Declare local integer variable that is used to hold a day number
+  MP4 Attempt to use both SETDATE() and DAYINDEX()
+  MP5 Correctly generate value of type DATE using SETDATE() for first of
+  March / specific day in March
+  MP6 Test if date represents a Sunday / specific day using DAYINDEX()
+  and calculate third Sunday // Correctly calculate third Sunday for a
+  value returned by DAYINDEX()for one day
+  MP7 Calculate third Sunday for other six days
+  MP8 Return day number of third Sunday
+
+  Max 7 marks</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A requirement specification</li>
+<li>Definition of System Objectives</li>
+<li>List of problems with existing system</li>
+<li>Survey results</li>
+<li>Feasibility study</li>
+<li>Interview notes</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A requirement specification</li><li>Definition of System Objectives</li><li>List of problems with existing system</li><li>Survey results</li><li>Feasibility study</li><li>Interview notes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for name and use  4
+
+  Mark as follows:
+  Examples include:
+
+  Sub-module: ScanCard()/ GetID()
+  Use: Read the barcode from the loyalty card / Get the customer ID from the
+  barcode
+
+  Sub-module: GetPoints()
+  Use: Get the number of points the customer has
+
+  Sub-module: ExchangePoints() / UpdateCard()
+  Use: Reduce the number of loyalty points
+
+  Sub-module: GetDiscount() / CalculateDiscount()
+  Use: Calculate the discount
+
+  Sub-module: CalculatePoints()
+  Use: Calculate points (following a purchase)
+
+  Sub-module: UpdatePoints()
+  Use: Update total points a customer has (following a purchase)
+
+  Sub-module: ShowDiscount()
+  Use: Display the discount
+
+  Max 4 marks
+
+ University Press &amp; Assessment 2024  Page 12 of 14
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked23/page-14.jpg" alt="Paper page 14 for Q8"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Character[Index].Player = ThisPlayer AND __</li>
+<li>Character[Index].Role = ThisRole THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Character[Index].Player = ThisPlayer AND __</li><li>Character[Index].Role = ThisRole THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  7
+
+  PROCEDURE Restore()
+  DECLARE Index : INTEGER
+  DECLARE Line : STRING
+
+  OPENFILE &quot;SaveFile.txt&quot; FOR READ
+  FOR Index  1 TO 45
+  READFILE &quot;SaveFile.txt&quot;, Line
+  Character[Index].Player  STR_TO_NUM(Extract(Line,
+  1))
+  Character[Index].Role  Extract(Line, 2)
+  Character[Index].Name  Extract(Line, 3)
+  Character[Index].Skill  STR_TO_NUM(Extract(Line,
+  4))
+  NEXT Index
+
+  CLOSEFILE &quot;SaveFile.txt&quot;
+
+  ENDPROCEDURE
+
+  Mark as follows:
+  MP1 Open the file in read mode and subsequently close
+  MP2 Loop through 45 elements
+  MP3 Read a line from the file in a loop
+  MP4 Attempt to use Extract() in a loop
+  MP5 Correct use of Extract() for all fields in a loop
+  MP6 Use of STR_TO_NUM() on Player and Skill in a loop
+  MP7 Completely correct extraction and assignment of all fields in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  The Character array / character data can be saved before the  2
+  program is closed
+  MP2  Allowing the game to continue using the same data / from the point it
+  was saved
+
+ University Press &amp; Assessment 2024  Page 14 of 14</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

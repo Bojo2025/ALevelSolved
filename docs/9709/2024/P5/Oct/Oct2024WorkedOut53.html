@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9709/53 · October/November 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9709/53 · October/November 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q20">Q20</a> <a href="#q30">Q30</a> <a href="#q36">Q36</a> <a href="#q63">Q63</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] Correct expression, accept unsimplified,</li>
+<li>[B1] AWRT</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Correct expression, accept unsimplified,</li><li>[B1] AWRT</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] p 3 + q 3 , p + q = 1, p, q  0</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] p 3 + q 3 , p + q = 1, p, q  0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>(3  0.3  0.7 + 3  0.3  0.7 ) = 1 − 0.63</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(3  0.3  0.7 + 3  0.3  0.7 ) = 1 − 0.63</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 100</p>
+<ol>
+<li>[A1] Obtain/use: 0.37[0]</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 0.37[0]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 105</p>
+<ol>
+<li>[B1] 37.5 or 37½ and 26.25, 26¼ seen, allow</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] 37.5 or 37½ and 26.25, 26¼ seen, allow</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  1  1  probability stated as 0.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4096</p>
+<ol>
+<li>[M1] 1 − 0.75n , n = 6,7</li>
+<li>[A1] 0.82202148… to at least 3SF</li>
+<li>[M1] Summing 6 or 7 terms – condone extra term</li>
+<li>[A1] Obtain/use: =0.822</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 1 − 0.75n , n = 6,7</li><li>[A1] 0.82202148… to at least 3SF</li><li>[M1] Summing 6 or 7 terms – condone extra term</li><li>[A1] Obtain/use: =0.822</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>0.757 − 0.25  0.756                                                                       M1 Correct expression</li>
+<li>[A1] Obtain/use: =0.822</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>0.757 − 0.25  0.756                                                                       M1 Correct expression</li><li>[A1] Obtain/use: =0.822</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked53/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Substituting their mean and their positive</li>
+<li>[M1] Use continuity corrections 44.5 or 45.5 in</li>
+<li>[M2] Obtain/use: Note:          or         seen gains</li>
+<li>[M1] Appropriate area Φ, from final process,</li>
+<li>[A1] 0.0592 ⩽ p ⩽ 0.0593</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Substituting their mean and their positive</li><li>[M1] Use continuity corrections 44.5 or 45.5 in</li><li>[M2] Obtain/use: Note:          or         seen gains</li><li>[M1] Appropriate area Φ, from final process,</li><li>[A1] 0.0592 ⩽ p ⩽ 0.0593</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Table with correct x values and at least one</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Table with correct x values and at least one</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] At least 6 correct midpoints seen, may be</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] At least 6 correct midpoints seen, may be</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>their midpoint (not ub, lb, upper limits,
+  −  their    lower limits, cw, fd, f or cf and must be
+  150    150   within class).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] AWRT 10.6 WWW</li>
+<li>[M1] withheld, SC B1 for 10.6</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT 10.6 WWW</li><li>[M1] withheld, SC B1 for 10.6</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Adding no of ways for 6 scenarios ( or 26 × 5!)</li>
+<li>[A1] SC B1 for 3120 if any method marks are</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Adding no of ways for 6 scenarios ( or 26 × 5!)</li><li>[A1] SC B1 for 3120 if any method marks are</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] FT FT their table with 4 or 5 probabilities (0 &lt;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT FT their table with 4 or 5 probabilities (0 &lt;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Using ± standardisation formula with 170,</li>
+<li>[M1] Appropriate area Φ, from final process,</li>
+<li>[A1] 0.894 or 0.89435 ⩽ p ⩽ 0.8944</li>
+<li>[A0] scored, SC B1 for 0.894 or</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Using ± standardisation formula with 170,</li><li>[M1] Appropriate area Φ, from final process,</li><li>[A1] 0.894 or 0.89435 ⩽ p ⩽ 0.8944</li><li>[A0] scored, SC B1 for 0.894 or</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] 1 – their 3(a) seen or implied by 0.7056 or</li>
+<li>[B1] 0.540 &lt; z ⩽ 0.541 or −0.541 ⩽ z &lt; 0.540</li>
+<li>[M1] Use of ±standardisation formula with k,</li>
+<li>[A1] CAO (answer required to 1 dp)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 1 – their 3(a) seen or implied by 0.7056 or</li><li>[B1] 0.540 &lt; z ⩽ 0.541 or −0.541 ⩽ z &lt; 0.540</li><li>[M1] Use of ±standardisation formula with k,</li><li>[A1] CAO (answer required to 1 dp)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] One term 8Cx ( p ) x (1 − p )8− x ,</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] One term 8Cx ( p ) x (1 − p )8− x ,</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked53/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Cf values 28, 60, 102, 130, 144, 150 seen,</li>
+<li>[B1] Linearly scaled axes correctly labelled</li>
+<li>[M1] At least 4 points plotted at upper boundary</li>
+<li>[A1] All points plotted correctly, curve drawn</li>
+<li>[A0] if straight line segments used</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Cf values 28, 60, 102, 130, 144, 150 seen,</li><li>[B1] Linearly scaled axes correctly labelled</li><li>[M1] At least 4 points plotted at upper boundary</li><li>[A1] All points plotted correctly, curve drawn</li><li>[A0] if straight line segments used</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Use of graph must be seen</li>
+<li>[A1] FT Must be an increasing cf graph. Expect an</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use of graph must be seen</li><li>[A1] FT Must be an increasing cf graph. Expect an</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] All probabilities correct and attempt to sum</li>
+<li>[B1] Obtain/use: [P(5th is first unwrapped) =] ( 0.55) ( 0.45) = 0.041178</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] All probabilities correct and attempt to sum</li><li>[B1] Obtain/use: [P(5th is first unwrapped) =] ( 0.55) ( 0.45) = 0.041178</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] their P ( 2nd gold  5th is first unwrapped )</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] their P ( 2nd gold  5th is first unwrapped )</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li> = 0.0411778125                                                                                     identified if incorrect</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li> = 0.0411778125                                                                                     identified if incorrect</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked53/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] One term 8Cx</li>
+<li>[A1] Correct expression, accept unsimplified, no</li>
+<li>[B1] AWRT</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] One term 8Cx</li><li>[A1] Correct expression, accept unsimplified, no</li><li>[B1] AWRT</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Method 1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] a  0.3 b  c  0.45 0 &lt; a, b, c &lt; 1</li>
+<li>[A1] 5 correct probabilities multiplied</li>
+<li>[M1] a  0.3 b  c  0.45 0 &lt; a, b, c &lt; 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] a  0.3 b  c  0.45 0 &lt; a, b, c &lt; 1</li><li>[A1] 5 correct probabilities multiplied</li><li>[M1] a  0.3 b  c  0.45 0 &lt; a, b, c &lt; 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] 0.25             0.3</li>
+<li>[A1] 0.25     0.3</li>
+<li>[B1] Both probs correct, can be unsimplified</li>
+<li>[M1] Multiplying their identified P(red given</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 0.25             0.3</li><li>[A1] 0.25     0.3</li><li>[B1] Both probs correct, can be unsimplified</li><li>[M1] Multiplying their identified P(red given</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: C3 5 C2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: C3 5 C2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>C 2 , a  5 C 3 , or 5 C2 + 5 C3 seen as a</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>C3 + 5 C2
+  M1  9
+  C5 or 9 C 4 seen (no addition,</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked53/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>P(X = x)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>P(X = x)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] 4 correct probabilities linked with the</li>
+<li>[B1] 5 correct probabilities linked with correct x</li>
+<li>[B1] 4 or 5 probabilities summing to 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] 4 correct probabilities linked with the</li><li>[B1] 5 correct probabilities linked with correct x</li><li>[B1] 4 or 5 probabilities summing to 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use:  9! </li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use:  9! </li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: 9! 7!</li>
+<li>[A1] FT ft their 6(a) – 5040</li>
+<li>[M1] Finding correct number of ways for one of</li>
+<li>[M1] Adding no of ways for 3 correctly identified</li>
+<li>[A1] Obtain/use: Total                            85680</li>
+<li>[M1] Finding correct number of ways for one of</li>
+<li>[M1] Adding no of ways for 3 correctly identified</li>
+<li>[A1] Obtain/use: Total                                                 85680</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 9! 7!</li><li>[A1] FT ft their 6(a) – 5040</li><li>[M1] Finding correct number of ways for one of</li><li>[M1] Adding no of ways for 3 correctly identified</li><li>[A1] Obtain/use: Total                            85680</li><li>[M1] Finding correct number of ways for one of</li><li>[M1] Adding no of ways for 3 correctly identified</li><li>[A1] Obtain/use: Total                                                 85680</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] 6! + d, d an integer ≥ 1, may be implied</li>
+<li>[M1] e + 5! f , e, f integers ≥ 1, may be implied</li>
+<li>[M1] (           )</li>
+<li>[A1] Obtain/use: [Total ]= 3120</li>
+<li>[M1] Identifying no of ways if S^^S is in position 1 or</li>
+<li>[M1] Identifying no of ways if S^^S is in position 2,</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 6! + d, d an integer ≥ 1, may be implied</li><li>[M1] e + 5! f , e, f integers ≥ 1, may be implied</li><li>[M1] (           )</li><li>[A1] Obtain/use: [Total ]= 3120</li><li>[M1] Identifying no of ways if S^^S is in position 1 or</li><li>[M1] Identifying no of ways if S^^S is in position 2,</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Method 1
+  Either PP in the group of 5 or PP in the group of 4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>C5(0.75)3 (0.25)5 + 8C6(0.75)2 (0.25)6 + 8C7(0.75) (0.25)7 + (0.25)8}</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>+  ,
+  C5 9 C5  numerator of one or two fractions
+  where a is 1 or 2, no extra terms.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> C5</p>
+<div class='ms-raw'>C5
+  multiplication) as a denominator of one or
+  two fractions.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: C5</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2>
+        <section class="part">
+          <p class="part-label">Part 10 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 150</p>
+<ol>
+<li>[M1] Correct unsimplified mean formula with</li>
+<li>[A1] Accept answers wrt 38.9 WWW</li>
+<li>[M1] withheld, SC B1 for</li>
+<li>[M1] Correct unsimplified variance formula with</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Correct unsimplified mean formula with</li><li>[A1] Accept answers wrt 38.9 WWW</li><li>[M1] withheld, SC B1 for</li><li>[M1] Correct unsimplified variance formula with</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>14.52 + 18  24.52 + 32  34.52 +42  422 + 28  472 + 14  522 + 6  572   5840 </div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q20"><h2>Question 20</h2>
+        <section class="part">
+          <p class="part-label">Part 20 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 126 63</p>
+<ol>
+<li>[A1] Obtain/use: 10</li>
+<li>[M1] a × 5 × 4 × 4 × 3 seen as a numerator of a</li>
+<li>[M1] 9 × 8 × 7 × 6 seen as a denominator of a</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 10</li><li>[M1] a × 5 × 4 × 4 × 3 seen as a numerator of a</li><li>[M1] 9 × 8 × 7 × 6 seen as a denominator of a</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q30"><h2>Question 30</h2>
+        <section class="part">
+          <p class="part-label">Part 30 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 121</p>
+<ol>
+<li>[A1] 0.24793…</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] 0.24793…</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 30 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> A1 · 121</p>
+<ol>
+<li>= 0.248 ,</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>= 0.248 ,</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q36"><h2>Question 36</h2>
+        <section class="part">
+          <p class="part-label">Part 36 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>36  36  36  36  x and P(X) may be omitted.
+  Condone any additional x values if</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q63"><h2>Question 63</h2>
+        <section class="part">
+          <p class="part-label">Part 63 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<div class='ms-raw'>3
+
+ University Press &amp; Assessment 2024  Page 18 of 18</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

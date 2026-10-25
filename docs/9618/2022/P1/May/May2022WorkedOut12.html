@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/12 · May/June 2022 · Worked Solutions</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #fafafa; color: #222; }
+  header { border-bottom: 3px solid #003366; padding-bottom: 12px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 1.35em; color: #003366; }
+  header p { margin: 0; color: #555; font-size: 0.95em; }
+  .question { margin-bottom: 36px; }
+  .question > h2 { font-size: 1.15em; color: #003366; border-left: 4px solid #003366; padding-left: 10px; margin-bottom: 10px; }
+  .part { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; padding: 14px 16px; }
+  .part h3 { margin: 0 0 8px; font-size: 1em; color: #444; }
+  .q-text { margin-bottom: 10px; line-height: 1.6; }
+  .q-img { margin: 10px 0; }
+  .q-img img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+.worked { background: #f0f6ff; border-left: 4px solid #003366; padding: 12px 14px; margin-top: 10px; line-height: 1.65; }
+  .worked p { margin: 6px 0; }
+  .marks { background: #f9fff0; border-left: 4px solid #3a7a1a; padding: 10px 14px 10px 28px; margin: 10px 0 0; }
+  .marks li { margin: 4px 0; line-height: 1.55; }
+  table.q-table { border-collapse: collapse; margin: 8px 0; font-size: 0.9em; }
+  table.q-table th, table.q-table td { border: 1px solid #aaa; padding: 5px 10px; text-align: center; }
+  table.q-table th { background: #e0e8f5; }
+  .register-row { display: flex; gap: 0; margin: 6px 0; }
+  .register-cell { border: 1px solid #888; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 1.1em; font-weight: bold; background: #fff; }
+  .register-label { font-size: 0.85em; color: #555; margin-right: 8px; line-height: 36px; min-width: 60px; }
+  .answer-reg { background: #d4edda; }
+  pre { background: #f0f0f0; padding: 10px 14px; border-radius: 4px; font-size: 0.9em; overflow-x: auto; }
+  code { font-family: monospace; background: #e8eef7; padding: 1px 4px; border-radius: 3px; }
+
+  .solution-open { margin-top: 10px; }
+  .part-label-note { font-size: 0.85em; color: #3a7a1a; font-weight: 700; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>9618/12 · May/June 2022 · Worked Solutions</h1>
+  <p>Cambridge International AS &amp; A Level Computer Science — Paper 1 Theory Fundamentals</p>
+</header>
+
+<main>
+
+<!-- ==================== QUESTION 1 ==================== -->
+<section class="question">
+<h2>Question 1 — Bitmap Images (8 marks)</h2>
+
+<div class="part">
+<h3>1 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Draw one line from each image representation term to its correct definition.</p>
+<div class="q-img"><img src="worked12/fig_1a.png" alt="Matching: Pixel, Bit depth, Image resolution, File header to their definitions"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Identify each term carefully:</p>
+<p><strong>Pixel</strong> → <em>The smallest identifiable component of an image.</em> A pixel is the individual dot that makes up a raster image.</p>
+<p><strong>Bit depth</strong> → <em>The number of bits used to represent each colour.</em> More bits per pixel means more possible colours (e.g. 8-bit = 256 colours, 24-bit = ~16 million colours).</p>
+<p><strong>Image resolution</strong> → <em>The number of pixels wide by the number of pixels high.</em> E.g. 1920 × 1080 is the image resolution.</p>
+<p><strong>File header</strong> → <em>Stores data about the image file, e.g. file format, number of bits per pixel, file size.</em> The header is metadata at the start of the file.</p>
+</div>
+<ul class="marks">
+<li>Pixel ↔ Smallest identifiable component of an image. [1 per correct line; 1 for 1 correct, 2 for 2–3 correct, 3 for all 4 correct]</li>
+<li>Bit depth ↔ Number of bits used to represent each colour. </li>
+<li>Image resolution ↔ Number of pixels wide × pixels high. </li>
+<li>File header ↔ Stores metadata about the image file. </li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b)(i) [1 mark]</h3>
+<div class="q-text">
+<p>The 10 × 5 pixel bitmap image can have up to 256 colours. Identify the smallest number of bits to represent each colour.</p>
+<div class="q-img"><img src="worked12/fig_1b.png" alt="10x5 bitmap grid with coloured letters B,Y,R,P,K,T,O,M,G"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The image can have up to 256 different colours. We need enough bits to represent 256 distinct values. Since 2<sup>8</sup> = 256, we need exactly <strong>8 bits</strong> per colour.</p>
+<p>Check: 7 bits gives only 2<sup>7</sup> = 128 distinct values, which is insufficient for 256 colours. 8 bits gives exactly 256 — perfect.</p>
+</div>
+<ul class="marks">
+<li>8 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b)(ii) [2 marks]</h3>
+<div class="q-text"><p>Calculate an estimate for the file size of the 10 × 5 section of the bitmap image in bytes. Use your answer from (b)(i).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Working:</strong></p>
+<p>Number of pixels = 10 (wide) × 5 (high) = <strong>50 pixels</strong></p>
+<p>Bits per pixel = 8 (from part b(i))</p>
+<p>Total bits = 50 × 8 = <strong>400 bits</strong></p>
+<p>Convert to bytes: 400 bits ÷ 8 = <strong>50 bytes</strong></p>
+<p><strong>Answer: 50 bytes</strong></p>
+</div>
+<ul class="marks">
+<li>Working: 10 × 5 × 8 ÷ 8 = 50 [1]</li>
+<li>Answer: 50 bytes [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (c) [2 marks]</h3>
+<div class="q-text"><p>Describe how changing the colour depth of an image affects its file size.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Colour depth (bit depth) is the number of bits used to store each pixel. File size is calculated as: <em>width × height × colour depth ÷ 8 bytes</em>.</p>
+<p><strong>Increasing colour depth</strong> means more bits are used per pixel, so more total data is stored — the <em>file size increases</em>. For example, going from 8-bit (256 colours) to 24-bit (16 million colours) triples the file size.</p>
+<p><strong>Decreasing colour depth</strong> means fewer bits per pixel — the <em>file size decreases</em>. However, the image may look lower quality with fewer available colours.</p>
+</div>
+<ul class="marks">
+<li>Increasing colour depth increases file size / Decreasing colour depth decreases file size. [1]</li>
+<li>Because more/fewer bits are used per pixel, so more/less data is stored. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (d) [2 marks]</h3>
+<div class="q-text">
+<p>The first row of the image is all blue (B): all 10 pixels are the same colour. Explain how this row can be compressed using lossless compression.</p>
+<div class="q-img"><img src="worked12/fig_1d.png" alt="First row: B B B B B B B B B B (all blue pixels)"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The appropriate lossless technique here is <strong>Run-Length Encoding (RLE)</strong>.</p>
+<p>Instead of storing each of the 10 Blue pixels individually (which would require 10 × 8 = 80 bits), RLE replaces consecutive runs of the same value with a pair: (count, value).</p>
+<p>For this row: there are <strong>10 consecutive blue pixels</strong>, so RLE stores just two values: <strong>10 (count) and Blue/B (colour code)</strong>.</p>
+<p>This reduces the storage for this row from 10 colour codes to just 1 pair — a significant saving when there are long runs of identical colours.</p>
+</div>
+<ul class="marks">
+<li>Use run-length encoding (RLE). [1]</li>
+<li>Record the colour Blue and the number of times it occurs (10). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<section class="question">
+<h2>Question 2 — Embedded Systems &amp; Input Devices (5 marks)</h2>
+
+<div class="part">
+<h3>2 (a) [2 marks]</h3>
+<div class="q-text"><p>Explain why the car lane detection system is an example of an embedded system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An embedded system is a dedicated computer system built into a larger device to perform a specific, fixed function.</p>
+<p>The lane detection system qualifies because:</p>
+<p>1. It is <strong>built into / integrated into</strong> the car — it is not a general-purpose standalone computer.</p>
+<p>2. It performs only <strong>one specific task</strong>: monitoring lane lines and automatically correcting the car's position. It is not reprogrammed or used for other purposes by the driver.</p>
+</div>
+<ul class="marks">
+<li>The lane detection system is built into / integrated into the car. [1]</li>
+<li>It only performs one specific task / is not easily changed by the car owner. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (b) [2 marks]</h3>
+<div class="q-text"><p>Identify the data stored in primary and secondary storage for the two mileage features (current journey miles + total miles since build).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Primary storage (RAM):</strong> The number of miles travelled in the <em>current journey</em>. This is a temporary value that is actively being updated while the engine is running. It needs fast access but does not need to persist when the engine turns off — it is reset each journey.</p>
+<p><strong>Secondary storage (non-volatile, e.g. EEPROM/flash):</strong> The <em>total miles</em> the car has travelled since it was built. This must persist permanently even when the engine is off. Every time a journey ends, the current journey miles are added to the running total stored in secondary storage.</p>
+</div>
+<ul class="marks">
+<li>Primary: miles travelled in current journey (temporary, volatile). [1]</li>
+<li>Secondary: total miles since car was built / most recent journey miles after engine off. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (c) [1 mark]</h3>
+<div class="q-text">
+<p>Tick one box per row to show whether each statement about a resistive touchscreen is true or false.</p>
+<div class="q-img"><img src="worked12/fig_2c.png" alt="True/False table for resistive touchscreen statements"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>A resistive touchscreen has <strong>five</strong> layers (two flexible conductive layers separated by air/dots, plus cover, adhesive, and backing). Statement "always has five different layers" — <strong>True</strong>.</p>
+<p>"A processor determines the horizontal and vertical coordinates of the point of contact" — <strong>True</strong>. When pressure is applied, the two conductive layers touch, and the processor reads the voltage to determine X–Y coordinates.</p>
+<p>"The touchscreen will work if any object touches the screen" — <strong>True</strong>. Unlike capacitive screens, resistive screens respond to any physical pressure (finger, stylus, gloved hand, etc.).</p>
+<p><strong>Correct ticks: True / True / True</strong></p>
+</div>
+<ul class="marks">
+<li>All three rows correctly ticked (True / True / True) = 1 mark. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<section class="question">
+<h2>Question 3 — Bit Manipulation &amp; Binary Arithmetic (9 marks)</h2>
+
+<div class="part">
+<h3>3 (a) [2 marks]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked12/fig_3_table.png" alt="Instruction set table: AND, XOR, OR with #n and address operands"></div>
+<p>ACC currently contains: <code>0110 0101</code>. Write the instruction to change it to: <code>1111 1111</code></p>
+<div class="q-img"><img src="worked12/fig_3a.png" alt="ACC register before: 0 1 1 0 0 1 0 1, change to all 1s"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The target pattern is all 1s: <code>1111 1111</code>. We need an operation that turns every 0 in the ACC into a 1, while keeping existing 1s as 1s.</p>
+<p>The <strong>OR</strong> operation works: <code>x OR 1 = 1</code> for any x, and <code>x OR 0 = x</code>. So we OR the ACC with a mask of all 1s:</p>
+<p>ACC OR 11111111₂ = 11111111₂</p>
+<p>In denary, 11111111₂ = 255. So: <strong>OR #255</strong></p>
+<p><em>Alternative:</em> We could also XOR with <code>1001 1010</code> (the bits that need flipping from 0 to 1), i.e. XOR #154 (154 = 10011010₂). Both are correct.</p>
+<p><strong>Answer: Opcode: OR, Operand: #255</strong> (or XOR #154)</p>
+</div>
+<ul class="marks">
+<li>Correct opcode: OR (or XOR). [1]</li>
+<li>Correct operand: #255 (or #154 for XOR). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (b) [2 marks]</h3>
+<div class="q-text">
+<p>ACC currently contains: <code>0110 0101</code>. Write the instruction to change it to: <code>1001 1010</code></p>
+<div class="q-img"><img src="worked12/fig_3b.png" alt="ACC register before: 0 1 1 0 0 1 0 1, change to 1 0 0 1 1 0 1 0"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Compare the before and after:</p>
+<pre>Before:  0 1 1 0 0 1 0 1
+After:   1 0 0 1 1 0 1 0</pre>
+<p>Every single bit is flipped (inverted). This is a bitwise NOT — but the instruction set doesn't have NOT. Instead, <strong>XOR with all 1s (11111111₂ = #255)</strong> flips every bit:</p>
+<p><code>0110 0101</code> XOR <code>1111 1111</code> = <code>1001 1010</code> ✓</p>
+<p><strong>Answer: Opcode: XOR, Operand: #255</strong></p>
+</div>
+<ul class="marks">
+<li>Correct opcode: XOR. [1]</li>
+<li>Correct operand: #255. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (c) [1 mark]</h3>
+<div class="q-text"><p>Convert <code>0111 1110</code> into hexadecimal.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Split the 8-bit binary into two 4-bit nibbles:</p>
+<p><code>0111</code> = 0 + 4 + 2 + 1 = <strong>7</strong></p>
+<p><code>1110</code> = 8 + 4 + 2 + 0 = <strong>14 = E</strong></p>
+<p><strong>Answer: 7E</strong></p>
+</div>
+<ul class="marks">
+<li>7E [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (d) [1 mark]</h3>
+<div class="q-text"><p>Perform a three-place logical shift to the LEFT on <code>0111 1110</code>. Show the result.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>LSL (Logical Shift Left) by 3: shift all bits left by 3 places, dropping the 3 most significant bits, and padding with 3 zeros on the right:</p>
+<pre>Original:  0 1 1 1 1 1 1 0
+LSL #3:    1 1 1 1 0 0 0 0   (bits 0111 shifted left, 3 zeros added right)</pre>
+<p><strong>Answer: <code>1111 0000</code></strong></p>
+</div>
+<ul class="marks">
+<li>1111 0000 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (e) [3 marks]</h3>
+<div class="q-text"><p>Convert 127 and 12 to 8-bit binary. Then perform the subtraction <strong>12 − 127</strong> in binary. Show your working.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Step 1 — Convert to binary:</strong></p>
+<p>127 in 8-bit binary: 64+32+16+8+4+2+1 = <strong>0111 1111</strong></p>
+<p>12 in 8-bit binary: 8+4 = <strong>0000 1100</strong></p>
+
+<p><strong>Step 2 — Perform 12 − 127 using two's complement:</strong></p>
+<p>We compute 12 + (−127). Find two's complement of 127:</p>
+<p>Invert 01111111 → 10000000</p>
+<p>Add 1: 10000000 + 1 = <strong>10000001</strong> (this is −127 in two's complement)</p>
+
+<p><strong>Step 3 — Add:</strong></p>
+<pre>  0000 1100  (12)
++ 1000 0001  (−127)
+-----------
+  1000 1101</pre>
+<p>The carry out from bit 7 is 0 (no overflow of the sign bit set), and the result has the sign bit = 1, indicating a negative number. The result <code>1000 1101</code> is the two's complement representation of −115.</p>
+<p><strong>Answer: 1000 1101</strong></p>
+</div>
+<ul class="marks">
+<li>Correct binary: 0111 1111 (127) and 0000 1100 (12). [1]</li>
+<li>Working: two's complement of 127 = 1000 0001. [1]</li>
+<li>Answer: 1000 1101. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<section class="question">
+<h2>Question 4 — Data Security (8 marks)</h2>
+
+<div class="part">
+<h3>4 (a) [2 marks]</h3>
+<div class="q-text"><p>Explain why the school needs to keep both its data and its computer system secure from unauthorised access.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Data:</strong> Personal data about staff and students (names, dates of birth, grades etc.) must be protected from unauthorised amendment, deletion, or theft. If stolen or leaked, it could be misused (identity theft, discrimination). If amended, decisions based on wrong data could harm individuals. Schools have legal obligations (e.g. under data protection laws) to keep personal data secure.</p>
+<p><strong>Computer system:</strong> The computer system must be protected to prevent people from, for example, installing malware or ransomware that could disrupt the school's operations, corrupting or encrypting all data, or using the school's computing resources for malicious purposes.</p>
+</div>
+<ul class="marks">
+<li>Data needs protecting to prevent amending / deleting / taking it. [1]</li>
+<li>Computer system needs protecting to stop people installing malware / damaging the system. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b) [6 marks]</h3>
+<div class="q-text"><p>Complete the table: identify two security threats, describe each, and give a different prevention method for each.</p></div>
+<div class="solution-open">
+<div class="worked">
+<table class="q-table" style="text-align:left">
+<tr><th>Threat</th><th>Description</th><th>Prevention method</th></tr>
+<tr>
+  <td><strong>Virus</strong></td>
+  <td>A type of malicious software that <em>replicates itself</em> and can corrupt, delete, or steal data on the computer system. It often spreads through email attachments or infected downloads.</td>
+  <td>Install and regularly update <strong>anti-virus / anti-malware software</strong> that scans for and removes viruses.</td>
+</tr>
+<tr>
+  <td><strong>Hacker</strong></td>
+  <td>An individual who attempts to gain <em>unauthorised access</em> to the school's computer system, potentially to steal, alter, or leak student/staff personal data.</td>
+  <td>Use a <strong>firewall</strong> to monitor and filter network traffic, blocking suspicious access attempts. Also use strong, complex passwords or biometric authentication.</td>
+</tr>
+</table>
+</div>
+<ul class="marks">
+<li>Threat 1 identified. [1]</li>
+<li>Description matches Threat 1. [1]</li>
+<li>Prevention method for Threat 1. [1]</li>
+<li>Threat 2 identified. [1]</li>
+<li>Description matches Threat 2. [1]</li>
+<li>Prevention method for Threat 2 (different from Threat 1's). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c) [2 marks]</h3>
+<div class="q-text"><p>Describe what is meant by encryption and explain why it is used.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Encryption</strong> is the process of converting data (plaintext) into an unreadable scrambled form (ciphertext) using an encryption algorithm and a key. Only someone with the correct decryption key can convert it back to readable form.</p>
+<p><strong>Why it is used:</strong> When data is transmitted over a network (e.g. the internet), it may be intercepted by unauthorised parties. Even if they capture the encrypted data, they cannot understand it without the decryption key — so encryption protects the confidentiality of data in transit.</p>
+</div>
+<ul class="marks">
+<li>Data is turned into ciphertext / encoded / scrambled. [1]</li>
+<li>Used so that it cannot be understood if intercepted without the decryption key. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<section class="question">
+<h2>Question 5 — Database FILMS (17 marks)</h2>
+<p style="margin:0 0 10px; color:#555; font-size:0.9em;">Tables: ACTOR(ActorID, FirstName, LastName, DateOfBirth) · FILM_FACT(FilmID, FilmTitle, ReleaseDate, Category) · FILM_ACTOR(ActorID, FilmID)</p>
+
+<div class="part">
+<h3>5 (a) [2 marks]</h3>
+<div class="q-text">
+<p>Complete the entity-relationship (E-R) diagram for the FILMS database.</p>
+<div class="q-img"><img src="worked12/fig_5a.png" alt="E-R diagram skeleton: ACTOR and FILM_FACT connected through FILM_ACTOR"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The FILM_ACTOR table links ACTOR and FILM_FACT. Each actor can appear in many films; each film can have many actors. This creates a many-to-many (M:M) relationship between ACTOR and FILM_FACT, resolved by the linking table FILM_ACTOR.</p>
+<p><strong>Relationships:</strong></p>
+<p>ACTOR — (1) — FILM_ACTOR — (M) — FILM_FACT</p>
+<p>Or equivalently: ACTOR has a 1:M relationship with FILM_ACTOR; FILM_FACT has a 1:M relationship with FILM_ACTOR.</p>
+<p>The E-R diagram should show "1" and "M" crow's foot or min/max notation on the connecting lines between ACTOR↔FILM_ACTOR and FILM_FACT↔FILM_ACTOR.</p>
+</div>
+<ul class="marks">
+<li>Correct relationship (1:M) between ACTOR and FILM_ACTOR. [1]</li>
+<li>Correct relationship (1:M) between FILM_FACT and FILM_ACTOR. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b) [2 marks]</h3>
+<div class="q-text"><p>Explain why FILM_ACTOR has a composite primary key.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>FILM_ACTOR records which actor appeared in which film. It has two attributes: ActorID and FilmID.</p>
+<p><strong>Why neither alone is a primary key:</strong> ActorID alone is not unique in FILM_ACTOR because the same actor can appear in multiple films (so ActorID appears multiple times). Similarly, FilmID alone is not unique because a film has multiple actors.</p>
+<p><strong>Why together they form a key:</strong> The combination (ActorID, FilmID) is unique — a given actor can only appear in a given film once. Together they uniquely identify each row, making them a composite primary key.</p>
+</div>
+<ul class="marks">
+<li>Neither key uniquely identifies each tuple by itself. [1]</li>
+<li>Together they are unique / an actor cannot appear in the same film twice. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (c) [4 marks]</h3>
+<div class="q-text"><p>Complete the SQL script to return the IDs of all actors in the film with title 'Cinderella'.</p>
+<pre>SELECT .....
+FROM FILM_ACTOR
+INNER JOIN ............
+ON FILM_FACT.FilmID = ............
+WHERE FILM_FACT.FilmTitle = ............;</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>We need to join FILM_ACTOR with FILM_FACT to be able to filter by film title. The join condition links the FilmID in both tables. We SELECT ActorID, JOIN FILM_FACT, match on FilmID, and filter by title.</p>
+<pre>SELECT FILM_ACTOR.ActorID
+FROM FILM_ACTOR
+INNER JOIN FILM_FACT
+ON FILM_FACT.FilmID = FILM_ACTOR.FilmID
+WHERE FILM_FACT.FilmTitle = 'Cinderella';</pre>
+</div>
+<ul class="marks">
+<li>SELECT FILM_ACTOR.ActorID [1]</li>
+<li>INNER JOIN FILM_FACT [1]</li>
+<li>ON FILM_FACT.FilmID = FILM_ACTOR.FilmID [1]</li>
+<li>WHERE FILM_FACT.FilmTitle = 'Cinderella' [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (d) [3 marks]</h3>
+<div class="q-text"><p>Write an SQL script to count the number of films released in January 2022.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>We need to COUNT films where the ReleaseDate falls in January 2022. Use a WHERE clause with a date range or BETWEEN.</p>
+<pre>SELECT COUNT(FilmID)
+FROM FILM_FACT
+WHERE ReleaseDate >= #01/01/2022# AND ReleaseDate <= #31/01/2022#;</pre>
+<p><em>Alternative using BETWEEN:</em></p>
+<pre>SELECT COUNT(FilmID)
+FROM FILM_FACT
+WHERE ReleaseDate BETWEEN #01/01/2022# AND #31/01/2022#;</pre>
+</div>
+<ul class="marks">
+<li>COUNT with correct field name. [1]</li>
+<li>SELECT and FROM statements with correct table name. [1]</li>
+<li>WHERE clause correctly restricting to January 2022. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (e) [6 marks]</h3>
+<div class="q-text">
+<p>Complete the description of DBMS features using terms from the given word bank.</p>
+<div class="q-img"><img src="worked12/fig_5e_words.png" alt="Word bank and fill-in sentences about DBMS features"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>A DBMS provides data management. This includes the development of a <strong>data dictionary</strong> that stores information about the data stored, such as <strong>field names</strong> and <strong>primary keys</strong>.</p>
+<p>The <strong>logical schema</strong> uses methods, such as an E-R diagram, to show the structure of the database and its relationships.</p>
+<p>The <strong>query</strong> processor allows a user to perform searches to find specific data. The DBMS also provides a developer <strong>interface</strong> that allows the user to create tables, forms and reports.</p>
+</div>
+<ul class="marks">
+<li>data dictionary [1]</li>
+<li>field names [1]</li>
+<li>primary keys [1]</li>
+<li>logical schema [1]</li>
+<li>query [1]</li>
+<li>interface [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<section class="question">
+<h2>Question 6 — Language Translators &amp; IDE (8 marks)</h2>
+
+<div class="part">
+<h3>6 (a) [2 marks]</h3>
+<div class="q-text"><p>Describe the operation of a <strong>compiler</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A compiler reads the <em>entire</em> source code of a program and attempts to translate it all into machine code (object code) in one go. If there are any errors, the compiler produces an error report after completing its analysis — the programmer sees all errors at once. If translation is successful (no errors), the compiler produces an independent executable file that can run without the compiler being present. The compiled executable runs faster than interpreted code because translation is done just once.</p>
+</div>
+<ul class="marks">
+<li>Attempts to translate the whole source code at once. [1]</li>
+<li>Creates a separate error report at the end / if no errors, creates an executable file. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b) [2 marks]</h3>
+<div class="q-text"><p>Describe the operation of an <strong>interpreter</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An interpreter reads and translates the source code <em>one line at a time</em>. It translates each line into machine code and immediately executes it before moving to the next line. If an error is found on any line, the interpreter stops immediately and reports that error — subsequent lines are not reached. The interpreter must be present every time the program runs (there is no separate executable). During development, interpreters make it easy to test partial code or individual sections.</p>
+</div>
+<ul class="marks">
+<li>Reads/translates and executes each line one at a time. [1]</li>
+<li>Stops when an error is encountered / displays errors where it finds them. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c) [4 marks]</h3>
+<div class="q-text"><p>Explain how a programmer can make use of a typical IDE when <strong>writing</strong> and <strong>testing</strong> a program.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Writing (max 2 marks):</strong></p>
+<p>• The IDE provides a <em>code editor</em> where the programmer enters source code. Pretty-printing (syntax highlighting) makes key terms such as keywords and variables visually distinct.</p>
+<p>• <em>Context-sensitive prompts / autocomplete</em> suggests how to complete a statement as the programmer types, speeding up code entry.</p>
+<p>• <em>Dynamic syntax checking</em> underlines or highlights errors in real time as code is typed, allowing immediate correction without needing to run the program.</p>
+
+<p><strong>Testing (max 2 marks):</strong></p>
+<p>• <em>Breakpoints</em> allow the programmer to pause execution at a specific line to inspect the state of variables at that point.</p>
+<p>• <em>Single stepping</em> executes the program one line at a time, letting the programmer trace through logic step-by-step to find where behaviour diverges from expectations.</p>
+<p>• The <em>report window / variable watch</em> shows the current values of variables and data structures at any point during execution.</p>
+</div>
+<ul class="marks">
+<li>Writing: Enter code in editor; pretty printing / syntax highlighting. [1]</li>
+<li>Writing: Context-sensitive prompts / autocomplete / dynamic syntax checking. [1]</li>
+<li>Testing: Single stepping to run line by line / Breakpoints to stop at set lines. [1]</li>
+<li>Testing: Report window to see variable values change. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<section class="question">
+<h2>Question 7 — Truth Table (2 marks)</h2>
+
+<div class="part">
+<h3>7 [2 marks]</h3>
+<div class="q-text">
+<p>Complete the truth table for: <strong>X = (A XOR B) AND NOT C</strong></p>
+<div class="q-img"><img src="worked12/fig_7.png" alt="Truth table template for X = (A XOR B) AND NOT C"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Evaluate step by step for each row:</p>
+<p>First: A XOR B → 1 if A ≠ B, else 0. Then: NOT C → 1 if C=0, else 0. Then: (A XOR B) AND NOT C → 1 only when both are 1.</p>
+<table class="q-table">
+<tr><th>A</th><th>B</th><th>C</th><th>A XOR B</th><th>NOT C</th><th>X</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>First 4 rows correct (0,0,1,0). [1]</li>
+<li>Second 4 rows correct (1,0,0,0). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<section class="question">
+<h2>Question 8 — Artificial Intelligence (3 marks)</h2>
+
+<div class="part">
+<h3>8 [3 marks]</h3>
+<div class="q-text"><p>Describe one application of Artificial Intelligence (AI).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Application: Self-driving (autonomous) cars</strong></p>
+<p>Self-driving cars use AI to process sensor data (cameras, lidar, radar) in real time. The AI system uses machine learning algorithms trained on millions of driving scenarios to:</p>
+<p>• Detect its position on the road and within surrounding traffic.</p>
+<p>• Identify other vehicles, pedestrians, road markings, and traffic signals.</p>
+<p>• Follow a planned route while performing collision avoidance, lane-keeping, and self-parking.</p>
+<p>The AI continuously updates its decisions based on new sensor input, allowing the car to operate without human intervention.</p>
+
+<p><em>(Other valid applications include: facial recognition for police identification; natural language interfaces / speech recognition systems; game-playing programs.)</em></p>
+</div>
+<ul class="marks">
+<li>One application identified (e.g. self-driving cars / facial recognition / speech recognition). [1]</li>
+<li>Relevant description point 1. [1]</li>
+<li>Relevant description point 2. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<section class="question">
+<h2>Question 9 — Networking (11 marks)</h2>
+
+<div class="part">
+<h3>9 (a) [4 marks]</h3>
+<div class="q-text">
+<p>Complete the table of network devices and their descriptions.</p>
+<div class="q-img"><img src="worked12/fig_9a.png" alt="Network devices table with missing devices and descriptions"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Working through each missing entry:</p>
+<p><strong>Missing device 1</strong> (receives and sends data between two networks on the same protocol): <strong>Router</strong>. A router operates at Layer 3 (network layer) and forwards packets between networks using IP addresses.</p>
+<p><strong>Wireless Network Interface Card (WNIC)</strong> — missing description: <em>Hardware component that allows a device to connect to a wireless network; provides the device with a MAC address to identify it on the network.</em></p>
+<p><strong>Missing device 2</strong> (restores the digital signal so it can be transmitted over greater distances): <strong>Repeater</strong>. A repeater amplifies/regenerates weakened signals to extend transmission range.</p>
+<p><strong>Wireless Access Point (WAP)</strong> — missing description: <em>Hardware component that provides radio communication from the central device (router/switch) to wireless nodes on the network.</em></p>
+</div>
+<ul class="marks">
+<li>Router [1]</li>
+<li>WNIC description: allows device to connect to wireless network / provides MAC address. [1]</li>
+<li>Repeater [1]</li>
+<li>WAP description: provides radio communication from central device to wireless nodes. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>9 (b) [3 marks]</h3>
+<div class="q-text"><p>Describe three differences between fibre-optic cables and copper cables.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>1. <strong>Transmission medium:</strong> Fibre-optic cables transmit data as pulses of <em>light</em>, whereas copper cables transmit data as <em>electrical signals</em>.</p>
+<p>2. <strong>Bandwidth / speed:</strong> Fibre-optic cables have significantly <em>higher bandwidth</em> and transmission rates than copper cables, supporting much faster data transfer (e.g. gigabits vs megabits per second for standard copper).</p>
+<p>3. <strong>Distance / attenuation:</strong> Fibre-optic cables can transmit data over <em>much longer distances</em> before needing a repeater, because light experiences less attenuation than electrical signals in copper. Copper cables are more susceptible to signal degradation over distance.</p>
+<p><em>(Other valid differences: fibre is less susceptible to electromagnetic interference/noise; fibre is harder to tap/intercept than copper; fibre is physically more fragile/brittle than copper.)</em></p>
+</div>
+<ul class="marks">
+<li>Fibre uses light; copper uses electrical signals. [1]</li>
+<li>Fibre has higher bandwidth / transmission rate than copper. [1]</li>
+<li>Fibre can be used over longer distances before repeaters are needed. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>9 (c) [4 marks]</h3>
+<div class="q-text"><p>Describe CSMA/CD (Carrier Sense Multiple Access / Collision Detection) as used in Ethernet.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>CSMA/CD is a protocol used in Ethernet bus networks to manage how multiple devices share the same transmission medium:</p>
+<p><strong>1. Carrier Sense (CS):</strong> Before transmitting, a workstation <em>listens</em> to the channel to check if it is idle (no signal present). If the channel is busy, the device waits.</p>
+<p><strong>2. Multiple Access (MA):</strong> Because more than one device shares the same physical medium, <em>any device</em> can attempt to transmit when it detects the channel is free.</p>
+<p><strong>3. Collision:</strong> If two workstations both detect a free channel at the same moment and transmit simultaneously, a <em>collision</em> occurs — the signals interfere with each other.</p>
+<p><strong>4. Collision Detection (CD):</strong> Both transmitting devices detect the collision. They immediately abort transmission and each send a <em>jamming signal</em> to alert all devices on the network.</p>
+<p><strong>5. Back-off:</strong> Each device waits a <em>random</em> amount of time (back-off period) before attempting to retransmit. The random wait reduces the chance of another collision.</p>
+</div>
+<ul class="marks">
+<li>Device listens to channel; data only sent when channel is free. [1]</li>
+<li>More than one computer connected to the same medium — two may transmit simultaneously causing a collision. [1]</li>
+<li>If a collision is detected, transmission is aborted / jamming signal sent. [1]</li>
+<li>Each device waits a random time before attempting to retransmit. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+</main>
+</body>
+</html>

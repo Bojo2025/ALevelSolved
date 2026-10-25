@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataArray = [] #15 strings</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim DataArray(14) As String</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataArray = [] #15 strings</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataArray = [] #15 strings</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end)</li>
+<li>Taking 15 strings as input</li>
+<li>… converting to lower case</li>
+<li>… storing in array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub CreateArray()
+                     For x = 0 To 14
+                         Console.WriteLine(&quot;Enter a word &quot;)
+                         DataArray(x) = Console.ReadLine().ToLower()
+                     Next
+                  End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CreateArray():
+                       for x in range(15):
+                           DataArray.append(input(&quot;Enter a word &quot;).lower())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end)</li><li>Taking 15 strings as input</li><li>… converting to lower case</li><li>… storing in array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) and outputting all data</li>
+<li>… on one line with a space between each element</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputArray()
+                      Dim StringOutput As String = &quot;&quot;
+                      For x = 0 To 14
+                          StringOutput = StringOutput + &quot; &quot; + DataArray(x)
+                      Next
+                      Console.WriteLine(StringOutput)
+                  End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputArray():
+                       StringOutput = &quot;&quot;
+                       for x in range(15):
+                           StringOutput = StringOutput + &quot; &quot; + DataArray[x]
+                       print(StringOutput)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) and outputting all data</li><li>… on one line with a space between each element</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling both procedures in the given order  1
+
+  Example program code
+  Python
+  CreateArray()
+  OutputArray()
+
+  VB.NET
+  CreateArray()
+  OutputArray()</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>CreateArray()
+                  OutputArray()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>CreateArray()
+                  OutputArray()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for showing the 15 inputs and all data output on the same line  1 Outputs must be
+  lowercase
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 9 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking string as input and converting to lower</li>
+<li>Looping through all elements in the array</li>
+<li>… comparing to input</li>
+<li>… counting number of times it occurs</li>
+<li>Outputting final count</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub FindWords()
+                        Console.WriteLine(&quot;Enter the word you want to find&quot;)
+                        Dim WordFind As String = Console.ReadLine().ToLower()
+                        Dim Counter As Integer = 0
+                        For x = 0 To 14
+                            If DataArray(x) = WordFind Then
+                                Counter = Counter + 1
+                            End If
+                        Next
+                        Console.WriteLine(&quot;It was found &quot; &amp; Counter &amp; &quot; times&quot;)
+                    End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def FindWords():
+                       WordFind = input(&quot;Enter the word you want to find &quot;).lower()
+                       Counter = 0
+                       for x in range(15):
+                           if(DataArray[x] == WordFind):
+                                Counter = Counter + 1
+                       print(&quot;It was found &quot;, Counter, &quot; times&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking string as input and converting to lower</li><li>Looping through all elements in the array</li><li>… comparing to input</li><li>… counting number of times it occurs</li><li>Outputting final count</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) and iterating through each element (first loop)</li>
+<li>Inner loop</li>
+<li>Stopping the loop when in order (any method)</li>
+<li>Comparing by length …</li>
+<li>… and swapping correctly</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SortLength()
+                      Dim Temp As String
+                      Dim Swap As Boolean = True
+                      Dim Count As Integer = 0
+                      While Count &lt; 15 And Swap = True
+                          Swap = False
+                          For y = 0 To 13
+                              If DataArray(y).Length &gt; DataArray(y + 1).Length Then
+                                  Temp = DataArray(y)
+                                  DataArray(y) = DataArray(y + 1)
+                                  DataArray(y + 1) = Temp
+                                  Swap = True
+                              End If
+                          Next
+                          Count = Count + 1
+                      End While
+                  End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 13 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SortLength():
+                       Swap = True
+                       Count = 0
+
+                                 while(Count &lt; 14 and Swap):
+                                     Swap = False
+                                     for y in range(14):
+                                         if(len(DataArray[y]) &gt; len(DataArray[y+1])):
+                                             DataArray[y], DataArray[y+1] = DataArray[y+1], DataArray[y]
+                                             Swap = True
+                                     Count = Count + 1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) and iterating through each element (first loop)</li><li>Inner loop</li><li>Stopping the loop when in order (any method)</li><li>Comparing by length …</li><li>… and swapping correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling the 3 procedures in order  1
+
+  Example program code
+  Python
+  FindWords()
+  SortLength()
+  OutputArray()
+
+  VB.NET
+  FindWords()
+  SortLength()
+  OutputArray()</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>FindWords()
+                  SortLength()
+                  OutputArray()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FindWords()
+                  SortLength()
+                  OutputArray()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing inputs and outputs  1 Ignore output of
+  array content in
+  order first.
+
+  Allow ordering if
+  correct for the
+  data but not
+  matching
+  screenshot.
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 15 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end)</li>
+<li>Five attributes with the correct data types</li>
+<li>Constructor header (and end) taking five parameters</li>
+<li>Assigning parameters to each attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Character
+                       Dim CharacterName As String
+                       Dim Colour As String
+                       Dim SuperStrength As String
+                       Dim Fly As String
+                       Dim Invisible As String
+
+                                     Public Sub New(pCharacterName, pColour, pSuperStrength, pFly, pInvisible)
+                                         CharacterName = pCharacterName
+                                         Colour = pColour
+                                         SuperStrength = pSuperStrength
+                                         Fly = pFly
+                                         Invisible = pInvisible
+                                     End Sub
+
+                  End Class
+
+                University Press &amp; Assessment 2026                                                                       Page 16 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Character():
+                       def __init__(self, pCharacterName, pColour, pSuperStrength, pFly, pInvisible):
+                           self.__CharacterName = pCharacterName
+                           self.__Colour = pColour
+                           self.__SuperStrength = pSuperStrength
+                           self.__Fly = pFly
+                           self.__Invisible = pInvisible</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end)</li><li>Five attributes with the correct data types</li><li>Constructor header (and end) taking five parameters</li><li>Assigning parameters to each attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method header (and end) with no parameter</li>
+<li>… returning correct attribute</li>
+<li>Remaining 4 get methods correct</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Function GetCharacterName()
+                      Return CharacterName
+                  End Function
+                  Public Function GetColour()
+                      Return Colour
+                  End Function
+                  Public Function GetSuperStrength()
+                      Return SuperStrength
+                  End Function
+                  Public Function GetFly()
+                      Return Fly
+                  End Function
+                  Public Function GetInvisible()
+                      Return Invisible
+                  End Function
+
+                University Press &amp; Assessment 2026                                                                       Page 18 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetCharacterName(self):
+                           return self.__CharacterName
+                       def GetColour(self):
+                           return self.__Colour
+                       def GetSuperStrength(self):
+                           return self.__SuperStrength
+                       def GetFly(self):
+                           return self.__Fly
+                       def GetInvisible(self):
+                           return self.__Invisible</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method header (and end) with no parameter</li><li>… returning correct attribute</li><li>Remaining 4 get methods correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ReadData() header (and end) returning populated array</li>
+<li>Opening file to read and closing file in appropriate place</li>
+<li>Exception handling for file handling including appropriate output</li>
+<li>Looping through each line in file and reading data…</li>
+<li>… (stripping and) splitting file correctly (as appropriate)</li>
+<li>Creating new instance of Character with correct values …</li>
+<li>… storing in array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Function ReadData()
+                      Dim AllCharacters(14) As Character
+                      Dim Line(4) As String
+                      Dim Count As Integer = 0
+
+                                 Try
+                                                Dim FileReader As New System.IO.StreamReader(&quot;Characters.txt&quot;)
+                                                While Not FileReader.EndOfStream
+
+                                                               Line = (FileReader.ReadLine()).Split(&quot;,&quot;)
+                                                               AllCharacters(Count) = New Character(Line(0), Line(1), Line(2), Line(3), Line(4))
+
+                                                    Count = Count + 1
+                                                End While
+                                                FileReader.Close()
+
+                      Catch ex As Exception
+                          Console.WriteLine(&quot;Cannot open or read from file&quot;)
+                      End Try
+                      Return AllCharacters
+                  End Function
+
+                University Press &amp; Assessment 2026                                                                       Page 21 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                       AllCharacters = []
+                       try:
+                           with open(&quot;Characters.txt&quot;) as TheFile:
+                                for Line in TheFile:
+                                     Line = Line.strip()
+                                     Line = Line.split(&quot;,&quot;)
+                                     AllCharacters.append(Character(Line[0],Line[1],Line[2],Line[3],Line[4]))
+                       except:
+                           print(&quot;Cannot open file&quot;)
+                       return AllCharacters</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ReadData() header (and end) returning populated array</li><li>Opening file to read and closing file in appropriate place</li><li>Exception handling for file handling including appropriate output</li><li>Looping through each line in file and reading data…</li><li>… (stripping and) splitting file correctly (as appropriate)</li><li>Creating new instance of Character with correct values …</li><li>… storing in array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking array parameter and outputting character data using get</li>
+<li>Looping through all characters and outputting data on same line …</li>
+<li>… in correct format</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Sub OutputCharacters(CharacterArray() As Character)
+                      Dim Count As Integer = 0
+
+                      While (Not (CharacterArray(Count) Is Nothing))
+                          Console.WriteLine(&quot;Name: &quot; &amp; CharacterArray(Count).GetCharacterName() &amp; &quot; Colour: &quot; &amp;
+                  CharacterArray(Count).GetColour() &amp; &quot; Super strength: &quot; &amp; CharacterArray(Count).GetSuperStrength() &amp; &quot; Fly:
+                  &quot; &amp; CharacterArray(Count).GetFly() &amp; &quot; Invisible: &quot; &amp; CharacterArray(Count).GetInvisible())
+                          Count = Count + 1
+                      End While
+
+                  End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputCharacters(CharacterArray):
+                       for Item in CharacterArray:
+                           print(&quot;Name: &quot;, Item.GetCharacterName(), &quot; Colour: &quot;, Item.GetColour(), &quot; Super Strength: &quot;,
+                  Item.GetSuperStrength(), &quot; Fly: &quot;, Item.GetFly(), &quot; Invisible: &quot;, Item.GetInvisible())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking array parameter and outputting character data using get</li><li>Looping through all characters and outputting data on same line …</li><li>… in correct format</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() and storing returned array</li>
+<li>Calling OutputCharacters() with returned array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim CharacterOptions(19) As Character
+                  CharacterOptions = ReadData()
+                  OutputCharacters(CharacterOptions)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>CharacterOptions = ReadData()
+                  OutputCharacters(CharacterOptions)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() and storing returned array</li><li>Calling OutputCharacters() with returned array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing all characters output (in correct format)  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 25 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Prompt and input for two criteria …</li>
+<li>… taking input as two separate inputs // each in one input and splitting appropriately</li>
+<li>Looping through each character and comparing attribute to one choice…</li>
+<li>… repeating for a second choice … (could be AND in if statement)</li>
+<li>… storing matching characters in new array // removing characters from the list // other</li>
+<li>Counting and outputting the number of characters</li>
+<li>Calling OutputCharacters() with updated array</li>
+<li>Using get methods correctly throughout</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;You can use 2 choices to limit the characters available&quot;)
+                  Dim TheOption As String
+                  Dim Choice As String
+                  Dim Count As Integer
+                  Dim TempCount As Integer
+
+                University Press &amp; Assessment 2026                                                                       Page 28 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                  For x = 1 To 2
+                      Dim TempArray(20) As Character
+                      TempCount = 0
+
+                                 Console.WriteLine(&quot;Choice &quot; &amp; x)
+                                 Console.WriteLine(&quot;Enter 1 to select a colour, 2 for strength, 3 for fly and 4 for invisibility &quot;)
+                                 TheOption = Console.ReadLine()
+
+                                 If TheOption = &quot;1&quot; Then
+                                     Console.WriteLine(&quot;Which colour would you like to select a character &quot;)
+                                     Choice = Console.ReadLine()
+                                     Count = 0
+
+                                                While (Not (CharacterOptions(Count) Is Nothing))
+                                                    If (CharacterOptions(Count).GetColour() = Choice) Then
+                                                        TempArray(TempCount) = CharacterOptions(Count)
+                                                        TempCount = TempCount + 1
+                                                    End If
+                                                    Count = Count + 1
+                                                End While
+                                                CharacterOptions = TempArray
+
+                      ElseIf TheOption = &quot;2&quot; Then
+                          Console.WriteLine(&quot;Enter 1 to select characters with super strength, anything else for those
+                  without select super strength &quot;)
+                          Choice = Console.ReadLine()
+                          Count = 0
+                          If Choice = &quot;1&quot; Then
+                              Choice = &quot;Yes&quot;
+                          Else
+                              Choice = &quot;No&quot;
+                          End If
+
+                University Press &amp; Assessment 2026                                                                       Page 29 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                                                While (Not (CharacterOptions(Count) Is Nothing))
+                                                    If (CharacterOptions(Count).GetSuperStrength() = Choice) Then
+                                                        TempArray(TempCount) = CharacterOptions(Count)
+                                                        TempCount = TempCount + 1
+                                                    End If
+                                                    Count = Count + 1
+                                                End While
+                                                CharacterOptions = TempArray
+
+                                 ElseIf TheOption = &quot;3&quot; Then
+                                     Console.WriteLine(&quot;Enter 1 to select characters that fly, anything else for those that cannot fly
+                  &quot;)
+                                                Choice = Console.ReadLine()
+                                                Count = 0
+                                                If Choice = &quot;1&quot; Then
+                                                    Choice = &quot;Yes&quot;
+                                                Else
+                                                    Choice = &quot;No&quot;
+                                                End If
+                                                While (Not (CharacterOptions(Count) Is Nothing))
+                                                    If (CharacterOptions(Count).GetFly() = Choice) Then
+                                                        TempArray(TempCount) = CharacterOptions(Count)
+                                                        TempCount = TempCount + 1
+                                                    End If
+                                                    Count = Count + 1
+                                                End While
+                                                CharacterOptions = TempArray
+
+                      Else
+                          Console.WriteLine(&quot;Enter 1 to select characters with invisibility, anything else for those without
+                  invisibility &quot;)
+                          Choice = Console.ReadLine()
+                          Count = 0
+
+                University Press &amp; Assessment 2026                                                                       Page 30 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                                     If Choice = &quot;1&quot; Then
+                                         Choice = &quot;Yes&quot;
+                                     Else
+                                         Choice = &quot;No&quot;
+                                     End If
+                                     While (Not (CharacterOptions(Count) Is Nothing))
+                                         If (CharacterOptions(Count).GetInvisible() = Choice) Then
+                                             TempArray(TempCount) = CharacterOptions(Count)
+                                             TempCount = TempCount + 1
+                                         End If
+                                         Count = Count + 1
+                                     End While
+                                     CharacterOptions = TempArray
+                                 End If
+
+                  Next
+                  Console.WriteLine(&quot;There are &quot; &amp; TempCount &amp; &quot; characters&quot;)
+                  OutputCharacters(CharacterOptions)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(&quot;You can use 2 choices to limit the characters available&quot;)
+                  for x in range(2):
+                       TempArray = []
+                       print(&quot;Choice &quot;, x+1)
+                       TheOption = int(input(&quot;Enter 1 to select a colour, 2 for strength, 3 for fly and 4 for invisibility &quot;))
+
+                                 if(TheOption == 1):
+                                     Choice = input(&quot;Which colour would you like to select a character &quot;)
+                                     for Item in CharacterOptions:
+                                         if Item.GetColour() == Choice:
+                                             TempArray.append(Item)
+                                     CharacterOptions = TempArray
+
+                      elif TheOption == 2:
+                          Choice = input(&quot;Enter 1 to select characters with super strength, anything else for those without
+                  select super strength &quot;)
+                          if Choice == &quot;1&quot;:
+                              Choice = &quot;Yes&quot;
+                          else:
+                              Choice = &quot;No&quot;
+                          for Item in CharacterOptions:
+                              if Item.GetSuperStrength() == Choice:
+                                  TempArray.append(Item)
+                          CharacterOptions = TempArray
+
+                                 elif TheOption == 3:
+                                     Choice = input(&quot;Enter 1 to select characters that fly, anything else for those that cannot fly &quot;)
+                                     if Choice == &quot;1&quot;:
+                                         Choice = &quot;Yes&quot;
+
+                University Press &amp; Assessment 2026                                                                       Page 27 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                                                else:
+                                                    Choice = &quot;No&quot;
+                                                for Item in CharacterOptions:
+
+                                                               if Item.GetFly() == Choice:
+
+                                                        TempArray.append(Item)
+                                                CharacterOptions = TempArray
+
+                      else:
+                          Choice = int(input(&quot;Enter 1 to select characters with invisibility, anything else for those without
+                  invisibility &quot;))
+                          if Choice == &quot;1&quot;:
+                              Choice = &quot;Yes&quot;
+                          else:
+                              Choice = &quot;No&quot;
+                          for Item in CharacterOptions:
+                              if Item.GetInvisible() == Choice:
+                                  TempArray.append(Item)
+                          CharacterOptions = TempArray
+
+                  NumberCharacters = len(CharacterOptions)
+                  print(&quot;There are&quot;, NumberCharacters, &quot;characters that match your choice&quot;)
+                  OutputCharacters(CharacterOptions)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Prompt and input for two criteria …</li><li>… taking input as two separate inputs // each in one input and splitting appropriately</li><li>Looping through each character and comparing attribute to one choice…</li><li>… repeating for a second choice … (could be AND in if statement)</li><li>… storing matching characters in new array // removing characters from the list // other</li><li>Counting and outputting the number of characters</li><li>Calling OutputCharacters() with updated array</li><li>Using get methods correctly throughout</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing correct inputs and outputs  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 34 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Global array with space for 100  3 elements …</li>
+<li>… all initialised to –1</li>
+<li>TreeRootPointer to –1 and FirstFreeNodePointer initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim BinaryTree(100, 3) As Integer
+                   Dim FirstFreeNodePointer As Integer
+                   Dim TreeRootPointer As Integer
+                  Sub Main()
+                          For x = 0 To 99
+                              BinaryTree(x, 0) = -1
+                              BinaryTree(x, 1) = -1
+                              BinaryTree(x, 2) = -1
+                          Next
+                          TreeRootPointer = -1
+                          FirstFreeNodePointer = 0
+                  End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(100):
+                       BinaryTree.append([-1,-1,-1])
+                  TreeRootPointer = -1
+                  FirstFreeNodePointer = 0</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Global array with space for 100  3 elements …</li><li>… all initialised to –1</li><li>TreeRootPointer to –1 and FirstFreeNodePointer initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) take integer parameter and incrementing FirstFreeNodePointer</li>
+<li>Checking if tree is empty, storing in first element and updating root pointer</li>
+<li>Checking if the tree is full and outputting message</li>
+<li>(if not full) stores the data in FirstFreeNodePointer with parameter (and pointers –1)</li>
+<li>Comparing to root pointer …</li>
+<li>… repeating with left pointer if less than</li>
+<li>… repeating with right pointer if greater than</li>
+<li>… repeating until leaf node found …</li>
+<li>… updating correct parent node pointer to new node</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub AddNode(NodeData)
+                       If FirstFreeNodePointer &lt;= 99 Then
+                           BinaryTree(FirstFreeNodePointer, 0) = -1
+                           BinaryTree(FirstFreeNodePointer, 1) = NodeData
+                           BinaryTree(FirstFreeNodePointer, 2) = -1
+
+                                                    If (TreeRootPointer = -1) Then
+                                                        TreeRootPointer = 0
+                                                    Else
+                                                        Dim Placed As Boolean = False
+                                                        Dim CurrentNode As Integer = TreeRootPointer
+
+                               While (Placed = False)
+                                   If (NodeData &lt; BinaryTree(CurrentNode, 1)) Then
+                                       If (BinaryTree(CurrentNode, 0) = -1) Then
+                                           BinaryTree(CurrentNode, 0) = FirstFreeNodePointer
+                                           Placed = True
+                                       Else
+                                           CurrentNode = BinaryTree(CurrentNode, 0)
+                                       End If
+                                   Else
+                                       If (BinaryTree(CurrentNode, 2) = -1) Then
+                                           BinaryTree(CurrentNode, 2) = FirstFreeNodePointer
+                                           Placed = True
+                                       Else
+                                           CurrentNode = BinaryTree(CurrentNode, 2)
+                                       End If
+                                   End If
+                               End While
+                           End If
+                           FirstFreeNodePointer = FirstFreeNodePointer + 1
+                       Else
+                           Console.WriteLine(&quot;The tree is full&quot;)
+                       End If
+                  End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 38 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def AddNode(NodeData):
+                       global FirstFreeNodePointer
+                       global TreeRootPointer
+                       if FirstFreeNodePointer &lt;= 99:
+
+                                                BinaryTree[FirstFreeNodePointer][0] = -1
+                                                BinaryTree[FirstFreeNodePointer][1] = NodeData
+                                                BinaryTree[FirstFreeNodePointer][2] = -1
+
+                                                if TreeRootPointer == -1:
+                                                    TreeRootPointer = 0
+                                                else:
+                                                    Placed = False
+                                                    CurrentNode = TreeRootPointer
+                                                    while Placed == False:
+
+                                             if NodeData &lt; BinaryTree[CurrentNode][1]:
+                                                 if BinaryTree[CurrentNode][0] == -1:
+                                                     BinaryTree[CurrentNode][0] = FirstFreeNodePointer
+                                                     Placed = True
+                                                 else:
+                                                     CurrentNode = BinaryTree[CurrentNode][0]
+                                             else:
+                                                 if BinaryTree[CurrentNode][2] == -1:
+                                                     BinaryTree[CurrentNode][2] = FirstFreeNodePointer
+                                                     Placed = True
+                                                 else:
+                                                     CurrentNode = BinaryTree[CurrentNode][2]
+                                     FirstFreeNodePointer = FirstFreeNodePointer + 1
+                                 else:
+                                     print(&quot;The tree is full&quot;)
+
+                University Press &amp; Assessment 2026                                                                       Page 37 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/43                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) take integer parameter and incrementing FirstFreeNodePointer</li><li>Checking if tree is empty, storing in first element and updating root pointer</li><li>Checking if the tree is full and outputting message</li><li>(if not full) stores the data in FirstFreeNodePointer with parameter (and pointers –1)</li><li>Comparing to root pointer …</li><li>… repeating with left pointer if less than</li><li>… repeating with right pointer if greater than</li><li>… repeating until leaf node found …</li><li>… updating correct parent node pointer to new node</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) looping 10 times</li>
+<li>Outputting array data in correct format</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputArray()
+                           For x = 0 To 9
+                               Console.WriteLine(BinaryTree(x, 0) &amp; &quot;    &quot; &amp; BinaryTree(x, 1) &amp; &quot;    &quot; &amp; BinaryTree(x, 2))
+                           Next
+                       End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputArray():
+                       for x in range(10):
+                           print(BinaryTree[x][0], &quot;                                                                &quot;, BinaryTree[x][1], &quot;               &quot;, BinaryTree[x][2])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) looping 10 times</li><li>Outputting array data in correct format</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking 10 numbers as input …</li>
+<li>… calling AddNode() with each value</li>
+<li>Calling OutputArray()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>For x = 0 To 9
+                                                    Console.WriteLine(&quot;Enter a number&quot;)
+                                                    AddNode(Console.ReadLine())
+                                                Next
+                                                OutputArray()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(10):
+                       AddNode(int(input(&quot;Enter a number &quot;)))
+                  OutputArray()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking 10 numbers as input …</li><li>… calling AddNode() with each value</li><li>Calling OutputArray()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot show array contents  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 42 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Recursive procedure InOrder() header and end with parameter</li>
+<li>Checking if left pointer is null …</li>
+<li>… if not, recursive call with left pointer</li>
+<li>Outputting data at parameter</li>
+<li>Checking if right pointer is null …</li>
+<li>… if not, recursive call with right pointer</li>
+<li>Correct order</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub InOrder(TheRoot)
+                                     If (BinaryTree(TheRoot, 0) &lt;&gt; -1) Then
+                                         InOrder(BinaryTree(TheRoot, 0))
+                                     End If
+                                     Console.WriteLine(BinaryTree(TheRoot, 1))
+                                     If (BinaryTree(TheRoot, 2) &lt;&gt; -1) Then
+                                         InOrder(BinaryTree(TheRoot, 2))
+                                     End If
+                                 End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InOrder(TheRoot):
+                       if(BinaryTree[TheRoot][0] != -1):
+                           InOrder(BinaryTree[TheRoot][0])
+                       print(BinaryTree[TheRoot][1])
+                       if(BinaryTree[TheRoot][2] != -1):
+                           InOrder(BinaryTree[TheRoot][2])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Recursive procedure InOrder() header and end with parameter</li><li>Checking if left pointer is null …</li><li>… if not, recursive call with left pointer</li><li>Outputting data at parameter</li><li>Checking if right pointer is null …</li><li>… if not, recursive call with right pointer</li><li>Correct order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling InOrder() with root pointer  1
+
+  Example program code
+  Python
+  InOrder(TreeRootPointer)
+
+  VB.NET
+  InOrder(TreeRootPointer)</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>InOrder(TreeRootPointer)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>InOrder(TreeRootPointer)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing data input and output in correct order  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 46 of 46
+
+Trace ID: PC-BEC0C4D104
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/43 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/43 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

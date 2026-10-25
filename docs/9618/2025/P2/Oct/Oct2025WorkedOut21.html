@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/21 · October/November 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/21 · October/November 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked21/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Expression
+
+  MyString  &#x27;X&#x27; &amp; MyString
+
+  MyChar  MID (&quot;ABCD&quot;, 1 / 2 / 3 / 4 , 1)
+
+  MyString  NUM_TO_STR (DAY / MONTH / YEAR / DAYINDEX
+  (MyDOB))
+
+  MyInt  INT(LENGTH(MyString) / 2)
+
+  One mark per row</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<div class='ms-raw'>3
+  Test description  Test method
+
+  carried out as soon as a program module has been  alpha
+  coded
+
+  carried out as program modules are being  integration
+  combined
+
+  completed by the developers without referring to  black-box
+  the code
+
+  completed by the customer  acceptance / beta
+
+  One mark per row (2 to 4)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Initialisation of variables used as array index and count</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for TYPE RentalRecord and ENDTYPE statements</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Different data types held (for each rental) under a single identifier</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare local variables Index as integer, ThisNum and LastNum as real</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare local variables Index as integer, ThisNum and LastNum as real</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The amount of values stored (in a text file) is not fixed / not limited
+  (other than by secondary storage available) //
+  The amount values stored is not limited to the size of the array</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function heading, parameters return type and ending</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function heading, parameters return type and ending</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] | X1 added on line from S1 to state labelled S2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] | X1 added on line from S1 to state labelled S2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Store date due back as a new data item / in the loan record</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked21/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution  5
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Loop through exactly 30 elements in the array</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for RentalID and CarID declared correctly</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Allows for iteration through rentals/records //
+  Can access rentals/records in a loop //
+  Can (directly) access a specific rental/record using an (array) index</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The data is stored permanently / non-volatile //
+  Data can be restored / reused without re-entering values</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Store date of loan and the loan length category as new data items / in the
+  loan record
+  Max 1
+
+  New Record</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correct explanation of both e.g. to stop program execution at specific
+  point / line / statement / instruction and to execute one line / statement /
+  instruction at a time to (locate an/the error)
+
+  One mark for each bulleted point
+
+ University Press &amp; Assessment 2025  Page 6 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Test for empty string in current array element // Test for non-empty string</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Pseudocode:  4
+
+  TYPE RentalRecord
+  DECLARE RentalID : STRING
+  DECLARE CarID : INTEGER
+  DECLARE DisCode : CHAR
+  DECLARE Start : DATE
+  DECLARE Duration : INTEGER
+  DECLARE Completed : BOOLEAN
+  ENDTYPE
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for DisCode and Start declared correctly</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE Rental : ARRAY[1:500] OF RentalRecord  2
+
+  One mark per underlined phrase</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Simplifies the code/program / less code needed / reduces code
+  duplication // Makes code/program easier to understand //
+  Makes testing / debugging easier //
+  Program maintenance easier
+
+ University Press &amp; Assessment 2025  Page 9 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Attempt at conditional loop including both tests</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Convert Number to a string and loop for length of converted Number</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A4] Obtain/use: Line from S2 to S5 with event label</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A4] Obtain/use: Line from S2 to S5 with event label</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Attempt to reference an individual data item in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>New Records with Category (and Loan length field)
+
+  Change to Program:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked21/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Increment count if appropriate in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for Duration and Completed declared correctly</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution - conditional:  6
+
+  PROCEDURE Store()
+  DECLARE ThisNum, LastNum : REAL
+  DECLARE Index : INTEGER // index to global array
+
+  INPUT ThisNum
+  LastNum  ThisNum
+  Number[1]  ThisNum
+
+  INPUT ThisNum
+  Index  2
+
+  WHILE Index &lt; 21 AND ThisNum &gt; LastNum
+  Number[Index]  ThisNum
+  LastNum  ThisNum
+  Index  Index + 1
+  IF Index &lt; 21 THEN
+  INPUT ThisNum
+  ENDIF
+  ENDWHILE
+
+  OUTPUT Index - 1, &quot; values were stored in the array&quot;
+  ENDPROCEDURE
+
+  Alternative loop:
+  // Loop without using LastNum
+  WHILE Index &lt; 21 AND ThisNumNum &gt; Number[Index - 1]
+  Number[Index]  ThisNum
+  Index  Index + 1
+  IF Index &lt; 21 THEN  //skip input if array full
+  INPUT ThisNum
+  ENDIF
+  ENDWHILE
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Completely correct conditional loop including both tests</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Alternative FOR loop example solution:
+
+  PROCEDURE Store()
+  DECLARE ThisNum, LastNum : REAL
+  DECLARE Index : INTEGER // index to global array
+  DECLARE Count : INTEGER
+  INPUT ThisNum
+  LastNum  ThisNum
+  Number[1]  ThisNum
+  Count  1
+  INPUT ThisNum
+  FOR Index  2 TO 20
+  IF ThisNum &gt; LastNum THEN
+  Number[Index]  ThisNum
+  LastNum  ThisNum
+  Count  Count + 1
+  IF Index &lt; 20 THEN
+  INPUT ThisNum
+  ENDIF
+  ELSE
+  BREAK
+  ENDIF
+  NEXT Index
+  OUTPUT Count, &quot; values were stored in the array&quot;
+  ENDPROCEDURE
+
+  Alternative loop:
+  Count  1
+  INPUT ThisNum
+  FOR Index  2 TO 20
+  IF ThisNum &gt; Number[Index - 1] THEN
+  Number[Index]  ThisNum
+  Count  Count + 1
+  IF Index &lt; 20 THEN
+  INPUT ThisNum
+  ENDIF
+  ELSE
+  BREAK
+  ENDIF
+  NEXT Index
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Count-controlled loop with BREAK if current value greater than previous
+  value</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Each (real) value would have to be converted to a string  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>attempt to use MOD and DIV to sum successive digits in Number</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>Lines from S3 with correct event labels including &#x27;loop&#x27; label</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Lines from S3 with correct event labels including &#x27;loop&#x27; label</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Return value from Modify and parameter to Final</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Test for correct StudentID field in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correct test for StudentID and correct BookID in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>(Use the loan length category of a book to) calculate the date due date</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked21/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Assign input value to current element if greater than previous element
+  and input next value in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>... Assign input value to current element following correct comparison
+  in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>It is a value that is invalid as an (array) index // not in the range of valid  1
+  (index) values</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>To test whether the current element / value at index matches the given /  1
+  search string / data / parameter</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The value of FoundAt is only updated to the (current) index if it currently  1
+  stores the initial value / -1
+  //
+  FoundAt is not updated when it currently stores any other value than -1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The loop continues after the (first instance) of the search value / string /  1
+  matching element has been found
+
+  Comparisons/tests continue to be made even if the search value / string /
+  matching element has been found</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point  2
+
+  Construct:  A conditional loop
+
+  Justification:  The loop / search can be terminated as soon as the (first
+  occurrence of) SearchString / required value / required
+  string / matching element is found</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>completely correct sum of digits in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <ol>
+<li>... and that OnLoan = TRUE in a loop</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>... and that OnLoan = TRUE in a loop</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>… If book not returned yet, then set OnLoan field to FALSE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Compare due date with today’s date (to check if overdue / to calculate
+  fine)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked21/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Final output giving count of elements stored plus message following a
+  reasonable attempt after loop
+
+ University Press &amp; Assessment 2025  Page 11 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Number:  Any number where the first two digits sum to 5 / 15 and the  2
+  last three digits are 623
+
+  Explanation:  The remainder is the same / 3 //
+  The sum of the (first four) digits is the same / 13
+
+ University Press &amp; Assessment 2025  Page 12 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution – conversion of Number to a string  7
+
+  FUNCTION Generate(Number : INTEGER) RETURNS INTEGER
+  DECLARE Total, Index, CheckDigit : INTEGER
+  DECLARE NumString : STRING
+
+  Total  0
+  NumString  NUM_TO_STR(Number)
+
+  FOR Index  1 TO LENGTH(NumString)
+  Total  Total + STR_TO_NUM(MID(NumString, Index,
+  1))
+  NEXT Index
+
+  CheckDigit  Total MOD 10
+
+  Number  Number * 10 + CheckDigit
+  // NumString  Numstring &amp; NUM_TO_STR(CheckDigit)
+  RETURN Number // STR_TO_NUM(NumString)
+
+  ENDFUNCTION
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example Solution – no conversion to string
+
+  FUNCTION Generate(Number : INTEGER) RETURNS INTEGER
+  DECLARE Total, CheckDigit, Remainder, Num: INTEGER
+
+  Num  Number
+  Total  0
+  WHILE Num &gt; 0
+  Remainder  Num MOD 10
+  Num  Num DIV 10
+  Total  Total + Remainder
+  ENDWHILE
+
+  CheckDigit  Total MOD 10
+
+  Number  Number * 10 + CheckDigit
+
+  RETURN Number
+
+  ENDFUNCTION
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>RETURN TRUE if book loan Found and not already returned</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Map loan length category to length of loan / date due back
+  Max 1
+
+  Max 2 marks
+
+ University Press &amp; Assessment 2025  Page 19 of 19</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked21/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Add CheckDigit to original number multiplied by 10 and return number
+  //
+  Convert CheckDigit to a character and appended to NumString and
+  then convert to a number and return
+
+ University Press &amp; Assessment 2025  Page 13 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+
+  One mark for each:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+
+  One mark per point:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>RETURN FALSE if book loan Found and loan already returned</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked21/page-14.jpg" alt="Paper page 14 for Q8"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Max = 5</li>
+<li>WHILE Index &lt;= 5000 / Index &lt;= 4999 AND Count &lt; Max</li>
+<li>IF Loan[Index].StudentID = ThisStudentID AND __</li>
+<li>Loan[Index].OnLoan =</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Max = 5</li><li>WHILE Index &lt;= 5000 / Index &lt;= 4999 AND Count &lt; Max</li><li>IF Loan[Index].StudentID = ThisStudentID AND __</li><li>Loan[Index].OnLoan =</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Loan[Index].StudentID = ThisStudentID AND __</li>
+<li>Loan[Index].BookID = ThisBookID THEN</li>
+<li>IF Loan[Index].OnLoan = TRUE THEN // Not</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Loan[Index].StudentID = ThisStudentID AND __</li><li>Loan[Index].BookID = ThisBookID THEN</li><li>IF Loan[Index].OnLoan = TRUE THEN // Not</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>RETURN FALSE if book loan not found
+
+  Alterantive example solution – not immediate return
+
+  FUNCTION ReturnBook(ThisStudentID, ThisBookID : STRING)
+  RETURNS BOOLEAN
+  DECLARE Index : INTEGER
+  DECLARE Found, OK : BOOLEAN
+
+  Index  1
+  Found  FALSE
+  OK  TRUE
+
+ University Press &amp; Assessment 2025  Page 18 of 19
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Loan[Index].StudentID = ThisStudentID AND __</li>
+<li>Loan[Index].BookID = ThisBookID THEN</li>
+<li>IF Loan[Index].OnLoan = FALSE THEN // Already</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Loan[Index].StudentID = ThisStudentID AND __</li><li>Loan[Index].BookID = ThisBookID THEN</li><li>IF Loan[Index].OnLoan = FALSE THEN // Already</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Award marks for reference to following design features:  2
+
+  Change to existing Record:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/22 · May/June 2021 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/22 · May/June 2021 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked22/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Variable  Example data value  Data type
+
+  Name  &quot;Catherine&quot;  STRING
+
+  Index  100  INTEGER
+
+  Modified  FALSE  BOOLEAN
+
+  Holiday  25/12/2020  DATE
+
+  One mark per data type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Expression  Evaluates to
+
+  Modified OR Index &gt; 100  FALSE
+
+  LENGTH(&quot;Student: &quot; &amp; Name)  18
+
+  INT(Index + 2.9)  102
+
+  MID(Name, 1, 3)  &quot;Cat&quot;
+
+  One mark per value
+  Quotation marks must be present for final row and must be capital C</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<ol>
+<li>IF Modified = TRUE THEN                    </li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Modified = TRUE THEN                    </li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Reference variables for Count of students and Total marks</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Initialise the array to a rogue value (to indicate &#x27;unassigned&#x27; element)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Procedure heading (with parameter) and ending</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare NewString and initialise to empty string</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked22/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<ol>
+<li>The final or halting state                                             S3</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The final or halting state                                             S3</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Current state: S2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Current state: S2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>User ID / Username</li>
+<li>Book ID</li>
+<li>Date of loan / return date</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>User ID / Username</li><li>Book ID</li><li>Date of loan / return date</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Users name / address / phone number / DOB</li>
+<li>Book title / author / publisher / library rack number / ISBN number /</li>
+<li>Date of loan / return date (if not already given in part (i))</li>
+<li>The length of the loan (assumed to be the same for all books)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Users name / address / phone number / DOB</li><li>Book title / author / publisher / library rack number / ISBN number /</li><li>Date of loan / return date (if not already given in part (i))</li><li>The length of the loan (assumed to be the same for all books)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Create loan / borrow book</li>
+<li>Return book</li>
+<li>Send letter / email / contact a user ref an overdue book</li>
+<li>View the loan history for a given book</li>
+<li>View the loan history for a given user</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Create loan / borrow book</li><li>Return book</li><li>Send letter / email / contact a user ref an overdue book</li><li>View the loan history for a given book</li><li>View the loan history for a given user</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare local variable for Index as loop counter but not CharCount
+  array</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Conditional loop to pick out all words from FNString</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked22/page-05.jpg" alt="Paper page 5 for Q3"><div class="cap">Original paper page 5</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Linked list  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Start pointer  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each:  2
+
+  Name: Null pointer
+
+  Meaning: There are no further nodes in the list
+
+ 2021  Page 4 of 10
+
+9618/22  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 2</p>
+<ol>
+<li>Start Pointer pointing to ‘Cat’ node</li>
+<li>Remaining arrows: Cat → Dolphin → Elk → Fish</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Start Pointer pointing to ‘Cat’ node</li><li>Remaining arrows: Cat → Dolphin → Elk → Fish</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Array element index &#x27;syntax&#x27; (left-hand side of assignment
+  expression) in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Generate and store a random number (in the correct range)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Initialise elements of CharCount array to zero</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Compare array element with parameter in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked22/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Marks awarded for a description of each of the following steps of the  6
+  algorithm:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Compare mark with threshold / boundary values to determine grade
+  (in loop)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Use of RAND() to generate value in range (and assign to array
+  element) in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check the stored number against values already in the array</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Loop through all characters in ThisString</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Set a flag (or similar) if match found (after reasonable attempt at
+  MP3) in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked22/page-07.jpg" alt="Paper page 7 for Q5"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output the grade for a student (in loop)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF RNum[Index] &gt;= 66 AND RNum[Index] &lt;= 173 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF RNum[Index] &gt;= 66 AND RNum[Index] &lt;= 173 THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check if random number within range and if so, increment count in
+  a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per bullet / sub-bullet point  3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If the stored number is found then generate another random value</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Answer
+
+  Give a line number containing an example of an  07
+  initialisation statement.
+
+  Give a line number containing the start of a repeating  09 / 10
+  block of code.
+
+  Give a line number containing a logic statement.  12
+
+  Give the number of parameters of function MID().  3
+
+  One mark for each row</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF (NextChar &gt;= &#x27;a&#x27;) AND (NextChar &lt;= &#x27;z&#x27;) THEN                                        2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF (NextChar &gt;= &#x27;a&#x27;) AND (NextChar &lt;= &#x27;z&#x27;) THEN                                        2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Use of MID() to extract single character</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Assign result of GetWord()to a variable in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked22/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Maintain a Total (and Count if required) (in loop)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output of count (following a reasonable attempt) after the loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Otherwise add it to the array (and exit loop)
+
+  Note: Max 3 marks</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>PROCEDURE CountVowels(ThisString : STRING)  8
+
+  DECLARE Index : INTEGER
+  DECLARE ThisChar : CHAR
+
+  FOR Index ← 1 to 6
+  CharCount[Index] ← 0 //initialise elements
+  NEXT Index
+  Index ← 1
+
+  FOR Index ← 1 TO LENGTH(ThisString)
+  ThisChar ← LCASE(MID(ThisString, Index, 1))
+
+  CASE OF ThisChar
+  &#x27;a&#x27;  : CharCount[1] ← CharCount[1] + 1
+  &#x27;e&#x27;  : CharCount[2] ← CharCount[2] + 1
+  &#x27;i&#x27;  : CharCount[3] ← CharCount[3] + 1
+  &#x27;o&#x27;  : CharCount[4] ← CharCount[4] + 1
+  &#x27;u&#x27;  : CharCount[5] ← CharCount[5] + 1
+  &#x27;a&#x27; TO &#x27;z&#x27;: CharCount[6] ← CharCount[6] + 1
+  ENDCASE
+  NEXT Index
+
+  FOR Index ← 1 to 6
+  OUTPUT CharCount[Index] //output results
+  NEXT Index
+
+  ENDPROCEDURE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Test for each vowel and increment associated count</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked22/page-11.jpg" alt="Paper page 11 for Q7"><div class="cap">Original paper page 11</div></div>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Test for consonants and increment associated count</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>At least one leading space (before the first word)</li>
+<li>at least one trailing space (after the last word)</li>
+<li>at least one instance of multiple spaces between words</li>
+<li>At least one upper case character</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>At least one leading space (before the first word)</li><li>at least one trailing space (after the last word)</li><li>at least one instance of multiple spaces between words</li><li>At least one upper case character</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dry run / produce a trace table / walk through the code</li>
+<li>Add output statements to allow the code to be tracked</li>
+<li>Insert a Breakpoint into the program // use single-stepping to execute</li>
+<li>Try different test values to see which ones fail</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dry run / produce a trace table / walk through the code</li><li>Add output statements to allow the code to be tracked</li><li>Insert a Breakpoint into the program // use single-stepping to execute</li><li>Try different test values to see which ones fail</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If not ignored, add the next initial letter to NewString in a
+  loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked22/page-12.jpg" alt="Paper page 12 for Q8"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output the results (supporting text not necessary) after the loop
+
+  Note: Max 7 if CharCount not used to store count
+
+ 2021  Page 7 of 10
+
+9618/22  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2021</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF TO_LOWER(IgnoreList[Index]) = ThisWord THEN</li>
+<li>UNTIL Found = TRUE OR Index &gt; 10</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF TO_LOWER(IgnoreList[Index]) = ThisWord THEN</li><li>UNTIL Found = TRUE OR Index &gt; 10</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF IgnoreWord(NextWord) = FALSE THEN</li>
+<li>UNTIL Index = -1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF IgnoreWord(NextWord) = FALSE THEN</li><li>UNTIL Index = -1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Increment ThisWordNum (must have been initialised) in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output NewString (must be all upper case) outside loop
+
+  Note: Max 8 marks
+
+ 2021  Page 10 of 10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

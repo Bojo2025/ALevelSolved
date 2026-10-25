@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9709/62 · October/November 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9709/62 · October/November 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q25">Q25</a> <a href="#q55">Q55</a> <a href="#q85">Q85</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked62/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use: X ~ N(25, 25)</li>
+<li>[M1] Standardising with their values</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: X ~ N(25, 25)</li><li>[M1] Standardising with their values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Allow p = 0.5</li>
+<li>[M1] Attempt 0.0439 + P(X = 9) + P(X = 10)</li>
+<li>[A1] SC B1 0.0547 or 0.0546 with no working</li>
+<li>[M1] Valid comparison of tail probability with 0.05</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow p = 0.5</li><li>[M1] Attempt 0.0439 + P(X = 9) + P(X = 10)</li><li>[A1] SC B1 0.0547 or 0.0546 with no working</li><li>[M1] Valid comparison of tail probability with 0.05</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Finding P(9,10) using B(10,0.5)</li>
+<li>[A1] Obtain/use: P(Type I error) = 11/1024 or 0.0107 (3 sf) or 0.0108</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Finding P(9,10) using B(10,0.5)</li><li>[A1] Obtain/use: P(Type I error) = 11/1024 or 0.0107 (3 sf) or 0.0108</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] For standardising and forming an equation. Must have</li>
+<li>[A1] May be implied by h &gt; 4.31. Allow h &lt; 4.31 for this A1</li>
+<li>[A1] Condone any letter instead of h</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For standardising and forming an equation. Must have</li><li>[A1] May be implied by h &gt; 4.31. Allow h &lt; 4.31 for this A1</li><li>[A1] Condone any letter instead of h</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> a</p>
+<ol>
+<li>[M1] Attempt to integrate f(x) and equate to 1. Ignore limits</li>
+<li>[A1] Integrate with correct limits and substitute b = 2a</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Attempt to integrate f(x) and equate to 1. Ignore limits</li><li>[A1] Integrate with correct limits and substitute b = 2a</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 2a</p>
+<ol>
+<li>[A1] Obtain convincingly (at least one step from previous</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain convincingly (at least one step from previous</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Attempt integrate f(x), with correct limits, and equate to</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Attempt integrate f(x), with correct limits, and equate to</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] oe. Correct equation after substituting limits</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] oe. Correct equation after substituting limits</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>2023  Page 12 of 12</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked62/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] For expression of correct form. Any z (but not ϕ(z))</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For expression of correct form. Any z (but not ϕ(z))</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 100 100</p>
+<ol>
+<li>[M1] Equation of correct form (any z)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Equation of correct form (any z)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Allow μ = 4.23 or population mean of h = 4.23</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow μ = 4.23 or population mean of h = 4.23</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>dx =</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>dx =</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 1</p>
+<div class='ms-raw'>1
+  .</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li> − x  = 2 or  − x  = 2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li> − x  = 2 or  − x  = 2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> A1</p>
+<ol>
+<li>m=     or 0.667 (3 sf)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>m=     or 0.667 (3 sf)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Allow one end error. Allow any λ</li>
+<li>[M1] Squaring their probability (λ ≠ 4.8)</li>
+<li>[A1] SC B2 0.478 with no working</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Allow one end error. Allow any λ</li><li>[M1] Squaring their probability (λ ≠ 4.8)</li><li>[A1] SC B2 0.478 with no working</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked62/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] Must have brackets</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Must have brackets</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] oe (e.g. invalid because it should be a tail probability</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] oe (e.g. invalid because it should be a tail probability</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Mark independently</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Mark independently</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Allow h instead of H or just ‘The population is normal.’</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow h instead of H or just ‘The population is normal.’</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] For both expressions seen</li>
+<li>[A1] *       Or r &lt; 1.4 (must have correct inequality)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For both expressions seen</li><li>[A1] *       Or r &lt; 1.4 (must have correct inequality)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] for substituting one value into correct expression</li>
+<li>[A1] * for [P(0) = 0.0907], P(1) = 0.218, P(2) = 0.261, P(3)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] for substituting one value into correct expression</li><li>[A1] * for [P(0) = 0.0907], P(1) = 0.218, P(2) = 0.261, P(3)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked62/page-07.jpg" alt="Paper page 7 for Q4"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] For Po(100p) expression</li>
+<li>[M1] Obtain/use: Accept un-simplified terms (e.g. p0/0! For</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For Po(100p) expression</li><li>[M1] Obtain/use: Accept un-simplified terms (e.g. p0/0! For</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked62/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> b · a · b · a</p>
+<ol>
+<li>[M1] Attempt to integrate xf(x) from a to b</li>
+<li>[A1] Obtain/use: = ln xa or ln b – ln a</li>
+<li>[A1] Must see both statements. No errors seen</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Attempt to integrate xf(x) from a to b</li><li>[A1] Obtain/use: = ln xa or ln b – ln a</li><li>[A1] Must see both statements. No errors seen</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked62/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] One of these soi – can be given at early stage</li>
+<li>[B1] One of these soi – can be given at early stage</li>
+<li>[M1] Attempt to combine their D and their F with or without</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] One of these soi – can be given at early stage</li><li>[B1] One of these soi – can be given at early stage</li><li>[M1] Attempt to combine their D and their F with or without</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked62/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 2</p>
+<div class='ms-raw'>2
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1]  2.42 2.43 2.44 </li>
+<li>[M1] for e−2.4      +    +     </li>
+<li>[A1] SC B1 0.47(0) with no working</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1]  2.42 2.43 2.44 </li><li>[M1] for e−2.4      +    +     </li><li>[A1] SC B1 0.47(0) with no working</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use: r=2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: r=2</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q25"><h2>Question 25</h2>
+        <section class="part">
+          <p class="part-label">Part 25 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] For area consistent with their working</li>
+<li>[A1] Obtain/use: = 0.136 (3 sf)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For area consistent with their working</li><li>[A1] Obtain/use: = 0.136 (3 sf)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q55"><h2>Question 55</h2>
+        <section class="part">
+          <p class="part-label">Part 55 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] Or N(154.45,7.3629) or N(45.55, 7.3629)</li>
+<li>[M1] 160–154.45/ 7.3629 or 40–45.55/ 7.3629</li>
+<li>[M1] For area consistent with their working</li>
+<li>[A1] Obtain/use: = 0.9795 or 0.9796 or 0.98(0) or 0.979 (3 sf)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Or N(154.45,7.3629) or N(45.55, 7.3629)</li><li>[M1] 160–154.45/ 7.3629 or 40–45.55/ 7.3629</li><li>[M1] For area consistent with their working</li><li>[A1] Obtain/use: = 0.9795 or 0.9796 or 0.98(0) or 0.979 (3 sf)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q85"><h2>Question 85</h2>
+        <section class="part">
+          <p class="part-label">Part 85 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 85</p>
+<ol>
+<li>[B1] Obtain/use: z = 1.96</li>
+<li>[A1] Must be an interval</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: z = 1.96</li><li>[A1] Must be an interval</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

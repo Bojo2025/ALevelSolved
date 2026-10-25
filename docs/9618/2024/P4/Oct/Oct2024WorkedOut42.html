@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/42 · October/November 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/42 · October/November 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked42/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class EventItem header (and end where appropriate)</li>
+<li>3 private attributes with suitable data types</li>
+<li>Constructor header (and end where appropriate) with 3 (min) parameters within class declaration …</li>
+<li>… assigning parameters to attributes within constructor</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class EventItem
+                    Private EventName As String
+                    Private EventType As String
+                    Private Difficulty As Integer
+                    Sub New(pName, pType, pDifficulty)
+                       EventName = pName
+                       EventType = pType
+                       Difficulty = pDifficulty
+                    End Sub
+                End Class
+
+ University Press &amp; Assessment 2024                       Page 4 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class EventItem():
+                     def __init__(self, pName, pType, pDifficulty):
+                         self.__EventName = pName #String
+                         self.__EventType = pType #String
+                         self.__Difficulty = pDifficulty #Integer</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class EventItem header (and end where appropriate)</li><li>3 private attributes with suitable data types</li><li>Constructor header (and end where appropriate) with 3 (min) parameters within class declaration …</li><li>… assigning parameters to attributes within constructor</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method with no parameter …</li>
+<li>… return correct attribute (without changing)</li>
+<li>Remaining 2 correct get methods returning the attributes</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetName(self):
+                         return self.__EventName
+                     def GetEventType(self):
+                         return self.__EventType
+                     def GetDifficulty(self):
+                         return self.__Difficulty
+
+ University Press &amp; Assessment 2024                       Page 5 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method with no parameter …</li><li>… return correct attribute (without changing)</li><li>Remaining 2 correct get methods returning the attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>VB.NET
+
+  Function GetName()
+  Return EventName
+  End Function
+  Function GetEventType()
+  Return EventType
+  End Function
+  Function GetDifficulty()
+  Return Difficulty
+  End Function</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetName()
+                    Return EventName
+                End Function
+                Function GetEventType()
+                    Return EventType
+                End Function
+                Function GetDifficulty()
+                    Return Difficulty
+                End Function</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1D array name Group with (min 5 elements and of type EventItem)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Group(4) As EventItem</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Group = [] #type Event, 5 spaces</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1D array name Group with (min 5 elements and of type EventItem)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Any 1 instance of EventItem declared with values passed in correct order …</li>
+<li>… stored in the array Group …</li>
+<li>… remaining 4 correctly instantiated and stored in Group</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Group(0) = New EventItem(&quot;Bridge&quot;, &quot;jump&quot;, 3)
+                Group(1) = New EventItem(&quot;Water wade&quot;, &quot;swim&quot;, 4)
+                Group(2) = New EventItem(&quot;100 mile run&quot;, &quot;run&quot;, 5)
+                Group(3) = New EventItem(&quot;Gridlock&quot;, &quot;drive&quot;, 2)
+                Group(4) = New EventItem(&quot;Wall on wall&quot;, &quot;jump&quot;, 4)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Group.append(EventItem(&quot;Bridge&quot;, &quot;jump&quot;, 3))
+                Group.append(EventItem(&quot;Water wade&quot;, &quot;swim&quot;, 4))
+                Group.append(EventItem(&quot;100 mile run&quot;, &quot;run&quot;, 5))
+                Group.append(EventItem(&quot;Gridlock&quot;, &quot;drive&quot;, 2))
+                Group.append(EventItem(&quot;Wall on wall&quot;, &quot;jump&quot;, 4))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Any 1 instance of EventItem declared with values passed in correct order …</li><li>… stored in the array Group …</li><li>… remaining 4 correctly instantiated and stored in Group</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Character declared (and end where appropriate)</li>
+<li>5 private attributes with correct data types</li>
+<li>Constructor header (and end) taking (min) 5 parameters and parameters assigned to attributes</li>
+<li>Get method (with no parameter) returning name attribute</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Character declared (and end where appropriate)</li><li>5 private attributes with correct data types</li><li>Constructor header (and end) taking (min) 5 parameters and parameters assigned to attributes</li><li>Get method (with no parameter) returning name attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.__CName = pName #string</li>
+<li>self.__Jump = pJump #integer chance of success</li>
+<li>self.__Swim = pSwim #integer chance of success</li>
+<li>self.__Run = pRun #integer chance of success</li>
+<li>self.__Drive = pDrive #integer chance of success</li>
+<li>CName = pName</li>
+<li>Jump = pJump</li>
+<li>Swim = pSwim</li>
+<li>Run = pRun</li>
+<li>Drive = pDrive</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Character
+                        Private CName As String
+                        Private Jump As Integer
+                        Private Swim As Integer
+                        Private Run As Integer
+                        Private Drive As Integer
+                        Sub New(pName, pJump, pSwim, pRun, pDrive)
+                            CName = pName
+                            Jump = pJump
+                            Swim = pSwim
+                            Run = pRun
+                            Drive = pDrive
+                        End Sub
+
+                            Function GetName()
+                                 Return CName
+                            End Function
+
+                End Class
+
+ University Press &amp; Assessment 2024                       Page 8 of 39
+
+9618/42                                           Cambridge International AS &amp; A Level – Mark Scheme                             October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Character():
+                     def __init__(self, pName, pJump, pSwim, pRun, pDrive):
+                         self.__CName = pName #string
+                         self.__Jump = pJump #integer chance of success
+                         self.__Swim = pSwim #integer chance of success
+                         self.__Run = pRun #integer chance of success
+                         self.__Drive = pDrive #integer chance of success
+                     def GetName(self):
+                         return self.__CName #STRING</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.__CName = pName #string</li><li>self.__Jump = pJump #integer chance of success</li><li>self.__Swim = pSwim #integer chance of success</li><li>self.__Run = pRun #integer chance of success</li><li>self.__Drive = pDrive #integer chance of success</li><li>CName = pName</li><li>Jump = pJump</li><li>Swim = pSwim</li><li>Run = pRun</li><li>Drive = pDrive</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header CalculateScore (and end where appropriate) taking (min) 2 parameters</li>
+<li>Selection on the type of event using the parameter</li>
+<li>… if skill value is  = difficulty return 100</li>
+<li>…otherwise subtracting skill value from the difficulty and return correct value 80 (diff 1), 60 (diff 2), 40 (diff 3) and 20</li>
+<li>Using the correct attributes and parameters throughout</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header CalculateScore (and end where appropriate) taking (min) 2 parameters</li><li>Selection on the type of event using the parameter</li><li>… if skill value is  = difficulty return 100</li><li>…otherwise subtracting skill value from the difficulty and return correct value 80 (diff 1), 60 (diff 2), 40 (diff 3) and 20</li><li>Using the correct attributes and parameters throughout</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if Type == &quot;jump&quot;:</li>
+<li>Chance = self.__Jump</li>
+<li>elif Type == &quot;swim&quot;:</li>
+<li>Chance = self.__Swim</li>
+<li>elif Type == &quot;run&quot;:</li>
+<li>Chance = self.__Run</li>
+<li>Chance = self.__Drive</li>
+<li>if Chance &gt;= Difficulty:</li>
+<li>Difference = Difficulty - Chance</li>
+<li>if Difference == 1:</li>
+<li>elif Difference == 2:</li>
+<li>elif Difference == 3:</li>
+<li>elif Difference == 4:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def CalculateScore(self, Type, Difficulty):
+                        if Type == &quot;jump&quot;:
+                            Chance = self.__Jump
+                        elif Type == &quot;swim&quot;:
+                            Chance = self.__Swim
+                        elif Type == &quot;run&quot;:
+                            Chance = self.__Run
+                        else:
+                            Chance = self.__Drive
+                        if Chance &gt;= Difficulty:
+                            return 100
+                        else:
+                            Difference = Difficulty - Chance
+                            if Difference == 1:
+                                return 80
+                            elif Difference == 2:
+                                return 60
+                            elif Difference == 3:
+                                return 40
+                            elif Difference == 4:
+                                return 20
+                            else:
+                                return 0
+
+ University Press &amp; Assessment 2024                       Page 10 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if Type == &quot;jump&quot;:</li><li>Chance = self.__Jump</li><li>elif Type == &quot;swim&quot;:</li><li>Chance = self.__Swim</li><li>elif Type == &quot;run&quot;:</li><li>Chance = self.__Run</li><li>Chance = self.__Drive</li><li>if Chance &gt;= Difficulty:</li><li>Difference = Difficulty - Chance</li><li>if Difference == 1:</li><li>elif Difference == 2:</li><li>elif Difference == 3:</li><li>elif Difference == 4:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If Type = &quot;jump&quot; Then</li>
+<li>Chance = Jump</li>
+<li>ElseIf Type = &quot;swim&quot; Then</li>
+<li>Chance = Swim</li>
+<li>ElseIf Type = &quot;run&quot; Then</li>
+<li>Chance = Run</li>
+<li>Chance = Drive</li>
+<li>If Chance &gt;= Difficulty Then</li>
+<li>Difference = Difficulty - Chance</li>
+<li>If Difference = 1 Then</li>
+<li>ElseIf Difference = 2 Then</li>
+<li>ElseIf Difference = 3 Then</li>
+<li>ElseIf Difference = 4 Then</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function CalculateScore(Type, Difficulty)
+                    Dim Chance As Integer
+                    Dim Difference As Integer
+                    If Type = &quot;jump&quot; Then
+                         Chance = Jump
+                    ElseIf Type = &quot;swim&quot; Then
+                         Chance = Swim
+                    ElseIf Type = &quot;run&quot; Then
+                         Chance = Run
+                    Else
+                         Chance = Drive
+                    End If
+                    If Chance &gt;= Difficulty Then
+                         Return 100
+                    Else
+                         Difference = Difficulty - Chance
+                         If Difference = 1 Then
+                              Return 80
+                         ElseIf Difference = 2 Then
+                              Return 60
+                         ElseIf Difference = 3 Then
+                              Return 40
+                         ElseIf Difference = 4 Then
+                              Return 20
+                         Else
+                              Return 0
+                         End If
+                    End If
+                End Function
+
+ University Press &amp; Assessment 2024                       Page 11 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If Type = &quot;jump&quot; Then</li><li>Chance = Jump</li><li>ElseIf Type = &quot;swim&quot; Then</li><li>Chance = Swim</li><li>ElseIf Type = &quot;run&quot; Then</li><li>Chance = Run</li><li>Chance = Drive</li><li>If Chance &gt;= Difficulty Then</li><li>Difference = Difficulty - Chance</li><li>If Difference = 1 Then</li><li>ElseIf Difference = 2 Then</li><li>ElseIf Difference = 3 Then</li><li>ElseIf Difference = 4 Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating one new instance of Character with correct name and values for 1 character and storing</li>
+<li>2nd correct instance of Character and storing</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim P1 As Character = New Character(&quot;Tarz&quot;, 5, 3, 5, 1)
+                Dim P2 As Character = New Character(&quot;Geni&quot;, 2, 2, 3, 4)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>P1 = Character(&quot;Tarz&quot;, 5, 3, 5, 1)
+                P2 = Character(&quot;Geni&quot;, 2, 2, 3, 4)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating one new instance of Character with correct name and values for 1 character and storing</li><li>2nd correct instance of Character and storing</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Looping through each event in Group (or checking each of the 5 events manually)</li>
+<li>Using CalculateScore() for each Character object with parameters of type and difficulty</li>
+<li>…comparing the return values from the two function calls …</li>
+<li>…incrementing points for winning player and outputting their name and message stating they have won for each</li>
+<li>…outputting message if it&#x27;s a draw</li>
+<li>Comparing the total points for each character after all events checked and outputting name of player with most points</li>
+<li>Using get methods correctly throughout</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Looping through each event in Group (or checking each of the 5 events manually)</li><li>Using CalculateScore() for each Character object with parameters of type and difficulty</li><li>…comparing the return values from the two function calls …</li><li>…incrementing points for winning player and outputting their name and message stating they have won for each</li><li>…outputting message if it&#x27;s a draw</li><li>Comparing the total points for each character after all events checked and outputting name of player with most points</li><li>Using get methods correctly throughout</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>P1Points = 0</li>
+<li>P2Points = 0</li>
+<li>P1EventScore = P1.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())</li>
+<li>P2EventScore = P2.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())</li>
+<li>P1Points = P1Points + 1</li>
+<li>P2Points = P2Points + 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>P1Points = 0
+                P2Points = 0
+                for x in range(0, 5):
+                     P1EventScore = P1.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())
+                     P2EventScore = P2.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())
+                     if P1EventScore &gt; P2EventScore:
+                         P1Points = P1Points + 1
+                         print(P1.GetName(), &quot;you win this event&quot;)
+                     elif P2EventScore &gt; P1EventScore:
+                         P2Points = P2Points + 1
+                         print(P2.GetName(), &quot;you win this event&quot;)
+                     else:
+                         print(&quot;This event is a draw&quot;)
+
+                if P1Points &gt; P2Points:
+                    print(P1.GetName(), &quot;you have won with&quot;, P1Points)
+                elif P2Points&gt; P1Points:
+                    print(P2.GetName(), &quot;you have won with&quot;, P2Points)
+                else:
+                    print(&quot;It&#x27;s a draw&quot;)
+
+ University Press &amp; Assessment 2024                       Page 14 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>P1Points = 0</li><li>P2Points = 0</li><li>P1EventScore = P1.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())</li><li>P2EventScore = P2.CalculateScore(Group[x].GetEventType(), Group[x].GetDifficulty())</li><li>P1Points = P1Points + 1</li><li>P2Points = P2Points + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim P1 As Character = New Character(&quot;Tarz&quot;, 5, 3, 5, 1)</li>
+<li>Dim P2 As Character = New Character(&quot;Geni&quot;, 2, 2, 3, 4)</li>
+<li>Dim P1Points As Integer = 0</li>
+<li>Dim P2Points As Integer = 0</li>
+<li>Dim P1EventScore As Integer = 0</li>
+<li>Dim P2EventScore As Integer = 0</li>
+<li>For x = 0 To 4</li>
+<li>P1EventScore = P1.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())</li>
+<li>P2EventScore = P2.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())</li>
+<li>P1Points = P1Points + 1</li>
+<li>P2Points = P2Points + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim P1 As Character = New Character(&quot;Tarz&quot;, 5, 3, 5, 1)
+                Dim P2 As Character = New Character(&quot;Geni&quot;, 2, 2, 3, 4)
+                Dim P1Points As Integer = 0
+                Dim P2Points As Integer = 0
+                Dim P1EventScore As Integer = 0
+                Dim P2EventScore As Integer = 0
+                For x = 0 To 4
+                     P1EventScore = P1.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())
+                     P2EventScore = P2.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())
+                     If P1EventScore &gt; P2EventScore Then
+                          P1Points = P1Points + 1
+                          Console.WriteLine(P1.GetName() &amp; &quot; you win this event&quot;)
+                     ElseIf P2EventScore &gt; P1EventScore Then
+                          P2Points = P2Points + 1
+                          Console.WriteLine(P2.GetName() &amp; &quot; you win this event&quot;)
+                     Else
+                          Console.WriteLine(&quot;This event is a draw&quot;)
+                     End If
+                Next x
+                If P1Points &gt; P2Points Then
+                     Console.WriteLine(P1.GetName() &amp; &quot; you have won with &quot; &amp; P1Points)
+                ElseIf P2Points &gt; P1Points Then
+                     Console.WriteLine(P2.GetName() &amp; &quot; you have won with &quot; &amp; P2Points)
+                Else
+                     Console.WriteLine(&quot;It&#x27;s a draw&quot;)
+                End If
+
+ University Press &amp; Assessment 2024                       Page 15 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim P1 As Character = New Character(&quot;Tarz&quot;, 5, 3, 5, 1)</li><li>Dim P2 As Character = New Character(&quot;Geni&quot;, 2, 2, 3, 4)</li><li>Dim P1Points As Integer = 0</li><li>Dim P2Points As Integer = 0</li><li>Dim P1EventScore As Integer = 0</li><li>Dim P2EventScore As Integer = 0</li><li>For x = 0 To 4</li><li>P1EventScore = P1.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())</li><li>P2EventScore = P2.CalculateScore(Group(x).GetEventType(), Group(x).GetDifficulty())</li><li>P1Points = P1Points + 1</li><li>P2Points = P2Points + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing the correct winner for each event, the final winner’s name (and their points)  1
+  e.g.
+
+ University Press &amp; Assessment 2024  Page 17 of 39
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for correct values returned in correct places</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF AQueue.HeadPointer = -1 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF AQueue.HeadPointer = -1 THEN</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked42/page-08.jpg" alt="Paper page 8 for Q2"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Record structure or class with constructor Queue (and end where appropriate) …</li>
+<li>… containing a 1D array of (100) integers QueueArray</li>
+<li>… containing HeadPointer and TailPointer as integers</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Structure Queue
+                    Dim QueueArray() As Integer
+                    Dim HeadPointer As Integer
+                    Dim TailPointer As Integer
+                End Structure</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Queue:
+                     def __init__(self):
+                         self.QueueArray = []
+                         HeadPointer = 0 #integer
+                         TailPointer = 0 #integer
+                         for x in range(0, 100):
+                             self.QueueArray.append(-1)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Record structure or class with constructor Queue (and end where appropriate) …</li><li>… containing a 1D array of (100) integers QueueArray</li><li>… containing HeadPointer and TailPointer as integers</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>New Queue record/object created/instance of class</li>
+<li>Queue field/attribute head pointer initialised to –1, tail pointer to 0</li>
+<li>All 100 array field/attribute elements initialised with –1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim TheQueue As New Queue
+                        TheQueue.HeadPointer = -1
+                        TheQueue.TailPointer = 0
+                        ReDim TheQueue.QueueArray(100)
+                        For x = 0 To 99
+                             TheQueue.QueueArray(x) = -1
+                        Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Queue:
+                    def __init__(self):
+                        self.QueueArray = []
+                        for x in range(0, 100):
+                             self.QueueArray.append(-1)
+
+                        self.HeadPointer = -1
+                        self.TailPointer = 0
+                TheQueue= Queue()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>New Queue record/object created/instance of class</li><li>Queue field/attribute head pointer initialised to –1, tail pointer to 0</li><li>All 100 array field/attribute elements initialised with –1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HeadPointer = -1;</li>
+<li>TailPointer = 0;</li>
+<li>for(Integer x = 0; x &lt; 100; x++){</li>
+<li>QueueArray[x] = -1;</li>
+<li>queue TheQueue = new queue();</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HeadPointer = -1;</li><li>TailPointer = 0;</li><li>for(Integer x = 0; x &lt; 100; x++){</li><li>QueueArray[x] = -1;</li><li>queue TheQueue = new queue();</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each completed statement to max 3  5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if AQueue.HeadPointer == -1:</li>
+<li>AQueue.HeadPointer = 0</li>
+<li>AQueue.QueueArray[AQueue.HeadPointer] = TheData</li>
+<li>AQueue.TailPointer +=1</li>
+<li>AQueue.QueueArray[AQueue.TailPointer] = TheData</li>
+<li>AQueue.TailPointer = AQueue.TailPointer + 1</li>
+<li>If AQueue.HeadPointer = -1 Then</li>
+<li>AQueue.QueueArray(AQueue.TailPointer) = TheData</li>
+<li>AQueue.HeadPointer = 0</li>
+<li>AQueue.TailPointer += 1</li>
+<li>AQueue.QueueArray(AQueue.TailPointer) = TheData</li>
+<li>AQueue.TailPointer += 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(ByRef AQueue As Queue, ByVal TheData As Integer)
+                     If AQueue.HeadPointer = -1 Then
+                          AQueue.QueueArray(AQueue.TailPointer) = TheData
+                          AQueue.HeadPointer = 0
+                           AQueue.TailPointer += 1
+                          Return 1
+                     ElseIf AQueue.TailPointer &gt; 99 Then
+                          Return -1
+                     Else
+                          AQueue.QueueArray(AQueue.TailPointer) = TheData
+                          AQueue.TailPointer += 1
+                          Return 1
+                     End If
+
+                End Function
+
+ University Press &amp; Assessment 2024                       Page 21 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(AQueue, TheData):
+
+                       if AQueue.HeadPointer == -1:
+                           AQueue.HeadPointer = 0
+                           AQueue.QueueArray[AQueue.HeadPointer] = TheData
+                           AQueue.TailPointer +=1
+                           return AQueue, 1
+                       elif AQueue.TailPointer &gt; 99:
+                           return AQueue, -1
+                       else:
+                           AQueue.QueueArray[AQueue.TailPointer] = TheData
+                           AQueue.TailPointer = AQueue.TailPointer + 1
+                           return AQueue, 1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if AQueue.HeadPointer == -1:</li><li>AQueue.HeadPointer = 0</li><li>AQueue.QueueArray[AQueue.HeadPointer] = TheData</li><li>AQueue.TailPointer +=1</li><li>AQueue.QueueArray[AQueue.TailPointer] = TheData</li><li>AQueue.TailPointer = AQueue.TailPointer + 1</li><li>If AQueue.HeadPointer = -1 Then</li><li>AQueue.QueueArray(AQueue.TailPointer) = TheData</li><li>AQueue.HeadPointer = 0</li><li>AQueue.TailPointer += 1</li><li>AQueue.QueueArray(AQueue.TailPointer) = TheData</li><li>AQueue.TailPointer += 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) iterating through each element in the queue</li>
+<li>Starting at HeadPointer and incrementing until TailPointer – 1 …</li>
+<li>… concatenating and returning all integer values with a space between</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReturnAllData(TheQueue):
+                    Temp = &quot;&quot;
+
+                       for X in range(TheQueue.HeadPointer, TheQueue.TailPointer):
+                           Temp = Temp + str(TheQueue.QueueArray[X]) + &quot; &quot;
+                       return Temp
+
+ University Press &amp; Assessment 2024                       Page 22 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                      October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) iterating through each element in the queue</li><li>Starting at HeadPointer and incrementing until TailPointer – 1 …</li><li>… concatenating and returning all integer values with a space between</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Temp As String = &quot;&quot;</li>
+<li>For X = AQueue.HeadPointer To AQueue.TailPointer - 1</li>
+<li>Temp = Temp &amp; AQueue.QueueArray(X).ToString() &amp; &quot; &quot;</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReturnAllData(AQueue As Queue)
+                        Dim Temp As String = &quot;&quot;
+                        For X = AQueue.HeadPointer To AQueue.TailPointer - 1
+                            Temp = Temp &amp; AQueue.QueueArray(X).ToString() &amp; &quot; &quot;
+                        Next X
+                        Return Temp
+                  End Function</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Temp As String = &quot;&quot;</li><li>For X = AQueue.HeadPointer To AQueue.TailPointer - 1</li><li>Temp = Temp &amp; AQueue.QueueArray(X).ToString() &amp; &quot; &quot;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking only 10 inputs in loop/one at a time</li>
+<li>Calling Enqueue() with each input (min) and storing/using return value …</li>
+<li>… only calling Enqueue() once when each input is an integer  = 0. Do not award if this validation stops 10 valid</li>
+<li>Outputting message if each item is inserted and outputting a message if queue is full</li>
+<li>Calling ReturnAllData() and outputting return value at the end</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking only 10 inputs in loop/one at a time</li><li>Calling Enqueue() with each input (min) and storing/using return value …</li><li>… only calling Enqueue() once when each input is an integer  = 0. Do not award if this validation stops 10 valid</li><li>Outputting message if each item is inserted and outputting a message if queue is full</li><li>Calling ReturnAllData() and outputting return value at the end</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Continue = True</li>
+<li>while(Continue == True):</li>
+<li>DataInput = int(input(&quot;Enter an integer that is 0 or more&quot;))</li>
+<li>Continue = False</li>
+<li>TheQueue, ReturnValue = Enqueue(TheQueue, DataInput)</li>
+<li>if(ReturnValue == -1):</li>
+<li>For x = 0 To 9</li>
+<li>ContinueLoop = True</li>
+<li>While ContinueLoop = True</li>
+<li>DataInput = Console.ReadLine</li>
+<li>ContinueLoop = False</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim ContinueLoop As Boolean
+                Dim DataInput As Integer
+                Dim ReturnValue As Integer
+                For x = 0 To 9
+                    ContinueLoop = True
+                    While ContinueLoop = True
+                        Console.WriteLine(&quot;Enter an integer that is 0 or more&quot;)
+                        DataInput = Console.ReadLine
+                        If DataInput &gt; -1 Then
+                            ContinueLoop = False
+
+ University Press &amp; Assessment 2024                       Page 24 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(0, 10):
+                     Continue = True
+                     while(Continue == True):
+                         DataInput = int(input(&quot;Enter an integer that is 0 or more&quot;))
+                         if DataInput &gt; -1:
+                             Continue = False
+
+                       TheQueue, ReturnValue = Enqueue(TheQueue, DataInput)
+
+                       if(ReturnValue == -1):
+                           print(&quot;Queue full&quot;)
+                       else:
+                           print(&quot;Item inserted&quot;)
+
+                print(ReturnAllData(TheQueue))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Continue = True</li><li>while(Continue == True):</li><li>DataInput = int(input(&quot;Enter an integer that is 0 or more&quot;))</li><li>Continue = False</li><li>TheQueue, ReturnValue = Enqueue(TheQueue, DataInput)</li><li>if(ReturnValue == -1):</li><li>For x = 0 To 9</li><li>ContinueLoop = True</li><li>While ContinueLoop = True</li><li>DataInput = Console.ReadLine</li><li>ContinueLoop = False</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ReturnValue = Enqueue(TheQueue, DataInput)</li>
+<li>If ReturnValue = 2 Then</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ReturnValue = Enqueue(TheQueue, DataInput)</li><li>If ReturnValue = 2 Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>All values input and 10 messages ‘Inserted’ (i.e. –1 is not inserted)</li>
+<li>Screenshot show 10 9 8 7 6 5 4 3 2 1 on one line with a space between each number</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>All values input and 10 messages ‘Inserted’ (i.e. –1 is not inserted)</li><li>Screenshot show 10 9 8 7 6 5 4 3 2 1 on one line with a space between each number</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function Dequeue() (head and close), returning a value in all cases</li>
+<li>Checking if empty and returning –1</li>
+<li>Returning item at HeadPointer without deleting/changing it</li>
+<li>Incrementing HeadPointer</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue(AQueue):
+                     if AQueue.HeadPointer = 100 or AQueue.HeadPointer == -1 or AQueue.HeadPointer ==
+                AQueue.TailPointer:
+                         return AQueue, -1
+                     else:
+                         Temp = AQueue.QueueArray[AQueue.HeadPointer]
+                         AQueue.HeadPointer = AQueue.HeadPointer + 1
+                         return AQueue, Temp
+
+ University Press &amp; Assessment 2024                       Page 26 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function Dequeue() (head and close), returning a value in all cases</li><li>Checking if empty and returning –1</li><li>Returning item at HeadPointer without deleting/changing it</li><li>Incrementing HeadPointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If AQueue.HeadPointer = 100 or AQueue.HeadPointer = -1 or AQueue.HeadPointer =</li>
+<li>Dim Temp As Integer = AQueue.QueueArray(AQueue.HeadPointer)</li>
+<li>AQueue.HeadPointer += 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue(ByRef AQueue As Queue)
+                        If AQueue.HeadPointer = 100 or AQueue.HeadPointer = -1 or AQueue.HeadPointer =
+                AQueue.TailPointer Then
+                             Return -1
+                        Else
+                             Dim Temp As Integer = AQueue.QueueArray(AQueue.HeadPointer)
+                             AQueue.HeadPointer += 1
+                             Return Temp
+                        End If
+                  End Function</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If AQueue.HeadPointer = 100 or AQueue.HeadPointer = -1 or AQueue.HeadPointer =</li><li>Dim Temp As Integer = AQueue.QueueArray(AQueue.HeadPointer)</li><li>AQueue.HeadPointer += 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calls Dequeue() twice and stores/uses return value</li>
+<li>Outputs &quot;Queue empty&quot; when each return values is –1 and outputs return value otherwise</li>
+<li>Calls ReturnAllData() at the end</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>ReturnValue = Dequeue(TheQueue)
+                If ReturnValue = -1 Then
+                     Console.WriteLine(&quot;Queue empty&quot;)
+                Else
+                     Console.WriteLine(ReturnValue, &quot; is returned&quot;)
+                End If
+
+ University Press &amp; Assessment 2024                       Page 28 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>TheQueue, ReturnValue = Dequeue(TheQueue)
+                if ReturnValue == -1:
+                     print(&quot;Queue empty&quot;)
+                else:
+                     print(ReturnValue, &quot; is returned&quot;)
+                TheQueue, ReturnValue = Dequeue(TheQueue)
+                if ReturnValue == -1:
+                     print(&quot;Queue empty&quot;)
+                else:
+                     print(ReturnValue, &quot; is returned&quot;)
+                print(ReturnAllData(TheQueue))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calls Dequeue() twice and stores/uses return value</li><li>Outputs &quot;Queue empty&quot; when each return values is –1 and outputs return value otherwise</li><li>Calls ReturnAllData() at the end</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ReturnValue = Dequeue(TheQueue)</li>
+<li>If ReturnValue = -1 Then</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ReturnValue = Dequeue(TheQueue)</li><li>If ReturnValue = -1 Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Screenshot shows the input of 10 9 8 7 6 5 4 3 2 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Screenshot shows the input of 10 9 8 7 6 5 4 3 2 1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked42/page-12.jpg" alt="Paper page 12 for Q3"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HighScores created as 2D array, (of strings) with (min) 7  3 elements (local to main) …</li>
+<li>… all elements initialised to empty string (&quot;&quot;)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim HighScores(7, 3) As String
+                For(X = 0 to 7)
+                    For(Y = 0 to 3)
+                       HighScores(X, Y) = &quot;&quot;
+                  Next Y
+                Next X</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>HighScores = [] #String, 7 x 3
+                HighScores = [[&#x27;&#x27; for x in range(3)] for y in range(7)]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HighScores created as 2D array, (of strings) with (min) 7  3 elements (local to main) …</li><li>… all elements initialised to empty string (&quot;&quot;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) that returns populated array</li>
+<li>Opening text file to read and closing the file in an appropriate place</li>
+<li>Looping through 7 players/to EOF/21 times …</li>
+<li>… reading in each group of 3 data items and storing each in separate element in 2D array for each player</li>
+<li>Exception handling with all file handling within the try, appropriate catch and an output</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) that returns populated array</li><li>Opening text file to read and closing the file in an appropriate place</li><li>Looping through 7 players/to EOF/21 times …</li><li>… reading in each group of 3 data items and storing each in separate element in 2D array for each player</li><li>Exception handling with all file handling within the try, appropriate catch and an output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Temp = []</li>
+<li>HighScores = []</li>
+<li>File = open(&quot;HighScoreTable.txt&quot;)</li>
+<li>Temp = File.read().split(&quot;\n&quot;)</li>
+<li>NumberRecords = len(Temp)-1</li>
+<li>Counter = 0</li>
+<li>Counter = Counter + 3</li>
+<li>Dim TextFile As String = &quot;HighScoreTable.txt&quot;</li>
+<li>Dim Counter As Integer = 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReadData()
+                        Dim TextFile As String = &quot;HighScoreTable.txt&quot;
+
+                              Dim HighScores(7, 3) As String
+                              Try
+                                  Dim FileReader As New System.IO.StreamReader(TextFile)
+                                  Dim Counter As Integer = 0
+
+ University Press &amp; Assessment 2024                       Page 32 of 39
+
+9618/42                                            Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                     Temp = []
+                     HighScores = []
+                     try:
+                          File = open(&quot;HighScoreTable.txt&quot;)
+                          Temp = File.read().split(&quot;\n&quot;)
+                          File.close()
+                     except:
+                          print(&quot;No file found&quot;)
+                     NumberRecords = len(Temp)-1
+                     Counter = 0
+
+                       while Counter &lt; NumberRecords:
+
+                              HighScores.append([Temp[Counter], Temp[Counter+1], Temp[Counter+2]])
+                              Counter = Counter + 3
+
+                       return HighScores</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Temp = []</li><li>HighScores = []</li><li>File = open(&quot;HighScoreTable.txt&quot;)</li><li>Temp = File.read().split(&quot;\n&quot;)</li><li>NumberRecords = len(Temp)-1</li><li>Counter = 0</li><li>Counter = Counter + 3</li><li>Dim TextFile As String = &quot;HighScoreTable.txt&quot;</li><li>Dim Counter As Integer = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HighScores(Counter, 0) = FileReader.ReadLine()</li>
+<li>HighScores(Counter, 1) = FileReader.ReadLine()</li>
+<li>HighScores(Counter, 2) = FileReader.ReadLine()</li>
+<li>Counter = Counter + 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HighScores(Counter, 0) = FileReader.ReadLine()</li><li>HighScores(Counter, 1) = FileReader.ReadLine()</li><li>HighScores(Counter, 2) = FileReader.ReadLine()</li><li>Counter = Counter + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HighScores[X][0] = Reader.readLine();</li>
+<li>HighScores[X][1] = Reader.readLine();</li>
+<li>HighScores[X][2] = Reader.readLine();</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HighScores[X][0] = Reader.readLine();</li><li>HighScores[X][1] = Reader.readLine();</li><li>HighScores[X][2] = Reader.readLine();</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure (header and end) taking (min) 1 parameter (2D array), looping through each of the first dimension in array</li>
+<li>… outputting all data in correct format</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputHighScores(HighScores(,))
+                        For x = 0 To 6
+                             Console.WriteLine(HighScores(x, 0) &amp; &quot; reached level &quot; &amp; HighScores(x, 1) &amp; &quot;
+                with a score of &quot; &amp; HighScores(x, 2))
+                        Next
+                  End Sub
+
+ University Press &amp; Assessment 2024                         Page 34 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme               October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputHighScores(HighScores):
+                    for x in range(0, len(HighScores)):
+                        print(HighScores[x][0], &quot;reached level&quot;, HighScores[x][1], &quot;with a score of&quot;,
+                HighScores[x][2])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure (header and end) taking (min) 1 parameter (2D array), looping through each of the first dimension in array</li><li>… outputting all data in correct format</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end taking array as parameter) returning sorted array</li>
+<li>Comparing the levels and swapping all dimensions when in incorrect order</li>
+<li>Comparing scores when levels are the same and swapping all dimensions when in incorrect order</li>
+<li>Correct loops and comparisons to put data in correct order</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function SortScores(HighScores)
+                        Dim ArrayLength As Integer = 6
+                        Dim Temp1 As String
+
+ University Press &amp; Assessment 2024                       Page 35 of 39
+
+9618/42                                            Cambridge International AS &amp; A Level – Mark Scheme      October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SortScores(HighScores):
+                     Counter = 0
+                     ArrayLength = len(HighScores)
+
+                       for x in range(ArrayLength-1):
+                           for y in range(0, ArrayLength-x-1):
+                               if int(HighScores[y][1]) &lt; int(HighScores[y + 1][1]):
+                                   HighScores[y], HighScores[y + 1] = HighScores[y + 1], HighScores[y]
+                               elif int(HighScores[y][1]) == int(HighScores[y+1][1]):
+                                   if int(HighScores[y][2]) &lt; int(HighScores[y+1][2]):
+                                       HighScores[y], HighScores[y + 1] = HighScores[y + 1], HighScores[y]
+                       return HighScores</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end taking array as parameter) returning sorted array</li><li>Comparing the levels and swapping all dimensions when in incorrect order</li><li>Comparing scores when levels are the same and swapping all dimensions when in incorrect order</li><li>Correct loops and comparisons to put data in correct order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 0 To ArrayLength - 1</li>
+<li>For y = 0 To ArrayLength - x - 1</li>
+<li>Temp1 = HighScores(y, 0)</li>
+<li>Temp2 = HighScores(y, 1)</li>
+<li>Temp3 = HighScores(y, 2)</li>
+<li>HighScores(y, 0) = HighScores(y + 1, 0)</li>
+<li>HighScores(y, 1) = HighScores(y + 1, 1)</li>
+<li>HighScores(y, 2) = HighScores(y + 1, 2)</li>
+<li>HighScores(y + 1, 0) = Temp1</li>
+<li>HighScores(y + 1, 1) = Temp2</li>
+<li>HighScores(y + 1, 2) = Temp3</li>
+<li>ElseIf Integer.Parse(HighScores(y, 1)) = Integer.Parse(HighScores(y + 1,</li>
+<li>Temp1 = HighScores(y, 0)</li>
+<li>Temp2 = HighScores(y, 1)</li>
+<li>Temp3 = HighScores(y, 2)</li>
+<li>HighScores(y, 0) = HighScores(y + 1, 0)</li>
+<li>HighScores(y, 1) = HighScores(y + 1, 1)</li>
+<li>HighScores(y, 2) = HighScores(y + 1, 2)</li>
+<li>HighScores(y + 1, 0) = Temp1</li>
+<li>HighScores(y + 1, 1) = Temp2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 0 To ArrayLength - 1</li><li>For y = 0 To ArrayLength - x - 1</li><li>Temp1 = HighScores(y, 0)</li><li>Temp2 = HighScores(y, 1)</li><li>Temp3 = HighScores(y, 2)</li><li>HighScores(y, 0) = HighScores(y + 1, 0)</li><li>HighScores(y, 1) = HighScores(y + 1, 1)</li><li>HighScores(y, 2) = HighScores(y + 1, 2)</li><li>HighScores(y + 1, 0) = Temp1</li><li>HighScores(y + 1, 1) = Temp2</li><li>HighScores(y + 1, 2) = Temp3</li><li>ElseIf Integer.Parse(HighScores(y, 1)) = Integer.Parse(HighScores(y + 1,</li><li>Temp1 = HighScores(y, 0)</li><li>Temp2 = HighScores(y, 1)</li><li>Temp3 = HighScores(y, 2)</li><li>HighScores(y, 0) = HighScores(y + 1, 0)</li><li>HighScores(y, 1) = HighScores(y + 1, 1)</li><li>HighScores(y, 2) = HighScores(y + 1, 2)</li><li>HighScores(y + 1, 0) = Temp1</li><li>HighScores(y + 1, 1) = Temp2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Integer ArrayLength = 6;</li>
+<li>for(Integer x = 0; x &lt; ArrayLength; x++){</li>
+<li>for(Integer y = 0; y &lt; ArrayLength - x; y++){</li>
+<li>Temp1 = HighScores[y][0];</li>
+<li>Temp2 = HighScores[y][1];</li>
+<li>Temp3 = HighScores[y][2];</li>
+<li>HighScores[y][0] = HighScores[y+1][0];</li>
+<li>HighScores[y][1] = HighScores[y+1][1];</li>
+<li>HighScores[y][2] = HighScores[y+1][2];</li>
+<li>HighScores[y+1][0] = Temp1;</li>
+<li>HighScores[y+1][1] = Temp2;</li>
+<li>HighScores[y+1][2] = Temp3;</li>
+<li>}else if(Integer.parseInt(HighScores[y][1]) ==</li>
+<li>Temp1 = HighScores[y][0];</li>
+<li>Temp2 = HighScores[y][1];</li>
+<li>Temp3 = HighScores[y][2];</li>
+<li>HighScores[y][0] = HighScores[y+1][0];</li>
+<li>HighScores[y][1] = HighScores[y+1][1];</li>
+<li>HighScores[y][2] = HighScores[y+1][2];</li>
+<li>HighScores[y+1][0] = Temp1;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Integer ArrayLength = 6;</li><li>for(Integer x = 0; x &lt; ArrayLength; x++){</li><li>for(Integer y = 0; y &lt; ArrayLength - x; y++){</li><li>Temp1 = HighScores[y][0];</li><li>Temp2 = HighScores[y][1];</li><li>Temp3 = HighScores[y][2];</li><li>HighScores[y][0] = HighScores[y+1][0];</li><li>HighScores[y][1] = HighScores[y+1][1];</li><li>HighScores[y][2] = HighScores[y+1][2];</li><li>HighScores[y+1][0] = Temp1;</li><li>HighScores[y+1][1] = Temp2;</li><li>HighScores[y+1][2] = Temp3;</li><li>}else if(Integer.parseInt(HighScores[y][1]) ==</li><li>Temp1 = HighScores[y][0];</li><li>Temp2 = HighScores[y][1];</li><li>Temp3 = HighScores[y][2];</li><li>HighScores[y][0] = HighScores[y+1][0];</li><li>HighScores[y][1] = HighScores[y+1][1];</li><li>HighScores[y][2] = HighScores[y+1][2];</li><li>HighScores[y+1][0] = Temp1;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>}
+  }
+  return HighScores;
+  }</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Code statements in order:</li>
+<li>Code statements in order:</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                        Dim HighScores(7, 3) As String
+                        HighScores = ReadData()
+                        Console.WriteLine(&quot;Before&quot;)
+                        OutputHighScores(HighScores)
+                        HighScores = SortScores(HighScores)
+                        Console.WriteLine(&quot;After&quot;)
+                        OutputHighScores(HighScores)
+                  End Sub
+
+ University Press &amp; Assessment 2024                       Page 38 of 39
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>HighScores = []
+                HighScores = ReadData()
+                print(&quot;Before&quot;)
+                OutputHighScores(HighScores)
+                HighScores = SortScores(HighScores)
+                print(&quot;After&quot;)
+                OutputHighScores(HighScores)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Code statements in order:</li><li>Code statements in order:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output showing ‘Before’ and players and scores in correct format before sorting  2
+  Output showing ‘After’ players and scores in correct order and format after sorting
+
+  e.g.
+
+ University Press &amp; Assessment 2024  Page 39 of 39</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

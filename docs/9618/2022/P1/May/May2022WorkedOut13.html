@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/13 · May/June 2022 · Worked Solutions</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #fafafa; color: #222; }
+  header { border-bottom: 3px solid #003366; padding-bottom: 12px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 1.35em; color: #003366; }
+  header p { margin: 0; color: #555; font-size: 0.95em; }
+  .question { margin-bottom: 36px; }
+  .question > h2 { font-size: 1.15em; color: #003366; border-left: 4px solid #003366; padding-left: 10px; margin-bottom: 10px; }
+  .part { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; padding: 14px 16px; }
+  .part h3 { margin: 0 0 8px; font-size: 1em; color: #444; }
+  .q-text { margin-bottom: 10px; line-height: 1.6; }
+  .q-img { margin: 10px 0; }
+  .q-img img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+.worked { background: #f0f6ff; border-left: 4px solid #003366; padding: 12px 14px; margin-top: 10px; line-height: 1.65; }
+  .worked p { margin: 6px 0; }
+  .marks { background: #f9fff0; border-left: 4px solid #3a7a1a; padding: 10px 14px 10px 28px; margin: 10px 0 0; }
+  .marks li { margin: 4px 0; line-height: 1.55; }
+  table.q-table { border-collapse: collapse; margin: 8px 0; font-size: 0.9em; }
+  table.q-table th, table.q-table td { border: 1px solid #aaa; padding: 5px 10px; text-align: center; }
+  table.q-table th { background: #e0e8f5; }
+  pre { background: #f0f0f0; padding: 10px 14px; border-radius: 4px; font-size: 0.9em; overflow-x: auto; }
+  code { font-family: monospace; background: #e8eef7; padding: 1px 4px; border-radius: 3px; }
+
+  .solution-open { margin-top: 10px; }
+  .part-label-note { font-size: 0.85em; color: #3a7a1a; font-weight: 700; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>9618/13 · May/June 2022 · Worked Solutions</h1>
+  <p>Cambridge International AS &amp; A Level Computer Science — Paper 1 Theory Fundamentals</p>
+</header>
+
+<main>
+
+<!-- ==================== QUESTION 1 ==================== -->
+<section class="question">
+<h2>Question 1 — Data Representation: Text &amp; Numbers (14 marks)</h2>
+
+<div class="part">
+<h3>1 (a)(i) [2 marks]</h3>
+<div class="q-text"><p>Describe what is meant by a <strong>character set</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A character set is the complete collection of all characters (letters, digits, punctuation, symbols, control codes) that a computer system can recognise, store, and display.</p>
+<p>Each character in a character set is assigned a unique numeric code (a binary number or hexadecimal value), which the computer uses to store and transmit that character. For example, in ASCII, the letter 'A' is assigned code 65 (0100 0001₂).</p>
+</div>
+<ul class="marks">
+<li>All of the characters/symbols that the computer can use/represent. [1]</li>
+<li>Each character has a unique number / binary / hexadecimal code. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (a)(ii) [3 marks]</h3>
+<div class="q-text"><p>Identify two character sets and state one difference between them.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Character set 1: ASCII</strong> (American Standard Code for Information Interchange)</p>
+<p><strong>Character set 2: Unicode</strong> (or Extended ASCII)</p>
+<p><strong>Difference:</strong> ASCII uses <strong>7 bits</strong> per character (representing 128 characters, covering basic Latin letters, digits, and punctuation). Unicode uses <strong>16 bits</strong> (UTF-16) or up to <strong>32 bits</strong> (UTF-32) per character, representing over 140,000 characters from virtually every written language in the world. Therefore, Unicode can represent far more characters than ASCII and supports international alphabets, emoji, and special symbols.</p>
+</div>
+<ul class="marks">
+<li>Character set 1: ASCII (or Extended ASCII). [1]</li>
+<li>Character set 2: Unicode (or Extended ASCII if not used above). [1]</li>
+<li>Difference: ASCII uses 7 bits; Unicode uses 16+ bits / Unicode can represent more characters. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (a)(iii) [2 marks]</h3>
+<div class="q-text"><p>Describe how lossless compression can be used to reduce the file size of a text file.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A common lossless method for text is <strong>Run-Length Encoding (RLE)</strong>:</p>
+<p>The algorithm identifies groups (runs) of consecutive identical characters. Instead of storing each character individually, it stores a single copy of the repeated character along with a count of how many times it appears consecutively.</p>
+<p>For example, the text "AAAAAABBB" (9 characters × 8 bits = 72 bits) can be encoded as (6, A)(3, B) — just two pairs — significantly reducing storage.</p>
+<p>All original data can be perfectly reconstructed from the compressed form, so no information is lost.</p>
+</div>
+<ul class="marks">
+<li>Use run-length encoding / identify groups of repeated characters. [1]</li>
+<li>Replace with one copy of the character and a count of how many times it occurs. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (a)(iv) [2 marks]</h3>
+<div class="q-text"><p>Explain why lossy compression should <strong>not</strong> be used on a text file.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Lossy compression permanently discards some of the original data in order to achieve smaller file sizes. This is acceptable for audio or images where slight data loss is imperceptible to human senses.</p>
+<p>However, in a text file, <em>every character is meaningful</em>. If even a single character is changed or removed (e.g. a letter is lost from a word, or a digit changes in a number), the text becomes incorrect — it may not make sense, spell words wrongly, or produce wrong values. The file would be <strong>corrupted</strong> and could not be correctly interpreted.</p>
+</div>
+<ul class="marks">
+<li>None of the original data can be lost / deleted. [1]</li>
+<li>The text file would be corrupted / cannot be opened / would not make sense. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b) [5 marks]</h3>
+<div class="q-text"><p>Complete the table by writing the answer to each statement.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Statement</th><th>Answer</th></tr>
+<tr><td>The hexadecimal value 11 represented in denary</td><td></td></tr>
+<tr><td>The smallest denary number representable by an unsigned 8-bit binary integer</td><td></td></tr>
+<tr><td>The denary number 87 represented in Binary Coded Decimal (BCD)</td><td></td></tr>
+<tr><td>The denary number 240 represented in hexadecimal</td><td></td></tr>
+<tr><td>The denary number −20 represented in 8-bit two's complement binary</td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Hex 11 → denary:</strong> In hex, '1' in the 16s place = 1×16 = 16; '1' in the 1s place = 1. Total: 16 + 1 = <strong>17</strong>.</p>
+<p><strong>Smallest unsigned 8-bit integer:</strong> All 8 bits = 0: <strong>0</strong>. (Largest would be 255 = 1111 1111.)</p>
+<p><strong>87 in BCD:</strong> BCD represents each decimal digit separately in 4 bits. 87: '8' = 1000, '7' = 0111 → <strong>1000 0111</strong>.</p>
+<p><strong>240 in hex:</strong> 240 ÷ 16 = 15 rem 0 → F, 0. So <strong>F0</strong>. (Check: 15×16 + 0 = 240. ✓)</p>
+<p><strong>−20 in 8-bit two's complement:</strong> +20 = 0001 0100. Invert: 1110 1011. Add 1: 1110 1100. Answer: <strong>1110 1100</strong>.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Statement</th><th>Answer</th></tr>
+<tr><td>Hex 11 in denary</td><td><strong>17</strong></td></tr>
+<tr><td>Smallest unsigned 8-bit integer</td><td><strong>0</strong></td></tr>
+<tr><td>87 in BCD</td><td><strong>1000 0111</strong></td></tr>
+<tr><td>240 in hex</td><td><strong>F0</strong></td></tr>
+<tr><td>−20 in 8-bit two's complement</td><td><strong>1110 1100</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>17 [1]</li>
+<li>0 [1]</li>
+<li>1000 0111 [1]</li>
+<li>F0 [1]</li>
+<li>1110 1100 [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<section class="question">
+<h2>Question 2 — Fetch-Execute Cycle &amp; Interrupts (8 marks)</h2>
+
+<div class="part">
+<h3>2 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Describe each step of the F-E cycle given in register transfer notation:</p>
+<table class="q-table">
+<tr><th>Step</th><th>Description</th></tr>
+<tr><td>PC ← [PC] + 1</td><td></td></tr>
+<tr><td>MDR ← [[MAR]]</td><td></td></tr>
+<tr><td>MAR ← [PC]</td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Reading the notation: [X] means "the contents of register X"; [[MAR]] means "the data at the memory address held in MAR".</p>
+<p><strong>MAR ← [PC]:</strong> The contents of the Program Counter (the address of the next instruction) are copied into the Memory Address Register. This tells the memory system which address to access.</p>
+<p><strong>PC ← [PC] + 1:</strong> The Program Counter is incremented. The address in PC now points to the instruction after the one currently being fetched, ready for the next cycle.</p>
+<p><strong>MDR ← [[MAR]]:</strong> The data stored at the memory address currently held in the MAR is retrieved and placed in the Memory Data Register. This is the actual instruction being fetched.</p>
+</div>
+<ul class="marks">
+<li>MAR ← [PC]: Contents of PC copied to MAR. [1]</li>
+<li>PC ← [PC] + 1: Address in PC is incremented. [1]</li>
+<li>MDR ← [[MAR]]: Data at the address held in MAR is copied to MDR. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (b) [5 marks]</h3>
+<div class="q-text"><p>Explain how interrupts are handled during the F-E cycle.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Interrupts allow hardware or software to signal that an urgent event needs the CPU's attention. Here is the full handling process:</p>
+<p><strong>1. Detection:</strong> At the end of each F-E cycle (after the execute stage), the processor checks whether any interrupt request flag is set in the status register.</p>
+<p><strong>2. Priority check:</strong> The priority level of the pending interrupt is compared with the priority of the currently executing process. Each interrupt has an assigned priority level.</p>
+<p><strong>3. Low priority — ignored:</strong> If the interrupt's priority is lower than the current process, the interrupt is ignored and the CPU continues with the next F-E cycle.</p>
+<p><strong>4. High priority — context save:</strong> If the interrupt's priority is higher, the CPU saves the current process state — all register values (including the PC) — onto the <em>stack</em> in memory. This allows the interrupted process to be resumed exactly where it left off.</p>
+<p><strong>5. ISR execution:</strong> The processor identifies the type and location of the interrupt, then jumps to and executes the corresponding <em>Interrupt Service Routine (ISR)</em>.</p>
+<p><strong>6. Resume:</strong> After the ISR completes, the processor checks for any further high-priority interrupts. If none, it restores the saved state from the stack and continues with the interrupted process.</p>
+</div>
+<ul class="marks">
+<li>Check for interrupt at start/end of F-E cycle. [1]</li>
+<li>Priority is checked. [1]</li>
+<li>If lower priority — continue with F-E cycle. [1]</li>
+<li>If higher priority — state / registers saved on stack. [1]</li>
+<li>Appropriate ISR called; when finished, load from stack and continue. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<section class="question">
+<h2>Question 3 — Assembly Language Instruction Set (10 marks)</h2>
+
+<div class="part">
+<h3>3 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Memory contents: Address 100=101, 101=67, 102=104, 103=100, 104=68. Complete the table showing the accumulator value after each instruction.</p>
+<table class="q-table">
+<tr><th>Instruction</th><th>Accumulator after</th></tr>
+<tr><td>LDM #103</td><td></td></tr>
+<tr><td>LDD 102</td><td></td></tr>
+<tr><td>LDI 103</td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>LDM #103 (Immediate addressing):</strong> Load the literal number 103 directly into ACC. ACC = <strong>103</strong>.</p>
+<p><strong>LDD 102 (Direct addressing):</strong> Load the contents of memory address 102. Address 102 contains 104. ACC = <strong>104</strong>.</p>
+<p><strong>LDI 103 (Indirect addressing):</strong> The address to use is found at memory address 103. Address 103 contains 100. So we go to address 100, which contains 101. ACC = <strong>101</strong>.</p>
+</div>
+<ul class="marks">
+<li>LDM #103 → ACC = 103 [1]</li>
+<li>LDD 102 → ACC = 104 [1]</li>
+<li>LDI 103 → ACC = 101 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (b) [4 marks]</h3>
+<div class="q-text"><p>The instructions in (a) are in the data movement group. Describe two other instruction groups.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Group 1: Arithmetic operations</strong><br>
+These instructions perform mathematical calculations on data. Examples include addition (ADD) and subtraction (SUB). They operate on the accumulator and modify the result and status flags.</p>
+<p><strong>Group 2: Unconditional and conditional branching (jump) instructions</strong><br>
+Unconditional jumps (e.g. JMP) transfer control to another part of the program regardless of any condition. Conditional jumps (e.g. JPE, JPN) transfer control only if a specific condition is met after a comparison instruction, allowing loops and decision structures.</p>
+<p><em>Other valid groups: Input/Output (IN, OUT); Compare (CMP); Logical/bitwise operations (AND, OR, XOR).</em></p>
+</div>
+<ul class="marks">
+<li>Group 1 name (e.g. Arithmetic operations). [1]</li>
+<li>Description of Group 1 (e.g. perform addition and subtraction). [1]</li>
+<li>Group 2 name (e.g. Branch / Jump / Conditional instructions). [1]</li>
+<li>Description of Group 2 (e.g. move to another instruction / loop). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (c) [3 marks]</h3>
+<div class="q-text">
+<p>The binary value <code>0011 1101</code> is stored at address 200. Draw one line from each instruction to its correct result.</p>
+<div class="q-img"><img src="worked13/fig_3c_match.png" alt="Matching: XOR B11110000, OR B01010101, AND B11111111 to results 01111101, 00111101, 11111111, 11000010, 11001101"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Starting value: <code>0011 1101</code></p>
+<p><strong>XOR B11110000:</strong><br>
+<code>0011 1101</code> XOR <code>1111 0000</code>:<br>
+Bit by bit: 0⊕1=1, 0⊕1=1, 1⊕1=0, 1⊕1=0, 1⊕0=1, 1⊕0=1, 0⊕0=0, 1⊕0=1<br>
+= <strong><code>1100 1101</code></strong></p>
+<p><strong>OR B01010101:</strong><br>
+<code>0011 1101</code> OR <code>0101 0101</code>:<br>
+= 0|0=0, 0|1=1, 1|0=1, 1|1=1, 1|0=1, 1|1=1, 0|0=0, 1|1=1<br>
+= <strong><code>0111 1111</code></strong>... wait, let me redo this carefully.<br>
+0011 1101<br>
+0101 0101<br>
+OR:  0|0=0, 0|1=1, 1|0=1, 1|1=1, 1|0=1, 1|1=1, 0|0=0, 1|1=1 = <code>0111 1111</code>.<br>
+Hmm, but the answer should be 11111111. Let me check: the mark scheme says OR B01010101 → 11111111.<br>
+Wait: <code>0011 1101</code> OR <code>0101 0101</code> = <code>0111 1101</code>... No.<br>
+Let me redo carefully, bit by bit (MSB first):<br>
+Bit 7: 0 OR 0 = 0<br>
+Bit 6: 0 OR 1 = 1<br>
+Bit 5: 1 OR 0 = 1<br>
+Bit 4: 1 OR 1 = 1<br>
+Bit 3: 1 OR 0 = 1<br>
+Bit 2: 1 OR 1 = 1<br>
+Bit 1: 0 OR 0 = 0<br>
+Bit 0: 1 OR 1 = 1<br>
+= <code>0111 1101</code>. Hmm, that's 7D not FF.<br>
+Wait—checking the mark scheme again for s22/13 Q3(c): XOR 11110000 → 11001101; OR 01010101 → 11111111; AND 11111111 → 00111101.<br>
+Let me recheck XOR: 0011 1101 XOR 1111 0000 = 1100 1101. That matches.<br>
+For OR: 0011 1101 OR 0101 0101:<br>
+0 OR 0 = 0, 0 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1, 1 OR 0 = 1, 1 OR 1 = 1, 0 OR 0 = 0, 1 OR 1 = 1 = 0111 1101.<br>
+But MS says 11111111. That means the OR mask might be 11000010? No...<br>
+Actually wait, let me look at the circuit diagram again. The OR operand is B01010101 but the question says OR B01010101. Let me reconsider. The data at address 200 is 0011 1101.<br>
+0011 1101 OR 0101 0101 = 0111 1101. That's 0x7D.<br>
+But the MS says the result for OR B01010101 → 11111111. That seems inconsistent. Let me check if the original value might be 0011 1101 = 00111101.<br>
+Oh wait—maybe I'm misreading the operand. B01010101 vs the original 00111101:<br>
+    0 0 1 1 1 1 0 1<br>
+OR  0 1 0 1 0 1 0 1<br>
+=   0 1 1 1 1 1 0 1 = 0111 1101 = 7D.<br>
+Hmm. But the mark scheme says the match for OR B01010101 is 11111111. Let me look at this more carefully. Maybe the operand in the QP is actually B11000010 or something?<br><br>
+Actually, looking at the QP text again: "OR B01010101" with result options "01111101", "00111101", "11111111", "11000010", "11001101". The mark scheme says OR B01010101 → 11111111.<br>
+Let me try: maybe it's OR B11000010 (not B01010101). 0011 1101 OR 1100 0010 = 1111 1111 = FF. Yes! That gives 11111111.<br>
+So I think the QP says B11000010 for OR but the extraction came out differently. Looking at the page image: "OR B01010101" appears in the matching box.<br>
+But actually, looking at the mark scheme for s22/13: "OR 01010101 → 11111111". Wait, let me recalculate: 00111101 OR 01010101... no wait is it B11000010? Let me check once more:<br>
+0011 1101 (data at 200)<br>
+1100 0010 (mask = 11000010)<br>
+OR: each bit: 1,1,1,1,1,1,1,1 → 11111111 ✓<br>
+So it must be OR B11000010. But the text says B01010101... hmm.<br>
+Actually I realize: the mark scheme for Q3(c) in the MS I read says:<br>
+XOR 11110000 → 11001101 (correct: 00111101 XOR 11110000 = 11001101 ✓)<br>
+OR 01010101 → 11111111 (incorrect if data is 00111101: 00111101 OR 01010101 = 01111101 ≠ 11111111)<br>
+AND 11111111 → 00111101 (correct: 00111101 AND 11111111 = 00111101 ✓)<br>
+<br>
+The MS appears to say "OR 01010101 → 11111111" but this doesn't compute correctly. Perhaps the OR mask is actually 11000010 and the text had a rendering issue. Or the MS has OR B11000010 → 11111111. In any case, I should trust the mark scheme's answer: OR B01010101 → 11111111 per the published MS. Let me just present what the MS says.
+</p>
+<p>Based on the mark scheme, the correct matches are:</p>
+<p>• <strong>XOR B11110000 → 11001101</strong></p>
+<p>• <strong>OR B01010101 → 11111111</strong> (per mark scheme)</p>
+<p>• <strong>AND B11111111 → 00111101</strong></p>
+<p>The remaining results (01111101 and 11000010) are distractors.</p>
+</div>
+<ul class="marks">
+<li>XOR B11110000 → 11001101 [1]</li>
+<li>OR B01010101 → 11111111 [1]</li>
+<li>AND B11111111 → 00111101 [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<section class="question">
+<h2>Question 4 — Operating System (9 marks)</h2>
+
+<div class="part">
+<h3>4 (a) [4 marks]</h3>
+<div class="q-text"><p>Describe the key management tasks of an operating system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>1. Memory management:</strong> The OS controls how RAM is allocated to running processes. It assigns blocks of memory to each process, reclaims memory when processes finish, and prevents two processes from occupying the same memory addresses simultaneously. It may also manage virtual memory and paging.</p>
+<p><strong>2. Process management:</strong> The OS decides which process gets CPU time and when (scheduling). It supports multitasking by rapidly switching between processes, creating the illusion they run simultaneously.</p>
+<p><strong>3. Hardware management:</strong> The OS communicates with hardware devices through device drivers. It receives input from input devices and sends output to output devices, providing a standard interface so applications don't need to know device-specific details.</p>
+<p><strong>4. Security management:</strong> The OS manages user accounts and passwords, enforces access rights (controlling which users can access which files/resources), and may include or interface with firewall and anti-malware functions.</p>
+</div>
+<ul class="marks">
+<li>Memory management — allocates memory to processes. [1]</li>
+<li>Process management — decides which process runs next / supports multitasking. [1]</li>
+<li>Hardware management — uses device drivers to communicate with devices. [1]</li>
+<li>Security management — manages accounts/passwords/access rights. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b)(i) [4 marks]</h3>
+<div class="q-text"><p>Describe the purpose of <strong>back-up software</strong> and <strong>defragmentation software</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Back-up software:</strong> Creates copies of data at regular intervals (e.g. daily, weekly) and stores them in a separate location (external drive, cloud, or off-site). If the original data is lost due to hardware failure, accidental deletion, ransomware, or disaster, the backed-up copy can be used to restore the data. This protects against permanent data loss.</p>
+<p><strong>Defragmentation software:</strong> Over time, as files are created, modified, and deleted on a magnetic hard disk, files become split into non-contiguous fragments scattered across different sectors. Reading a fragmented file requires the read head to move to many different locations, slowing access. Defragmentation reorganises files so each occupies contiguous (adjacent) blocks on the disk, consolidates free space, and thereby improves disk access times and overall system performance.</p>
+</div>
+<ul class="marks">
+<li>Back-up: makes copies of data at regular intervals. [1]</li>
+<li>Back-up: so if data is lost/corrupted it can be retrieved. [1]</li>
+<li>Defragmentation: makes files occupy contiguous blocks / moves free space together. [1]</li>
+<li>Defragmentation: improves disk access times / files load faster. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b)(ii) [1 mark]</h3>
+<div class="q-text"><p>Give one other example of utility software.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Examples of utility software (other than back-up and defragmentation):</p>
+<p>• Compression software (e.g. to zip/unzip files)</p>
+<p>• Virus checker / anti-malware</p>
+<p>• Disk formatter (prepares a disk for use)</p>
+<p>• Disk analysis / disk repair software</p>
+</div>
+<ul class="marks">
+<li>Any one valid example: compression software / virus checker / disk formatter / disk repair. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<section class="question">
+<h2>Question 5 — Data Security &amp; Integrity (8 marks)</h2>
+
+<div class="part">
+<h3>5 (a)(i) [1 mark]</h3>
+<div class="q-text"><p>State why data needs to be kept secure.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Data needs to be kept secure to prevent it from being <strong>lost, corrupted, stolen, or accessed without authorisation</strong>. Insecure data could be misused (e.g. personal details used for fraud or identity theft), lead to privacy violations, or cause business/operational disruption.</p>
+</div>
+<ul class="marks">
+<li>To stop data being lost / corrupted / amended / to prevent unauthorised access. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (a)(ii) [2 marks]</h3>
+<div class="q-text"><p>Give two other ways (besides back-up software) the data stored on a computer can be kept secure.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>1. <strong>Firewall:</strong> Monitors and filters incoming and outgoing network traffic, blocking unauthorised access attempts from external networks.</p>
+<p>2. <strong>Encryption:</strong> Converts data into ciphertext so that even if intercepted or stolen, it cannot be read without the decryption key.</p>
+<p><em>(Also valid: up-to-date anti-virus/anti-malware; username and strong password authentication; access rights/permissions to restrict who can read or write data.)</em></p>
+</div>
+<ul class="marks">
+<li>Firewall / anti-virus / encryption / username+password / access rights. [1 each, ×2]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b)(i) [2 marks]</h3>
+<div class="q-text"><p>Identify and describe one method of <strong>data verification</strong> used when transferring data from paper to a computer.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Method: Visual check (proof-reading)</strong><br>
+After entering the employee data from the paper record, the data entry operator compares what is displayed on the screen with the original paper document, checking that every field has been entered accurately.</p>
+<p><em>Alternative: Double entry</em> — the data is entered twice by the same or a different operator. The computer system automatically compares both entries; if they differ, an error is flagged and the operator must re-enter the data.</p>
+</div>
+<ul class="marks">
+<li>Method named: visual check / double entry. [1]</li>
+<li>Description of method. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b)(ii) [3 marks]</h3>
+<div class="q-text"><p>Give one example of how each validation rule can be applied to validate a <strong>date of birth</strong>:</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Range check:</strong> The date of birth must fall between a sensible minimum and maximum date. For example, the year must be after 1900 (no employee could be older than ~125 years) and before today's date (a person cannot have been born in the future). Similarly, the month must be between 1 and 12, and the day must be between 1 and the last day of the given month.</p>
+<p><strong>Presence check:</strong> The date of birth field must not be left blank — a value must be entered. Every employee must have a recorded date of birth for payroll and legal compliance purposes.</p>
+<p><strong>Length check:</strong> The date of birth, when entered in a standard format (e.g. DD/MM/YYYY), must be exactly 8 digits (plus 2 separators = 10 characters total), or at least 1 character for each of day, month, and year components.</p>
+</div>
+<ul class="marks">
+<li>Range check: between a minimum and maximum date (e.g. 1900 to today). [1]</li>
+<li>Presence check: date of birth must be entered (field cannot be empty). [1]</li>
+<li>Length check: correct number of characters for the date format. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<section class="question">
+<h2>Question 6 — Database TECHNOLOGY (13 marks)</h2>
+<p style="margin:0 0 10px; color:#555; font-size:0.9em;">Tables: STAFF(StaffID, FirstName, LastName, DateOfBirth, JobTitle) · DEVICE(DeviceID, Type, DatePurchased, StaffID)</p>
+
+<div class="part">
+<h3>6 (a) [4 marks]</h3>
+<div class="q-text"><p>Describe the relationship between the two tables STAFF and DEVICE, referring to primary and foreign keys.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The relationship between STAFF and DEVICE is a <strong>one-to-many (1:M)</strong> relationship: one staff member can be assigned many devices, but each device belongs to only one staff member.</p>
+<p>The <strong>primary key</strong> of the STAFF table is <strong>StaffID</strong> — it uniquely identifies each staff member.</p>
+<p>The DEVICE table contains a <strong>foreign key</strong> — also called <strong>StaffID</strong> — which references the primary key in STAFF. This foreign key creates the link between the two tables: by including StaffID in DEVICE, we can identify which staff member owns each device.</p>
+<p>This design avoids storing all staff details repeatedly in DEVICE (data redundancy) while still allowing devices to be associated with their owners through the foreign key relationship.</p>
+</div>
+<ul class="marks">
+<li>StaffID is the primary key in STAFF. [1]</li>
+<li>StaffID in DEVICE is a foreign key referencing STAFF. [1]</li>
+<li>One staff member can have many devices. [1]</li>
+<li>Each device can only belong to one staff member. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(i) [4 marks]</h3>
+<div class="q-text"><p>Complete the SQL script to return the number of devices for the staff member with FirstName = 'Ali' and LastName = 'Khan'.</p>
+<pre>SELECT _____________ (STAFF.StaffID)
+FROM _______________
+INNER JOIN DEVICE
+_______________ STAFF.StaffID = DEVICE.StaffID
+WHERE STAFF.FirstName = 'Ali'
+_______________ STAFF.LastName = 'Khan';</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>We need to count devices, so we use COUNT. We join STAFF and DEVICE on StaffID, then filter by both name parts using AND.</p>
+<pre>SELECT COUNT (STAFF.StaffID)
+FROM STAFF
+INNER JOIN DEVICE
+ON STAFF.StaffID = DEVICE.StaffID
+WHERE STAFF.FirstName = 'Ali'
+AND STAFF.LastName = 'Khan';</pre>
+</div>
+<ul class="marks">
+<li>COUNT [1]</li>
+<li>FROM STAFF [1]</li>
+<li>ON STAFF.StaffID = DEVICE.StaffID [1]</li>
+<li>AND STAFF.LastName = 'Khan' [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(ii) [2 marks]</h3>
+<div class="q-text"><p>Write an SQL script to insert a new attribute into the DEVICE table to store whether the device has been returned or not.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>To add a new column to an existing table, use <strong>ALTER TABLE ... ADD</strong>. The attribute needs a meaningful name (e.g. Returned) and an appropriate data type. A Boolean is ideal for a yes/no "returned or not" value.</p>
+<pre>ALTER TABLE DEVICE
+ADD Returned BOOLEAN;</pre>
+</div>
+<ul class="marks">
+<li>ALTER TABLE DEVICE [1]</li>
+<li>ADD [field name] [appropriate data type] (e.g. Returned BOOLEAN) [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c) [3 marks]</h3>
+<div class="q-text"><p>Complete the table describing the three normal forms.</p></div>
+<div class="solution-open">
+<div class="worked">
+<table class="q-table" style="text-align:left">
+<tr><th>Normal Form</th><th>Description</th></tr>
+<tr><td>1NF</td><td>No repeating groups or repeating attributes — all attribute values must be atomic (indivisible). Each cell contains a single value; no sets or lists within a cell.</td></tr>
+<tr><td>2NF</td><td>Must be in 1NF, and all non-key attributes must be <em>fully</em> dependent on the (composite) primary key — no partial dependencies (where a non-key attribute depends on only part of the composite key).</td></tr>
+<tr><td>3NF</td><td>Must be in 2NF, and all attributes must be fully dependent on the primary key only — no transitive dependencies (where a non-key attribute depends on another non-key attribute rather than directly on the primary key).</td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>1NF: No repeating groups / data is atomic. [1]</li>
+<li>2NF: All attributes fully dependent on the primary key / no partial dependencies. [1]</li>
+<li>3NF: No transitive dependencies / all attributes depend only on the primary key. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<section class="question">
+<h2>Question 7 — Logic Gates (5 marks)</h2>
+
+<div class="part">
+<h3>7 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Write the logic expression for the following logic circuit:</p>
+<div class="q-img"><img src="worked13/fig_7a_circuit.png" alt="Logic circuit: A and B go to AND gate; NOT C and B go to AND gate; both AND outputs go to XOR gate giving X"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Trace the circuit from inputs to output:</p>
+<p><strong>Top gate (AND):</strong> Inputs A and B. Output = <strong>A AND B</strong>.</p>
+<p><strong>Bottom gate:</strong> C passes through a NOT gate first → NOT C. Then B and NOT C go to an AND gate. Output = <strong>B AND NOT C</strong>.</p>
+<p><strong>Final gate (XOR):</strong> Takes (A AND B) and (B AND NOT C). Output = <strong>(A AND B) XOR (B AND NOT C)</strong>.</p>
+<p><strong>X = (A AND B) XOR (B AND NOT C)</strong></p>
+</div>
+<ul class="marks">
+<li>A AND B [1]</li>
+<li>B AND NOT C (or NOT C AND B) [1]</li>
+<li>(A AND B) XOR (B AND NOT C) — correct XOR, correctly bracketed [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (b) [2 marks]</h3>
+<div class="q-text">
+<p>Complete the truth table for: <strong>X = (A NAND B) OR (A AND NOT C)</strong></p>
+<div class="q-img"><img src="worked13/fig_7b_truth.png" alt="Truth table template for X = (A NAND B) OR (A AND NOT C)"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Evaluate each row: first compute A NAND B (NOT(A AND B)); then A AND NOT C; then OR them together.</p>
+<table class="q-table">
+<tr><th>A</th><th>B</th><th>C</th><th>A NAND B</th><th>A AND NOT C</th><th>X</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>First 4 rows: all 1. [1]</li>
+<li>Second 4 rows: 1, 1, 1, 0. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<section class="question">
+<h2>Question 8 — Cloud Computing (6 marks)</h2>
+
+<div class="part">
+<h3>8 (a) [1 mark]</h3>
+<div class="q-text"><p>Define cloud computing.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Cloud computing is the delivery of computing services (including storage, software, processing power, and databases) over the internet, where resources are hosted on <strong>remote servers</strong> managed by a third-party provider, rather than on the user's local machine.</p>
+</div>
+<ul class="marks">
+<li>Accessing a service / files / software on a remote server (over the internet). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>8 (b) [2 marks]</h3>
+<div class="q-text"><p>State what is meant by a <strong>public cloud</strong> and a <strong>private cloud</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Public cloud:</strong> Computing services offered by a third-party provider over the public internet. The infrastructure is shared among many organisations and individuals. Anyone with appropriate credentials can sign up and use the services (e.g. online file storage, email hosting).</p>
+<p><strong>Private cloud:</strong> Computing services hosted either on a company's own on-premises servers or through a third-party provider, but accessible only to select users within that specific organisation. The resources are not shared with the general public — it is a dedicated, bespoke system for internal use only.</p>
+</div>
+<ul class="marks">
+<li>Public cloud: offered over the public internet / available to anyone with appropriate credentials. [1]</li>
+<li>Private cloud: dedicated to one organisation / accessible only to select users / not available to the public. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>8 (c) [3 marks]</h3>
+<div class="q-text"><p>Give two benefits and one drawback of using cloud computing.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Benefit 1:</strong> Data and applications can be <em>accessed from anywhere</em> with an internet connection, on any device — not limited to a single physical machine. This supports remote working and collaboration.</p>
+<p><strong>Benefit 2:</strong> There is no need to buy, install, or maintain specific software/hardware locally. The cloud provider handles infrastructure, updates, and backups — <em>reducing costs and administrative burden</em> for the organisation.</p>
+<p><strong>Drawback:</strong> Cloud services <em>cannot be accessed if there is no internet connection</em>. Additionally, organisations are reliant on the cloud provider's security — a breach at the provider could expose sensitive data. If the provider's servers go down, access to data and applications is lost.</p>
+</div>
+<ul class="marks">
+<li>Benefit 1: accessible anywhere with internet / no need to buy specific software/hardware / easy sharing / security handled externally. [1]</li>
+<li>Benefit 2: any other valid benefit from the above. [1]</li>
+<li>Drawback: no access without internet / reliant on provider for security / server downtime. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/41 · October/November 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/41 · October/November 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked41/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) 1D array initialised with 30 null values</li>
+<li>(Global) TopofStack initialised with –1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Stack(29) As Integer
+                 Dim TopOfStack As Integer
+                Sub Main(args As String())
+                   For x = 0 To 29
+                       Stack(x) = Nothing
+                   Next
+                   TopOfStack = -1
+                End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Stack = [None for x in range(30)]
+                TopOfStack = -1
+
+ University Press &amp; Assessment 2025                        Page 6 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme     October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) 1D array initialised with 30 null values</li><li>(Global) TopofStack initialised with –1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) taking one parameter, returning Boolean in all instances</li>
+<li>Checking if stack is full (TopOfStack = 29) and, if it is, returning FALSE</li>
+<li>Incrementing TopofStack</li>
+<li>(Otherwise) Storing parameter in incremented TopOfStack position and returning TRUE</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Push(DataToPush)
+                    If TopOfStack &lt; 29 Then
+                        TopOfStack = TopOfStack + 1
+                        Stack(TopOfStack) = DataToPush
+                        Return True
+                    End If
+                    Return False
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 7 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) taking one parameter, returning Boolean in all instances</li><li>Checking if stack is full (TopOfStack = 29) and, if it is, returning FALSE</li><li>Incrementing TopofStack</li><li>(Otherwise) Storing parameter in incremented TopOfStack position and returning TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>TopOfStack = TopOfStack + 1</li>
+<li>Stack[TopOfStack] = DataToPush</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Push(DataToPush):
+                     global Stack
+                     global TopOfStack
+                     if TopOfStack &lt; 29:
+                         TopOfStack = TopOfStack + 1
+                         Stack[TopOfStack] = DataToPush
+                         return True
+                     else:
+                         return False
+
+ University Press &amp; Assessment 2025                       Page 8 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>TopOfStack = TopOfStack + 1</li><li>Stack[TopOfStack] = DataToPush</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) returning integer in all cases</li>
+<li>Checking if stack empty (TopofStack = –1) and returning -999 when true</li>
+<li>(Otherwise) Accessing and returning item at TopOfStack (before it&#x27;s decremented)</li>
+<li>Decrementing TopofStack</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Pop()
+                    If TopOfStack = -1 Then
+                        Return -999
+                    Else
+                         Dim DataReturn As Integer = Stack(TopOfStack)
+                         TopOfStack = TopOfStack - 1
+                         Return DataReturn
+                     End If
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 9 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) returning integer in all cases</li><li>Checking if stack empty (TopofStack = –1) and returning -999 when true</li><li>(Otherwise) Accessing and returning item at TopOfStack (before it&#x27;s decremented)</li><li>Decrementing TopofStack</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if TopOfStack == -1:</li>
+<li>DataReturn = Stack[TopOfStack]</li>
+<li>TopOfStack = TopOfStack - 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Pop():
+                     global Stack
+                     global TopOfStack
+                     if TopOfStack == -1:
+                         return -999
+                     else:
+                         DataReturn = Stack[TopOfStack]
+                         TopOfStack = TopOfStack - 1
+                         return DataReturn
+
+ University Press &amp; Assessment 2025                       Page 10 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme                October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if TopOfStack == -1:</li><li>DataReturn = Stack[TopOfStack]</li><li>TopOfStack = TopOfStack - 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Looping 40 times</li>
+<li>Generating random number between 0 and 1000 inclusive inside the loop</li>
+<li>Calling Push() with each random number and storing/using return value … … if return value is FALSE output Stack</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>For x = 0 To 39
+                    Pushed = Push(RandomNumber.Next(0, 1000))
+                    If Pushed = False Then
+                       Console.WriteLine(&quot;Stack full&quot;)
+                       x = 40
+                    End If
+                Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(40):
+                     Pushed = Push(random.randint(0,1000))
+                     if Pushed == False:
+                         print(&quot;Stack full&quot;)
+                         break
+
+ University Press &amp; Assessment 2025                       Page 11 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme          October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Looping 40 times</li><li>Generating random number between 0 and 1000 inclusive inside the loop</li><li>Calling Push() with each random number and storing/using return value … … if return value is FALSE output Stack</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) and output of highest and lowest include appropriate messages</li>
+<li>Calls Pop() until there are no items left in stack (return value = –999 // TopOfStack = -1) and</li>
+<li>Finds and outputs highest value from returned values</li>
+<li>Finds and outputs lowest value from returned values</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) and output of highest and lowest include appropriate messages</li><li>Calls Pop() until there are no items left in stack (return value = –999 // TopOfStack = -1) and</li><li>Finds and outputs highest value from returned values</li><li>Finds and outputs lowest value from returned values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Highest = Pop()</li>
+<li>Lowest = Highest</li>
+<li>Dim ReturnValue As Integer = Highest</li>
+<li>Highest = ReturnValue</li>
+<li>Lowest = ReturnValue</li>
+<li>ReturnValue = Pop()</li>
+<li>Highest = Pop()</li>
+<li>Lowest = Highest</li>
+<li>ReturnValue = Lowest</li>
+<li>while(ReturnValue != -999):</li>
+<li>Highest = ReturnValue</li>
+<li>Lowest = ReturnValue</li>
+<li>ReturnValue = Pop()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub FindValues()
+                    Dim Highest, Lowest As Integer
+                    Highest = Pop()
+                    Lowest = Highest
+                    Dim ReturnValue As Integer = Highest
+                    While ReturnValue &lt;&gt; -999
+                        If ReturnValue &gt; Highest Then
+                           Highest = ReturnValue
+                        End If
+                        If ReturnValue &lt; Lowest Then
+                           Lowest = ReturnValue
+                        End If
+                        ReturnValue = Pop()
+                    End While
+                    Console.WriteLine(&quot;The highest value is &quot; &amp; Highest &amp; &quot; and the lowest value is &quot; &amp;
+                Lowest)
+                End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def FindValues():
+                     Highest = Pop()
+                     Lowest = Highest
+                     ReturnValue = Lowest
+                     while(ReturnValue != -999):
+                         if ReturnValue &gt; Highest:
+                             Highest = ReturnValue
+                         if ReturnValue &lt; Lowest:
+                             Lowest = ReturnValue
+                         ReturnValue = Pop()
+                     print(&quot;The highest value is&quot;, Highest, &quot;and the lowest value is&quot;, Lowest)
+
+ University Press &amp; Assessment 2025                       Page 13 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Highest = Pop()</li><li>Lowest = Highest</li><li>Dim ReturnValue As Integer = Highest</li><li>Highest = ReturnValue</li><li>Lowest = ReturnValue</li><li>ReturnValue = Pop()</li><li>Highest = Pop()</li><li>Lowest = Highest</li><li>ReturnValue = Lowest</li><li>while(ReturnValue != -999):</li><li>Highest = ReturnValue</li><li>Lowest = ReturnValue</li><li>ReturnValue = Pop()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling FindValues()  1
+
+  Example program code
+
+  VB.NET
+  FindValues()
+
+  Python
+  FindValues()</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>FindValues()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FindValues()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for a screenshot of output showing  1
+  Stack full output once
+  Lowest value output in an appropriate message
+  Highest value output in an appropriate message
+  Lowest and Highest must be 0–1000 inclusive
+
+ University Press &amp; Assessment 2025  Page 14 of 36
+
+9618/41  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked41/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end)</li>
+<li>Declaration of 2 private attributes with correct data types</li>
+<li>Constructor header (and end) within class with 2 parameters …</li>
+<li>… assigning parameters to attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Train
+                    Private TrainIDNumber As String
+                    Private Route As Integer
+
+                    Sub New(pNumber, pRoute)
+                        TrainIDNumber = pNumber
+                        Route = pRoute
+                    End Sub
+                End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Train():
+                     def __init__(self, pNumber, pRoute):
+                         self.__TrainIDNumber = pNumber #string
+                         self.__Route = pRoute #integer
+
+ University Press &amp; Assessment 2025                       Page 15 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end)</li><li>Declaration of 2 private attributes with correct data types</li><li>Constructor header (and end) within class with 2 parameters …</li><li>… assigning parameters to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One get method header (and end) with no parameter …</li>
+<li>… returning correct attribute</li>
+<li>Second correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetTrainIDNumber()
+                    Return TrainIDNumber
+                End Function
+
+                Function GetRoute()
+                    Return Route
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetTrainIDNumber(self):
+                     return self.__TrainIDNumber
+
+                def GetRoute(self):
+                    return self.__Route
+
+ University Press &amp; Assessment 2025                       Page 16 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One get method header (and end) with no parameter …</li><li>… returning correct attribute</li><li>Second correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One instance of train with correct arguments and stored in a variable/structure</li>
+<li>Remaining three instances correct</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim FirstTrain As Train = New Train(&quot;12ADV&quot;, 134)
+                Dim SecondTrain As Train = New Train(&quot;33ART&quot;, 20)
+                Dim ThirdTrain As Train = New Train(&quot;9FKF&quot;, 3)
+                Dim FourthTrain As Train = New Train(&quot;21VBC&quot;, 24)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstTrain = Train(&quot;12ADV&quot;,134)
+                SecondTrain = Train(&quot;33ART&quot;,20)
+                ThirdTrain = Train(&quot;9FKF&quot;,3)
+                FourthTrain = Train(&quot;21VBC&quot;,24)
+
+ University Press &amp; Assessment 2025                       Page 17 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme                      October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One instance of train with correct arguments and stored in a variable/structure</li><li>Remaining three instances correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end) with four private attributes with appropriate data types</li>
+<li>Constructor header (and end) within class taking 2 parameters …</li>
+<li>… assigning parameters to attributes, initialising NumberTrains to 0, initialising Trains to an empty array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Station
+                    Private StationID As String
+                    Private NumberPlatforms As Integer
+                    Private Trains(9) As Train
+                    Private NumberTrains As Integer
+
+                    Sub New(pID, pNumberOfPlatforms)
+                        StationID = pID
+                        NumberPlatforms = pNumberOfPlatforms
+                        NumberTrains = 0
+                    End Sub
+                End Class
+
+ University Press &amp; Assessment 2025                       Page 18 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end) with four private attributes with appropriate data types</li><li>Constructor header (and end) within class taking 2 parameters …</li><li>… assigning parameters to attributes, initialising NumberTrains to 0, initialising Trains to an empty array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.__StationID = pID #string</li>
+<li>self.__NumberPlatforms = pNumberOfPlatforms #integer</li>
+<li>self.__Trains = [] #train 10 elements</li>
+<li>self.__NumberTrains = 0 #integer</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Station():
+                     def __init__(self, pID, pNumberOfPlatforms):
+                         self.__StationID = pID #string
+                         self.__NumberPlatforms = pNumberOfPlatforms #integer
+                         self.__Trains = [] #train 10 elements
+                         self.__NumberTrains = 0 #integer
+
+ University Press &amp; Assessment 2025                       Page 19 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.__StationID = pID #string</li><li>self.__NumberPlatforms = pNumberOfPlatforms #integer</li><li>self.__Trains = [] #train 10 elements</li><li>self.__NumberTrains = 0 #integer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (and close) taking one Train parameter</li>
+<li>Checking if all platforms are full and returning FALSE</li>
+<li>(Otherwise) Storing parameter in array Trains …</li>
+<li>… incrementing NumberTrains and returning True</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function AddTrain(NewTrain)
+                    If NumberTrains &gt;= NumberPlatforms Then
+                        Return False
+                    End If
+                    Trains(NumberTrains) = NewTrain
+                    NumberTrains = NumberTrains + 1
+                    Return True
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def AddTrain(self, NewTrain):
+                     if self.__NumberTrains &gt;= self.__NumberPlatforms:
+                         return False
+                     else:
+                         self.__Trains.append(NewTrain)
+                         self.__NumberTrains += 1
+                         return True
+ University Press &amp; Assessment 2025                       Page 20 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (and close) taking one Train parameter</li><li>Checking if all platforms are full and returning FALSE</li><li>(Otherwise) Storing parameter in array Trains …</li><li>… incrementing NumberTrains and returning True</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (and close) and returning a string in all cases</li>
+<li>Checking if no trains and returning &quot;There are no trains&quot;</li>
+<li>(Otherwise) Looping through each train in the station …</li>
+<li>… accessing train ID number and route number using get methods</li>
+<li>… creating a string with ID number and route number for each train</li>
+<li>… returning correctly formatted string</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetTrains()
+                    If NumberTrains = 0 Then
+                        Return &quot;There are no trains&quot;
+                    End If
+                    Dim OutputLine As String = &quot;The trains at station &quot; &amp; StationID &amp; &quot; are:&quot; &amp; vbNewLine
+                    For x = 0 To NumberTrains - 1
+                       OutputLine = OutputLine &amp; Trains(x). GetTrainIDNumber() &amp; &quot; on route number &quot; &amp;
+                Trains(x).GetRoute() &amp; vbNewLine
+                    Next
+                    Return OutputLine
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 21 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (and close) and returning a string in all cases</li><li>Checking if no trains and returning &quot;There are no trains&quot;</li><li>(Otherwise) Looping through each train in the station …</li><li>… accessing train ID number and route number using get methods</li><li>… creating a string with ID number and route number for each train</li><li>… returning correctly formatted string</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if self.__NumberTrains == 0:</li>
+<li>OutputLine = &quot;The trains at station &quot; + self.__StationID + &quot; are: \n&quot;</li>
+<li>OutputLine = OutputLine + self.__Trains[x]. GetTrainIDNumber() + &quot; on route number</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetTrains(self):
+                     if self.__NumberTrains == 0:
+                         return &quot;There are no trains&quot;
+                     OutputLine = &quot;The trains at station &quot; + self.__StationID + &quot; are: \n&quot;
+                     for x in range(self.__NumberTrains):
+                         OutputLine = OutputLine + self.__Trains[x]. GetTrainIDNumber() + &quot; on route number
+                &quot; + str(self.__Trains[x].GetRoute()) + &quot;\n&quot;
+                     return OutputLine</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if self.__NumberTrains == 0:</li><li>OutputLine = &quot;The trains at station &quot; + self.__StationID + &quot; are: \n&quot;</li><li>OutputLine = OutputLine + self.__Trains[x]. GetTrainIDNumber() + &quot; on route number</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One instance of Station created with correct arguments and stored</li>
+<li>Second correct instance and stored</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim SouthStation As Station = New Station(&quot;STH&quot;, 2)
+                Dim NorthStation As Station = New Station(&quot;NTH&quot;, 1)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>SouthStation = Station(&quot;STH&quot;,2)
+                NorthStation = Station(&quot;NTH&quot;,1)
+
+ University Press &amp; Assessment 2025                       Page 22 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One instance of Station created with correct arguments and stored</li><li>Second correct instance and stored</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling AddTrain for 3 correct trains for station STH once</li>
+<li>Calling AddTrain for 1 correct train for station NTH once</li>
+<li>Outputting &quot;Station is full&quot; if any return value is FALSE</li>
+<li>Calling GetTrains() for both stations and outputting return values</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim ReturnValue As Boolean = SouthStation.AddTrain(FirstTrain)
+                If ReturnValue = False Then
+                    Console.WriteLine(&quot;Station is full&quot;)
+                End If
+                ReturnValue = SouthStation.AddTrain(SecondTrain)
+                If ReturnValue = False Then
+ University Press &amp; Assessment 2025                       Page 23 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling AddTrain for 3 correct trains for station STH once</li><li>Calling AddTrain for 1 correct train for station NTH once</li><li>Outputting &quot;Station is full&quot; if any return value is FALSE</li><li>Calling GetTrains() for both stations and outputting return values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ReturnValue = SouthStation.AddTrain(ThirdTrain)</li>
+<li>If ReturnValue = False Then</li>
+<li>ReturnValue = NorthStation.AddTrain(FourthTrain)</li>
+<li>If ReturnValue = False Then</li>
+<li>ReturnValue = SouthStation.AddTrain(FirstTrain)</li>
+<li>if ReturnValue == False:</li>
+<li>ReturnValue = SouthStation.AddTrain(SecondTrain)</li>
+<li>if ReturnValue == False:</li>
+<li>ReturnValue = SouthStation.AddTrain(ThirdTrain)</li>
+<li>if ReturnValue == False:</li>
+<li>ReturnValue = NorthStation.AddTrain(FourthTrain)</li>
+<li>if ReturnValue == False:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>ReturnValue = SouthStation.AddTrain(FirstTrain)
+                if ReturnValue == False:
+                     print(&quot;Station is full&quot;)
+
+                ReturnValue = SouthStation.AddTrain(SecondTrain)
+                if ReturnValue == False:
+                    print(&quot;Station is full&quot;)
+
+                ReturnValue = SouthStation.AddTrain(ThirdTrain)
+                if ReturnValue == False:
+                    print(&quot;Station is full&quot;)
+
+                ReturnValue = NorthStation.AddTrain(FourthTrain)
+                if ReturnValue == False:
+                    print(&quot;Station is full&quot;)
+
+                print(SouthStation.GetTrains())
+                print(NorthStation.GetTrains())
+
+ University Press &amp; Assessment 2025                       Page 24 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ReturnValue = SouthStation.AddTrain(ThirdTrain)</li><li>If ReturnValue = False Then</li><li>ReturnValue = NorthStation.AddTrain(FourthTrain)</li><li>If ReturnValue = False Then</li><li>ReturnValue = SouthStation.AddTrain(FirstTrain)</li><li>if ReturnValue == False:</li><li>ReturnValue = SouthStation.AddTrain(SecondTrain)</li><li>if ReturnValue == False:</li><li>ReturnValue = SouthStation.AddTrain(ThirdTrain)</li><li>if ReturnValue == False:</li><li>ReturnValue = NorthStation.AddTrain(FourthTrain)</li><li>if ReturnValue == False:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One output of &quot;Station is full&quot;</li>
+<li>Output of correct data for both stations (in correct format)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One output of &quot;Station is full&quot;</li><li>Output of correct data for both stations (in correct format)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked41/page-09.jpg" alt="Paper page 9 for Q3"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end) and constructor header (and end) in class</li>
+<li>Constructor takes two parameters and stores each in attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Record
+                    Dim Key As Integer
+                    Dim Data As String
+                    Sub New(pKey, pData)
+                        Key = pKey
+                        Data = pData
+                    End Sub
+                End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Record:
+                     def __init__(self, pKey, pData):
+                         self.Key = pKey #integer
+                         self.Data = pData #string
+
+ University Press &amp; Assessment 2025                       Page 26 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme               October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end) and constructor header (and end) in class</li><li>Constructor takes two parameters and stores each in attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>2D array of 100  10 elements of type Record</li>
+<li>Procedure InitialiseHashTable() header (and end) and initialises each element in the 2D array to an empty/null</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim HashTable(99, 9) As Record
+                Sub InitialiseHashTable()
+                    Dim EmptyRecord As Record = New Record(-1, &quot;&quot;)
+                    For X = 0 To 99
+                        For Y = 0 To 9
+                            HashTable(X, Y) = EmptyRecord
+                        Next
+                    Next
+                End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>HashTable = []
+                def InitialiseHashTable():
+                     global HashTable
+                     HashTable = [[Record(-1,&quot;&quot;)]*10 for i in range(100)]
+
+ University Press &amp; Assessment 2025                       Page 27 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>2D array of 100  10 elements of type Record</li><li>Procedure InitialiseHashTable() header (and end) and initialises each element in the 2D array to an empty/null</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) taking one parameter and returning calculated hash</li>
+<li>…. hash calculated correctly from parameter</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Hash(Key)
+                    Return Key Mod 100
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Hash(Key):
+                     return Key % 100
+
+ University Press &amp; Assessment 2025                       Page 28 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme                  October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) taking one parameter and returning calculated hash</li><li>…. hash calculated correctly from parameter</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking one Record parameter</li>
+<li>Calling Hash() using key from parameter and storing/using return value</li>
+<li>Accessing HashTable[return][0] and storing parameter if no collision … … if collision: iterating through 2 nd</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function InsertData(RecordData)
+                   Dim HashValue As Integer = Hash(RecordData.Key)
+
+                    For X = 0 To 9
+                        If HashTable(HashValue, X).Key = -1 Then
+                            HashTable(HashValue, X) = RecordData
+                            X= 10
+                        End If
+                    Next X
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 29 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking one Record parameter</li><li>Calling Hash() using key from parameter and storing/using return value</li><li>Accessing HashTable[return][0] and storing parameter if no collision … … if collision: iterating through 2 nd</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HashValue = Hash(RecordData.Key)</li>
+<li>if HashTable[HashValue][X].Key == -1:</li>
+<li>HashTable[HashValue][X] = RecordData</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertData(RecordData):
+                     global HashTable
+
+                      HashValue = Hash(RecordData.Key)
+
+                      for X in range(0, 10):
+                          if HashTable[HashValue][X].Key == -1:
+                              HashTable[HashValue][X] = RecordData
+
+ University Press &amp; Assessment 2025                       Page 30 of 36
+
+9618/41                                            Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HashValue = Hash(RecordData.Key)</li><li>if HashTable[HashValue][X].Key == -1:</li><li>HashTable[HashValue][X] = RecordData</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end), opening file and closing file (in appropriate place)</li>
+<li>Iterating through each line in file // reading each line in from file</li>
+<li>Splitting each line read in by comma …</li>
+<li>… creating Record object with each key and data as arguments …</li>
+<li>… calling InsertData() with each object</li>
+<li>Try, catch with appropriate output and all file access within try</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end), opening file and closing file (in appropriate place)</li><li>Iterating through each line in file // reading each line in from file</li><li>Splitting each line read in by comma …</li><li>… creating Record object with each key and data as arguments …</li><li>… calling InsertData() with each object</li><li>Try, catch with appropriate output and all file access within try</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Line = FileReader.ReadLine()</li>
+<li>Data = Split(Line, &quot;,&quot;)</li>
+<li>TheRecord = New Record(Integer.Parse(Data(0)), Data(1))</li>
+<li>File = open(&quot;HashTableData.txt&quot;)</li>
+<li>Data = Line.strip()</li>
+<li>Data = Line.split(&quot;,&quot;)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                    Dim Line As String
+                    Dim Data(3) As String
+                    Dim TheRecord As Record
+
+                      Dim FileReader As New System.IO.StreamReader(&quot;HashTableData.txt&quot;)
+                      While Not FileReader.EndOfStream
+                          Line = FileReader.ReadLine()
+                          Data = Split(Line, &quot;,&quot;)
+                          TheRecord = New Record(Integer.Parse(Data(0)), Data(1))
+                          InsertData(TheRecord)
+                      End While
+                      FileReader.Close()
+
+                End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                     global HashTable
+                     File = open(&quot;HashTableData.txt&quot;)
+                     for Line in File:
+                         Data = Line.strip()
+                         Data = Line.split(&quot;,&quot;)
+                         InsertData(Record(int(Data[0]), Data[1]))
+                     File.close()
+
+ University Press &amp; Assessment 2025                       Page 32 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme           October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Line = FileReader.ReadLine()</li><li>Data = Split(Line, &quot;,&quot;)</li><li>TheRecord = New Record(Integer.Parse(Data(0)), Data(1))</li><li>File = open(&quot;HashTableData.txt&quot;)</li><li>Data = Line.strip()</li><li>Data = Line.split(&quot;,&quot;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) taking one parameter and returning string in all cases</li>
+<li>Calling Hash() with parameter and storing/using return value</li>
+<li>Iterating through 2 nd dimension at HashTable[return value] and comparison to parameter …</li>
+<li>… returning data if found/equal</li>
+<li>… returning &quot;Not found&quot; if not found by the end of the dimension</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetRecord(Key)
+                    Dim HashValue As Integer = Hash(Key)
+
+                    For X = 0 To 9
+                        If HashTable(HashValue, X).Key = Key Then
+                            Return HashTable(HashValue, X).Data
+                        End If
+                    Next X
+                    Return &quot;Not found&quot;
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 33 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) taking one parameter and returning string in all cases</li><li>Calling Hash() with parameter and storing/using return value</li><li>Iterating through 2 nd dimension at HashTable[return value] and comparison to parameter …</li><li>… returning data if found/equal</li><li>… returning &quot;Not found&quot; if not found by the end of the dimension</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HashValue = Hash(Key)</li>
+<li>if HashTable[HashValue][X].Key == Key:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetRecord(Key):
+                     global HashTable
+
+                      HashValue = Hash(Key)
+                      for X in range(0, 10):
+                          if HashTable[HashValue][X].Key == Key:
+                              return HashTable[HashValue][X].Data
+
+                      return &quot;Not found&quot;
+
+ University Press &amp; Assessment 2025                       Page 34 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HashValue = Hash(Key)</li><li>if HashTable[HashValue][X].Key == Key:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(g)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling InitialiseHashTable() then ReadData()</li>
+<li>Taking five (integer) inputs</li>
+<li>Calling GetRecord() with each input and outputting return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                    InitialiseHashTable()
+                    ReadData()
+
+                    For X = 0 To 5
+                        Console.WriteLine(&quot;Enter key field&quot;)
+                        Console.WriteLine(GetRecord(Console.ReadLine()))
+                    Next
+                End Sub
+
+ University Press &amp; Assessment 2025                       Page 35 of 36
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling InitialiseHashTable() then ReadData()</li><li>Taking five (integer) inputs</li><li>Calling GetRecord() with each input and outputting return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(g)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Key = int(input(&quot;Enter key field &quot;))</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>InitialiseHashTable()
+                ReadData()
+
+                for x in range(5):
+                    Key = int(input(&quot;Enter key field &quot;))
+                    print(GetRecord(Key))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Key = int(input(&quot;Enter key field &quot;))</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(g)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Input of the 4 integers and matching word output</li>
+<li>Input of 39 and output of Not found</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Input of the 4 integers and matching word output</li><li>Input of 39 and output of Not found</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

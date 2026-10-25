@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/23 · October/November 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/23 · October/November 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Assignment statement  Data type
+
+  MyVar1  Total1 / Total2  REAL
+
+  MyVar2  27/10/2023  DATE
+
+  MyVar3  &quot;Sum1 / Sum2&quot;  STRING
+
+  MyVar4  Result1 AND Result2  BOOLEAN</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<ol>
+<li>Fraction &gt;= 0.2 AND NOT Active                            FALSE</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Fraction &gt;= 0.2 AND NOT Active                            FALSE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The use of a program library (routines)  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1 Type: Adaptive  2
+  MP2 Reason: The (user) requirement(s) changes // to accommodate
+  legislative changes
+
+ 2023  Page 4 of 11
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>GetData() does not return a value until a message has been received</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+
+  MP1 Initialise Min to first value in Data and MinIndex to 1
+  MP2 Loop through 29 more values (or 30 values in total)
+  MP3 Compare element from Data[] with Min
+  MP4 Set new Min AND save MinIndex when element value &lt; Min in a loop
+  MP5 Output MinIndex</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1 Simplifies the algorithm // easier to write / understand / test / debug  2
+  MP2 It is possible to iterate through the values // can use a loop // allows the
+  storage of many values using a single identifier</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per underlined section  2
+
+  DECLARE Data : ARRAY[1:120] OF REAL
+
+ 2023  Page 5 of 11
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>So once a message has been sent the user has to wait for a reply // chat
+  is half-duplex
+
+  Modification:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-06.jpg" alt="Paper page 6 for Q3"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3</p>
+<div class='ms-raw'>3
+
+  :
+  MP1 D3, D4, D1, D2 and D5 in question order or reversed - in any five
+  consecutive locations
+  MP2 FoQ value matches index with D3
+  MP3 EoQ value matches index with D5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP1 If NumItems is / = 8 // (queue) full then jump to step 6                      6</li>
+<li>MP3 If EndOfQueue = 9 then set EndOfQueue to 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP1 If NumItems is / = 8 // (queue) full then jump to step 6                      6</li><li>MP3 If EndOfQueue = 9 then set EndOfQueue to 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If no response allow the receiver to exit chat at any time …</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-08.jpg" alt="Paper page 8 for Q4"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT StepVal = 10</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT StepVal = 10</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP1 Result[x + 1] &lt;= Result[x]</li>
+<li>Result[x] &gt;= Result[x + 1]</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP1 Result[x + 1] &lt;= Result[x]</li><li>Result[x] &gt;= Result[x + 1]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>GetData() should immediately return a suitable message // set a time
+  limit</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked23/page-10.jpg" alt="Paper page 10 for Q5"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 6</p>
+<ol>
+<li>MP6 5 – Total 28 and final Mix[1] = 56</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP6 5 – Total 28 and final Mix[1] = 56</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>... which Chat() can detect and respond by allowing the conversation to
+  continue
+
+ 2023  Page 11 of 11</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q6"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 6 · AND MID(ThisNum, 5, 1) = MID(ThisNum, 6, 1) THEN</p>
+<ol>
+<li>IF LEFT(ThisNum,3) = RIGHT(ThisNum 3) THEN</li>
+<li>IF RIGHT(ThisNum, 3) = &quot;000&quot; THEN</li>
+<li>IF MID(ThisNum, 4, 1) = MID(ThisNum, 5, 1)__</li>
+<li>AND MID(ThisNum, 5, 1) = MID(ThisNum, 6, 1) THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF LEFT(ThisNum,3) = RIGHT(ThisNum 3) THEN</li><li>IF RIGHT(ThisNum, 3) = &quot;000&quot; THEN</li><li>IF MID(ThisNum, 4, 1) = MID(ThisNum, 5, 1)__</li><li>AND MID(ThisNum, 5, 1) = MID(ThisNum, 6, 1) THEN</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked23/page-14.jpg" alt="Paper page 14 for Q7"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1 iteration / looping  2
+  MP2 naming all four modules correctly in the correct sequence // e.g.
+  Module-A repeatedly calls Sub-Y1,then SubY2 then Sub-9</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>TYPE MyType  3
+  DECLARE RA  : INTEGER
+  DECLARE RB  : STRING
+  DECLARE RC  : BOOLEAN
+  ENDTYPE
+
+  MP1 TYPE MyType... ENDTYPE
+  MP2 RA as integer and RB3 as string
+  MP3 RC as Boolean</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>PROCEDURE Sub-9(BYREF Param : MyType)  2
+
+  MP 1 One mark for BYREF
+  MP 2 One mark for the rest of the statement
+
+ 2023  Page 9 of 11
+
+9618/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked23/page-16.jpg" alt="Paper page 16 for Q8"><div class="cap">Original paper page 16</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Terminator = &quot;****&quot;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Terminator = &quot;****&quot;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If the file being sent contains a line of the string &quot;****&quot;</li>
+<li>then the file being written by ReceiveFile() will end at this point //</li>
+<li>Read the file (at the sending end) to find the number of lines it contains</li>
+<li>Send an initial message which defines the number of lines in the file</li>
+<li>(Transmitter program) chooses a different terminator string / character</li>
+<li>Transmitter program sends the terminator string / character before first</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If the file being sent contains a line of the string &quot;****&quot;</li><li>then the file being written by ReceiveFile() will end at this point //</li><li>Read the file (at the sending end) to find the number of lines it contains</li><li>Send an initial message which defines the number of lines in the file</li><li>(Transmitter program) chooses a different terminator string / character</li><li>Transmitter program sends the terminator string / character before first</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Terminator = &quot;Bye&quot;</li>
+<li>CONSTANT STX = CHR(2)</li>
+<li>CONSTANT ETX = CHR(3)</li>
+<li>IF Data = Terminator THEN</li>
+<li>IF Data = Terminator THEN</li>
+<li>UNTIL Finished = TRUE</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Terminator = &quot;Bye&quot;</li><li>CONSTANT STX = CHR(2)</li><li>CONSTANT ETX = CHR(3)</li><li>IF Data = Terminator THEN</li><li>IF Data = Terminator THEN</li><li>UNTIL Finished = TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Note: Max 3 marks (from either limitation or modification list)  3
+
+  Limitation:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

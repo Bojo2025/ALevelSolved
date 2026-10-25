@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/21 · May/June 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/21 · May/June 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked21/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>An algorithm  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Variable  Use of variable  Data type
+
+  Temp  Stores the average temperature  REAL
+
+  PetName  Stores the name of my pet  STRING
+
+  MyDOB  To calculate how many days until my  DATE
+  next birthday
+
+  LightOn  Stores state of light; light is only on or off  BOOLEAN
+
+  One mark for each data type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for variable name, and one for reason  2
+
+  Variable: Temp
+
+  Reason: Name does not indicate what the variable is used for</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Expression  Evaluation
+
+  INT((31 / 3) + 1)  11
+
+  MID(TO_UPPER(&quot;Version&quot;), 4, 2)  &quot;SI&quot;
+
+  TRUE AND (NOT FALSE)  TRUE
+
+  NUM_TO_STR(27 MOD 3)  &quot;0&quot;
+
+  One mark per row</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare loop variable and counter as integers, counter initialised</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare loop variable and counter as integers, , counter initialised</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Functions header including parameter, ending and return type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare all local variables used, attempted solution has to be reasonable</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked21/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The single input value that could result in S4                 Button-Y</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The single input value that could result in S4                 Button-Y</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per row  4
+
+  Example answer
+
+  Note: Accept other valid answers</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Set up a conditional loop, repeating until the value is found or the EOF()
+  is reached</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Calculation of number of pairs to match (length or half length)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Randomly decide which of the three ranges to select</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Conditional loop while not found and not end of array</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked21/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Allows the user to search for films being shown // input name of film they</li>
+<li>Allows the user to search for available seats</li>
+<li>Calculate cost of booking</li>
+<li>Book a given number of seats for a particular screening</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Allows the user to search for films being shown // input name of film they</li><li>Allows the user to search for available seats</li><li>Calculate cost of booking</li><li>Book a given number of seats for a particular screening</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>STEP 10 or explicit increment if conditional loop used</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Compare value of element in column 1 with parameter passed into
+  function</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked21/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 206</p>
+<div class='ms-raw'>One mark per row  2
+  Answer
+
+  The value that has been on the stack for the longest time.  &#x27;H&#x27;
+
+  The memory location pointed to by TopOfStack if three
+  206
+  POP operations are performed.
+
+ 2022  Page 4 of 12
+
+9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 206</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4 · 200</p>
+<div class='ms-raw'>4
+  Stack  Pointer
+
+  Memory
+  Value
+  location
+
+  200
+
+  201  &#x27;D&#x27;   TopOfStack
+
+  202  &#x27;C&#x27;
+
+  203  &#x27;A&#x27;
+
+  204  &#x27;X&#x27;
+
+  205  &#x27;Z&#x27;
+
+  206  &#x27;N&#x27;
+
+  207  &#x27;P&#x27;
+
+  One mark for:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li><li>Correct result: 200</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Values &#x27;X&#x27; to &#x27;P&#x27; unchanged (204 to 207)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output selected value and incrementing a counter in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output each value and incrementing a counter in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>…Extracting characters to compare // create reverse string</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One alphanumeric character range correct</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>...and use Decrypt() with element in column 2 as parameter</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked21/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point to Max 6  6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Description of how Field 2 could be extracted e.g. using substring
+  function and lengths of Field 1 and Field 2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output the counter, following a reasonable attempt, after the loop
+
+  Alternative Solution:
+
+  DECLARE ThisInt, Count : INTEGER
+  Count  0
+
+  FOR ThisInt  107 TO 197 STEP 10
+  OUTPUT ThisInt
+  Count  Count + 1
+  NEXT ThisInt
+
+  OUTPUT Count
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>All alphanumeric character ranges correct</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked21/page-09.jpg" alt="Paper page 9 for Q6"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Compare extracted field with search value</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF ThisInt MOD 10 = 7 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF ThisInt MOD 10 = 7 THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF MySwitch = 1 THEN                                                      4</li>
+<li>IF MySwitch = 2 THEN</li>
+<li>IF MySwitch = 3 THEN</li>
+<li>1.   ANY test of MySwitch = 1, 2 or 3</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF MySwitch = 1 THEN                                                      4</li><li>IF MySwitch = 2 THEN</li><li>IF MySwitch = 3 THEN</li><li>1.   ANY test of MySwitch = 1, 2 or 3</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check for mismatch of characters inside loop / test for mismatch after
+  loop for reversed string</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output warning message if parameter not found</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked21/page-11.jpg" alt="Paper page 11 for Q7"><div class="cap">Original paper page 11</div></div>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If search value found, extract Field 1and Field 3 and output them</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>WHILE Index &lt;= Num AND IsPal = TRUE</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>WHILE Index &lt;= Num AND IsPal = TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4 · D</p>
+<ol>
+<li>B</li>
+<li>D</li>
+<li>C</li>
+<li>...F and G</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>B</li><li>D</li><li>C</li><li>...F and G</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked21/page-14.jpg" alt="Paper page 14 for Q8"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>FUNCTION RandomChar() RETURNS CHAR  6
+  DECLARE ThisRange : INTEGER
+  DECLARE ThisChar : CHAR
+
+  //First select the range
+  ThisRange  INT(RAND(3)) + 1 // 1 to 3
+
+  CASE OF ThisRange
+  1: ThisChar  CHR(INT(RAND(26) + 65)) // 65 to 90:
+  &#x27;A&#x27; to &#x27;Z&#x27;
+  ThisChar  LCASE(ThisChar)  // &#x27;a&#x27; to &#x27;z&#x27;
+  2: ThisChar  CHR(INT(RAND(26) + 65)) // 65 to 90:
+  A to Z
+  3: ThisChar  NUM_TO_STR(INT(RAND(10)) // &#x27;0&#x27; to &#x27;9&#x27;
+  ENDCASE
+
+  RETURN ThisChar
+  ENDFUNCTION
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>WHILE Password = &quot;&quot; AND Index &lt;= 500</li>
+<li>IF Secret[Index, 1] = Name THEN</li>
+<li>IF Password = &quot;&quot; THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>WHILE Password = &quot;&quot; AND Index &lt;= 500</li><li>IF Secret[Index, 1] = Name THEN</li><li>IF Password = &quot;&quot; THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Stub testing</li>
+<li>A simple module is written to replace each of the modules</li>
+<li>The simple module will return an expected value // will output a message</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Stub testing</li><li>A simple module is written to replace each of the modules</li><li>The simple module will return an expected value // will output a message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Length too long // length too short</li>
+<li>Invalid character</li>
+<li>Incorrect grouping (including number of hyphens)</li>
+<li>Duplicated characters</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Length too long // length too short</li><li>Invalid character</li><li>Incorrect grouping (including number of hyphens)</li><li>Duplicated characters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Generate a random integer divisible by 3</li>
+<li>Split range into 1/3 and set as numeric</li>
+<li>Else alphabetic character</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Generate a random integer divisible by 3</li><li>Split range into 1/3 and set as numeric</li><li>Else alphabetic character</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

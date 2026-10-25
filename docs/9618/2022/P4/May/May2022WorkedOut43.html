@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · May/June 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · May/June 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>declaration of at least 1 array with appropriate identifier</li>
+<li>… 11 elements (and appropriate data type(s))</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim FileData(0 To 9, 0 To 1) As String</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FileData = [[&quot;&quot;] *2 for i in range(11)] #string
+
+ 2022                                                            Page 4 of 34
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>declaration of at least 1 array with appropriate identifier</li><li>… 11 elements (and appropriate data type(s))</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure declaration (and end)</li>
+<li>Opening the text file (to read)</li>
+<li>Looping 10 times // looping until end of file (e.g. 10 pairs of data)</li>
+<li>Reading in each pair of lines …</li>
+<li>… storing player name and score in data structure(s)</li>
+<li>closing the file</li>
+<li>Try and catch on file handling …</li>
+<li>… with suitable output</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure declaration (and end)</li><li>Opening the text file (to read)</li><li>Looping 10 times // looping until end of file (e.g. 10 pairs of data)</li><li>Reading in each pair of lines …</li><li>… storing player name and score in data structure(s)</li><li>closing the file</li><li>Try and catch on file handling …</li><li>… with suitable output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Filename = &quot;HighScore.txt&quot;</li>
+<li>File = open(Filename, &#x27;r&#x27;)</li>
+<li>FileData[x][0] = File.readline()[:3]</li>
+<li>FileData[x][1] = File.readline()</li>
+<li>Dim Textfile As String = &quot;HighScore.txt&quot;</li>
+<li>Dim DataEntered As Integer = 0</li>
+<li>FileData(DataEntered, 0) = FileReader.ReadLine()</li>
+<li>FileData(DataEntered, 1) = FileReader.ReadLine()</li>
+<li>DataEntered = DataEntered + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadHighScores()
+                 Dim Textfile As String = &quot;HighScore.txt&quot;
+                 Dim FileReader As New System.IO.StreamReader(textfile)
+                 Dim DataEntered As Integer = 0
+                 While FileReader.Peek &lt;&gt; -1 and DataEntered &lt; 10
+                   FileData(DataEntered, 0) = FileReader.ReadLine()
+                   FileData(DataEntered, 1) = FileReader.ReadLine()
+                   DataEntered = DataEntered + 1
+                 End While
+                 FileReader.Close()
+               End Sub
+
+ 2022                                               Page 6 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadHighScores():
+                 Filename = &quot;HighScore.txt&quot;
+                 File = open(Filename, &#x27;r&#x27;)
+                 for x in range(0, 10):
+                      FileData[x][0] = File.readline()[:3]
+                      FileData[x][1] = File.readline()
+                File.close</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Filename = &quot;HighScore.txt&quot;</li><li>File = open(Filename, &#x27;r&#x27;)</li><li>FileData[x][0] = File.readline()[:3]</li><li>FileData[x][1] = File.readline()</li><li>Dim Textfile As String = &quot;HighScore.txt&quot;</li><li>Dim DataEntered As Integer = 0</li><li>FileData(DataEntered, 0) = FileReader.ReadLine()</li><li>FileData(DataEntered, 1) = FileReader.ReadLine()</li><li>DataEntered = DataEntered + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure heading and end</li>
+<li>looping through all data structure elements</li>
+<li>outputting player name, space, score. Each player must start on a new line</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputHighScores ()
+                 For x = 0 To 10
+                   Console.WriteLine(FileData(x, 0) &amp; &quot; &quot; &amp; FileData(x,1))
+                 Next
+               End Sub
+
+ 2022                                                        Page 7 of 34
+
+9618/43                                   Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputHighScores ():
+                  for x in range(0, 11):
+                      Output = FileData[x][0] + &quot; &quot; + FileData[x][1]
+                      print(Output)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure heading and end</li><li>looping through all data structure elements</li><li>outputting player name, space, score. Each player must start on a new line</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Main program) calls ReadHighScores()</li>
+<li>… then calls OutputHighScores()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 ReadHighScores()
+                 OutputHighScore()
+                 Console.ReadLine()
+               End Sub
+
+ 2022                                                  Page 8 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme                                   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ReadHighScores()
+               OutputHighScore()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Main program) calls ReadHighScores()</li><li>… then calls OutputHighScores()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing the 10 names and scores from the file (and one extra blank space may, or may not be  1
+  included)
+  e.g.
+
+ 2022  Page 9 of 34
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Read in a username and score</li>
+<li>Validate username input (3-characters, or just selecting the first 3 characters if there are definitely 3 characters)</li>
+<li>Validate score input (integer (cast) between 1 and 100 000 inclusive)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>Username = &quot;ABCD&quot;
+               while len(Username) != 3:
+                   Username = input(&quot;Enter your Username&quot;)
+
+               score = -1
+               while Score &lt; 1 or Score &gt; 100000:
+                   Score = int(input(&quot;Enter score&quot;))
+
+ 2022                                                           Page 10 of 34
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Read in a username and score</li><li>Validate username input (3-characters, or just selecting the first 3 characters if there are definitely 3 characters)</li><li>Validate score input (integer (cast) between 1 and 100 000 inclusive)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Username = &quot;ABCD&quot;</li>
+<li>Username = Console.ReadLine()</li>
+<li>Score = -1</li>
+<li>Score = Console.ReadLine()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Enter Username&quot;)
+               Username = &quot;ABCD&quot;
+               While Username.length &lt;&gt; 3
+                 Username = Console.ReadLine()
+               End While
+               Score = -1
+               While Score &lt; 1 Or Score &gt; 100000
+                 Console.WriteLine(&quot;Enter score&quot;)
+                 Score = Console.ReadLine()
+               End While
+
+ 2022                                               Page 11 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme               May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Username = &quot;ABCD&quot;</li><li>Username = Console.ReadLine()</li><li>Score = -1</li><li>Score = Console.ReadLine()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure declaration (and close where appropriate) taking 1 string and 1 integer parameter</li>
+<li>looping through each array element</li>
+<li>… finding the position to input the score</li>
+<li>storing the array data in the correct position</li>
+<li>storing the name and score in the correct position</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure declaration (and close where appropriate) taking 1 string and 1 integer parameter</li><li>looping through each array element</li><li>… finding the position to input the score</li><li>storing the array data in the correct position</li><li>storing the name and score in the correct position</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Temp1 = FileData[x][0]</li>
+<li>Temp2 = FileData[x][1]</li>
+<li>FileData[x][0] = Username</li>
+<li>FileData[x][1] = Score</li>
+<li>Count = x+1</li>
+<li>Second1 = FileData[Count][0]</li>
+<li>Second2 = FileData[Count][1]</li>
+<li>FileData[Count][0] = Temp1</li>
+<li>FileData[Count][1] = Temp2</li>
+<li>Temp1 = Second1</li>
+<li>Temp2 = Second2</li>
+<li>Count = Count + 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Arrange(Username, Score):
+                   for x in range(0, 10):
+                       if Score &gt; FileData[x][1]:
+                           Temp1 = FileData[x][0]
+                           Temp2 = FileData[x][1]
+                           FileData[x][0] = Username
+                           FileData[x][1] = Score
+                           Count = x+1
+                           while(Count &lt; 10):
+                               Second1 = FileData[Count][0]
+                               Second2 = FileData[Count][1]
+                               FileData[Count][0] = Temp1
+                               FileData[Count][1] = Temp2
+
+                               Temp1 = Second1
+                               Temp2 = Second2
+                               Count = Count + 1
+                               break;
+
+ 2022                                               Page 13 of 34
+
+9618/43                                 Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Temp1 = FileData[x][0]</li><li>Temp2 = FileData[x][1]</li><li>FileData[x][0] = Username</li><li>FileData[x][1] = Score</li><li>Count = x+1</li><li>Second1 = FileData[Count][0]</li><li>Second2 = FileData[Count][1]</li><li>FileData[Count][0] = Temp1</li><li>FileData[Count][1] = Temp2</li><li>Temp1 = Second1</li><li>Temp2 = Second2</li><li>Count = Count + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 0 To 9</li>
+<li>Temp1 = FileData(x, 0)</li>
+<li>Temp2 = FileData(x, 1)</li>
+<li>FileData(x, 0) = Username</li>
+<li>FileData(x, 1) = Score.ToString</li>
+<li>For Count = x + 1 To 9</li>
+<li>Second1 = FileData(Count, 0)</li>
+<li>Second2 = FileData(Count, 1)</li>
+<li>FileData(Count, 0) = Temp1</li>
+<li>FileData(Count, 1) = Temp2</li>
+<li>Temp1 = Second1</li>
+<li>Temp2 = Second2</li>
+<li>x = 10</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Arrange(Username, Score)
+                 Dim Temp1 As String
+                 Dim Temp2 As String
+                 Dim Second1 As String
+                 Dim Second2 As String
+                 For x = 0 To 9
+                   If Score &gt; Integer.Parse(FileData(x, 1)) Then
+                     Temp1 = FileData(x, 0)
+                     Temp2 = FileData(x, 1)
+
+                      FileData(x, 0) = Username
+                      FileData(x, 1) = Score.ToString
+                      For Count = x + 1 To 9
+                        Second1 = FileData(Count, 0)
+                        Second2 = FileData(Count, 1)
+                        FileData(Count, 0) = Temp1
+                        FileData(Count, 1) = Temp2
+                        Temp1 = Second1
+                        Temp2 = Second2
+                        x = 10
+                      Next
+                   End If
+                 Next
+               End Sub
+
+ 2022                                                Page 14 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 0 To 9</li><li>Temp1 = FileData(x, 0)</li><li>Temp2 = FileData(x, 1)</li><li>FileData(x, 0) = Username</li><li>FileData(x, 1) = Score.ToString</li><li>For Count = x + 1 To 9</li><li>Second1 = FileData(Count, 0)</li><li>Second2 = FileData(Count, 1)</li><li>FileData(Count, 0) = Temp1</li><li>FileData(Count, 1) = Temp2</li><li>Temp1 = Second1</li><li>Temp2 = Second2</li><li>x = 10</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling sorting procedure with correct parameters</li>
+<li>Outputting the array before and after procedure call</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>ReadHighScores()
+               OutputHighScore()
+               Username = input(&quot;Enter your Username&quot;)
+               Score = -1
+               while Score &lt; 0 or Score &gt; 100000:
+                   Score = int(input(&quot;Enter score&quot;))
+               Arrange(Username, Score)
+               OutputHighScore()
+
+ 2022                                                        Page 15 of 34
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling sorting procedure with correct parameters</li><li>Outputting the array before and after procedure call</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Username = Console.ReadLine()</li>
+<li>Score = -1</li>
+<li>Score = Console.ReadLine()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>OutputHighScore()
+               Username = Console.ReadLine()
+               Score = -1
+               While(score &lt; 0 or Score &gt; 100000)
+                   Score = Console.ReadLine()
+               End While
+               Arrange(Username, Score)
+               OutputHighScore()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Username = Console.ReadLine()</li><li>Score = -1</li><li>Score = Console.ReadLine()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(iv) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot. JKL, 9999 entered. After shows JKL in the second position.  1
+  e.g.
+
+ 2022  Page 16 of 34
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure header and end (where appropriate) and opening the file NewHighScore.txt to write</li>
+<li>Closing the file</li>
+<li>Looping through all 10 array values …</li>
+<li>… writing the username, then the score</li>
+<li>Exception handling and appropriate output</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def WriteTopTen():
+                   Filename = &quot; NewHighScore.txt&quot;
+                   Filename = open(Filename, &#x27;w&#x27;)
+                   for x in range(0, 10):
+                       Filename.write(str(FileData[x][0]) + &#x27;\n&#x27;)
+                       Filename.write(str(FileData[x][1]) + &#x27;\n&#x27;)
+                       Filename.close
+
+ 2022                                                     Page 17 of 34
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure header and end (where appropriate) and opening the file NewHighScore.txt to write</li><li>Closing the file</li><li>Looping through all 10 array values …</li><li>… writing the username, then the score</li><li>Exception handling and appropriate output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Filename As String = &quot; NewHighScore.txt&quot;</li>
+<li>For x = 0 To 9</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub WriteTopTen()
+                 Dim Filename As String = &quot; NewHighScore.txt&quot;
+                 Dim NewFile As New System.IO.StreamWriter(Filename)
+                 For x = 0 To 9
+                   NewFile.WriteLine(FileData(x, 0))
+                   NewFile.WriteLine(FileData(x, 1))
+                 Next
+                 NewFile.Close()
+               End Sub
+
+ 2022                                               Page 18 of 34
+
+9618/43                                         Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Filename As String = &quot; NewHighScore.txt&quot;</li><li>For x = 0 To 9</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for function heading and end, dealing with ByRef</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF NumberItems = 10 THEN</li>
+<li>IF TailPointer &gt;= 9 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF NumberItems = 10 THEN</li><li>IF TailPointer &gt;= 9 THEN</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-05.jpg" alt="Paper page 5 for Q2"><div class="cap">Original paper page 5</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Balloon declaration (and end where appropriate)</li>
+<li>declaration of 3 attributes as private with suitable data types</li>
+<li>constructor header (and end) with two parameters …</li>
+<li>… initialising colour and defence item to parameters</li>
+<li>… initialising health to 100</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Balloon:
+               #Health as integer
+               #Colour as string
+               #DefenceItem as string
+               def __init__(self, PDefenceItem, PColour):
+                   self.__Health = 100
+                   self.__Colour = PColour
+                   self.__DefenceItem = PDefenceItem
+
+ 2022                                                          Page 19 of 34
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Balloon declaration (and end where appropriate)</li><li>declaration of 3 attributes as private with suitable data types</li><li>constructor header (and end) with two parameters …</li><li>… initialising colour and defence item to parameters</li><li>… initialising health to 100</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Health = 100</li>
+<li>Colour = PColour</li>
+<li>DefenceItem = PDefenceItem</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class balloon
+                 Private Health As Integer
+                 Private Colour As String
+                 Private DefenceItem As String
+
+                 Public Sub New(PDefenceItem, PColour)
+                   Health = 100
+                   Colour = PColour
+                   DefenceItem = PDefenceItem
+                 End Sub
+               End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Health = 100</li><li>Colour = PColour</li><li>DefenceItem = PDefenceItem</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>get header and close with no parameter …</li>
+<li>… returning defence item attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Function GetDefenceItem()
+                 Return DefenceItem
+               End Function
+
+ 2022                                                    Page 20 of 34
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetDefenceItem(self):
+                   return self.__DefenceItem</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>get header and close with no parameter …</li><li>… returning defence item attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure header and close taking 1 parameter …</li>
+<li>… adding parameter value to health attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Sub ChangeHealth(Change)
+                 Health = Health + Change
+               End Sub
+
+ 2022                                                       Page 21 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ChangeHealth(self, Change):
+                   self.__Health = self.__Health + Change</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure header and close taking 1 parameter …</li><li>… adding parameter value to health attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>method header and close and checking if health attribute is &lt;= 0</li>
+<li>Returning TRUE if health attribute &lt;= 0 and returning FALSE otherwise</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function CheckHealth()
+                 If Health &lt;= 0 Then
+                   Return True
+                 Else
+                   Return False
+                 End If
+               End Function
+
+ 2022                                                       Page 22 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CheckHealth(self):
+                   if self.__Health &lt;= 0:
+                      return True
+                   else:
+                      return False</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>method header and close and checking if health attribute is &lt;= 0</li><li>Returning TRUE if health attribute &lt;= 0 and returning FALSE otherwise</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>take as input defence method and colour (2 strings)</li>
+<li>instantiating new balloon object with identifier Balloon1 …</li>
+<li>… with both input values as parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 Console.WriteLine(&quot;Enter balloon defence method&quot;)
+                 Dim Method As String = Console.ReadLine
+                 Console.WriteLine(&quot;Enter the balloons colour&quot;)
+                 Dim Colour As String = Console.ReadLine
+                 Dim Balloon1 As Balloon = New Balloon(Method, Colour)
+               End Sub
+
+ 2022                                                       Page 23 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme      May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Method = input(&quot;Enter balloon defence method &quot;)
+               Colour = input(&quot;Enter the balloon colour &quot;)
+               Balloon1 = Balloon(Method, Colour)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>take as input defence method and colour (2 strings)</li><li>instantiating new balloon object with identifier Balloon1 …</li><li>… with both input values as parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>function header (and end where appropriate) and taking balloon object as parameter</li>
+<li>Inputting strength</li>
+<li>Calling ChangeHealth method for the parameter object …</li>
+<li>… with the input as a subtraction</li>
+<li>outputting the defence item for the parameter object …</li>
+<li>… using GetDefenceItem()</li>
+<li>Calling CheckHealth()for the parameter object …</li>
+<li>… outputting appropriate message if TRUE is returned (no health remaining)</li>
+<li>… outputting appropriate message if FALSE is returned (health remaining)</li>
+<li>Returning the updated balloon object</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>function header (and end where appropriate) and taking balloon object as parameter</li><li>Inputting strength</li><li>Calling ChangeHealth method for the parameter object …</li><li>… with the input as a subtraction</li><li>outputting the defence item for the parameter object …</li><li>… using GetDefenceItem()</li><li>Calling CheckHealth()for the parameter object …</li><li>… outputting appropriate message if TRUE is returned (no health remaining)</li><li>… outputting appropriate message if FALSE is returned (health remaining)</li><li>Returning the updated balloon object</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Strength = int(input(&quot;Enter the strength of opponent&quot;))</li>
+<li>if(MyBalloon.CheckHealth() == True):</li>
+<li>Dim Strength As Integer = Console.ReadLine</li>
+<li>If (MyBalloon.CheckHealth() = True) Then</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Defend(MyBalloon)
+                 Console.WriteLine(&quot;Enter the strength of opponent&quot;)
+                 Dim Strength As Integer = Console.ReadLine
+                 MyBalloon.ChangeHealth(-Strength)
+                 Console.WriteLine(&quot;You defended with &quot; &amp; MyBalloon.GetDefenceItem)
+                 If (MyBalloon.CheckHealth() = True) Then
+                   Console.WriteLine(&quot;Defence failed&quot;)
+                 Else
+                   Console.WriteLine(&quot;Defence succeeded&quot;)
+                 End If
+                 Return MyBalloon
+               End Function
+
+ 2022                                               Page 25 of 34
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Defend(MyBalloon):
+                   Strength = int(input(&quot;Enter the strength of opponent&quot;))
+                   MyBalloon.VhangeHealth(-Strength)
+                   print(&quot;You defended with &quot;, str(MyBalloon.GetDefenceItem()))
+                   if(MyBalloon.CheckHealth() == True):
+                       print(&quot;Defence failed&quot;)
+                   else:
+                       print(&quot;Defence succeeded&quot;)
+                   return MyBalloon</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Strength = int(input(&quot;Enter the strength of opponent&quot;))</li><li>if(MyBalloon.CheckHealth() == True):</li><li>Dim Strength As Integer = Console.ReadLine</li><li>If (MyBalloon.CheckHealth() = True) Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>calling Defend with balloon object …</li>
+<li>… and stores return value over object</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Balloon1 = Defend(Balloon1)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Balloon1 = Defend(Balloon1)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>calling Defend with balloon object …</li><li>… and stores return value over object</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot with:  1
+  Shield, Red and 50 input
+  Output stating their defence item was Shield
+  Output says health is not 0 (in some manner)
+
+  e.g.
+
+ 2022  Page 26 of 34
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-08.jpg" alt="Paper page 8 for Q3"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring variables: head pointer, tail pointer and number of items all initialised as 0 (integer)</li>
+<li>QueueArray declared as 1D array as string with 10 elements</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                Dim QueueArray(0 To 9) As String
+                Dim QueueHeadPointer As Integer = 0
+                Dim QueueTailPointer As Integer = 0
+                Dim NumberOfItems As Integer = 0
+               End Sub
+
+ 2022                                                           Page 27 of 34
+
+9618/43                                         Cambridge International AS &amp; A Level – Mark Scheme    May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>QueueArray = [&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;,&#x27;&#x27;] #string
+               QueueHeadPointer = 0 #integer
+               QueueTailPointer = 0 #integer
+               NumberOfItems = 0 #integer</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring variables: head pointer, tail pointer and number of items all initialised as 0 (integer)</li><li>QueueArray declared as 1D array as string with 10 elements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark per complete statement (5)  7</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if NumItems &gt;= 10:</li>
+<li>Queue[Tail] = InputData</li>
+<li>if Tail &gt;= 9:</li>
+<li>Tail = 0</li>
+<li>Tail = Tail + 1</li>
+<li>NumItems = NumItems + 1</li>
+<li>If NumItems = 10 Then</li>
+<li>Queue(Tail) = InputData</li>
+<li>If Tail &gt;= 9 Then</li>
+<li>Tail = 0</li>
+<li>Tail = Tail + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(ByRef Queue() As String, ByRef Head As Integer, ByRef Tail As Integer,
+                        ByRef NumItems As Integer, ByRef InputData As String)
+                 If NumItems = 10 Then
+                   Return False
+                 End If
+                 Queue(Tail) = InputData
+                 If Tail &gt;= 9 Then
+                   Tail = 0
+                 Else
+                   Tail = Tail + 1
+
+ 2022                                               Page 29 of 34
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(Queue, Head, Tail, NumItems, InputData):
+                   if NumItems &gt;= 10:
+                       return (False, Queue, Head, Tail, NumItems)
+                   Queue[Tail] = InputData
+                   if Tail &gt;= 9:
+                       Tail = 0
+                   else:
+                       Tail = Tail + 1
+                   NumItems = NumItems + 1
+                   return (True, Queue, Head, Tail, NumItems)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if NumItems &gt;= 10:</li><li>Queue[Tail] = InputData</li><li>if Tail &gt;= 9:</li><li>Tail = 0</li><li>Tail = Tail + 1</li><li>NumItems = NumItems + 1</li><li>If NumItems = 10 Then</li><li>Queue(Tail) = InputData</li><li>If Tail &gt;= 9 Then</li><li>Tail = 0</li><li>Tail = Tail + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header and end</li>
+<li>checking if queue is empty …</li>
+<li>… returning False</li>
+<li>If not empty accessing and returning item at head pointer</li>
+<li>… incrementing head pointer …</li>
+<li>… changing head pointer to 0 if it&#x27;s more than 9 after incrementing</li>
+<li>… decrement number of items</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue(Queue, Head, Tail, NumItems):
+                   if NumItems == 0:
+                       return (false, Queue, Head, Tail, NumItems)
+                   else:
+                       ReturnValue = Queue(Head)
+                       Head = Head + 1
+                       if Head &gt;= 9:
+                           Head = 0
+                       NumItems = NumItems - 1
+                       return(ReturnValue, Queue, Head, Tail, NumItems)
+
+ 2022                                                        Page 30 of 34
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme                May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header and end</li><li>checking if queue is empty …</li><li>… returning False</li><li>If not empty accessing and returning item at head pointer</li><li>… incrementing head pointer …</li><li>… changing head pointer to 0 if it&#x27;s more than 9 after incrementing</li><li>… decrement number of items</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If NumberOfItems = 0 Then</li>
+<li>Dim ReturnValue = QueueArray(QueueHeadPointer)</li>
+<li>QueueHeadPointer = QueueHeadPointer + 1</li>
+<li>If QueueHeadPointer &gt;= 9 Then</li>
+<li>QueueHeadPointer = 0</li>
+<li>NumberOfItems = NumberOfItems - 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue(ByRef QueueArray() As String, ByRef QueueHeadPointer As Integer, ByRef
+               QueueTailpointer As Integer, ByRef NumberOfItems As Integer)
+
+                 If NumberOfItems = 0 Then
+                   Return &quot;False&quot;
+                 Else
+                   Dim ReturnValue = QueueArray(QueueHeadPointer)
+                   QueueHeadPointer = QueueHeadPointer + 1
+                   If QueueHeadPointer &gt;= 9 Then
+                      QueueHeadPointer = 0
+                   End If
+                   NumberOfItems = NumberOfItems - 1
+                   Return ReturnValue
+                 End If
+
+               End Function
+
+ 2022                                               Page 31 of 34
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If NumberOfItems = 0 Then</li><li>Dim ReturnValue = QueueArray(QueueHeadPointer)</li><li>QueueHeadPointer = QueueHeadPointer + 1</li><li>If QueueHeadPointer &gt;= 9 Then</li><li>QueueHeadPointer = 0</li><li>NumberOfItems = NumberOfItems - 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking 11 inputs…</li>
+<li>… calling Enqueue with each of the 11 inputs …</li>
+<li>… outputting an appropriate message if added or not added</li>
+<li>Calling Dequeue twice …</li>
+<li>… outputting return value each time</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking 11 inputs…</li><li>… calling Enqueue with each of the 11 inputs …</li><li>… outputting an appropriate message if added or not added</li><li>Calling Dequeue twice …</li><li>… outputting return value each time</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>InputString = input(&quot;Enter a string&quot;)</li>
+<li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li>
+<li>if ReturnValue == True:</li>
+<li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li>
+<li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li>
+<li>For x = 0 To 10</li>
+<li>InputString = Console.ReadLine</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>For x = 0 To 10
+                Console.WriteLine(&quot;Enter a string&quot;)
+                InputString = Console.ReadLine
+                If(Enqueue(QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems, InputString))
+               Then
+                  Console.WriteLine(&quot;Successful&quot;)
+                Else
+                  Console.WriteLine(&quot;Unsuccessful&quot;)
+                End If
+               Next
+               Console.WriteLine(Dequeue)
+               Console.WriteLine(Dequeue)
+
+ 2022                                               Page 33 of 34
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(0, 11):
+                    InputString = input(&quot;Enter a string&quot;)
+                    ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =
+                     Enqueue(QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems, InputString)
+                    if ReturnValue == True:
+                        print(&quot;Successful&quot;)
+                    else:
+                        print(&quot;Unsuccessful&quot;)
+               ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =
+                 Dequeue(QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems)
+               print(ReturnValue)
+               ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =
+                 Dequeue(QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems)
+               print(ReturnValue)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>InputString = input(&quot;Enter a string&quot;)</li><li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li><li>if ReturnValue == True:</li><li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li><li>ReturnValue, QueueArray, QueueHeadPointer, QueueTailPointer, NumberOfItems =</li><li>For x = 0 To 10</li><li>InputString = Console.ReadLine</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for showing inputs and outputs:  1
+  A – J input and successful.
+  K input and unsuccessful.
+  Output: A, B
+
+  e.g.
+
+ 2022  Page 34 of 34</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

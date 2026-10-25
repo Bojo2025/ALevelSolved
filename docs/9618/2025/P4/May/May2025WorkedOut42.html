@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/42 · May/June 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/42 · May/June 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked42/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) Stack as 1D array (of strings) with 20 elements initialised to string &quot;–1&quot;</li>
+<li>(Global) TopOfStack initialised to –1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Stack(19) As String
+ Dim TopOfStack As Integer
+ For x = 0 To 19
+      Stack(x) = &quot;-1&quot;
+ Next
+ TopOfStack = -1</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Stack = []
+ TopOfStack = -1
+ #main
+ for x in range(20):
+      Stack.append(&quot;-1&quot;)
+
+ University Press &amp; Assessment 2025                         Page 7 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme      May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) Stack as 1D array (of strings) with 20 elements initialised to string &quot;–1&quot;</li><li>(Global) TopOfStack initialised to –1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Push function header (and end where appropriate) taking one (string) parameter</li>
+<li>Checking if stack is full and returning integer –1</li>
+<li>(Otherwise) Incrementing TopOfStack</li>
+<li>Storing parameter in the incremented the stack at TopOfStack and returning integer 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Push(ByVal Data)
+     If TopOfStack = 19 Then
+         Return -1
+     Else
+         TopOfStack = TopOfStack + 1
+         Stack(TopOfStack) = Data
+         Return 1
+     End If
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 8 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Push(Data):
+      global Stack
+      global TopOfStack
+      if TopOfStack == 19:
+          return -1
+      else:
+          TopOfStack += 1
+          Stack[TopOfStack] = Data
+          return 1
+
+ University Press &amp; Assessment 2025                       Page 9 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Push function header (and end where appropriate) taking one (string) parameter</li><li>Checking if stack is full and returning integer –1</li><li>(Otherwise) Incrementing TopOfStack</li><li>Storing parameter in the incremented the stack at TopOfStack and returning integer 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) and returning a value in all cases</li>
+<li>Checking if stack is empty and returning string &quot;–1&quot;</li>
+<li>(Otherwise) Decrementing TopOfStack</li>
+<li>Returning element in stack at TopOfStack before TopOfStack is decremented</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Pop()
+     If TopOfStack = -1 Then
+         Pop = &quot;-1&quot;
+     Else
+         Pop = Stack(TopOfStack)
+         TopOfStack = TopOfStack - 1
+     End If
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 10 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Pop():
+      global Stack
+      global TopOfStack
+      if TopOfStack == -1:
+          return &quot;-1&quot;
+      else:
+          ReturnValue = Stack[TopOfStack]
+          TopOfStack -= 1
+          return ReturnValue
+
+ University Press &amp; Assessment 2025                       Page 11 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme           May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) and returning a value in all cases</li><li>Checking if stack is empty and returning string &quot;–1&quot;</li><li>(Otherwise) Decrementing TopOfStack</li><li>Returning element in stack at TopOfStack before TopOfStack is decremented</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) taking one (string) parameter</li>
+<li>Opening the file with the filename parameter and closing the file in an appropriate place</li>
+<li>Looping through to end of file and reading in each line</li>
+<li>… calling Push() once with each read in value …</li>
+<li>… if any return value from Push() is integer –1 outputting &quot;Stack full&quot;</li>
+<li>Exception handling for opening and reading from file with appropriate catch and output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData(ByVal FileName As String)
+     Dim ReturnValue As String
+     Try
+         Dim FileReader As New System.IO.StreamReader(FileName)
+         While Not FileReader.EndOfStream
+             ReturnValue = Push(FileReader.ReadLine())
+             If ReturnValue = &quot;-1&quot; Then
+                 Console.WriteLine(&quot;Stack full&quot;)
+             End If
+         End While
+         FileReader.Close()
+     Catch ex As Exception
+         Console.WriteLine(&quot;Cannot open file&quot;)
+     End Try
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData(FileName):
+      global Stack
+      global TopOfStack
+      try:
+          File = open(FileName)
+          for Line in File:
+              ReturnValue = Push(Line.strip())
+              if ReturnValue == -1:
+                  print(&quot;Stack full&quot;)
+          File.close()
+      except:
+          print(&quot;Cannot open file&quot;)
+
+ University Press &amp; Assessment 2025                       Page 13 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                               May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) taking one (string) parameter</li><li>Opening the file with the filename parameter and closing the file in an appropriate place</li><li>Looping through to end of file and reading in each line</li><li>… calling Push() once with each read in value …</li><li>… if any return value from Push() is integer –1 outputting &quot;Stack full&quot;</li><li>Exception handling for opening and reading from file with appropriate catch and output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calculate() function header (and end where appropriate)</li>
+<li>Looping until the stack is empty</li>
+<li>Calling Pop() repeatedly within loop and storing/using return value</li>
+<li>… working out if return value from Pop() call is an operator or a number / alternating between operator and number</li>
+<li>Select to determine if the operator is +, -, /, * or ^ and attempt the matching calculation</li>
+<li>… performing correct calculation using operator, number</li>
+<li>… updating total from previous loops and returning this final value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Calculate()
+     Dim Total As Integer = Pop()
+     Dim ReturnValue As String = &quot;&quot;
+     Dim LastOperator As String = &quot;&quot;
+     Dim OperatorFlag As Boolean = True
+     Dim TheData As Integer = 0
+     While (ReturnValue &lt;&gt; &quot;-1&quot;)
+         ReturnValue = Pop()
+         Select Case OperatorFlag
+             Case False
+                 TheData = ReturnValue
+                 Select Case LastOperator
+                     Case &quot;+&quot;
+                         Total = Total + TheData
+                     Case &quot;-&quot;
+                         Total = Total - TheData
+                     Case &quot;*&quot;
+                         Total = Total * TheData
+                     Case &quot;/&quot;
+                         Total = Total / TheData
+                     Case &quot;^&quot;
+                         Total = Total ^ TheData
+                 End Select
+                 OperatorFlag = True
+             Case Else
+                 LastOperator = ReturnValue
+
+ University Press &amp; Assessment 2025                       Page 15 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+                 OperatorFlag = False
+         End Select
+     End While
+     Return Total
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Calculate():
+      global Stack
+      global TopOfStack
+      Total = Pop()
+      Total = int(Total)
+      Return = 0
+      LastOperator = &quot;&quot;
+      Operator = True
+      while(Return != &quot;-1&quot;):
+          Return = Pop()
+          if Operator == False:
+              Data = int(Return)
+              if LastOperator == &quot;+&quot;:
+                  Total = Total + Data
+              elif LastOperator == &quot;-&quot;:
+                  Total = Total - Data
+              elif LastOperator == &quot;*&quot;:
+                  Total = Total * Data
+              elif LastOperator == &quot;/&quot;:
+                  Total = Total / Data
+              elif LastOperator == &quot;^&quot;:
+                  Total = Total ** Data
+              Operator = True
+         else:
+              LastOperator = Return
+              Operator = False
+     return Total
+
+ University Press &amp; Assessment 2025                       Page 16 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calculate() function header (and end where appropriate)</li><li>Looping until the stack is empty</li><li>Calling Pop() repeatedly within loop and storing/using return value</li><li>… working out if return value from Pop() call is an operator or a number / alternating between operator and number</li><li>Select to determine if the operator is +, -, /, * or ^ and attempt the matching calculation</li><li>… performing correct calculation using operator, number</li><li>… updating total from previous loops and returning this final value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking a filename as input and calling ReadData() with input</li>
+<li>Calling Calculate() and outputting the return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Enter the filename&quot;)
+ Dim FileName As String = Console.ReadLine()
+ ReadData(FileName)
+ Dim ReturnValue As Single
+ ReturnValue = Calculate()
+ Console.WriteLine(ReturnValue)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FileName = input(&quot;Enter the filename: &quot;)
+ ReadData(FileName)
+ ReturnValue = Calculate()
+ print(ReturnValue)
+
+ University Press &amp; Assessment 2025                       Page 17 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking a filename as input and calling ReadData() with input</li><li>Calling Calculate() and outputting the return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing input of StackData.txt and output of 131  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for screenshot showing input of SecondStack.txt and output of 320
+
+ e.g.
+
+ University Press &amp; Assessment 2025  Page 18 of 45
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked42/page-06.jpg" alt="Paper page 6 for Q2"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Record/class NewRecord declared</li>
+<li>3 variables within structure (all integer)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Structure NewRecord
+         Dim Key As Integer
+         Dim Item1 As Integer
+         Dim Item2 As Integer
+     End Structure
+
+ University Press &amp; Assessment 2025                       Page 19 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Record:
+      def __init__(self, pKey, pItem1, pItem2):
+          self.__Key = pKey #integer
+          self.__Item1 = pItem1 #integer
+          self.__Item2 = pItem2 #integer
+
+        def GetKey(self):
+            return self.__Key
+        def GetItem1(self):
+            return self.__Item1
+        def GetItem2(self):
+            return self.__Item2
+
+ University Press &amp; Assessment 2025                       Page 20 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Record/class NewRecord declared</li><li>3 variables within structure (all integer)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HashTable (200 records) and Spare (100 records) declared as (global) arrays</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim HashTable(199) As NewRecord
+ Dim Spare(99) As NewRecord</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>HashTable = []
+ Spare = []
+
+ University Press &amp; Assessment 2025                       Page 21 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                            May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HashTable (200 records) and Spare (100 records) declared as (global) arrays</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure Initialise() header (and close where appropriate) that initialises all elements in both arrays …</li>
+<li>… to an empty record with –1 in each of the 3 fields/elements</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Initialise()
+     Dim EmptyRecord As NewRecord
+     EmptyRecord.Key = -1
+     EmptyRecord.Item1 = -1
+     EmptyRecord.Item2 = -1
+     For X = 0 To 199
+         HashTable(X) = EmptyRecord
+     Next
+     For X = 0 To 99
+         Spare(X) = EmptyRecord
+     Next
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 22 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Initialise():
+      global HashTable
+      global Spare
+      for X in range(200):
+          HashTable.append(Record(-1,-1,-1))
+      for X in range(100):
+          Spare.append(Record(-1,-1,-1))
+
+ University Press &amp; Assessment 2025                       Page 23 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                                  May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure Initialise() header (and close where appropriate) that initialises all elements in both arrays …</li><li>… to an empty record with –1 in each of the 3 fields/elements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and close where appropriate), taking one (integer) parameter and returning the calculated value</li>
+<li>Calculation of parameter MOD 200</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function CalculateHash(Key)
+     Return Key Mod 200
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CalculateHash(Key):
+      return Key % 200
+
+ University Press &amp; Assessment 2025                       Page 24 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme       May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and close where appropriate), taking one (integer) parameter and returning the calculated value</li><li>Calculation of parameter MOD 200</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) taking one record as a parameter</li>
+<li>Calling CalculateHash() with key from parameter record and storing/using return value</li>
+<li>Checking if HashTable at return value from CalculateHash is empty record …</li>
+<li>… if it is empty, store parameter in location</li>
+<li>… otherwise, locating next free space in Spare …</li>
+<li>… and storing in that index only (i.e. not in all other free spaces)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub InsertIntoHash(TheRecord)
+     Dim HashValue As Integer = CalculateHash(TheRecord.Key)
+     If HashTable(HashValue).Key = -1 Then
+         HashTable(HashValue) = TheRecord
+     Else
+         For X = 0 To 99
+             If Spare(X).Key = -1 Then
+                 Spare(X) = TheRecord
+                 X = 100
+             End If
+         Next
+     End If
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 26 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertIntoHash(TheRecord):
+      global HashTable
+      global Spare
+      HashValue = CalculateHash(TheRecord.GetKey())
+
+        if HashTable[HashValue].GetKey() == -1:
+            HashTable[HashValue] = TheRecord
+
+        else:
+            for x in range(0, 100):
+                if Spare[x].GetKey() == -1:
+                    Spare[x] = TheRecord
+                    break
+
+ University Press &amp; Assessment 2025                       Page 27 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme         May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) taking one record as a parameter</li><li>Calling CalculateHash() with key from parameter record and storing/using return value</li><li>Checking if HashTable at return value from CalculateHash is empty record …</li><li>… if it is empty, store parameter in location</li><li>… otherwise, locating next free space in Spare …</li><li>… and storing in that index only (i.e. not in all other free spaces)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate), opening and closing file HashData.txt</li>
+<li>Reading in all lines of data …</li>
+<li>… splitting each line by commas</li>
+<li>Creating record with correct values with each line read in from file</li>
+<li>Calling InsertIntoHash() with each record they have created</li>
+<li>Exception handling for opening and reading from file with appropriate catch and output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub CreateHashTable()
+     Dim Line As String
+     Dim Data(3) As String
+     Dim TheRecord As NewRecord
+     Try
+         Dim FileReader As New System.IO.StreamReader(&quot;HashData.txt&quot;)
+         While Not FileReader.EndOfStream
+             Line = FileReader.ReadLine()
+             Data = Split(Line, &quot;,&quot;)
+             TheRecord.Key = Integer.Parse(Data(0))
+             TheRecord.Item1 = Integer.Parse(Data(1))
+             TheRecord.Item2 = Integer.Parse(Data(2))
+             InsertIntoHash(TheRecord)
+         End While
+         FileReader.Close()
+     Catch ex As Exception
+         Console.WriteLine(&quot;Cannot open file&quot;)
+     End Try
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CreateHashTable():
+      global HashTable
+      global Spare
+      try:
+          File = open(&quot;HashData.txt&quot;)
+          for Line in File:
+             Data = Line.strip()
+             Data = Line.split(&quot;,&quot;)
+             InsertIntoHash(Record(int(Data[0]), int(Data[1]), int(Data[2])))
+          File.close()
+      except:
+          print(&quot;Cannot open file&quot;)
+
+ University Press &amp; Assessment 2025                       Page 29 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme          May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate), opening and closing file HashData.txt</li><li>Reading in all lines of data …</li><li>… splitting each line by commas</li><li>Creating record with correct values with each line read in from file</li><li>Calling InsertIntoHash() with each record they have created</li><li>Exception handling for opening and reading from file with appropriate catch and output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) and looping through each element in Spare …</li>
+<li>… checking if record is empty and outputting key field if not empty</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PrintSpare()
+    Dim X As Integer = 0
+    While Spare(X).Key &lt;&gt; -1
+        Console.WriteLine(Spare(X).Key)
+        X = X + 1
+    End While
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PrintSpare():
+      global Spare
+      X = 0
+      while Spare[X].GetKey() != -1:
+          print(Spare[X].GetKey())
+          X +=1
+
+ University Press &amp; Assessment 2025                       Page 30 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) and looping through each element in Spare …</li><li>… checking if record is empty and outputting key field if not empty</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling Initialise() then CreateHashTable() then PrintSpare()  1
+
+ Example program code:
+
+ VB.NET
+ Initialise()
+ CreateHashTable()
+ PrintSpare()
+
+ Python
+ Initialise()
+ CreateHashTable()
+ PrintSpare()
+
+ University Press &amp; Assessment 2025  Page 31 of 45
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Initialise()
+ CreateHashTable()
+ PrintSpare()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Initialise()
+ CreateHashTable()
+ PrintSpare()
+
+ University Press &amp; Assessment 2025                       Page 31 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output  1
+
+ For example:
+
+ University Press &amp; Assessment 2025  Page 32 of 45
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked42/page-09.jpg" alt="Paper page 9 for Q3"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end when appropriate)</li>
+<li>Four attributes with appropriate data types</li>
+<li>Constructor header (and end where appropriate) within class taking (min) 4 parameters …</li>
+<li>… assigning each parameter to its attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Animal
+     Public Name As String
+     Public Sound As String
+     Public Size As Integer
+     Public Intelligence As Integer
+
+     Sub New(pName, pSound, pSize, pIntelligence)
+         Name = pName
+         Sound = pSound
+         Size = pSize
+         Intelligence = pIntelligence
+     End Sub
+ End Class
+
+ University Press &amp; Assessment 2025                       Page 34 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Animal:
+      def __init__(self, pName, pSound, pSize, pIntelligence):
+          self.Name = pName #string
+          self.Sound = pSound #string
+          self.Size = pSize #integer
+          self.Intelligence = pIntelligence #integer
+
+ University Press &amp; Assessment 2025                       Page 35 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end when appropriate)</li><li>Four attributes with appropriate data types</li><li>Constructor header (and end where appropriate) within class taking (min) 4 parameters …</li><li>… assigning each parameter to its attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Description() method header (and end where appropriate) with no parameter</li>
+<li>Concatenating the attributes with the given message …</li>
+<li>… and returning the created message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Description()
+     Dim Message As String = &quot;The animal&#x27;s name is &quot; &amp; Name &amp; &quot;, it makes a &quot; &amp; Sound &amp; &quot;, its size is &quot; &amp;
+ CStr(Size) &amp; &quot; and its intelligence level is &quot; &amp; CStr(Intelligence)
+     Return Message
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Description(self):
+         Message = &quot;The animal&#x27;s name is &quot; + self.Name + &quot;, it makes a &quot; + self.Sound + &quot;, its size is &quot; +
+ str(self.Size) + &quot; and its intelligence level is &quot; + str(self.Intelligence)
+         return Message
+
+ University Press &amp; Assessment 2025                       Page 36 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                               May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Description() method header (and end where appropriate) with no parameter</li><li>Concatenating the attributes with the given message …</li><li>… and returning the created message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate) inherits from Animal</li>
+<li>Constructor header (and end where appropriate) taking 6 parameters within class and calling parent constructor with</li>
+<li>… WingSpan and NumberWords attributes defined with data types and parameters assigned within constructor</li>
+<li>ChangeNumberWords() method header (and end where appropriate) takes one parameter and adds parameter to</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Parrot
+     Inherits Animal
+     Dim WingSpan As Integer
+     Dim NumberWords As Integer
+     Sub New(pName, pSound, pSize, pIntelligence, pWingSpan, pNumberWords)
+         MyBase.New(pName, pSound, pSize, pIntelligence)
+         WingSpan = pWingSpan
+         NumberWords = pNumberWords
+     End Sub
+
+ University Press &amp; Assessment 2025                       Page 37 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+     Sub ChangeNumberWords(Change)
+         NumberWords = NumberWords + Change
+     End Sub
+ End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Parrot(Animal):
+      def __init__(self, pName, pSound, pSize, pIntelligence, pWingSpan, pNumberWords):
+          super().__init__(pName, pSound, pSize, pIntelligence)
+          self.WingSpan = pWingSpan #integer
+          self.NumberWords = pNumberWords #integer
+
+        def ChangeNumberWords(self, Change):
+            self.NumberWords = self.NumberWords + Change
+
+ University Press &amp; Assessment 2025                       Page 38 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate) inherits from Animal</li><li>Constructor header (and end where appropriate) taking 6 parameters within class and calling parent constructor with</li><li>… WingSpan and NumberWords attributes defined with data types and parameters assigned within constructor</li><li>ChangeNumberWords() method header (and end where appropriate) takes one parameter and adds parameter to</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Description() method header (and end where appropriate) taking no parameters and</li>
+<li>Concatenating and returning the correct string</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overloads Function Description()
+    Dim Message As String = &quot;The animal&#x27;s name is &quot; &amp; Name &amp; &quot;, it makes a &quot; &amp; Sound &amp; &quot;, its size is &quot; &amp;
+ CStr(Size) &amp; &quot; and its intelligence level is &quot; &amp; CStr(Intelligence) &amp; &quot;. It has a wingspan of &quot; &amp;
+ CStr(WingSpan) &amp; &quot;cm and can say &quot; &amp; CStr(NumberWords) &amp; &quot; words.&quot;
+     Return Message
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Description(self):
+         Message = &quot;The animal&#x27;s name is &quot; + self.Name + &quot;, it makes a &quot; + self.Sound + &quot;, its size is &quot; +
+ str(self.Size) + &quot; and its intelligence level is &quot; + str(self.Intelligence) + &quot;. It has a wingspan of &quot; +
+ str(self.WingSpan) + &quot;cm and can say &quot; + str(self.NumberWords) + &quot; words.&quot;
+         return Message
+
+ University Press &amp; Assessment 2025                       Page 39 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme                               May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Description() method header (and end where appropriate) taking no parameters and</li><li>Concatenating and returning the correct string</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate) inherits from Animal</li>
+<li>Constructor header (and end where appropriate) taking 5 parameters within class and calling parent constructor with</li>
+<li>Attribute Territory defined as int and parameter assigned within constructor</li>
+<li>SetTerritory() method header (and end) takes 1 parameter and adds parameter to attribute TerritorySize</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Wolf
+     Inherits Animal
+     Dim TerritorySize As Integer
+     Sub New(pName, pSound, pSize, pIntelligence, pTerritory)
+         MyBase.New(pName, pSound, pSize, pIntelligence)
+         TerritorySize = pTerritory
+     End Sub
+
+     Sub SetTerritorySize(Change)
+         TerritorySize = TerritorySize + Change
+     End Sub
+ End Class
+
+ University Press &amp; Assessment 2025                       Page 40 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Wolf(Animal):
+      def __init__(self, pName, pSound, pSize, pIntelligence, pTerritorySize):
+          super().__init__(pName, pSound, pSize, pIntelligence)
+          self.TerritorySize = pTerritorySize #integer
+      def SetTerritorySize(self, Change):
+          self.TerritorySize = self.TerritorySize + Change
+
+ University Press &amp; Assessment 2025                       Page 41 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate) inherits from Animal</li><li>Constructor header (and end where appropriate) taking 5 parameters within class and calling parent constructor with</li><li>Attribute Territory defined as int and parameter assigned within constructor</li><li>SetTerritory() method header (and end) takes 1 parameter and adds parameter to attribute TerritorySize</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Description() method header (and end where appropriate) taking no parameters and</li>
+<li>Concatenating and return correct message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overloads Function Description()
+     Dim Message As String = &quot;The animal&#x27;s name is &quot; &amp; Name &amp; &quot;, it makes a &quot; &amp; Sound &amp; &quot;, its size is &quot; &amp;
+ CStr(Size) &amp; &quot; and its intelligence level is &quot; &amp; CStr(Intelligence) + &quot;. Its territory is &quot; &amp;
+ CStr(TerritorySize) &amp; &quot; square miles.&quot;
+     Return Message
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Description(self):
+         Message = &quot;The animal&#x27;s name is &quot; + self.Name + &quot;, it makes a &quot; + self.Sound + &quot;, its size is &quot; +
+ str(self.Size) + &quot; and its intelligence level is &quot; + str(self.Intelligence) + &quot; it&#x27;s territory is &quot; +
+ str(self.TerritorySize) +&quot; square miles.&quot;
+         return Message
+
+ University Press &amp; Assessment 2025                       Page 42 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Description() method header (and end where appropriate) taking no parameters and</li><li>Concatenating and return correct message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 correct instance created and stored in a suitable variable/structure</li>
+<li>2nd and 3rd correct instances created and stored in a suitable variable/structure</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Animal1 As Parrot
+ Animal1 = New Parrot(&quot;Chewie&quot;, &quot;Squawk&quot;, 1, 10, 30, 29)
+ Dim Animal2 As Wolf
+ Animal2 = New Wolf(&quot;Nighteyes&quot;, &quot;Howl&quot;, 8, 7, 100)
+ Dim Animal3 As Animal
+ Animal3 = New Animal(&quot;Copper&quot;, &quot;Neigh&quot;, 10, 6)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Animal1 = Parrot(&quot;Chewie&quot;,&quot;Squawk&quot;,1,10,30,29)
+ Animal2 = Wolf(&quot;Nighteyes&quot;,&quot;Howl&quot;,8,7,100)
+ Animal3 = Animal(&quot;Copper&quot;, &quot;Neigh&quot;, 10, 6)
+
+ University Press &amp; Assessment 2025                        Page 43 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme          May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 correct instance created and stored in a suitable variable/structure</li><li>2nd and 3rd correct instances created and stored in a suitable variable/structure</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling SetTerritorySize(-20) for instance of Nighteyes</li>
+<li>Calling ChangeNumberWords(2) for instance of Chewie</li>
+<li>Calling Description() for all 3 animals (after any updates) and outputting return values</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Animal2.SetTerritorySize(-20)
+ Animal1.ChangeNumberWords(2)
+ Console.WriteLine(Animal1.Description())
+ Console.WriteLine(Animal2.Description())
+ Console.WriteLine(Animal3.Description())</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Animal2.SetTerritorySize(-20)
+ Animal1.ChangeNumberWords(2)
+ print(Animal1.Description())
+ print(Animal2.Description())
+ print(Animal3.Description())
+
+ University Press &amp; Assessment 2025                       Page 44 of 45
+
+9618/42                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling SetTerritorySize(-20) for instance of Nighteyes</li><li>Calling ChangeNumberWords(2) for instance of Chewie</li><li>Calling Description() for all 3 animals (after any updates) and outputting return values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>All three messages accurate with all relevant values</li>
+<li>… showing correctly updated territory for Nighteyes and words for Chewie</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>All three messages accurate with all relevant values</li><li>… showing correctly updated territory for Nighteyes and words for Chewie</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

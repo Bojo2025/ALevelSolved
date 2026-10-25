@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/42 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/42 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaration of array with space for 9 strings (through declaration/initialisation)</li>
+<li>Storing the correct data in the order given</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim TheData(8) As String
+                  TheData(0) = &quot;laptop&quot;
+                  TheData(1) = &quot;tablet&quot;
+                  TheData(2) = &quot;printer&quot;
+                  TheData(3) = &quot;computer&quot;
+                  TheData(4) = &quot;processor&quot;
+                  TheData(5) = &quot;monitor&quot;
+                  TheData(6) = &quot;memory&quot;
+                  TheData(7) = &quot;cable&quot;
+                  TheData(8) = &quot;touchscreen&quot;</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>TheData = [&quot;laptop&quot;, &quot;tablet&quot;, &quot;printer&quot;, &quot;computer&quot;, &quot;processor&quot;, &quot;monitor&quot;, &quot;memory&quot;, &quot;cable&quot;,
+                  &quot;touchscreen&quot;]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaration of array with space for 9 strings (through declaration/initialisation)</li><li>Storing the correct data in the order given</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) taking one (string array) parameter</li>
+<li>Looping through each string in the array</li>
+<li>Finding the shortest string</li>
+<li>Finding the longest string</li>
+<li>Output the longest and shortest string in appropriate messages</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub FindLongestShortest(TheData())
+                      Dim LongestLength As Integer = -1
+                      Dim LongestWord As String = &quot;&quot;
+                      Dim ShortestLength As Integer = 999
+                      Dim ShortestWord As String = &quot;&quot;
+
+                                 For x = 0 To TheData.Length() - 1
+                                     If Len(TheData(x)) &gt; LongestLength Then
+                                         LongestLength = Len(TheData(x))
+                                         LongestWord = TheData(x)
+                                     End If
+                                     If Len(TheData(x)) &lt; ShortestLength Then
+                                         ShortestLength = Len(TheData(x))
+                                         ShortestWord = TheData(x)
+                                     End If
+                                 Next
+
+                University Press &amp; Assessment 2026                                                                         Page 8 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                     9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                           May/June 2026
+
+                     Guidance
+
+                      Console.WriteLine(&quot;The longest word is &quot; &amp; LongestWord)
+                      Console.WriteLine(&quot;The shortest word is &quot; &amp; ShortestWord)
+                  End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def FindLongestShortest(TheData):
+                       LongestLength = -1
+                       LongestWord = &quot;&quot;
+                       ShortestLength = 999999999
+                       ShortestWord = &quot;&quot;
+
+                                 for x in range(len(TheData)):
+                                     if len(TheData[x]) &gt; LongestLength:
+                                         LongestLength = len((TheData[x]))
+                                         LongestWord = TheData[x]
+                                     if len(TheData[x]) &lt; ShortestLength:
+                                         ShortestLength = len(TheData[x])
+                                         ShortestWord = TheData[x]
+                                 print(&quot;The longest word is&quot;, LongestWord)
+                                 print(&quot;The shortest word is&quot;, ShortestWord)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) taking one (string array) parameter</li><li>Looping through each string in the array</li><li>Finding the shortest string</li><li>Finding the longest string</li><li>Output the longest and shortest string in appropriate messages</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>calling FindLongestShortest with array as parameter</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>FindLongestShortest(TheData)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FindLongestShortest(TheData)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>calling FindLongestShortest with array as parameter</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot of output  1
+
+  Example output</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) taking (string array) parameter</li>
+<li>Looping through each element in the array…</li>
+<li>…using insertion sort method e.g. taking element out and moving down</li>
+<li>Using appropriate string comparison function/methods</li>
+<li>Returning a correctly sorted array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function InsertionSort(TheData())
+                      Dim ArrayLength As Integer = TheData.Length()
+                      Dim Temp As String
+                      Dim y As Integer
+                      If ArrayLength &lt;= 1 Then
+                          Return TheData
+                      End If
+                      For x = 1 To ArrayLength - 1
+                          Temp = TheData(x)
+                          y = x - 1
+                          While y &gt;= 0
+                              If Temp &lt; TheData(y) Then
+                                  TheData(y + 1) = TheData(y)
+                                  y = y - 1
+                              Else
+                                  Exit While
+                              End If
+                          End While
+                          TheData(y + 1) = Temp
+
+                University Press &amp; Assessment 2026                                                                       Page 11 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                      Next
+                      Return TheData
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertionSort(TheData):
+                       ArrayLength = len(TheData)
+                       if ArrayLength &lt;= 1:
+                           return TheData
+                       for x in range(1, ArrayLength):
+                           Temp = TheData[x]
+                           y = x-1
+                           while y &gt;= 0 and Temp &lt; TheData[y]:
+                                TheData[y+1] = TheData[y]
+                                y -= 1
+                           TheData[y+1] = Temp
+                       return TheData</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) taking (string array) parameter</li><li>Looping through each element in the array…</li><li>…using insertion sort method e.g. taking element out and moving down</li><li>Using appropriate string comparison function/methods</li><li>Returning a correctly sorted array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Outputting &quot;Before sorting&quot; and the array contents before sorting</li>
+<li>Calling InsertionSort() with array and storing/using returned array</li>
+<li>Outputting &quot;After sorting&quot; and the array contents after sorting</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Before sorting&quot;)
+                  For x = 0 To 8
+                       Console.WriteLine(TheData(x))
+                  Next
+                  Console.WriteLine(&quot;After sorting&quot;)
+                  TheData = InsertionSort(TheData)
+                  For x = 0 To 8
+                       Console.WriteLine(TheData(x))
+                  Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(&quot;Before Sorting&quot;)
+                  print(TheData)
+                  print(&quot;After sorting&quot;)
+                  TheData = InsertionSort(TheData)
+                  print(TheData)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Outputting &quot;Before sorting&quot; and the array contents before sorting</li><li>Calling InsertionSort() with array and storing/using returned array</li><li>Outputting &quot;After sorting&quot; and the array contents after sorting</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing unsorted and then sorted array  1 FT data in array
+  and output
+  messages
+
+  University Press &amp; Assessment 2026  Page 14 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for output of empty list data
+
+  University Press &amp; Assessment 2026  Page 36 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Four private attributes with correct data types</li>
+<li>Class Avatar header (and end where appropriate)</li>
+<li>Constructor header (and end where appropriate) within class taking 4 parameters (Python 5)</li>
+<li>Assigning parameters to attributes within constructor</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Avatar
+                      Private TheName As String
+                      Private Glasses As Boolean
+                      Private Hair As String
+                      Private Age As Integer
+
+                      Public Sub New(pName, pGlasses, pHair, pAge)
+                          TheName = pName
+                          Glasses = pGlasses
+                          Hair = pHair
+                          Age = pAge
+                      End Sub
+                  End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>5)
+                                                    • Assigning parameters to attributes within constructor
+
+                University Press &amp; Assessment 2026                                                                       Page 15 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                  Example program code
+                  Python
+                  class Avatar():
+                       def __init__(self, pName, pGlasses, pHair, pAge):
+                           self.__TheName = pName    #name as string
+                           self.__Glasses = pGlasses #glasses as boolean
+                           self.__Hair = pHair #hairColour as string
+                           self.__Age = pAge    #age as integer</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Four private attributes with correct data types</li><li>Class Avatar header (and end where appropriate)</li><li>Constructor header (and end where appropriate) within class taking 4 parameters (Python 5)</li><li>Assigning parameters to attributes within constructor</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method header (and end where appropriate) with no parameter…</li>
+<li>… returning correct attribute</li>
+<li>2nd get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Function GetName()
+                      Return TheName
+                  End Function
+                  Public Function GetAge()
+                      Return Age
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetName(self):
+                       return self.__TheName
+                  def GetAge(self):
+                       return self.__Age</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method header (and end where appropriate) with no parameter…</li><li>… returning correct attribute</li><li>2nd get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (and end where appropriate) taking two parameters (Boolean and string) and                                              Meetcritera</li>
+<li>Comparing parameters to correct attributes returning TRUE and FALSE correctly</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Function MeetCriteria(pGlasses, pHair)
+                      If Glasses = pGlasses And Hair = pHair Then
+                          Return True
+                      Else
+                          Return False
+                      End If
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def MeetCriteria(self, Glasses, Hair):
+                           if self.__Glasses == Glasses and Hair == self.__Hair:
+                                return True
+                           else:
+                                return False</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (and end where appropriate) taking two parameters (Boolean and string) and                                              Meetcritera</li><li>Comparing parameters to correct attributes returning TRUE and FALSE correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) and appropriate exception handling with output</li>
+<li>Opening text file (to read) and closing file</li>
+<li>Looping until EOF/30 times…</li>
+<li>… reading in each line</li>
+<li>Splitting each line by space</li>
+<li>Instantiating object with correct values</li>
+<li>Storing each object in appropriate global array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Sub LoadAvatars()
+                      Dim TempData() As String
+                      NumberAvatars = 0
+                      Try
+                          Dim FileReader As New System.IO.StreamReader(&quot;AvatarFile.txt&quot;)
+                          While Not FileReader.EndOfStream
+                              TempData = (FileReader.ReadLine()).Split(&quot; &quot;)
+                              AvailableAvatars(NumberAvatars) = New Avatar(TempData(0), Convert.ToBoolean(TempData(1)),
+                  TempData(2), Convert.ToInt32(TempData(3)))
+                              NumberAvatars = NumberAvatars + 1
+                          End While
+                          FileReader.Close()
+                      Catch ex As Exception
+                          Console.WriteLine(&quot;Cannot open or read from file&quot;)
+                      End Try
+                  End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 20 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def LoadAvatars():
+                       global AvailableAvatars
+                       try:
+                           TheFile = open(&quot;AvatarFile.txt&quot;)
+                           for Line in TheFile:
+                                DataSplit = (Line.strip()).split(&quot; &quot;)
+                                if DataSplit[1] == &quot;True&quot;:
+                                     DataSplit[1] = True
+                                else:
+                                     DataSplit[1] = False
+                                AvailableAvatars.append(Avatar(DataSplit[0], bool(DataSplit[1]), DataSplit[2],
+                  int(DataSplit[3])))
+                           TheFile.close()
+                       except:
+                           print(&quot;File not found&quot;)
+                       return AvailableAvatars</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) and appropriate exception handling with output</li><li>Opening text file (to read) and closing file</li><li>Looping until EOF/30 times…</li><li>… reading in each line</li><li>Splitting each line by space</li><li>Instantiating object with correct values</li><li>Storing each object in appropriate global array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling LoadAvatars()  1
+
+  Example program code
+  Python
+  LoadAvatars()
+
+  VB.NET
+  LoadAvatars()</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>LoadAvatars()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>LoadAvatars()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) and prompting for 2 inputs and reading 2 inputs …                                      Meetcritera</li>
+<li>… and validating appropriately</li>
+<li>Looping through each avatar in the array …</li>
+<li>… calling MeetCriteria() for each avatar and storing/using the return value</li>
+<li>… with correct values for glasses and hair</li>
+<li>… if return value is true, avatar is stored in a global array // reverse and delete</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Sub EnterChoices()
+                          Dim Chosen As Boolean = False
+                          Dim Valid As Boolean = False
+                          Dim GlassesChoice As String = &quot;&quot;
+                          Dim TheGlasses As String = &quot;&quot;
+                          Dim HairChoice As Integer
+                          Dim TheHair As String = &quot;&quot;
+                          While Valid = False
+                              Console.WriteLine(&quot;Do you want them to wear glasses&quot;)
+                              GlassesChoice = Console.ReadLine()
+                              If GlassesChoice = &quot;yes&quot; Then
+                                  Valid = True
+                                  TheGlasses = True
+                              ElseIf GlassesChoice = &quot;no&quot; Then
+                                  Valid = True
+                                  TheGlasses = False
+                              Else
+                                  Console.WriteLine(&quot;Invalid, enter yes or no&quot;)
+                              End If
+                          End While
+
+                          HairChoice = -1
+                          While HairChoice &lt; 1 Or HairChoice &gt; 6
+                              Console.WriteLine(&quot;What colour hair? 1 for black, 2 for blonde, 3 for brown, 4 for pink, 5 for
+                  red, 6 for green&quot;)
+                              HairChoice = Console.ReadLine()
+                              If HairChoice = 1 Then
+                                  TheHair = &quot;black&quot;
+                              ElseIf HairChoice = 2 Then
+                                  TheHair = &quot;blonde&quot;
+                              ElseIf HairChoice = 3 Then
+                                  TheHair = &quot;brown&quot;
+                              ElseIf HairChoice = 4 Then
+                                  TheHair = &quot;pink&quot;
+
+                University Press &amp; Assessment 2026                                                                       Page 24 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance
+
+                                                               ElseIf HairChoice = 5 Then
+                                                                   TheHair = &quot;red&quot;
+                                                               ElseIf HairChoice = 6 Then
+                                                                   TheHair = &quot;green&quot;
+
+                                                    End If
+                                                End While
+                                                OptionNumberAvatars = 0
+                                                For x = 0 To 29
+                                                    If AvailableAvatars(x).MeetCriteria(TheGlasses, TheHair) Then
+                                                        OptionAvatars(OptionNumberAvatars) = AvailableAvatars(x)
+                                                        OptionNumberAvatars = OptionNumberAvatars + 1
+                                                    End If
+                                                Next
+
+                                 End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def EnterChoices():
+                       global AvailableAvatars
+                       global OptionAvatars
+                       global NumberAvatars
+                       global OptionNumberAvatars
+                       Chosen = False
+                       Valid = False
+                       while Valid == False:
+                           GlassesChoice = input(&quot;Do you want them to wear glasses? &quot;)
+                           if GlassesChoice.lower() == &quot;yes&quot;:
+                                Valid = True
+                                TheGlasses = True
+                           elif GlassesChoice.lower() == &quot;no&quot;:
+                                Valid = True
+                                TheGlasses = False
+                           else:
+                                print(&quot;Invalid, enter yes or no&quot;)
+
+                      HairChoice = -1
+                      while HairChoice &lt; 1 or HairChoice &gt; 6:
+                          HairChoice = int(input(&quot;What colour hair? 1 for black, 2 for blonde, 3 for brown, 4 for pink, 5 for
+                  red, 6 for green &quot;))
+                      if HairChoice == 1: TheHair = &quot;black&quot;
+                      elif HairChoice == 2: TheHair = &quot;blonde&quot;
+                      elif HairChoice == 3: TheHair = &quot;brown&quot;
+                      elif HairChoice == 4: TheHair = &quot;pink&quot;
+                      elif HairChoice == 5: TheHair = &quot;red&quot;
+                      elif HairChoice == 6: TheHair = &quot;green&quot;
+
+                                 for x in range(len(AvailableAvatars)):
+                                     if AvailableAvatars[x].MeetCriteria(TheGlasses, TheHair):
+                                         OptionAvatars.append(AvailableAvatars[x])
+                                         OptionNumberAvatars = OptionNumberAvatars + 1
+
+                University Press &amp; Assessment 2026                                                                       Page 23 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) and prompting for 2 inputs and reading 2 inputs …                                      Meetcritera</li><li>… and validating appropriately</li><li>Looping through each avatar in the array …</li><li>… calling MeetCriteria() for each avatar and storing/using the return value</li><li>… with correct values for glasses and hair</li><li>… if return value is true, avatar is stored in a global array // reverse and delete</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling EnterChoices()</li>
+<li>Counting/calculating the number of avatars and outputting</li>
+<li>Looping through each avatar that meets the criteria …</li>
+<li>…outputting the name and age in an appropriate message …</li>
+<li>…using get methods</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>EnterChoices()
+                   Console.WriteLine(&quot;There are&quot; &amp; OptionNumberAvatars &amp; &quot;avatars that meet your criteria&quot;)
+                   If OptionNumberAvatars &gt; 0 Then
+                       For x = 0 To OptionNumberAvatars - 1
+                           Console.WriteLine(OptionAvatars(x).GetName() &amp; &quot; who is &quot; &amp; OptionAvatars(x).GetAge() &amp; &quot; years
+                  old&quot;)
+                       Next
+                   End If</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>EnterChoices()
+                  print(&quot;There are&quot;, len(OptionAvatars), &quot;avatars that meet your criteria&quot;)
+                  if len(OptionAvatars) &gt; 0:
+                       for x in range(len(OptionAvatars)):
+                           print(OptionAvatars[x].GetName(),&quot;who is&quot;, OptionAvatars[x].GetAge(), &quot;years old&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling EnterChoices()</li><li>Counting/calculating the number of avatars and outputting</li><li>Looping through each avatar that meets the criteria …</li><li>…outputting the name and age in an appropriate message …</li><li>…using get methods</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for inputs and output  1 FT appropriate
+  For blue accept any invalid data  message</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for inputs and output of 0 avatars  1 FT appropriate
+  message
+
+  University Press &amp; Assessment 2026  Page 28 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>LinkedList 2D array with 8  2 elements (integer global)</li>
+<li>StartLinkedList (int) initialised with 2</li>
+<li>StartEmptyList (int) initialised with 7</li>
+<li>LinkedList initialised with correct data …</li>
+<li>… in correct indices</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim LinkedList(7, 1) As Integer
+                  Dim StartLinkedList As Integer
+                  Dim StartEmptyList As Integer
+                  LinkedList(0, 0) = 9512
+                  LinkedList(0, 1) = 5
+                  LinkedList(1, 0) = 5541
+                  LinkedList(1, 1) = 3
+                  LinkedList(2, 0) = 1999
+                  LinkedList(2, 1) = 0
+                  LinkedList(3, 0) = 6651
+                  LinkedList(3, 1) = -1
+                  LinkedList(4, 0) = -1
+                  LinkedList(4, 1) = 6
+                  LinkedList(5, 0) = 5612
+                  LinkedList(5, 1) = 1
+                  LinkedList(6, 0) = -1
+                  LinkedList(6, 1) = -1
+                  LinkedList(7, 0) = -1
+                  LinkedList(7, 1) = 4
+                  StartLinkedList = 2
+                  StartEmptyList = 7
+
+                University Press &amp; Assessment 2026                                                                       Page 30 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>LinkedList = []
+                  LinkedList.append([9512,5])
+                  LinkedList.append([5541,3])
+                  LinkedList.append([1999,0])
+                  LinkedList.append([6651,-1])
+                  LinkedList.append([-1,6])
+                  LinkedList.append([5612,1])
+                  LinkedList.append([-1,-1])
+                  LinkedList.append([-1,4])
+                  StartLinkedList = 2
+                  StartEmptyList = 7</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>LinkedList 2D array with 8  2 elements (integer global)</li><li>StartLinkedList (int) initialised with 2</li><li>StartEmptyList (int) initialised with 7</li><li>LinkedList initialised with correct data …</li><li>… in correct indices</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) and starting at StartLinkedList</li>
+<li>Following pointers …</li>
+<li>… outputting data of each node</li>
+<li>Stopping when empty node found // stopping when null pointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PrintListItems()
+                      Dim TempPosition As Integer = StartLinkedList
+                      While (LinkedList(TempPosition, 1) &lt;&gt; -1)
+                          Console.WriteLine(LinkedList(TempPosition, 0))
+                          TempPosition = LinkedList(TempPosition, 1)
+                      End While
+                      Console.WriteLine(LinkedList(TempPosition, 0))
+                  End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 32 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PrintListItems():
+                       global LinkedList
+                       global StartEmptyList
+                       global StartLinkedList
+                       TempPosition = StartLinkedList
+                       while LinkedList[TempPosition][1] != -1:
+                           print(LinkedList[TempPosition][0])
+                           TempPosition = LinkedList[TempPosition][1]
+                       print(LinkedList[TempPosition][0])
+
+                  Alternative Python:
+                  def PrintListItems():
+                        global StartLinkedList, LinkedList
+                        node = StartLinkedList
+                        while node != -1:
+                             print(LinkedList[node][0])
+                             node = LinkedList[node][1]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) and starting at StartLinkedList</li><li>Following pointers …</li><li>… outputting data of each node</li><li>Stopping when empty node found // stopping when null pointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header and starting at StartEmptyList</li>
+<li>Following pointers and outputting data</li>
+<li>Stopping correctly</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PrintEmptyList()
+                      Dim TempPosition = StartEmptyList
+                      Dim Flag As Boolean = True
+
+                      While Flag = True
+                          If LinkedList(TempPosition, 1) = -1 Then
+                              Flag = False
+                          End If
+                          Console.WriteLine(TempPosition)
+                          TempPosition = LinkedList(TempPosition, 1)
+                      End While
+                  End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 34 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PrintEmptyList():
+                       global LinkedList
+                       global StartEmptyList
+
+                                 TempPosition = StartEmptyList
+                                 Flag = True
+                                 while Flag == True:
+                                     if LinkedList[TempPosition][1] == -1:
+                                         Flag = False
+                                     print(TempPosition)
+                                     TempPosition = LinkedList[TempPosition][1]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header and starting at StartEmptyList</li><li>Following pointers and outputting data</li><li>Stopping correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Outputting Linked list then calling PrintListItems()</li>
+<li>Outputting Empty list then calling PrintEmptyList()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Linked list&quot;)
+                  PrintListItems()
+                  Console.WriteLine(&quot;Empty list&quot;)
+                  PrintEmptyList()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(&quot;Linked list&quot;)
+                  PrintListItems()
+                  print(&quot;Empty list&quot;)
+                  PrintEmptyList()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Outputting Linked list then calling PrintListItems()</li><li>Outputting Empty list then calling PrintEmptyList()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iv) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output of linked list data  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header taking one (integer) parameter</li>
+<li>Checking if list is full (e.g. if StartEmptyList != -1) …</li>
+<li>…and outputting &quot;List is full&quot;</li>
+<li>Storing node in StartEmptyList index …</li>
+<li>…with pointer -1 (may be done at separate position in algorithm)</li>
+<li>Starting at first node (StartLinkedList) …</li>
+<li>…following pointers until empty node</li>
+<li>Changing last pointer to StartEmptyList (or temp)</li>
+<li>Updating StartEmptyList to previous (could be temp) node&#x27;s pointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub AddItem(ByVal Item)
+                        Dim TempPosition As Integer = 0
+                        Dim NewEmptylist As Integer = 0
+                        If StartEmptyList &lt;&gt; -1 Then
+                            LinkedList(StartEmptyList, 0) = Item
+                            NewEmptylist = LinkedList(StartEmptyList, 1)
+                            LinkedList(StartEmptyList, 1) = -1
+                            TempPosition = StartLinkedList
+                            While (LinkedList(TempPosition, 1) &lt;&gt; -1)
+                                TempPosition = LinkedList(TempPosition, 1)
+                            End While
+                            LinkedList(TempPosition, 1) = StartEmptyList
+                            StartEmptyList = NewEmptylist
+                        Else
+                            Console.WriteLine(&quot;List is full&quot;)
+                        End If
+                    End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 38 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/42                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                     Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def AddItem(Item):
+                       global LinkedList
+                       global StartEmptyList
+                       global StartLinkedList
+                       TempPosition = 0
+                       if StartEmptyList != -1:
+                           LinkedList[StartEmptyList][0] = Item
+                           NewEmptyList = LinkedList[StartEmptyList][1]
+                           LinkedList[StartEmptyList][1] = -1
+                           TempPosition = StartLinkedList
+                           while LinkedList[TempPosition][1] != -1:
+                                TempPosition = LinkedList[TempPosition][1]
+                           LinkedList[TempPosition][1] = StartEmptyList
+                           StartEmptyList = NewEmptyList
+                       else:
+                           print(&quot;List is full&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header taking one (integer) parameter</li><li>Checking if list is full (e.g. if StartEmptyList != -1) …</li><li>…and outputting &quot;List is full&quot;</li><li>Storing node in StartEmptyList index …</li><li>…with pointer -1 (may be done at separate position in algorithm)</li><li>Starting at first node (StartLinkedList) …</li><li>…following pointers until empty node</li><li>Changing last pointer to StartEmptyList (or temp)</li><li>Updating StartEmptyList to previous (could be temp) node&#x27;s pointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling AddItem() with parameter 8451</li>
+<li>Calling both output procedures with suitable headings</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>AddItem(8451)
+                  Console.WriteLine(&quot;Linked list&quot;)
+                  PrintListItems()
+                  Console.WriteLine(&quot;Empty list&quot;)
+                  PrintEmptyList()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>AddItem(8451)
+                  print(&quot;Linked list&quot;)
+                  PrintListItems()
+                  print(&quot;Empty list&quot;)
+                  PrintEmptyList()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling AddItem() with parameter 8451</li><li>Calling both output procedures with suitable headings</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing updated linked list contents and empty list  1
+
+  University Press &amp; Assessment 2026  Page 41 of 41
+
+Trace ID: PC-AB1FFDFB16
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/42 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/42 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

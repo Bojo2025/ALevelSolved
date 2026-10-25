@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/32 · May/June 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/32 · May/June 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <ol>
+<li>exponent = 6 (movement of 6 bicimal places seen to find what exponent should</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>exponent = 6 (movement of 6 bicimal places seen to find what exponent should</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked32/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>correct mantissa</li>
+<li>correct exponent with associated working</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>correct mantissa</li><li>correct exponent with associated working</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  the mantissa of the number would need to be 0.101011111001 / 13
+  bits / digits
+  MP2  … it can only store 10 bits / digits
+  MP3  The 3 least significant digits would be truncated
+  MP4  …causing a loss of precision</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>2  3  4  5  6  7  8  9  10  11  12
+  IF  1.1  2.1  3.1  4.1  5.1  6.1
+
+  Processor stages
+  ID  1.2  2.2  3.2  4.2  5.2  6.2
+  OF  1.3  2.3  3.3  4.3  5.3  6.3
+  IE  1.4  2.4  3.4  4.4  5.4  6.4
+  WB  1.5  2.5  3.5  4.5  5.5  6.5
+
+  Example answer 2
+  Clock cycles</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>2  3  4  5  6  7  8  9  10  11  12
+  IF  A  B  C  D  E  F
+
+  Processor stages
+  ID  A  B  C  D  E  F
+  OF  A  B  C  D  E  F
+  IE  A  B  C  D  E  F
+  WB  A  B  C  D  E  F</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>THEN
+  RearPointer  RearPointer + 1
+  IF RearPointer &gt; MaxLength – 1 THEN
+  RearPointer  0
+  ENDIF
+  Queue[RearPointer]  NewItem
+  Length  Length + 1
+  ENDIF
+  ENDPROCEDURE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked32/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  records are stored in a particular order
+  MP2  the order is determined based on the value in a key field
+  MP3  records are accessed one after the other
+  MP4  records can be found by searching from the beginning of the file,
+  record by record,
+  MP5  … until the required record is found or key field value is exceeded.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 3003 3 · 1029 4 · 7630 0</p>
+<div class='ms-raw'>One mark for each correct hash value (Max 2)  2
+
+  Record key  Hash value
+  3003  3
+
+  1029  4
+
+  7630  0
+
+ 2023  Page 4 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3003 3</li><li>Correct result: 1029 4</li><li>Correct result: 7630 0</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked32/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per correct valid/invalid and reason combination (Max 2)  2
+
+  9SW – Invalid
+  Reason - This begins with a digit and a variable must begin with a letter
+
+  UWY – Valid
+  Reason – This begins with a letter and is followed by two other letters.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>&lt;word&gt; ::= &lt;letter&gt;|</li>
+<li>…&lt;word&gt;&lt;letter&gt;</li>
+<li>&lt;variable&gt; ::= &lt;word&gt;|&lt;word&gt;&lt;digit&gt;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>&lt;word&gt; ::= &lt;letter&gt;|</li><li>…&lt;word&gt;&lt;letter&gt;</li><li>&lt;variable&gt; ::= &lt;word&gt;|&lt;word&gt;&lt;digit&gt;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AC768</p>
+<div class='ms-raw'>Answer must be two letters followed by one, two or three digits using the letters  1
+  and digits on the syntax diagram.
+
+  Example answer
+  AC768</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: AC768</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>always has only two letters</li>
+<li>one, two or three digits possible</li>
+<li>correct arrows, boxes and name of syntax diagram</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>always has only two letters</li><li>one, two or three digits possible</li><li>correct arrows, boxes and name of syntax diagram</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked32/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correct line connecting an OOP term to its description  4
+  (Max 4).
+
+  OOP term  Description
+  methods used to return the value of a
+  property
+  Encapsulation
+
+  the process of putting data and
+  methods together as a single unit
+  Getters
+
+  methods used to update the value of
+  a property
+  Polymorphism
+  allows methods to be redefined for
+  derived classes
+
+  Setters
+  enables the defining of a new class
+  that inherits from a parent class</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked32/page-06.jpg" alt="Paper page 6 for Q5"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  to produce a virtually unbreakable encryption system / send
+  virtually un-hackable secure messages …
+  MP2  …using the laws / principles of quantum mechanics / properties of
+  photons
+  MP3  detects eavesdropping …
+  MP4  …because the properties of photons change
+  MP5  to protect security of data transmitted over fibre optic cables
+  MP6  to enable the use of longer keys.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Symmetric cryptography uses a single key to encrypt and decrypt
+  messages, Asymmetric cryptography uses two.
+  MP2  The symmetric key is shared, whereas with asymmetric, only the
+  public key is shared (and the private key isn’t).
+  MP3  … the risk of compromise is higher with symmetric encryption and
+  asymmetric encryption is more secure.
+  MP4  Symmetric cryptography is a simple process that can be carried out
+  quickly, but asymmetric is much more complex, so slower.
+  MP5  The length of the keys in symmetric encryption are (usually) shorter
+  than those for asymmetric (128/256 bits v 2048 bits).
+
+ 2023  Page 6 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked32/page-07.jpg" alt="Paper page 7 for Q6"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for TYPE TAppointments and ENDTYPE correct  4
+  One mark for every two correct declarations (Max 3)
+
+  Example answer
+  TYPE TAppointments
+  DECLARE Name : STRING
+  DECLARE DateOfBirth : DATE
+  DECLARE Telephone : STRING
+  DECLARE LastAppointment : DATE
+  DECLARE NextAppointment : DATE
+  DECLARE TreatmentsComplete : BOOLEAN
+  ENDTYPE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correctly completed line (Max 5)  5
+  DECLARE DentalRecord : ARRAY[1:250] OF TAppointments
+  DECLARE DentalFile : STRING
+  DECLARE Count : INTEGER
+  DentalFile  &quot;DentalFile.dat&quot;
+  OUTPUT &quot;The file &quot;, DentalFile, &quot; contains these records:&quot;
+  OPENFILE DentalFile FOR RANDOM
+  Count  1
+  REPEAT
+  SEEK DentalFile, Count
+  GETRECORD DentalFile, DentalRecord[Count]
+  OUTPUT DentalRecord[Count]
+  Count  Count + 1
+  UNTIL EOF(DentalFile)
+  CLOSEFILE DentalFile</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked32/page-08.jpg" alt="Paper page 8 for Q7"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  Packet switching is most commonly used on data networks such as
+  the internet to send large data files that don’t need to be live streamed
+  MP2  Packet switching is used when it is necessary to be able to overcome
+  failed/faulty lines by rerouting.
+  MP3  Packet switching is used when it is necessary for the communication
+  to be more secure.
+  MP4  Packet switching is used for high volume data transmission.
+  MP5  Packet switching is used when it isn’t necessary to use all the
+  bandwidth.
+  MP6  Specific examples e.g. email, text messages, documents, VOIP etc.
+  (up to two marks).
+
+ 2023  Page 7 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4
+  MP1  Circuit switching uses a dedicated channel to make communication,
+  whereas packet switching forms data into packets to transmit over a
+  digital network.
+  MP2  The dedicated path for circuit switching must be established before
+  the transfer of data can commence, which is not the case with packet
+  switching (as it doesn’t require a dedicated path).
+  MP3  Data in packet switching is split into packets, in circuit switching the
+  message remains intact.
+  MP4  All of the transmission in circuit switching follows the same path
+  whereas different packets in packet switching can take different
+  routes.
+  MP5  The message is received in the same order in which it is sent with
+  circuit switching, but with packet switching, the packets can be
+  received out of order (for assembly at the destination).
+  MP6  Circuit switching is implemented at the physical layer while packet
+  switching is implemented at the network layer.
+  MP7  Circuit switching uses the whole bandwidth of the channel used,
+  packet switching can share bandwidth.
+  MP8  Circuit switching communication ends with an error but packet
+  switching allows packets to be re-sent.
+  MP9  Circuit switching is a simpler process than packet switching.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked32/page-09.jpg" alt="Paper page 9 for Q8"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  Pipelining allows several instructions to be processed simultaneously
+  / concurrently.
+  MP2  … therefore, increasing the CPU instruction throughput / the number
+  of instructions completed per unit of time.
+  MP3  Each instruction stage / subtask is completed during one clock cycle
+  MP4  No two instructions can execute their same stage of instruction /
+  subtask at the same clock cycle.
+  MP5  … e.g., while one instruction is being decoded, the next instruction
+  can be fetched, etc.
+
+ 2023  Page 8 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>First stage of first instruction in first clock cycle</li>
+<li>First instruction successfully completed over five clock cycles</li>
+<li>Remaining instructions completed over ten clock cycles …</li>
+<li>… with no extra instruction sections added on any row</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>First stage of first instruction in first clock cycle</li><li>First instruction successfully completed over five clock cycles</li><li>Remaining instructions completed over ten clock cycles …</li><li>… with no extra instruction sections added on any row</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked32/page-10.jpg" alt="Paper page 10 for Q9"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Z =) ABCD + ABCD + ABCD + ABCD + ABCD + ABCD</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Z =) ABCD + ABCD + ABCD + ABCD + ABCD + ABCD</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Two marks if no errors present  2
+  One mark if one error present
+
+ 2023  Page 9 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correct loop (Max 2)  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Any correct Boolean term</li>
+<li>Boolean terms and operator correct and no other terms present</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Any correct Boolean term</li><li>Boolean terms and operator correct and no other terms present</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Z =) A (B + C)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Z =) A (B + C)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2><div class="diagram"><img src="worked32/page-11.jpg" alt="Paper page 11 for Q10"><div class="cap">Original paper page 11</div></div>
+        <section class="part">
+          <p class="part-label">Part 10(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark from:  1
+  Supervised (learning)
+  Unsupervised (learning)
+  Reinforcement (learning)
+  Deep (learning)
+
+ 2023  Page 10 of 12
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Node B (from Begin) (Line 3 in table)</li>
+<li>Node C (from Begin) (Line 4 in table)</li>
+<li>Node D (from Begin) (Line 5 in table)</li>
+<li>Node G (from C) (Line 6 in table)</li>
+<li>Node F and Node End (from G) (Lines 7 and 8 in table)</li>
+<li>Node End (from F) (Line 9 in table)</li>
+<li>Begin  C  G  F  End</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Node B (from Begin) (Line 3 in table)</li><li>Node C (from Begin) (Line 4 in table)</li><li>Node D (from Begin) (Line 5 in table)</li><li>Node G (from C) (Line 6 in table)</li><li>Node F and Node End (from G) (Lines 7 and 8 in table)</li><li>Node End (from F) (Line 9 in table)</li><li>Begin  C  G  F  End</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q11"><h2>Question 11</h2><div class="diagram"><img src="worked32/page-13.jpg" alt="Paper page 13 for Q11"><div class="cap">Original paper page 13</div></div>
+        <section class="part">
+          <p class="part-label">Part 11(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for every two correct identifiers (Max 2)  2
+  Identifier  Data type  Description
+
+  Queue  STRING  An array to store the contents of the queue.
+
+  RearPointer  INTEGER  Points to the last term of the queue.
+
+  Length  INTEGER  Indicates the number of items in the queue.
+
+  FrontPointer  INTEGER  Points to the first term of the queue.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT MaxLength = 50</li>
+<li>IF Length &lt; MaxLength THEN // IF Length &lt;= MaxLength -</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT MaxLength = 50</li><li>IF Length &lt; MaxLength THEN // IF Length &lt;= MaxLength -</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Print jobs are expected to be actioned by the printer in the order they are</li>
+<li>… because the printer queue is a queue, the first job to be sent to the</li>
+<li>If the printer queue was on a stack, the first job the printer received would</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Print jobs are expected to be actioned by the printer in the order they are</li><li>… because the printer queue is a queue, the first job to be sent to the</li><li>If the printer queue was on a stack, the first job the printer received would</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

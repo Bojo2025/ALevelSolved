@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/11 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/11 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q30">Q30</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 0 1</p>
+<div class='ms-raw'>0  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 0 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 1 1</p>
+<div class='ms-raw'>1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 1 1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each correct value  4 Correct answers only
+
+  Character  Denary  Binary  Hexadecimal
+
+  ҉  489  0001 1110 1001  1E9
+
+  @  64  0100 0000  40
+
+  Ώ  911  0011 1000 1111  38F
+
+  ᗖ  5590  0001 0101 1101 0110  15D6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ASCII                                                                                                                        set</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ASCII                                                                                                                        set</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>There are fewer bits per character // ASCII has 7/8 bits per character, UNICODE has</li>
+<li>Fewer different characters can be represented // ASCII only represents the Latin</li>
+<li>ASCII Cannot be expanded indefinitely</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>There are fewer bits per character // ASCII has 7/8 bits per character, UNICODE has</li><li>Fewer different characters can be represented // ASCII only represents the Latin</li><li>ASCII Cannot be expanded indefinitely</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>107  1 Correct answer only
+
+  University Press &amp; Assessment 2026  Page 5 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>showing/working binary subtraction                                                                                                  denary and back</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>showing/working binary subtraction                                                                                                  denary and back</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>0100 1101                                                                                                                    Needs to show the carries</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>0100 1101                                                                                                                    Needs to show the carries</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Binary is in powers of 2 whilst decimal is in powers of 10                                                                0,1,2,3,4,5,6,7,8,9 binary</li>
+<li>Any example of values e.g. Kibibyte is 1024 bytes whilst Kilobyte is 1000 bytes                                           only uses the digits 0 and</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Binary is in powers of 2 whilst decimal is in powers of 10                                                                0,1,2,3,4,5,6,7,8,9 binary</li><li>Any example of values e.g. Kibibyte is 1024 bytes whilst Kilobyte is 1000 bytes                                           only uses the digits 0 and</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The question asks about
+  binary and denary
+  prefixes
+
+  MP2: Binary is mebibyte,
+  denary is megabyte is ok,
+  binary is mebibyte, denary
+  is kilobyte is not
+
+  University Press &amp; Assessment 2026  Page 6 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B00000000] instructions</li>
+<li>[B00000000] // AND &amp;0 // AND #0                                                                                                 Bit manipulation so no load</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B00000000] instructions</li><li>[B00000000] // AND &amp;0 // AND #0                                                                                                 Bit manipulation so no load</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for a matching description  relative, direct, absolute,</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>Indirect</li>
+<li>the operand stores the address where the data is found // the data is held in the address</li>
+<li>example: LDI 23 loads the data in the address stored in address 23</li>
+<li>Indexed</li>
+<li>the address is calculated by adding the operand to the contents of the index register</li>
+<li>example: LDX 20 adds 20 to the contents of the index register to calculate the address</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Indirect</li><li>the operand stores the address where the data is found // the data is held in the address</li><li>example: LDI 23 loads the data in the address stored in address 23</li><li>Indexed</li><li>the address is calculated by adding the operand to the contents of the index register</li><li>example: LDX 20 adds 20 to the contents of the index register to calculate the address</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>The logo might include something like a photograph                                                                                    Accept any sensible</li>
+<li>Bitmaps can be more detailed/precise/high quality                                                                                     justification of their choice</li>
+<li>which may be more attractive/appealing on documents</li>
+<li>Bitmaps can be edited more precisely                                                                                                  Accept other examples</li>
+<li>in case changes need to be made to the logo in future                                                                                 such as tee shirts for</li>
+<li>A logo should be made of simple shapes which are calculated mathematically</li>
+<li>A vector graphic logo can be resized without pixelation</li>
+<li>so, it could be used on different documents without losing quality</li>
+<li>The file size is smaller than a bitmap image</li>
+<li>so, the logo will not use excessive file storage if used in many documents</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The logo might include something like a photograph                                                                                    Accept any sensible</li><li>Bitmaps can be more detailed/precise/high quality                                                                                     justification of their choice</li><li>which may be more attractive/appealing on documents</li><li>Bitmaps can be edited more precisely                                                                                                  Accept other examples</li><li>in case changes need to be made to the logo in future                                                                                 such as tee shirts for</li><li>A logo should be made of simple shapes which are calculated mathematically</li><li>A vector graphic logo can be resized without pixelation</li><li>so, it could be used on different documents without losing quality</li><li>The file size is smaller than a bitmap image</li><li>so, the logo will not use excessive file storage if used in many documents</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for the correct outputs in the NAND column  working
+
+  Input 1  Input 2  NAND</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 0 1</p>
+<div class='ms-raw'>0  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 0 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 1 0</p>
+<div class='ms-raw'>1  0
+
+  University Press &amp; Assessment 2026  Page 15 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 1 0</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>To convert a high-level language to a low-level language/assembly/machine code</li>
+<li>Computers use machine code and programmers use high-level languages                                                        MP3: Read is NE</li>
+<li>To allow the computer to process the coded statements</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>To convert a high-level language to a low-level language/assembly/machine code</li><li>Computers use machine code and programmers use high-level languages                                                        MP3: Read is NE</li><li>To allow the computer to process the coded statements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Amend the code or debug in real time</li>
+<li>and see the changes immediately instead of having to recompile</li>
+<li>Stops as soon as an error is encountered</li>
+<li>so the position of the error can be easily seen</li>
+<li>Only one error is displayed at a time // no dependent errors generated</li>
+<li>individual errors are easier to identify/debug/fix</li>
+<li>Incomplete code can be tested/run</li>
+<li>so the program does not need to be complete to see if it works/see the output</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Amend the code or debug in real time</li><li>and see the changes immediately instead of having to recompile</li><li>Stops as soon as an error is encountered</li><li>so the position of the error can be easily seen</li><li>Only one error is displayed at a time // no dependent errors generated</li><li>individual errors are easier to identify/debug/fix</li><li>Incomplete code can be tested/run</li><li>so the program does not need to be complete to see if it works/see the output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for a correct answer  1 Correct answer only
+
+  Assembler
+
+  University Press &amp; Assessment 2026  Page 7 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each correct licence  3 Do not accept copyleft for
+  open source
+  Software licence  Description
+  Do not accept freeware for
+  Shareware  The software is released on a trial period. After the trial  open source
+  period ends, a fee may be required to continue using the
+  software.
+
+  Commercial // proprietary  The software is purchased for a fee. There is no access to
+  the source code.
+
+  Open source initiative //  The software is released with the source code. The
+  free software  software can be changed and distributed with the changes
+  under the same licence restrictions.
+
+  University Press &amp; Assessment 2026  Page 8 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> ADD 200</p>
+<ol>
+<li>[B11001010] ADD B00000010           B11001101</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B11001010] ADD B00000010           B11001101</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for AND  2 Accept correct shift</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 0000 0110</p>
+<div class='ms-raw'>1 mark for the correct answer  1 Correct answer only
+
+  0000 0110
+
+  University Press &amp; Assessment 2026  Page 9 of 17
+
+Trace ID: PC-2245DE020A
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/11 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/11 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/11  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 0000 0110</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for a correct name  3 Do not accept Immediate,</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CUSTOMER BORROW is a one-to-many relationship // 1:M</li>
+<li>TOY_INSTANCE to TOY is a many-to-one relationship // M:1</li>
+<li>Identifying the correct Primary Key and matching Foreign Key in both relationships</li>
+<li>Stating how the keys form the relationship</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CUSTOMER BORROW is a one-to-many relationship // 1:M</li><li>TOY_INSTANCE to TOY is a many-to-one relationship // M:1</li><li>Identifying the correct Primary Key and matching Foreign Key in both relationships</li><li>Stating how the keys form the relationship</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Selecting the contact name, customer ID and totalling the number of days - needs all 3</li>
+<li>Using an appropriate name                                                                                                         Accept any correct method</li>
+<li>Linking or joining the correct tables                                                                                             of joining the tables, but no</li>
+<li>Grouping the results                                                                                                              mix and match between</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Selecting the contact name, customer ID and totalling the number of days - needs all 3</li><li>Using an appropriate name                                                                                                         Accept any correct method</li><li>Linking or joining the correct tables                                                                                             of joining the tables, but no</li><li>Grouping the results                                                                                                              mix and match between</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Altering the correct table                                                                                               wrong order or if there are</li>
+<li>Adding an appropriately named field with an appropriate data type                                                        any additional statements</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Altering the correct table                                                                                               wrong order or if there are</li><li>Adding an appropriately named field with an appropriate data type                                                        any additional statements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Updating the correct table                                                                                               the wrong order or if there</li>
+<li>Setting the additional field to the correct data                         data type must match 4(c)(i)                    are any additional</li>
+<li>Where clause                                                                                                             statements</li>
+<li>[A2226] Obtain/use: WHERE BorrowID = &quot;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Updating the correct table                                                                                               the wrong order or if there</li><li>Setting the additional field to the correct data                         data type must match 4(c)(i)                    are any additional</li><li>Where clause                                                                                                             statements</li><li>[A2226] Obtain/use: WHERE BorrowID = &quot;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Validation only ensures that data meets certain criteria                                                                 verification for MP3 BOD</li>
+<li>Validation prevents the input of inappropriate data                                                                      but not for both</li>
+<li>Verification makes sure that the data that is entered matches the original data / the data</li>
+<li>Verification prevents data being accidentally changed from the original</li>
+<li>Any example of validation/verification in practice e.g. entering a password twice</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Validation only ensures that data meets certain criteria                                                                 verification for MP3 BOD</li><li>Validation prevents the input of inappropriate data                                                                      but not for both</li><li>Verification makes sure that the data that is entered matches the original data / the data</li><li>Verification prevents data being accidentally changed from the original</li><li>Any example of validation/verification in practice e.g. entering a password twice</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The original data was incorrect</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The original data was incorrect</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The image is made of pixels</li>
+<li>Each pixel has one colour</li>
+<li>Each colour has a unique binary code</li>
+<li>The code for the colour of each pixel is stored in sequence / order</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The image is made of pixels</li><li>Each pixel has one colour</li><li>Each colour has a unique binary code</li><li>The code for the colour of each pixel is stored in sequence / order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>drawing object</li>
+<li>property</li>
+<li>drawing list</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>drawing object</li><li>property</li><li>drawing list</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>No mark for the choice.  3 Justification must match</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Y = NOT (B OR NOT C)</li>
+<li>Accept Y = B NOR NOT C</li>
+<li>Z = E NOR (NOT C XOR D)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Y = NOT (B OR NOT C)</li><li>Accept Y = B NOR NOT C</li><li>Z = E NOR (NOT C XOR D)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for drawing a truth table with correct inputs  2 Ignore extra columns for</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Data is not stored on the client computer // all data is stored on the server</li>
+<li>The client computer is reliant on access to server</li>
+<li>The client computer is heavily reliant on the network connection</li>
+<li>The client computer requires few local resources, for example, memory / processing</li>
+<li>The client computer performs minimal functions / processes</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Data is not stored on the client computer // all data is stored on the server</li><li>The client computer is reliant on access to server</li><li>The client computer is heavily reliant on the network connection</li><li>The client computer requires few local resources, for example, memory / processing</li><li>The client computer performs minimal functions / processes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Both nodes are connected to a bus/cable</li>
+<li>Data is broadcast on the cable</li>
+<li>but is only accepted by the intended recipient</li>
+<li>Uses the IP/MAC addresses of the two nodes</li>
+<li>Ethernet transmits data as frames</li>
+<li>Ethernet uses Carrier Sense Multi-Access / Collision Detection / CSMA/CD</li>
+<li>The transmitting node listens to see if the line is free and only submits data when the line</li>
+<li>The node waits a random time if a collision is detected and then tries to send again</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Both nodes are connected to a bus/cable</li><li>Data is broadcast on the cable</li><li>but is only accepted by the intended recipient</li><li>Uses the IP/MAC addresses of the two nodes</li><li>Ethernet transmits data as frames</li><li>Ethernet uses Carrier Sense Multi-Access / Collision Detection / CSMA/CD</li><li>The transmitting node listens to see if the line is free and only submits data when the line</li><li>The node waits a random time if a collision is detected and then tries to send again</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Bus networks are inefficient with a large number of nodes                                                                first answer in each space</li>
+<li>because only one transmission can be on the line at once</li>
+<li>Bus networks are inefficient with large numbers of simultaneous data transmissions</li>
+<li>because of the need for nodes to wait for the line to be free</li>
+<li>Bus networks are not easily scalable</li>
+<li>If the bus/cable goes down the whole/part of the network is unusable</li>
+<li>Transmissions are broadcast to all nodes, so could be privacy/confidentiality/security</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Bus networks are inefficient with a large number of nodes                                                                first answer in each space</li><li>because only one transmission can be on the line at once</li><li>Bus networks are inefficient with large numbers of simultaneous data transmissions</li><li>because of the need for nodes to wait for the line to be free</li><li>Bus networks are not easily scalable</li><li>If the bus/cable goes down the whole/part of the network is unusable</li><li>Transmissions are broadcast to all nodes, so could be privacy/confidentiality/security</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>It does not change and it is only visible/accessible within the network/LAN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>It does not change and it is only visible/accessible within the network/LAN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Subnetting splits a larger network into smaller/more manageable parts</li>
+<li>The network has increased efficiency                                 – just faster is NE</li>
+<li>Congestion is reduced // fewer collisions happen</li>
+<li>Security is improved</li>
+<li>It can be more straightforward to isolate faults</li>
+<li>Easier to scale a network with subnets</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Subnetting splits a larger network into smaller/more manageable parts</li><li>The network has increased efficiency                                 – just faster is NE</li><li>Congestion is reduced // fewer collisions happen</li><li>Security is improved</li><li>It can be more straightforward to isolate faults</li><li>Easier to scale a network with subnets</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q30"><h2>Question 30</h2>
+        <section class="part">
+          <p class="part-label">Part 30 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 1110 0010</p>
+<ol>
+<li>0001 1110                                                  add</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>0001 1110                                                  add</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

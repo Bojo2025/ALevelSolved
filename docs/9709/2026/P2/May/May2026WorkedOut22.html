@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9709/22 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9709/22 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q12">Q12</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use: Expand integrand to obtain 1 + 2e− x + e−2 x</li>
+<li>[M1] Obtain/use: Integrate to obtain at least two of the terms of the form x + k1e− x + k2 e−2 x</li>
+<li>[A1] Obtain/use: Obtain correct x − 2e− x − 12 e−2 x</li>
+<li>[A1] Obtain/use: Apply limits correctly to obtain a − 32 e−2a − 12 e−4a + 2e−a</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: Expand integrand to obtain 1 + 2e− x + e−2 x</li><li>[M1] Obtain/use: Integrate to obtain at least two of the terms of the form x + k1e− x + k2 e−2 x</li><li>[A1] Obtain/use: Obtain correct x − 2e− x − 12 e−2 x</li><li>[A1] Obtain/use: Apply limits correctly to obtain a − 32 e−2a − 12 e−4a + 2e−a</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> B1</p>
+<ol>
+<li>[M1] Obtain/use: Integrate to obtain the form k1 sin 2 x + k2 tan 2 x                                                               *</li>
+<li>[A1] Obtain/use: Obtain correct 4sin 2 x − 12 tan 2 x</li>
+<li>[DM1] Or using 0 and their positive value together with</li>
+<li>[A1] Or exact equivalent</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Integrate to obtain the form k1 sin 2 x + k2 tan 2 x                                                               *</li><li>[A1] Obtain/use: Obtain correct 4sin 2 x − 12 tan 2 x</li><li>[DM1] Or using 0 and their positive value together with</li><li>[A1] Or exact equivalent</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: Use correct identities to produce a correct equation in one trigonometric function</li>
+<li>[A1] Obtain/use: Obtain sin 2  = 13 or cos2  = 23 or tan 2  = 12 or cot 2  = 2 or cosec2 = 3</li>
+<li>[A1] Allow greater accuracy 35.264…, 144.735…</li>
+<li>[A1] Obtain/use: Obtain all four correct answers and no others between −180 and 180</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Use correct identities to produce a correct equation in one trigonometric function</li><li>[A1] Obtain/use: Obtain sin 2  = 13 or cos2  = 23 or tan 2  = 12 or cot 2  = 2 or cosec2 = 3</li><li>[A1] Allow greater accuracy 35.264…, 144.735…</li><li>[A1] Obtain/use: Obtain all four correct answers and no others between −180 and 180</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Or by inspection, …</li>
+<li>[A1] Obtain/use: Obtain 2 x3 − 6 x − 9</li>
+<li>[A1] AG – necessary detail needed</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Or by inspection, …</li><li>[A1] Obtain/use: Obtain 2 x3 − 6 x − 9</li><li>[A1] AG – necessary detail needed</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use: Either</li>
+<li>[M1] Obtain/use: Equate gradient of line to ln a and attempt to find value of a</li>
+<li>[A1] Obtain/use: Obtain ln a = 0.588 and hence a = 1.8</li>
+<li>[M1] Obtain/use: Substitute appropriate values to find ln k</li>
+<li>[A1] Obtain/use: Obtain ln k = 1.162 and hence k = 3.2</li>
+<li>[B1] Obtain/use: Or</li>
+<li>[M1] Obtain/use: 3.22 = ln k + 3.5ln a and                                                                                       *</li>
+<li>[A1] Obtain/use: Obtain ln a = 0.588 and hence a = 1.8</li>
+<li>[DM1] Obtain/use: Substitute ln a to find ln k</li>
+<li>[A1] Obtain/use: Obtain ln k = 1.162 and hence k = 3.2</li>
+<li>[M1] Obtain/use: Or                                                                                                               *</li>
+<li>[DM1] Obtain/use: Eliminate either k or a correctly to find an unsimpified equation in either a or k                             *</li>
+<li>[A1] Obtain/use: Obtain either a = 1.8 or k = 3.2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: Either</li><li>[M1] Obtain/use: Equate gradient of line to ln a and attempt to find value of a</li><li>[A1] Obtain/use: Obtain ln a = 0.588 and hence a = 1.8</li><li>[M1] Obtain/use: Substitute appropriate values to find ln k</li><li>[A1] Obtain/use: Obtain ln k = 1.162 and hence k = 3.2</li><li>[B1] Obtain/use: Or</li><li>[M1] Obtain/use: 3.22 = ln k + 3.5ln a and                                                                                       *</li><li>[A1] Obtain/use: Obtain ln a = 0.588 and hence a = 1.8</li><li>[DM1] Obtain/use: Substitute ln a to find ln k</li><li>[A1] Obtain/use: Obtain ln k = 1.162 and hence k = 3.2</li><li>[M1] Obtain/use: Or                                                                                                               *</li><li>[DM1] Obtain/use: Eliminate either k or a correctly to find an unsimpified equation in either a or k                             *</li><li>[A1] Obtain/use: Obtain either a = 1.8 or k = 3.2</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[A1] Obtain/use: Obtain either k = 3.2 or a = 1.8</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Obtain either k = 3.2 or a = 1.8</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 12 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9709/22  Cambridge International AS Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: 6(c)                     Use iteration process correctly at least once</li>
+<li>[A1] Answer required to exactly four significant</li>
+<li>[A1] Obtain/use: Show sufficient iterates to 6 significant figures to justify answer or show a sign</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 6(c)                     Use iteration process correctly at least once</li><li>[A1] Answer required to exactly four significant</li><li>[A1] Obtain/use: Show sufficient iterates to 6 significant figures to justify answer or show a sign</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 13 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9709/22  Cambridge International AS Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 119</p>
+<ol>
+<li>2cos2 t − 1 + 5sin t and cos t =</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>2cos2 t − 1 + 5sin t and cos t =</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 9 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9709/22  Cambridge International AS Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: Attempt use of correct quotient rule                                                                             *</li>
+<li>[A1] Or (unsimplified) equivalent</li>
+<li>[DM1] Obtain/use: Substitute x = 0 to find value of derivative at P</li>
+<li>[A1] From correct expression for derivative,</li>
+<li>[M1] Obtain/use: Use x = 0, y = 13 and their negative reciprocal of derivative to find equation</li>
+<li>[A1] From correct work only,</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Attempt use of correct quotient rule                                                                             *</li><li>[A1] Or (unsimplified) equivalent</li><li>[DM1] Obtain/use: Substitute x = 0 to find value of derivative at P</li><li>[A1] From correct expression for derivative,</li><li>[M1] Obtain/use: Use x = 0, y = 13 and their negative reciprocal of derivative to find equation</li><li>[A1] From correct work only,</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Allow non-integer value for N so far</li>
+<li>[A1] Allow if seen as part of an inequality</li>
+<li>[A1] Allow if seen as part of an inequality</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Allow non-integer value for N so far</li><li>[A1] Allow if seen as part of an inequality</li><li>[A1] Allow if seen as part of an inequality</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 119</p>
+<ol>
+<li>[M1] Obtain/use: 8(b)                                          dy    dy</li>
+<li>[A1] Obtain/use: Obtain cos t (5 − 12sin t ) = 0 or equivalent and hence at least sin t = 125</li>
+<li>[M1] Obtain/use: Attempt to express y in terms of sin t and/or cos t only</li>
+<li>[A1] Obtain/use: Obtain 3 − 6sin 2 t + 5sin t or</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 8(b)                                          dy    dy</li><li>[A1] Obtain/use: Obtain cos t (5 − 12sin t ) = 0 or equivalent and hence at least sin t = 125</li><li>[M1] Obtain/use: Attempt to express y in terms of sin t and/or cos t only</li><li>[A1] Obtain/use: Obtain 3 − 6sin 2 t + 5sin t or</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Or inequality using &lt; or ⩽</li>
+<li>[M1] Or inequality using &lt; or ⩽</li>
+<li>[A1] Obtain/use: Obtain x = 23 or x = 64</li>
+<li>[A1] Now using ⩽ signs</li>
+<li>[B1] Or inequality using &lt; or ⩽</li>
+<li>[M1] 12 x 2 − 68 x + 40 = 0</li>
+<li>[A1] Obtain/use: Obtain critical values 23 and 5</li>
+<li>[A1] Now using ⩽ signs</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Or inequality using &lt; or ⩽</li><li>[M1] Or inequality using &lt; or ⩽</li><li>[A1] Obtain/use: Obtain x = 23 or x = 64</li><li>[A1] Now using ⩽ signs</li><li>[B1] Or inequality using &lt; or ⩽</li><li>[M1] 12 x 2 − 68 x + 40 = 0</li><li>[A1] Obtain/use: Obtain critical values 23 and 5</li><li>[A1] Now using ⩽ signs</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 15 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 11 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9709/22  Cambridge International AS Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: Attempt solution for a of f (−2) = 0</li>
+<li>[A1] Obtain/use: Obtain 16a − 32 −12a + 42 −18 = 0 and hence a = 2</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Attempt solution for a of f (−2) = 0</li><li>[A1] Obtain/use: Obtain 16a − 32 −12a + 42 −18 = 0 and hence a = 2</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Obtain/use: 1</li>
+<li>[A1] Obtain/use: Obtain cos 2x = 12 and hence x =  16 π</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 1</li><li>[A1] Obtain/use: Obtain cos 2x = 12 and hence x =  16 π</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2026  Page 14 of 15
+
+Trace ID: PC-68EB361ED4
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9709/22 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9709/22 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9709/22  Cambridge International AS Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[B1] Obtain/use: dx</li>
+<li>[B1] Obtain/use: dy</li>
+<li>[M1] Obtain/use: dy</li>
+<li>[A1] Obtain/use: Obtain 54</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: dx</li><li>[B1] Obtain/use: dy</li><li>[M1] Obtain/use: dy</li><li>[A1] Obtain/use: Obtain 54</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q12"><h2>Question 12</h2>
+        <section class="part">
+          <p class="part-label">Part 12 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Substitute exact value of sin t and cost (if appropriate) to obtain 97</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

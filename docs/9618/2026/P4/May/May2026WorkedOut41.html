@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/41 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/41 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) array of 10 integers</li>
+<li>(Global) head pointer and tail pointer both initialised to –1</li>
+<li>Queue values are initialised to –1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Queue(9) As Integer
+                   Dim HeadPointer As Integer
+                   Dim TailPointer As Integer
+                   Sub Main(args As String())
+                        HeadPointer = -1
+                        TailPointer = -1
+
+                        For x = 0 To 9
+                             Queue(x) = -1
+                        Next
+                   End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Queue = []
+                   HeadPointer = -1
+                   TailPointer = -1
+                   for x in range(10):
+                        Queue.append(-1)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) array of 10 integers</li><li>(Global) head pointer and tail pointer both initialised to –1</li><li>Queue values are initialised to –1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Enqueue header taking 1 (integer) parameter</li>
+<li>Checking if the queue is full …</li>
+<li>… returning False</li>
+<li>(otherwise) Storing parameter in tail pointer +1</li>
+<li>Incrementing tail pointer</li>
+<li>… returning True</li>
+<li>Dealing with first element and changing head pointer to be 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(DataValue As Integer)
+                      If TailPointer &lt; 9 Then
+                           TailPointer = TailPointer + 1
+                           Queue(TailPointer) = DataValue
+                           If HeadPointer = -1 Then
+                               HeadPointer = 0
+                           End If
+                           Return True
+                      Else
+                           Return False
+                      End If End
+                  Function
+
+                University Press &amp; Assessment 2026                                                                       Page 9 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                   9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(Data):
+                        global Queue
+                        global TailPointer
+                        global HeadPointer
+                        if TailPointer &lt; 9:
+                            TailPointer = TailPointer + 1
+                            Queue[TailPointer] = Data
+                            if HeadPointer == -1:
+                                 HeadPointer = 0
+                            return True
+                        else:
+                            return False</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Enqueue header taking 1 (integer) parameter</li><li>Checking if the queue is full …</li><li>… returning False</li><li>(otherwise) Storing parameter in tail pointer +1</li><li>Incrementing tail pointer</li><li>… returning True</li><li>Dealing with first element and changing head pointer to be 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking 11 (integer) values as input</li>
+<li>… calling Enqueue() with each input</li>
+<li>Checking/storing return value …</li>
+<li>… output message if False is returned</li>
+<li>Output content of array in any form</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Returned As Boolean
+                  For x = 0 To 10
+                       Console.WriteLine(&quot;Enter a number &quot;)
+                       Returned = Enqueue(Console.ReadLine())
+                       If Not Returned Then
+                           Console.WriteLine(&quot;Queue full&quot;)
+                       End If
+                  Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(11):
+                        Returned = Enqueue(int(input(&quot;Enter a number &quot;)))
+                        if not(Returned):
+                            print(&quot;Queue full&quot;)
+                   print(Queue)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking 11 (integer) values as input</li><li>… calling Enqueue() with each input</li><li>Checking/storing return value …</li><li>… output message if False is returned</li><li>Output content of array in any form</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for ss showing inputs and output  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 13 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/41  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dequeue header taking no parameter</li>
+<li>Checking if queue is empty (e.g. TailPointer == -1 or HeadPointer &gt; TailPointer) …</li>
+<li>… returning –1</li>
+<li>(otherwise) accessing data at head pointer …</li>
+<li>… and returning</li>
+<li>Incrementing HeadPointer (before any return)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue()
+                           Dim ReturnValue As Integer
+                           If HeadPointer &gt; -1 And HeadPointer &lt;= TailPointer Then
+                               ReturnValue = Queue(HeadPointer)
+                               HeadPointer = HeadPointer + 1
+                               Return ReturnValue
+                           Else
+                               Return -1
+                           End If End
+                        Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue():
+                        global Queue
+                        global HeadPointer
+                        global TailPointer
+                        if HeadPointer &gt; -1 and HeadPointer &lt;= TailPointer:
+                            ReturnValue = Queue[HeadPointer]
+                            HeadPointer = HeadPointer + 1
+                            return ReturnValue
+                        else:
+                            return -1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dequeue header taking no parameter</li><li>Checking if queue is empty (e.g. TailPointer == -1 or HeadPointer &gt; TailPointer) …</li><li>… returning –1</li><li>(otherwise) accessing data at head pointer …</li><li>… and returning</li><li>Incrementing HeadPointer (before any return)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking 6 integers as input and storing in the queue</li>
+<li>Calling Dequeue() 4 times and storing/using return value</li>
+<li>Outputs each removed element from the queue</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>For x = 0 To 5
+                           Console.WriteLine(&quot;Enter a number &quot;)
+                           Returned = Enqueue(Console.ReadLine())
+                      Next
+                      Dim ReturnValue As Integer = -1
+                      For x = 0 To 3
+                           ReturnValue = Dequeue()
+                           Console.WriteLine(ReturnValue)
+                      Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for x in range(6):
+                        returnValue = Enqueue(int(input(&quot;Enter a number &quot;)))
+                   for x in range(4):
+                        returnValue = Dequeue()
+                        print(returnValue)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking 6 integers as input and storing in the queue</li><li>Calling Dequeue() 4 times and storing/using return value</li><li>Outputs each removed element from the queue</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for ss showing inputs and output  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 17 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/41  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Record structure / class with identifier ToyRecord                                                                                    constructor for</li>
+<li>Four fields declared/initialised                                                                                                      MP1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Structure ToyRecord
+                       Dim ToyName As String
+                       Dim NumberBricks As Integer
+                       Dim Difficulty As String
+                          Dim Category As
+                     String End Structure
+
+                University Press &amp; Assessment 2026                                                                       Page 18 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class ToyRecord:
+                        def   init (self, pName, pNumBricks, pDifficulty, pCategory):
+                            self.ToyName = pName #string
+                            self.NumberBricks = pNumBricks #integer
+                            self.Difficulty = pDifficulty #string
+                            self.Category = pCategory #string</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Record structure / class with identifier ToyRecord                                                                                    constructor for</li><li>Four fields declared/initialised                                                                                                      MP1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header taking parameter and returning populated array</li>
+<li>Exception handling with suitable output (all file handling inside try)</li>
+<li>Opening the file</li>
+<li>…closing the file in an appropriate place</li>
+<li>Looping until EOF/16 times and reading in each line</li>
+<li>Splitting data by comma (and removing new line)</li>
+<li>Creating new ToyRecord with data // updating pre-existing record</li>
+<li>Appending each record to array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReadData(TheToys() As ToyRecord)
+                      Dim TempData(3) As String
+                      Dim TempRecord As ToyRecord
+                      Try
+                           Dim FileReader As New System.IO.StreamReader(&quot;Toys.txt&quot;)
+                           While Not FileReader.EndOfStream
+                               TempData = (FileReader.ReadLine()).Split(&quot;,&quot;)
+                               TempRecord.ToyName = TempData(0)
+                               TempRecord.NumberBricks = TempData(1)
+                               TempRecord.Difficulty = TempData(2)
+                               TempRecord.Category = TempData(3)
+                               TheToys(NumberToys) = TempRecord
+                               NumberToys = NumberToys + 1
+                           End While
+                           FileReader.Close()
+                      Catch ex As Exception
+                           Console.WriteLine(&quot;Cannot open or read from file&quot;)
+                      End Try
+                      Return TheToys
+                  End Function
+
+                University Press &amp; Assessment 2026                                                                       Page 21 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData(TheToys):
+                        try:
+                             TheFile = open(&quot;Toys.txt&quot;)
+                             for Line in TheFile:
+                                 DataSplit = (Line.strip()).split(&quot;,&quot;)
+                                 TheToys.append(ToyRecord(DataSplit[0],int(DataSplit[1]), DataSplit[2], DataSplit[3]))
+                             TheFile.close()
+                        except:
+                             print(&quot;Cannot open file&quot;)
+                        return TheToys</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header taking parameter and returning populated array</li><li>Exception handling with suitable output (all file handling inside try)</li><li>Opening the file</li><li>…closing the file in an appropriate place</li><li>Looping until EOF/16 times and reading in each line</li><li>Splitting data by comma (and removing new line)</li><li>Creating new ToyRecord with data // updating pre-existing record</li><li>Appending each record to array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header, taking array parameter</li>
+<li>Looping through each array element …</li>
+<li>…outputting the data</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputToys(TheToys)
+                       For x = 0 To NumberToys - 1
+                            Console.WriteLine(TheToys(x).ToyName &amp; &quot; &quot; &amp; TheToys(x).NumberBricks &amp; &quot; &quot; &amp;
+                   TheToys(x).Difficulty &amp; &quot; &quot; &amp; TheToys(x).Category)
+                       Next
+                   End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputToys(TheToys):
+                        for Item in TheToys:
+                            print(Item.ToyName, Item.NumberBricks, Item.Difficulty, Item.Category)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header, taking array parameter</li><li>Looping through each array element …</li><li>…outputting the data</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring array of (16 ToyRecord elements)</li>
+<li>Calling ReadData() with empty array parameter and storing return array</li>
+<li>Calling OutputToys() with returned array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>NumberToys = 0
+                  Dim TheToys(15) As ToyRecord
+                  TheToys = ReadData(TheToys)
+                  OutputToys(TheToys)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>TheToys = [] #16 elements
+                  TheToys = ReadData(TheToys)
+                  OutputToys(TheToys)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring array of (16 ToyRecord elements)</li><li>Calling ReadData() with empty array parameter and storing return array</li><li>Calling OutputToys() with returned array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iv) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing the toy data output  1 Ignore format
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 25 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/41  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header taking array of ToyRecord and returning a populated array</li>
+<li>Prompt to enter a difficulty level and reading as input …</li>
+<li>… repeatedly until valid                                                                                                              Allow any input as</li>
+<li>Iterating through each element in array and comparing difficulty to input …                                                           long as equates to</li>
+<li>… appending those that match to the new array                                                                                         the 3 levels</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function SearchToys(TheToys)
+                         Dim SelectedToys(16) As ToyRecord
+                         Dim Difficulty As Integer = -1
+                         Dim Choice As String
+                         NumberSelected = 0
+
+                                          While (Difficulty &lt; 1 Or Difficulty &gt; 3)
+                                               Console.WriteLine(&quot;Enter 1 for easy, 2 for medium and 3 for expert &quot;)
+                                               Difficulty = Console.ReadLine()
+                                          End While
+                                          If Difficulty = 1 Then
+                                               Choice = &quot;Easy&quot;
+                                          ElseIf Difficulty = 2 Then
+                                               Choice = &quot;Medium&quot;
+                                          Else
+                                               Choice = &quot;Expert&quot;
+                                          End If
+
+                               For x = 0 To NumberToys - 1
+                                    If TheToys(x).Difficulty = Choice Then
+                                        SelectedToys(NumberSelected) = TheToys(x)
+                                        NumberSelected = NumberSelected + 1
+                                    End If
+                               Next
+                               Return SelectedToys
+                           End Function
+
+                University Press &amp; Assessment 2026                                                                       Page 27 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SearchToys(TheToys):
+                           SelectedToys = []
+                           Difficulty = -1
+                           while Difficulty &lt; 1 or Difficulty &gt; 3:
+                                 Difficulty = int(input(&quot;Enter 1 for easy, 2 for medium and 3 for expert &quot;))
+                           if Difficulty == 1:
+                                 Choice = &quot;Easy&quot;
+                           elif Difficulty == 2:
+                                 Choice = &quot;Medium&quot;
+                           else:
+                             Choice = &quot;Expert&quot;
+                           for Item in TheToys:
+                                  if Item.Difficulty == Choice:
+                                       SelectedToys.append(Item)
+                       return SelectedToys
+
+                University Press &amp; Assessment 2026                                                                       Page 26 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header taking array of ToyRecord and returning a populated array</li><li>Prompt to enter a difficulty level and reading as input …</li><li>… repeatedly until valid                                                                                                              Allow any input as</li><li>Iterating through each element in array and comparing difficulty to input …                                                           long as equates to</li><li>… appending those that match to the new array                                                                                         the 3 levels</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header taking array of type ToyRecord, opening and closing text file</li>
+<li>Looping through array and formatting the data correctly</li>
+<li>…writing each line to the file</li>
+<li>Exception handling with suitable catch and output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub WriteToys(TheToys)
+                          Dim TextToWrite As String = &quot;&quot;
+                          Try
+                              Dim FileWriter As New System.IO.StreamWriter(&quot;SelectedToys.txt&quot;)
+                              For x = 0 To NumberSelected - 1
+                                   TextToWrite = TheToys(x).ToyName &amp; &quot;,&quot; &amp; TheToys(x).NumberBricks &amp; &quot;,&quot; &amp;
+                    TheToys(x).Difficulty &amp; &quot;,&quot; &amp; TheToys(x).Category
+                                   FileWriter.WriteLine(TextToWrite)
+                              Next
+                              FileWriter.Close()
+                          Catch ex As Exception
+                              Console.WriteLine(&quot;Cannot open or read from file&quot;)
+                          End Try
+                      End Sub
+
+                University Press &amp; Assessment 2026                                                                       Page 29 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def WriteToys(TheToys):
+                         try:
+                            TheFile = open(&quot;SelectedToys.txt&quot;, &#x27;w&#x27;)
+                            for Item in TheToys:
+                                  LineToWrite = Item.ToyName + &quot;,&quot; + str(Item.NumberBricks) + &quot;,&quot; + Item.Difficulty + &quot;,&quot; +
+                  Item.Category + &quot;\n&quot;
+                                  TheFile.write(LineToWrite)
+                              TheFile.close()
+                         except:
+                              print(&quot;Cannot write to file&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header taking array of type ToyRecord, opening and closing text file</li><li>Looping through array and formatting the data correctly</li><li>…writing each line to the file</li><li>Exception handling with suitable catch and output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling SearchToys() with populated array and storing return array</li>
+<li>Calling WriteToys() with returned array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim SelectedToys(15) As ToyRecord
+                   SelectedToys = SearchToys(TheToys)
+                   WriteToys(SelectedToys)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>SelectedToys = []
+                   SelectedToys = SearchToys(TheToys)
+                   WriteToys(SelectedToys)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling SearchToys() with populated array and storing return array</li><li>Calling WriteToys() with returned array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iv) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot of text file with correct name and content  1 Ignore format,
+  check content
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 31 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/41  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class declaration (and end) with attributes</li>
+<li>Constructor header (and end)</li>
+<li>… taking 2 parameters …</li>
+<li>… assigning parameters to attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class TheObject
+                       Public ObjectType As String
+                       Public Amount As Integer
+                       Sub New(pType, pAmount)
+                           ObjectType = pType
+                           Amount = pAmount
+                       End Sub
+                   End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class TheObject:
+                        def    init (self, pType, pAmount):
+                            self.ObjectType = pType #string
+                            self.Amount = pAmount #integer</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class declaration (and end) with attributes</li><li>Constructor header (and end)</li><li>… taking 2 parameters …</li><li>… assigning parameters to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end) and attributes including array</li>
+<li>Constructor taking 1 parameter and storing in NumberSpaces…</li>
+<li>… initialising empty objects to 100 spaces in BoardArray</li>
+<li>Get method with no parameter, returning attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Path
+                         Private BoardArray(99) As TheObject
+                         Private NumberSpaces As Integer
+
+                                          Sub New(pNumberSpaces)
+                                              For x = 0 To 99
+                                                   BoardArray(x) = New TheObject(&quot;&quot;, -1)
+                                              Next
+                                              NumberSpaces = pNumberSpaces
+                                          End Sub
+
+                               Function
+                                   GetNumberSpaces()
+                                   Return NumberSpaces
+                               End Function
+                           End Class
+
+                University Press &amp; Assessment 2026                                                                       Page 33 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·     papacambridge.com
+                             2026 | Source:    papacambridge.com                                                                                    9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+               9618/41                                                                                          Cambridge International AS &amp; A Level – Mark Scheme                          May/June 2026
+
+                      Guidance</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Path:
+                        def    init (self, pNumberSpaces):
+                            self. BoardArray = [] #100 TheObject
+                            self. NumberSpaces = pNumberSpaces #int
+                            for Number in range(100):
+                                 self. BoardArray.append(TheObject(&quot;&quot;,-1))
+                        def GetNumberSpaces(self):
+                             return self. NumberSpaces</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end) and attributes including array</li><li>Constructor taking 1 parameter and storing in NumberSpaces…</li><li>… initialising empty objects to 100 spaces in BoardArray</li><li>Get method with no parameter, returning attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header taking array as parameter</li>
+<li>If more elements, returning FALSE</li>
+<li>(otherwise) storing parameter elements in array and returning TRUE</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function InitialiseData(TheArray())
+                          Dim ALength As Integer = TheArray.Length
+                          If ALength &gt; NumberSpaces Then
+                              Return False
+                          End If
+
+                               For x = 0 To ALength - 1
+                                    BoardArray(x) = TheArray(x)
+                               Next
+                               Return True
+                           End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InitialiseData(self, TheArray):
+                            ALength = len(TheArray)
+                            if ALength &gt; self. NumberSpaces:
+                                 return False
+                            for x in range(len(TheArray)):
+                                 self. BoardArray[x] = TheArray[x]
+                            return True</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header taking array as parameter</li><li>If more elements, returning FALSE</li><li>(otherwise) storing parameter elements in array and returning TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header and returning string</li>
+<li>Creating string of all not null path objects type and amount</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReturnPath()
+                       Dim ReturnString As String = &quot;&quot;
+                       Dim TempString As String = &quot;&quot;
+                       For x = 0 To NumberSpaces - 1
+                            TempString = BoardArray(x).ObjectType &amp; &quot;-&quot; &amp; (BoardArray(x).Amount).ToString + &quot; &quot;
+                            ReturnString = ReturnString + TempString
+                       Next
+
+                       Return ReturnString
+                   End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReturnPath(self):
+                        ReturnString = &quot;&quot;
+                        for x in range(self. NumberSpaces):
+                            TempString = self. BoardArray[x].ObjectType + &quot;-&quot; + str(self.                                                                                   BoardArray[x].Amount) + &quot; &quot;
+                            ReturnString = ReturnString + TempString
+                        return ReturnString</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header and returning string</li><li>Creating string of all not null path objects type and amount</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(v) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (and end) taking one parameter and returning array element at parameter                                               the integer or</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetPathObject(TheIndex)
+                       If (TheIndex &gt;= NumberSpaces - 1) Then
+                           TheIndex = NumberSpaces - 1
+                       End If
+                       Return BoardArray(TheIndex)
+                   End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetPathObject(self, TheIndex):
+                            if(TheIndex &gt;= NumberSpaces – 1):
+                                 TheIndex = self. NumberSpaces - 1
+                            return self. BoardArray[TheIndex]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (and end) taking one parameter and returning array element at parameter                                               the integer or</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating 5 objects of type TheObject</li>
+<li>…with correct values …</li>
+<li>… and storing in ArrayOfObjects</li>
+<li>Creating new instance of Pathwith 5 elements</li>
+<li>Calling InitialiseData for the path with ArrayOfObjects</li>
+<li>Outputting the path using return path</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim ArrayOfObjects(4) As TheObject
+                  ArrayOfObjects(0) = New TheObject(&quot;Money&quot;, 50)
+                  ArrayOfObjects(1) = New TheObject(&quot;Experience&quot;, 100)
+                  ArrayOfObjects(2) = New TheObject(&quot;Money&quot;, 200)
+                  ArrayOfObjects(3) = New TheObject(&quot;Money&quot;, 20)
+                  ArrayOfObjects(4) = New TheObject(&quot;Experience&quot;, 30)
+                  Dim Path1 As Path = New Path(5)
+                  Path1.InitialiseData(ArrayOfObjects)
+                  Console.WriteLine(Path1.ReturnPath())</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ArrayOfObjects = []
+                  ArrayOfObjects.append(TheObject(&quot;Money&quot;,50))
+                  ArrayOfObjects.append(TheObject(&quot;Experience&quot;,100))
+                  ArrayOfObjects.append(TheObject(&quot;Money&quot;,200))
+                  ArrayOfObjects.append(TheObject(&quot;Money&quot;,20))
+                  ArrayOfObjects.append(TheObject(&quot;Experience&quot;,30))
+                  Path1 = Path(5)
+                  Path1.InitialiseData(ArrayOfObjects)
+                  print(Path1.ReturnPath())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating 5 objects of type TheObject</li><li>…with correct values …</li><li>… and storing in ArrayOfObjects</li><li>Creating new instance of Pathwith 5 elements</li><li>Calling InitialiseData for the path with ArrayOfObjects</li><li>Outputting the path using return path</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing the path  1
+
+  e.g.
+
+  University Press &amp; Assessment 2026  Page 41 of 41
+
+Trace ID: PC-250D51A797
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/41 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/41 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

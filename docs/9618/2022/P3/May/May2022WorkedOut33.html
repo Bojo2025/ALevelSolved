@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/33 · May/June 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/33 · May/June 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked33/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>LibraryBook.Title  &quot;A Level Computer Science&quot;  2
+  LibraryBook.Fiction  FALSE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE NumberOfCopies : 1 .. 10  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE AccessionNumber : ARRAY[1:NumberOfCopies] OF INTEGER  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A data type constructed by a programmer // not a primitive data type</li>
+<li>A data type that references at least one other data type…</li>
+<li>… the data types can be primitive, or user defined</li>
+<li>Class / object / set</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A data type constructed by a programmer // not a primitive data type</li><li>A data type that references at least one other data type…</li><li>… the data types can be primitive, or user defined</li><li>Class / object / set</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>type(caracal, wild).  2
+  hair(caracal, short).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>persian  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>type(Pet, domestic).  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>spots(WildSpotty, yes)  2
+  ,type(WildSpotty, wild).
+
+ 2022  Page 4 of 11
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q3"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>a dedicated circuit</li>
+<li>circuit is established before transmission starts //</li>
+<li>data is transferred using the whole bandwidth</li>
+<li>all data is transferred over the same route</li>
+<li>Advantage – data /frames arrive in order and do not need to be reassembled</li>
+<li>Disadvantage – nobody else can use the same circuit even if it is idle //less secure as only one route used</li>
+<li>data is split into packets</li>
+<li>each packet is given its own route</li>
+<li>the routing for a packet depends on the congestion</li>
+<li>packets may not arrive in the order sent</li>
+<li>Advantage – packets can be rerouted if there are problems// more secure as harder to intercept messages</li>
+<li>Disadvantage – time taken to reassemble packets at the destination</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>a dedicated circuit</li><li>circuit is established before transmission starts //</li><li>data is transferred using the whole bandwidth</li><li>all data is transferred over the same route</li><li>Advantage – data /frames arrive in order and do not need to be reassembled</li><li>Disadvantage – nobody else can use the same circuit even if it is idle //less secure as only one route used</li><li>data is split into packets</li><li>each packet is given its own route</li><li>the routing for a packet depends on the congestion</li><li>packets may not arrive in the order sent</li><li>Advantage – packets can be rerouted if there are problems// more secure as harder to intercept messages</li><li>Disadvantage – time taken to reassemble packets at the destination</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked33/page-07.jpg" alt="Paper page 7 for Q4"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Uses simple instructions</li>
+<li>Uses fixed length instructions</li>
+<li>Instructions only require one clock cycle</li>
+<li>Uses many registers</li>
+<li>Makes use of pipelining</li>
+<li>Hardwired CU</li>
+<li>Uses many instruction formats</li>
+<li>Uses variable length instructions</li>
+<li>Makes use of different addressing modes</li>
+<li>Uses few registers</li>
+<li>Has a large instruction set</li>
+<li>Requires complex circuits</li>
+<li>Frequently uses cache</li>
+<li>Instructions (converted to sub-instructions that) may require many clock cycles</li>
+<li>Programmable CU</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Uses simple instructions</li><li>Uses fixed length instructions</li><li>Instructions only require one clock cycle</li><li>Uses many registers</li><li>Makes use of pipelining</li><li>Hardwired CU</li><li>Uses many instruction formats</li><li>Uses variable length instructions</li><li>Makes use of different addressing modes</li><li>Uses few registers</li><li>Has a large instruction set</li><li>Requires complex circuits</li><li>Frequently uses cache</li><li>Instructions (converted to sub-instructions that) may require many clock cycles</li><li>Programmable CU</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>RISC has fewer instructions // CISC has more instructions</li>
+<li>RISC has many registers // CISC has few registers</li>
+<li>RISC’s instructions are simpler // CISC’s instructions are more complex</li>
+<li>RISC has a few instruction formats / CISC has many instruction formats</li>
+<li>RISC usually uses single-cycle instructions// CISC uses multi-cycle instructions</li>
+<li>RISC uses fixed-length instructions // CISC uses variable-length instructions</li>
+<li>RISC has better pipelineability // CISC has poorer pipelineability</li>
+<li>RISC requires less complex circuits// CISC requires more complex circuits</li>
+<li>RISC has fewer addressing modes // CISC has more addressing modes</li>
+<li>RISC makes more use of RAM// CISC makes more use of cache/less use of RAM</li>
+<li>RISC has a hard-wired control unit // CISC has a programmable control unit</li>
+<li>RISC only uses load and store instructions to address memory // CISC has many types of instructions to address</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>RISC has fewer instructions // CISC has more instructions</li><li>RISC has many registers // CISC has few registers</li><li>RISC’s instructions are simpler // CISC’s instructions are more complex</li><li>RISC has a few instruction formats / CISC has many instruction formats</li><li>RISC usually uses single-cycle instructions// CISC uses multi-cycle instructions</li><li>RISC uses fixed-length instructions // CISC uses variable-length instructions</li><li>RISC has better pipelineability // CISC has poorer pipelineability</li><li>RISC requires less complex circuits// CISC requires more complex circuits</li><li>RISC has fewer addressing modes // CISC has more addressing modes</li><li>RISC makes more use of RAM// CISC makes more use of cache/less use of RAM</li><li>RISC has a hard-wired control unit // CISC has a programmable control unit</li><li>RISC only uses load and store instructions to address memory // CISC has many types of instructions to address</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each in order jk+jk-/  2
+  jk+
+  jk-/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark per ring  4
+  Do not allow operators in stacks</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Working from left to right in the expression</li>
+<li>PUSH 10/m onto the stack</li>
+<li>PUSH the following numbers (10/m, 3/j, 2/k) onto the stack</li>
+<li>When the first operator ,*, is reached</li>
+<li>… POP the top two numbers, 2/k and 3/j</li>
+<li>… apply the operation</li>
+<li>PUSH result back onto stack</li>
+<li>Continue to the end of the expression</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Working from left to right in the expression</li><li>PUSH 10/m onto the stack</li><li>PUSH the following numbers (10/m, 3/j, 2/k) onto the stack</li><li>When the first operator ,*, is reached</li><li>… POP the top two numbers, 2/k and 3/j</li><li>… apply the operation</li><li>PUSH result back onto stack</li><li>Continue to the end of the expression</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>recursion</li>
+<li>implementation of ADTs e.g. linked lists</li>
+<li>procedure calls</li>
+<li>interrupt handling (storing contents of registers etc)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>recursion</li><li>implementation of ADTs e.g. linked lists</li><li>procedure calls</li><li>interrupt handling (storing contents of registers etc)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked33/page-09.jpg" alt="Paper page 9 for Q6"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Two marks each benefit description max 4  6
+
+  New system can be tried on different virtual hardware (1)
+  without need to purchase the hardware (1)
+
+  Easier to recover if software emulating the new computer causes system crash (1) as VM provides protection to other
+  software (1)
+
+  Emulate programs for the new computer system that are not compatible with the host computer / operating system (1) by
+  using the guest operating system on the old computer (1)
+
+  More than one new computer system can be emulated (1) this allows multiple operating systems to coexist on a single
+  computer(1)
+
+  Two marks each limitation description max 2 from:
+
+  Virtual machines may not be able to emulate the new hardware (1) because this hardware may have been developed since
+  the virtual machine was developed (1)
+
+  Using virtual machine means execution of extra code // A virtual machine might not be as efficient // resources e.g. memory
+  or processor time are shared (1) processing time increased // performance degrades (1)
+
+  Use of a virtual machine increases the maintenance overheads (1) because both host system and the virtual machine must
+  be maintained (1)
+
+ 2022  Page 8 of 11
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q7"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark per point  5
+  Acrylic has attribute Soft of type BOOLEAN
+  Wool has attribute WoolType with suitable data type
+  Acrylic and Wool have method YarnInfo()
+  Acrylic, Wool and Mix at least one inherit (one arrow correct) from Yarn …
+  … Acrylic, Wool and Mix all inherit (all arrows correct) from Yarn
+
+  Yarn
+
+  Name: STRING
+  Colour: STRING
+  BatchCode: STRING
+  Weight: INTEGER
+  NumberBalls: INTEGER
+  Type: STRING
+
+  Constructor()
+  EditNumberBalls()
+  YarnInfo()
+
+  Acrylic  Wool  Mix
+
+  WoolType: STRING  Percentage: INTEGER
+  Soft: BOOLEAN
+  Constructor()  Constructor()
+  Constructor()  YarnInfo()  YarnInfo()
+  YarnInfo()
+
+ 2022  Page 9 of 11
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>the data items / attributes</li>
+<li>the data types // characteristics</li>
+<li>defined in a class</li>
+<li>the procedures/ functions / programmed instructions in a</li>
+<li>… implementing the behaviours</li>
+<li>… that act on the properties / attributes</li>
+<li>Methods and properties / attributes contained in one class/ super class / base class</li>
+<li>Are made available to / reused by another class/ derived class</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>the data items / attributes</li><li>the data types // characteristics</li><li>defined in a class</li><li>the procedures/ functions / programmed instructions in a</li><li>… implementing the behaviours</li><li>… that act on the properties / attributes</li><li>Methods and properties / attributes contained in one class/ super class / base class</li><li>Are made available to / reused by another class/ derived class</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked33/page-12.jpg" alt="Paper page 12 for Q8"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>To ensure the message is authentic // came from a trusted source</li>
+<li>To ensure that only the intended receiver is able to understand the message</li>
+<li>To ensure the message has not been altered during transmission</li>
+<li>Non-repudiation, neither the sender or receiver can deny the transmission occurred</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>To ensure the message is authentic // came from a trusted source</li><li>To ensure that only the intended receiver is able to understand the message</li><li>To ensure the message has not been altered during transmission</li><li>Non-repudiation, neither the sender or receiver can deny the transmission occurred</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Symmetric  2
+  Asymmetric</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Any eavesdropping can be identified (as the state will be changed)</li>
+<li>Integrity of the key once transferred can be guaranteed (cannot be copied and decrypted at a later date)</li>
+<li>Longer/more secure keys can be exchanged</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Any eavesdropping can be identified (as the state will be changed)</li><li>Integrity of the key once transferred can be guaranteed (cannot be copied and decrypted at a later date)</li><li>Longer/more secure keys can be exchanged</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Limited range</li>
+<li>requires dedicated fibre (optic) line and specialist hardware</li>
+<li>cost of dedicated fibre (optic) line and specialist hardware is expensive</li>
+<li>polarisation of light may be altered whilst travelling down fibre optic cables</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Limited range</li><li>requires dedicated fibre (optic) line and specialist hardware</li><li>cost of dedicated fibre (optic) line and specialist hardware is expensive</li><li>polarisation of light may be altered whilst travelling down fibre optic cables</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked33/page-14.jpg" alt="Paper page 14 for Q9"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>LDM #500: Immediate 500  3
+  LDD 500: Direct 100
+  LDI 500: Indirect 20</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 7</p>
+<div class='ms-raw'>7
+  Instruction
+
+  Label  Opcode  Operand
+
+  LDM #20
+
+  STO Twenty
+
+  LDI Y
+
+  ADD Twenty
+
+  STO Z
+
+  Twenty:  #20
+
+  Y:
+
+  Z:
+
+  One mark for LDM #20 seen
+  One mark for storing 20 at any address
+  One mark for labelling that address e.g. Twenty away from the program code
+  One mark for labelling addresses away from the program code as Y and Z
+  One mark for correct use of LDI Y
+  One mark for correct use of STO Z
+  One mark for correct use of ADD with labelled address
+
+ 2022  Page 11 of 11</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 7</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2>
+        <section class="part">
+          <p class="part-label">Part 10 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>10  10  10  10  10  40</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

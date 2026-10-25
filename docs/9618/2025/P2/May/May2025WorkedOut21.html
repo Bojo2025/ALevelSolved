@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/21 · May/June 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/21 · May/June 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked21/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<div class='ms-raw'>4
+  Example  Explanation  Variable name  Data type
+  value
+
+  &quot;Fruit&quot;  a category of stock that is  Category  STRING
+  sold in the shop
+
+  20/02/2025 when an item was sold  DateSold  DATE
+
+  12.67  the cost of an item  (Item)Cost/Price  REAL
+
+  TRUE  to indicate if an item is in  (Item)InStock  BOOLEAN
+  stock
+
+  Mark as follows:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark per row for each variable name and data type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<ol>
+<li>IF Sales[Current] &lt;= 150 THEN                               ✓            ✓</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Sales[Current] &lt;= 150 THEN                               ✓            ✓</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Decomposition involves:  3
+
+  MP1  Breaking down a problem into sub problems
+  MP2  In order to explain / understand the process/task of how a (stock control)
+  can be managed in more detail
+
+  MP3  Leading to the concept of the program designed as a series of modules
+  / procedures / functions
+  // or by example of different stock control modules
+
+  MP4  Makes the program easier to test / debug
+
+  Max 3
+
+  Max 2 if no mention of stock control
+
+  University Press &amp; Assessment 2025  Page 6 of 14
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;D&#x27;
+
+  MP3  &#x27;H&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked21/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  The two decision boxes are in the wrong order //  1
+  The first decision symbol is wrong
+
+  MP2  The first decision should check for values greater than or equal to 2000
+
+  Max 1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Explaining how to correct the flowchart.  1
+
+  MP1  Swap around the two decision boxes
+
+  MP2  The first decision box should check for values greater than or equal to 2000
+  and the second decision box should check for values above 4000
+
+  Max 1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>2000 / 4000 / 10 / 100  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  The value cannot be changed // avoids being different in two places  2
+  MP2  Makes the program easier to understand
+
+  MP3  Avoids repeatedly writing the same value throughout the program
+  MP4  A change to the value requires a change in only one statement
+
+  Max 2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  (The code is) tried and tested so error free  1
+
+  MP2  Provides functionality / code that the programmer may find difficult to code
+  themselves
+
+  Max 1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Syntax (error)  4
+  MP2  Rules of programming language // the language grammar was not followed
+
+  MP3  Run-time (error)
+  MP4  The program performs an illegal operation
+
+  Mark as follows:
+  One mark for naming each type of error and one mark for the description
+
+  University Press &amp; Assessment 2025  Page 7 of 14
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;D&#x27;  &#x27;T&#x27;  &#x27;H&#x27;  &#x27;R&#x27;
+  &#x27;T&#x27;  1  &#x27;D&#x27;
+  MP1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;H&#x27;  (‘R’)
+  MP4
+  &#x27;R&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>UNTIL Guess = GeneratedValue</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>UNTIL Guess = GeneratedValue</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;H&#x27;  2  &#x27;T&#x27;  &#x27;T&#x27;
+  MP2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked21/page-08.jpg" alt="Paper page 8 for Q4"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Count-controlled  2
+
+  MP2  The number of iterations required is known</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>I  Key  J  Chars[J]
+  Chars  6
+  [1]  [2]  [3]  [4]</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&#x27;R&#x27;  3  &#x27;T&#x27;  &#x27;T&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked21/page-10.jpg" alt="Paper page 10 for Q5"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP5
+  Chars array final values
+  MP6
+  &#x27;D&#x27;  &#x27;H&#x27;  &#x27;R&#x27;  &#x27;T&#x27;
+
+  Mark as follows:
+
+  MP1, MP2, MP3, MP4, MP5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Pop an item off the stack  7
+  MP2  Update Stack pointer
+
+  MP3  Add it to the queue
+  MP4  Update Rear pointer
+
+  MP5  Repeat until the stack is empty
+
+  MP6  Remove an item from the queue
+  MP7  Update Front pointer
+
+  MP8  Push it onto the stack
+  MP9  Update the Stack pointer
+
+  MP10  Repeat until the queue is empty
+
+  Max 7</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked21/page-12.jpg" alt="Paper page 12 for Q6"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4</p>
+<ol>
+<li>abnormal                   &gt;= 61               data item is rejected</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>abnormal                   &gt;= 61               data item is rejected</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Conditional outer loop including flag reset</li>
+<li>Flag set in inner loop to indicate swap</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Conditional outer loop including flag reset</li><li>Flag set in inner loop to indicate swap</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked21/page-14.jpg" alt="Paper page 14 for Q7"><div class="cap">Original paper page 14</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>WHILE NewPoints &gt;= 11 AND Number &gt; 0</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>WHILE NewPoints &gt;= 11 AND Number &gt; 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  8
+
+  PROCEDURE AddNewCustomers(NumToAdd : INTEGER)
+
+  DECLARE CustomerID : INTEGER
+  DECLARE Count : INTEGER
+  DECLARE Line : STRING
+  DECLARE NewLine : STRING
+  OPENFILE &quot;Loyalty.txt&quot; FOR READ
+
+  WHILE NOT EOF(&quot;Loyalty.txt&quot;)
+  READFILE &quot;Loyalty.txt&quot;, Line
+  ENDWHILE
+  CLOSEFILE &quot;Loyalty.txt&quot;
+
+  OPENFILE &quot;Loyalty.txt&quot; FOR APPEND
+
+  CustomerID  STR_TO_NUM((LEFT(Line, 6))
+
+  FOR Count  1 TO NumToAdd
+  CustomerID  CustomerID + 1
+  OUTPUT CustomerID
+  NewLine  NUM_TO_STR(CustomerID) &amp; &quot;,0&quot;
+  WRITEFILE &quot;Loyalty.txt&quot;, NewLine
+  NEXT Count
+
+  CLOSEFILE &quot;Loyalty.txt&quot;
+  ENDPROCEDURE
+
+  Mark as follows:
+  MP1  All variables used are declared using the correct type including a string and
+  an integer
+  MP2  Open file in read mode and close (before opening in append mode)
+
+  MP3  Conditional loop with EOF(&quot;Loyalty.txt&quot;)
+  MP4  Read Line from file // Count number of records in the file
+
+  MP5  Open the file in append mode and subsequently close
+  MP6  Extract CustomerID from Line and convert to integer // use count from
+  MP4 to generate last CustomerID stored
+  MP7  A (count controlled) loop for the number of customers to add
+  MP8  Increment CustomerID and output the new CustomerID in loop
+
+  MP9  Create string for new CustomerID and write to file in loop
+
+  Max 8
+
+  University Press &amp; Assessment 2025  Page 13 of 14
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 100001</p>
+<div class='ms-raw'>MP1  Check if the text file loyalty.txt exists / is empty  4
+  MP2  If file does not exist it must be created (using write mode)
+  MP3  If the file has to be created / is empty then set the first CustomerID to
+  100001
+  MP4  Write &quot;100001,0&quot; to loyalty.txt (using write mode)
+  MP5  For all but the first customer (to be added to the empty file) use the existing
+  code / module
+
+  Max 4
+
+  University Press &amp; Assessment 2025  Page 14 of 14</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 100001</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

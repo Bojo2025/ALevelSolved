@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/32 · May/June 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/32 · May/June 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked32/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>BuildingRegister.BuildingID  1067  2
+  BuildingRegister.BuildingGroup  &quot;house&quot;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One mark: TYPE BuildingType =                                                                    2</li>
+<li>TYPE BuildingType = (house, bungalow, apartment, farm)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One mark: TYPE BuildingType =                                                                    2</li><li>TYPE BuildingType = (house, bungalow, apartment, farm)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE BuildingGroup : BuildingType  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>BuildingRegister.BuildingGroup  house  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>PRIVATE OwnerName : STRING  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>To ensure that attributes can only be accessed by the class’s own methods  2
+  To enforce encapsulation // ensure they are hidden</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked32/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>studies(sam, history).  2
+  tutors(nina, sam).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>freya, hua // hua, freya  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>one mark for correct use of X  4
+  one mark for two other variables in correct positions
+  one mark for three correct clauses in any order
+  one mark for correct syntax
+  teaches(R, S),
+  studies(X, S),
+  tutors(R, X).
+
+ 2022  Page 4 of 9
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked32/page-05.jpg" alt="Paper page 5 for Q3"><div class="cap">Original paper page 5</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>HTTP(S) (1) for sending and receiving web pages / hypertext documents (1)</li>
+<li>FTP (1) for sending and receiving files over a network / between devices (1)</li>
+<li>SMTP (1) for sending/uploading emails /push protocol (1)</li>
+<li>POP(3) (1) for receiving/downloading emails /pull protocol (1)</li>
+<li>IMAP (1) for receiving/downloading emails /pull protocol (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>HTTP(S) (1) for sending and receiving web pages / hypertext documents (1)</li><li>FTP (1) for sending and receiving files over a network / between devices (1)</li><li>SMTP (1) for sending/uploading emails /push protocol (1)</li><li>POP(3) (1) for receiving/downloading emails /pull protocol (1)</li><li>IMAP (1) for receiving/downloading emails /pull protocol (1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Transport (1) handles packets (1)</li>
+<li>Internet (1) handles transmission of data using</li>
+<li>Network Access (Interface) // (Data) Link // Physical (1) Handles how data is physically sent (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Transport (1) handles packets (1)</li><li>Internet (1) handles transmission of data using</li><li>Network Access (Interface) // (Data) Link // Physical (1) Handles how data is physically sent (1)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked32/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>An unsigned integer,12, is used instead of the last variable                                                 2</li>
+<li>The variable Z is not a valid variable / missing an unsigned integer after the Z</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>An unsigned integer,12, is used instead of the last variable                                                 2</li><li>The variable Z is not a valid variable / missing an unsigned integer after the Z</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>&lt;variable&gt; ::= &lt;letter&gt;&lt;unsigned_integer&gt;</li>
+<li>&lt;unsigned_integer&gt; ::= &lt;digit&gt;|&lt;digit&gt;&lt;digit&gt;</li>
+<li>&lt;digit&gt; ::= 1 | 2 | 3</li>
+<li>&lt;assignment_statement&gt; ::= &lt;variable&gt; =</li>
+<li>&lt;variable&gt;&lt;operator&gt;&lt;variable&gt;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>&lt;variable&gt; ::= &lt;letter&gt;&lt;unsigned_integer&gt;</li><li>&lt;unsigned_integer&gt; ::= &lt;digit&gt;|&lt;digit&gt;&lt;digit&gt;</li><li>&lt;digit&gt; ::= 1 | 2 | 3</li><li>&lt;assignment_statement&gt; ::= &lt;variable&gt; =</li><li>&lt;variable&gt;&lt;operator&gt;&lt;variable&gt;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>variable    =        variable             operator               variable</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>variable    =        variable             operator               variable</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>&lt;assignment_statement&gt;::=&lt;variable&gt;=</li>
+<li>&lt;assignment_statement&gt;::=&lt;variable&gt;= &lt;variable&gt;&lt;operator&gt;&lt;variable&gt;|&lt;variable&gt;&lt;operator&gt;</li>
+<li>&lt;operand&gt;::=&lt;variable&gt;|&lt;unsigned_integer&gt;</li>
+<li>&lt;assignment_statement&gt;::=&lt;variable&gt;=</li>
+<li>&lt;operand&gt;::=&lt;variable&gt;|&lt;unsigned_integer&gt;</li>
+<li>&lt;assignment_statement&gt;::=&lt;variable&gt;=&lt;operand&gt;&lt;operator&gt;&lt;operand&gt;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>&lt;assignment_statement&gt;::=&lt;variable&gt;=</li><li>&lt;assignment_statement&gt;::=&lt;variable&gt;= &lt;variable&gt;&lt;operator&gt;&lt;variable&gt;|&lt;variable&gt;&lt;operator&gt;</li><li>&lt;operand&gt;::=&lt;variable&gt;|&lt;unsigned_integer&gt;</li><li>&lt;assignment_statement&gt;::=&lt;variable&gt;=</li><li>&lt;operand&gt;::=&lt;variable&gt;|&lt;unsigned_integer&gt;</li><li>&lt;assignment_statement&gt;::=&lt;variable&gt;=&lt;operand&gt;&lt;operator&gt;&lt;operand&gt;</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked32/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>SIMD (1) many/array processors execute the same instruction using different data sets (1)  6
+  MISD (1) many processors (using different instructions) use the same data set (1)
+  MIMD (1) many processors (using different instructions) using different data sets (1)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked32/page-09.jpg" alt="Paper page 9 for Q6"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark per correct output column  2
+
+  INPUT  OUTPUT
+
+  A  B  E  F</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Half adder  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Purpose of E: Sum  2
+
+  Purpose of F: Carry
+
+ 2022  Page 7 of 9
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked32/page-10.jpg" alt="Paper page 10 for Q7"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Any three from  3
+  MP1  enquiry made to Certificate Authority (CA)
+  MP2  enquirer’s details checked by CA
+  MP3  if enquirer details verified by CA then public key is agreed
+  MP4  CA creates/issues certificate that includes the enquirers public key
+  MP5  encrypting data sent to/by CA with the CA’s public/private key</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  The message is hashed with (the agreed hashing algorithm)…  3
+  MP2  … to produce a message digest
+  MP3  The message digest is then encrypted with the sender’s private key to form the digital signature</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Any four from  4
+  MP1  The message together with the digital signature is decrypted using the receiver’s private key
+  MP2  The digital signature received is decrypted with the sender’s public key to recover the message digest sent
+  MP3  The decrypted message received is hashed with the agreed hashing algorithm to reproduce the message digest
+  of the message received
+  MP4  The two message digests are compared
+  MP5  … if they are the same the message has not been altered // if they are different the message has been altered</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked32/page-11.jpg" alt="Paper page 11 for Q8"><div class="cap">Original paper page 11</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>INTEGER  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The list to be searched must be ordered/sorted  1
+
+ 2022  Page 8 of 9
+
+9618/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP7     … or there is only one item left in the list and it is not the item searched for // lower bound &gt; / = upper bound</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP7     … or there is only one item left in the list and it is not the item searched for // lower bound &gt; / = upper bound</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>As the number of items in the list increases the time to search the list increases  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Linear search O(n) and Binary search O(log2n) / O(Log n)  3
+  MP2  time to search increases linearly in relation to the number of items in the list for a linear search and logarithmically
+  for a Binary search
+  MP3  time to search increases less rapidly for a binary search and time to search increases more rapidly for a linear
+  search</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked32/page-12.jpg" alt="Paper page 12 for Q9"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>// LENGTH(MyList) - 1
+  Index + 1
+  &quot;Value not found&quot; (or any similar phrase)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>To trap (some) runtime errors  4
+  To prevent a program halting unexpectedly
+  To produce meaningful error messages for these errors
+  Example divide by zero // end of file // file not found
+
+ 2022  Page 9 of 9</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

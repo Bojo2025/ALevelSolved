@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · October/November 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · October/November 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function declaration (and close where appropriate)</li>
+<li>Declaration/use of an array (with space/initialised with 45 spaces/strings)</li>
+<li>Opening the file Data.txt for read and closing in an appropriate place</li>
+<li>Looping through all file contents/Looping 45 times and reading each line …</li>
+<li>… storing all items from file into array</li>
+<li>Returning the populated array</li>
+<li>Exception handling with suitable try, catch and output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReadData()
+                        Dim TextFile As String = &quot;Data.txt&quot;
+
+                              Dim Colours(45) As String
+                              Try
+                                  Dim FileReader As New System.IO.StreamReader(TextFile)
+                                  For x = 0 To 45
+                                      Colours(x) = FileReader.ReadLine()
+
+ University Press &amp; Assessment 2024                        Page 4 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                     Colours = []
+                     try:
+                          File = open(&quot;Data.txt&quot;)
+                          Colours = File.read().split(&quot;\n&quot;)
+                          File.close()
+                          return Colours
+                     except:
+                          print(&quot;No file found&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function declaration (and close where appropriate)</li><li>Declaration/use of an array (with space/initialised with 45 spaces/strings)</li><li>Opening the file Data.txt for read and closing in an appropriate place</li><li>Looping through all file contents/Looping 45 times and reading each line …</li><li>… storing all items from file into array</li><li>Returning the populated array</li><li>Exception handling with suitable try, catch and output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Next
+  FileReader.Close()
+  Catch ex As Exception
+  Console.WriteLine(&quot;No file found&quot;)
+  End Try
+  Return Colours
+  End Function</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) taking (min) one parameter</li>
+<li>Looping through each parameter array element, concatenating with space and returning</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function FormatArray(DataArray)
+                    Dim OutputText As String = &quot;&quot;
+                    For X = 0 To 44
+                         OutputText = OutputText &amp; DataArray(X) &amp; &quot; &quot;
+                    Next
+                    Return OutputText
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def FormatArray(DataArray):
+                     OutputText = &quot;&quot;
+                     for x in range(0, 45):
+                         OutputText = OutputText + DataArray[x] + &quot; &quot;
+                     return OutputText</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) taking (min) one parameter</li><li>Looping through each parameter array element, concatenating with space and returning</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() and storing returned array …</li>
+<li>… calling FormatArray() with returned array</li>
+<li>Outputting return value from FormatArray()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Colours(45) As String
+                Colours = ReadData()
+                Console.WriteLine(FormatArray(Colours))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Colours = ReadData() #string array
+                print(FormatArray(Colours))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() and storing returned array …</li><li>… calling FormatArray() with returned array</li><li>Outputting return value from FormatArray()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing all colours in one string  1
+
+  e.g.
+
+ University Press &amp; Assessment 2024  Page 7 of 37
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and close where appropriate) taking (min) two parameters and returns a value in all cases</li>
+<li>Looping through each character in each string parameter …</li>
+<li>… return 1 when first parameter  second</li>
+<li>… return 2 when first parameter  second</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function CompareStrings(FirstS, SecondS)
+                    Dim Count As Integer = 1
+                    While (True)
+                        If Mid(FirstS, Count, 1) &lt; Mid(SecondS, Count, 1) Then
+                             Return 1
+                        ElseIf Mid(FirstS, Count, 1) &gt; Mid(SecondS, Count, 1) Then
+                             Return 2
+                        Else
+                             Count = Count + 1
+                        End If
+                    End While
+                End Function
+
+ University Press &amp; Assessment 2024                       Page 8 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme          October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CompareStrings(First, Second):
+                     Count = 0
+                     while True:
+                         if First[Count] &lt; Second[Count]:
+                             return 1
+                         elif First[Count] &gt; Second[Count]:
+                             return 2
+                         else:
+                             Count = Count + 1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and close where appropriate) taking (min) two parameters and returns a value in all cases</li><li>Looping through each character in each string parameter …</li><li>… return 1 when first parameter  second</li><li>… return 2 when first parameter  second</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Bubble sort function header taking array parameter and returns sorted array in all cases</li>
+<li>Comparing strings using CompareStrings() and correctly swapping values when needed</li>
+<li>Correct bubble sort that sorts the data correctly</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Bubble(DataArray):
+                     ArrayLength = len(DataArray)
+
+                       for x in range(ArrayLength - 1):
+                           for y in range(0, ArrayLength - x - 1):
+                               Result = CompareStrings(DataArray[y], DataArray[y + 1])
+                               if Result == 2:
+                                   DataArray[y], DataArray[y+1] = DataArray[y+1], DataArray[y]
+                       return DataArray
+
+ University Press &amp; Assessment 2024                       Page 9 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Bubble sort function header taking array parameter and returns sorted array in all cases</li><li>Comparing strings using CompareStrings() and correctly swapping values when needed</li><li>Correct bubble sort that sorts the data correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim ArrayLength As Integer = 45</li>
+<li>For X = 0 To ArrayLength - 1</li>
+<li>For Y = 0 To ArrayLength - X - 2</li>
+<li>Result = CompareStrings(DataArray(Y), DataArray(Y + 1))</li>
+<li>If Result = 2 Then</li>
+<li>Temp = DataArray(Y)</li>
+<li>DataArray(Y) = DataArray(Y + 1)</li>
+<li>DataArray(Y + 1) = Temp</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Bubble(DataArray)
+                        Dim ArrayLength As Integer = 45
+                        Dim Result As Integer
+                        Dim Temp As String
+
+                              For X = 0 To ArrayLength - 1
+                                   For Y = 0 To ArrayLength - X - 2
+                                        Result = CompareStrings(DataArray(Y), DataArray(Y + 1))
+                                        If Result = 2 Then
+                                            Temp = DataArray(Y)
+                                            DataArray(Y) = DataArray(Y + 1)
+                                            DataArray(Y + 1) = Temp
+                                        End If
+                                   Next
+                              Next
+                              Return DataArray
+
+                End Function</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim ArrayLength As Integer = 45</li><li>For X = 0 To ArrayLength - 1</li><li>For Y = 0 To ArrayLength - X - 2</li><li>Result = CompareStrings(DataArray(Y), DataArray(Y + 1))</li><li>If Result = 2 Then</li><li>Temp = DataArray(Y)</li><li>DataArray(Y) = DataArray(Y + 1)</li><li>DataArray(Y + 1) = Temp</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if (Result == 2){</li>
+<li>Temp = DataArray[Y];</li>
+<li>DataArray[Y] = DataArray[Y+1];</li>
+<li>DataArray[Y+1] = Temp;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if (Result == 2){</li><li>Temp = DataArray[Y];</li><li>DataArray[Y] = DataArray[Y+1];</li><li>DataArray[Y+1] = Temp;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Bubble() with array as parameter and using/storing return value</li>
+<li>Calling FormatArray() with return value from Bubble() and outputting return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim BubbleSorted(45) As String
+                BubbleSorted = Bubble(Colours)
+                Console.WriteLine(FormatArray(BubbleSorted))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>BubbleSorted = Bubble(Colours)
+                print(FormatArray(BubbleSorted))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Bubble() with array as parameter and using/storing return value</li><li>Calling FormatArray() with return value from Bubble() and outputting return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for sorted data  1
+
+  e.g.
+
+ University Press &amp; Assessment 2024  Page 11 of 37
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-06.jpg" alt="Paper page 6 for Q2"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Horse declaration (and end where appropriate)</li>
+<li>All 3 attributes declared as private with appropriate data types (declaration or comment)</li>
+<li>Constructor header (and end) taking 3 parameters (constructor must be within class) …</li>
+<li>… constructor assigns parameters to attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Horse
+                        Private Name As String
+                        Private MaxFenceHeight As Integer
+                        Private PercentageSuccess As Integer
+                   Sub New(PName, PMaxFenceHeight, PPercentageSuccess)
+                            Name = PName
+                            MaxFenceHeight = PMaxFenceHeight
+                            PercentageSuccess = PPercentageSuccess
+                        End Sub
+                End Class
+
+ University Press &amp; Assessment 2024                        Page 12 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Horse:
+                     def __init__(self, PName, PMaxFenceHeight, PPercentageSuccess):
+                         self.__Name = PName #String
+                         self.__MaxFenceHeight = PMaxFenceHeight #Integer
+                         self.__PercentageSuccess = PPercentageSuccess #Integer</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Horse declaration (and end where appropriate)</li><li>All 3 attributes declared as private with appropriate data types (declaration or comment)</li><li>Constructor header (and end) taking 3 parameters (constructor must be within class) …</li><li>… constructor assigns parameters to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method header with no parameter …</li>
+<li>… returning correct attribute (without change)</li>
+<li>2nd get method correct</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetName()
+                    Return Name
+                End Function
+
+ University Press &amp; Assessment 2024                       Page 13 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                      October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetName(self):
+                     return self.__Name
+                def GetMaxFenceHeight(self):
+                     return self.__MaxFenceHeight</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method header with no parameter …</li><li>… returning correct attribute (without change)</li><li>2nd get method correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function GetMaxFenceHeight()
+  Return MaxFenceHeight
+  End Function</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Instantiating one object of type Horse with correct data …</li>
+<li>… and storing in first element of a 1D array Horses</li>
+<li>Instantiating second object of type Horse with correct data and storing in second index of the array</li>
+<li>Outputting name of both horse objects from array …</li>
+<li>… using GetName()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Horses(2) As Horse
+                Horses(0) = New Horse(&quot;Beauty&quot;, 150, 72)
+                Horses(1) = New Horse(&quot;Jet&quot;, 160, 65)
+                Console.WriteLine(Horses(0).GetName())
+                Console.WriteLine(Horses(1).GetName())
+
+ University Press &amp; Assessment 2024                        Page 14 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme              October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Horses = []
+                Horses.append(Horse(&quot;Beauty&quot;, 150, 72))
+                Horses.append(Horse(&quot;Jet&quot;, 160, 65))
+                print(Horses[0].GetName())
+                print(Horses[1].GetName())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Instantiating one object of type Horse with correct data …</li><li>… and storing in first element of a 1D array Horses</li><li>Instantiating second object of type Horse with correct data and storing in second index of the array</li><li>Outputting name of both horse objects from array …</li><li>… using GetName()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for both names output:  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Fence header (and end where appropriate) with no inheritance</li>
+<li>Height and Risk private with integer data type</li>
+<li>Constructor taking 2 parameters and storing in attributes (constructor must be within class)</li>
+<li>2 get methods (no parameter) returning correct attributes (within class)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Fence:
+                     def __init__(self, PHeight, PRisk):
+                         self.__Height = PHeight #integer
+                         self.__Risk = PRisk #integer
+
+                       def GetHeight(self):
+                           return self.__Height
+                       def GetRisk(self):
+                           return self.__Risk
+
+ University Press &amp; Assessment 2024                        Page 15 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Fence header (and end where appropriate) with no inheritance</li><li>Height and Risk private with integer data type</li><li>Constructor taking 2 parameters and storing in attributes (constructor must be within class)</li><li>2 get methods (no parameter) returning correct attributes (within class)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Height = PHeight</li>
+<li>Risk = PRisk</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Fence
+                        Dim Height As Integer
+                        Dim Risk As Integer
+
+                              Sub New(PHeight, PRisk)
+                                  Height = PHeight
+                                  Risk = PRisk
+                              End Sub
+                              Function GetHeight()
+                                  Return Height
+                              End Function
+
+                        Function GetRisk()
+                            Return Risk
+                        End Function
+                End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Height = PHeight</li><li>Risk = PRisk</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>public Integer GetHeight(){
+  return Height;
+  }
+  public Integer GetRisk(){
+  return Risk;
+  }
+  }</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaration/use of array Course of type Fence (with at least 4 elements)</li>
+<li>Taking Height and Risk as input four times and store/use</li>
+<li>Instantiating a Fence object for each set of valid input values and storing in array</li>
+<li>Taking each height as input until it is between 70 and 180 (inclusive)</li>
+<li>Taking each risk as input until it is between 1 and 5 (inclusive)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>Course = []
+                for x in range(0, 4):
+                     Valid = False
+                     while Valid == False:
+                         Height = int(input(&quot;Enter the height in cm&quot;))
+                         if(Height &gt;= 70 and Height &lt;= 180):
+                             Valid = True
+                     Valid = False
+                     while Valid == False:
+                         Risk = int(input(&quot;Enter the risk between 1 (easy) and 5 (hard)&quot;))
+                         if(Risk &gt;= 1 and Risk &lt;= 5):
+                             Valid = True
+                     Course.append(Fence(Height, Risk))
+
+ University Press &amp; Assessment 2024                         Page 17 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaration/use of array Course of type Fence (with at least 4 elements)</li><li>Taking Height and Risk as input four times and store/use</li><li>Instantiating a Fence object for each set of valid input values and storing in array</li><li>Taking each height as input until it is between 70 and 180 (inclusive)</li><li>Taking each risk as input until it is between 1 and 5 (inclusive)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 0 To 3</li>
+<li>Height = Console.ReadLine()</li>
+<li>Loop Until Height &gt;= 70 And Height &lt;= 180</li>
+<li>Risk = Console.ReadLine()</li>
+<li>Loop Until Risk &gt;= 1 And Risk &lt;= 5</li>
+<li>Course(x) = New Fence(Height, Risk)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Course(5) As Fence
+                Dim Height As Integer
+                Dim Risk As Integer
+                For x = 0 To 3
+                   Do
+                        Console.WriteLine(&quot;Enter the height in cm&quot;)
+                        Height = Console.ReadLine()
+                   Loop Until Height &gt;= 70 And Height &lt;= 180
+                   Do
+                        Console.WriteLine(&quot;Enter the risk between 1 (easy) and 5 (hard)&quot;)
+                        Risk = Console.ReadLine()
+                   Loop Until Risk &gt;= 1 And Risk &lt;= 5
+                   Course(x) = New Fence(Height, Risk)
+                Next</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 0 To 3</li><li>Height = Console.ReadLine()</li><li>Loop Until Height &gt;= 70 And Height &lt;= 180</li><li>Risk = Console.ReadLine()</li><li>Loop Until Risk &gt;= 1 And Risk &lt;= 5</li><li>Course(x) = New Fence(Height, Risk)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header taking 2 parameters (and end where appropriate, returning real)</li>
+<li>Checking if fence height parameter is more than max attribute for that horse, if true multiplying percentage success by</li>
+<li>(Otherwise) selection checking risk value parameter between 1 and 5, multiplying modifier by percentage success</li>
+<li>Returning correct value as a real number in all instances</li>
+<li>Correct use of attributes and parameters throughout</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Success(Height, Risk)
+                        If Height &gt; MaxFenceHeight Then
+                             Return PercentageSuccess * 0.2
+                        Else
+
+ University Press &amp; Assessment 2024                        Page 19 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Success(self, Height, Risk):
+                     if Height &gt; self.__MaxFenceHeight:
+                         return self.__PercentageSuccess * 0.2
+                     else:
+
+                              if Risk == 1:
+                                  return self.__PercentageSuccess
+                              elif Risk == 2:
+                                  return self.__PercentageSuccess * 0.9
+                              elif Risk == 3:
+                                  return self.__PercentageSuccess * 0.8
+                              elif Risk == 4:
+                                  return self.__PercentageSuccess * 0.7
+                              else:
+                                  return self.__PercentageSuccess * 0.6</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header taking 2 parameters (and end where appropriate, returning real)</li><li>Checking if fence height parameter is more than max attribute for that horse, if true multiplying percentage success by</li><li>(Otherwise) selection checking risk value parameter between 1 and 5, multiplying modifier by percentage success</li><li>Returning correct value as a real number in all instances</li><li>Correct use of attributes and parameters throughout</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If Risk = 1 Then</li>
+<li>ElseIf Risk = 2 Then</li>
+<li>ElseIf Risk = 3 Then</li>
+<li>ElseIf Risk = 4 Then</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If Risk = 1 Then</li><li>ElseIf Risk = 2 Then</li><li>ElseIf Risk = 3 Then</li><li>ElseIf Risk = 4 Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Success() for each horse with the height and risk of all 4 fences …</li>
+<li>… using get methods for height and risk of each fence</li>
+<li>… outputting the horse name, fence number and calculated success at fence in appropriate message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Chance As Single
+                        For y = 0 To 1
+                             For x = 0 To 3
+                                  Chance = Horses(y).Success(Course(x).GetHeight(), Course(x).GetRisk())
+                                  Console.WriteLine(Horses(y).GetName() &amp; &quot; Fence &quot; &amp; x + 1 &amp; &quot; chance of
+                success is &quot; &amp; Chance &amp; &quot;%&quot;)
+                             Next
+                        Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for y in range(0, 2):
+                     for x in range(0, 4):
+                         Chance = Horses[y].Success(Course[x].GetHeight(), Course[x].GetRisk())
+                         print(Horses[y].GetName(), &quot;Fence&quot;, x + 1, &quot;chance of success is&quot;, Chance, &quot;%&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Success() for each horse with the height and risk of all 4 fences …</li><li>… using get methods for height and risk of each fence</li><li>… outputting the horse name, fence number and calculated success at fence in appropriate message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calculating average of all 4 fences for each horse and outputting in suitable message</li>
+<li>Identifying the highest percentage of success and outputting the horse&#x27;s name in an appropriate message</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>AverageSuccess = []
+                for y in range(0, 2):
+                     Total = 0
+                     for x in range(0, 4):
+                         Chance = Horses[y].Success(Course[x].GetHeight(), Course[x].GetRisk())
+                         print(Horses[y].GetName(), &quot;Fence&quot;, x + 1, &quot;chance of success is&quot;, Chance, &quot;%&quot;)
+                         Total = Total + Chance
+                     Average = Total / 4
+                     AverageSuccess.append(Average)
+                     print(Horses[y].GetName(), &quot;average success rate is&quot;, Average, &quot;%&quot;)
+
+                Highest = AverageSuccess[0]
+                Winner = -1
+                for x in range(1,2):
+                    if Highest &lt; AverageSuccess[x]:
+                        Winner = x
+                        Highest = AverageSuccess[x]
+                print(Horses[Winner].GetName(), &quot; has the highest average chance of success &quot;)
+
+ University Press &amp; Assessment 2024                       Page 22 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calculating average of all 4 fences for each horse and outputting in suitable message</li><li>Identifying the highest percentage of success and outputting the horse&#x27;s name in an appropriate message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For y = 0 To 1</li>
+<li>Total = 0</li>
+<li>For x = 0 To 3</li>
+<li>Chance = Horses(y).Success(Course(x).GetHeight(), Course(x).GetRisk())</li>
+<li>Total = Total + Chance</li>
+<li>Average = Total / 4</li>
+<li>AverageSuccess(y) = Average</li>
+<li>Highest = AverageSuccess(0)</li>
+<li>Winner = -1</li>
+<li>For x = 1 To 1</li>
+<li>Winner = x</li>
+<li>Highest = AverageSuccess(x)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Total As Integer
+                Dim Chance As Single
+                Dim Average As Single
+                For y = 0 To 1
+                     Total = 0
+                     For x = 0 To 3
+                          Chance = Horses(y).Success(Course(x).GetHeight(), Course(x).GetRisk())
+                          Console.WriteLine(Horses(y).GetName() &amp; &quot; Fence &quot; &amp; x + 1 &amp; &quot; chance of success is
+                &quot; &amp; Chance &amp; &quot;%&quot;)
+                          Total = Total + Chance
+                          Average = Total / 4
+                          AverageSuccess(y) = Average
+                          Console.WriteLine(Horses(y).GetName() &amp; &quot; average success rate is &quot; &amp; Average &amp;
+                &quot;%&quot;)
+                     Next
+                Next
+
+                Dim Highest As Single
+                Dim Winner As Integer
+                Highest = AverageSuccess(0)
+                Winner = -1
+                For x = 1 To 1
+                    If Highest &lt; AverageSuccess(x) Then
+                        Winner = x
+                        Highest = AverageSuccess(x)
+                       End If
+                Next x
+                Console.WriteLine(Horses(Winner).GetName() &amp; &quot; has the highest average chance of success &quot;)
+
+ University Press &amp; Assessment 2024                       Page 23 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For y = 0 To 1</li><li>Total = 0</li><li>For x = 0 To 3</li><li>Chance = Horses(y).Success(Course(x).GetHeight(), Course(x).GetRisk())</li><li>Total = Total + Chance</li><li>Average = Total / 4</li><li>AverageSuccess(y) = Average</li><li>Highest = AverageSuccess(0)</li><li>Winner = -1</li><li>For x = 1 To 1</li><li>Winner = x</li><li>Highest = AverageSuccess(x)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Outputting showing correct input values for all fences, and correct chance for each horse on each jump</li>
+<li>Outputs of average chance of each horse and horse name with highest average</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Outputting showing correct input values for all fences, and correct chance for each horse on each jump</li><li>Outputs of average chance of each horse and horse name with highest average</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-12.jpg" alt="Paper page 12 for Q3"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>LinkedList declared as 2D array with (min) 20  2 elements (Integer) with all data initialised to -1, all nodes linked</li>
+<li>(Global) FirstNode (Int) initialised as -1 and (global) FirstEmpty (Int) initialised as 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim LinkedList(20, 2) As Integer
+                Dim FirstNode As Integer
+                Dim FirstEmpty As Integer
+
+                Sub Main(args As String())
+                        FirstNode = -1
+                        FirstEmpty = 0
+                        For x = 0 To 18
+                            LinkedList(x, 0) = -1
+                            LinkedList(x, 1) = x + 1
+
+                              Next
+                              LinkedList(19, 0) = -1
+                              LinkedList(19, 1) = -1
+                End Sub
+
+ University Press &amp; Assessment 2024                        Page 26 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>LinkedList declared as 2D array with (min) 20  2 elements (Integer) with all data initialised to -1, all nodes linked</li><li>(Global) FirstNode (Int) initialised as -1 and (global) FirstEmpty (Int) initialised as 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>LinkedList = [] #global</li>
+<li>FirstNode = -1</li>
+<li>FirstEmpty = 0</li>
+<li>LinkedList[19][0] = -1</li>
+<li>LinkedList[19][1] = -1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>LinkedList = [] #global
+                FirstNode = -1
+                FirstEmpty = 0
+                for x in range(0, 19):
+                     LinkedList.append([-1, x + 1])
+                LinkedList[19][0] = -1
+                LinkedList[19][1] = -1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>LinkedList = [] #global</li><li>FirstNode = -1</li><li>FirstEmpty = 0</li><li>LinkedList[19][0] = -1</li><li>LinkedList[19][1] = -1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking (min) 5 data items as input from the user</li>
+<li>Checking if linked list is full (FirstEmpty = -1) …</li>
+<li>…ending procedure/loop/not doing anything further</li>
+<li>(otherwise) LinkedList[FirstEmpty, 0] = data input</li>
+<li>LinkedList[FirstEmpty, 1] = FirstNode</li>
+<li>FirstNode = FirstEmpty</li>
+<li>FirstEmpty = LinkedList[FirstEmpty, 1] before any update to FirstEmpty ‘s pointer</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertData():
+                     global LinkedList
+                     global FirstNode
+                     global FirstEmpty
+                     for _ in range(5):
+                         if FirstEmpty != -1:
+                             nextEmpty = LinkedList[FirstEmpty][1]
+                             LinkedList[FirstEmpty][0] = int(input(&quot;Value: &quot;))
+                             LinkedList[FirstEmpty][1] = FirstNode
+                             FirstNode = FirstEmpty
+                             FirstEmpty = nextEmpty
+
+ University Press &amp; Assessment 2024                       Page 28 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking (min) 5 data items as input from the user</li><li>Checking if linked list is full (FirstEmpty = -1) …</li><li>…ending procedure/loop/not doing anything further</li><li>(otherwise) LinkedList[FirstEmpty, 0] = data input</li><li>LinkedList[FirstEmpty, 1] = FirstNode</li><li>FirstNode = FirstEmpty</li><li>FirstEmpty = LinkedList[FirstEmpty, 1] before any update to FirstEmpty ‘s pointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 0 To 4</li>
+<li>NewItem = Console.ReadLine()</li>
+<li>If FirstEmpty = -1 Then</li>
+<li>x = 5</li>
+<li>NextEmpty = LinkedList(FirstEmpty, 1)</li>
+<li>LinkedList(FirstEmpty, 0) = NewItem</li>
+<li>LinkedList(FirstEmpty, 1) = FirstNode</li>
+<li>FirstNode = FirstEmpty</li>
+<li>FirstEmpty = NextEmpty</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub InsertData()
+                    Dim NewItem As Integer
+                    Dim NextEmpty As Integer
+
+                       For x = 0 To 4
+                           Console.WriteLine(&quot;Enter the next number&quot;)
+                           NewItem = Console.ReadLine()
+
+                              If FirstEmpty = -1 Then
+                                   x = 5
+                              Else
+                                   NextEmpty = LinkedList(FirstEmpty, 1)
+                                   LinkedList(FirstEmpty, 0) = NewItem
+                                   LinkedList(FirstEmpty, 1) = FirstNode
+                                   FirstNode = FirstEmpty
+                                   FirstEmpty = NextEmpty
+                              End If
+
+                    Next x
+                End Sub
+
+ University Press &amp; Assessment 2024                       Page 29 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 0 To 4</li><li>NewItem = Console.ReadLine()</li><li>If FirstEmpty = -1 Then</li><li>x = 5</li><li>NextEmpty = LinkedList(FirstEmpty, 1)</li><li>LinkedList(FirstEmpty, 0) = NewItem</li><li>LinkedList(FirstEmpty, 1) = FirstNode</li><li>FirstNode = FirstEmpty</li><li>FirstEmpty = NextEmpty</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) starting with node at index FirstNode and outputting data</li>
+<li>Following pointers until end reached and outputting data for each node</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputLinkedList()
+
+                              Dim CurrentPointer As Integer = FirstNode
+                              Dim Flag As Boolean = True
+                              While Flag
+                                  Console.WriteLine(LinkedList(CurrentPointer, 0))
+                                  CurrentPointer = LinkedList(CurrentPointer, 1)
+                                  If CurrentPointer = -1 Then
+                                      Flag = False
+                                  End If
+                              End While
+
+ University Press &amp; Assessment 2024                       Page 31 of 37
+
+9618/43                                           Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputLinkedList():
+                     global LinkedList
+                     global FirstNode
+                     global FirstEmpty
+                     CurrentPointer = FirstNode
+                     Flag = True
+                     while Flag:
+                         print(LinkedList[CurrentPointer][0])
+                         CurrentPointer = LinkedList[CurrentPointer][1]
+                         if CurrentPointer == -1:
+                             Flag = False</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) starting with node at index FirstNode and outputting data</li><li>Following pointers until end reached and outputting data for each node</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling InsertData() then OutputLinkedList()  1
+
+  Python
+  InsertData()
+  OutputLinkedList()
+
+  VB.NET
+  InsertData()
+  OutputLinkedList()</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>InsertData()
+                OutputLinkedList()</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>InsertData()
+                OutputLinkedList()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for inputs of 5 1 2 3 8 and output of 8 3 2 1 5  1
+
+ University Press &amp; Assessment 2024  Page 32 of 37
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) with parameter</li>
+<li>Checking data in FirstNode against parameter …</li>
+<li>… (if found) updating FirstNode to LinkedList[FirstNode, 1]</li>
+<li>(Otherwise) following pointers in loop/recursive call …</li>
+<li>…comparing to data to remove each time</li>
+<li>… storing previous pointer through each loop…</li>
+<li>… when found, updating previous pointer to found node’s pointer</li>
+<li>Adding deleted node to end of/start of empty list (and updating FirstEmpty if needed)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def RemoveData(ItemToRemove):
+                     global LinkedList
+                     global FirstNode
+                     global FirstEmpty
+
+                       if LinkedList[FirstNode][0] == ItemToRemove:
+                           NewFirst = LinkedList[FirstNode][1]
+                           LinkedList[FirstNode][1] = FirstEmpty
+                           FirstEmpty = FirstNode
+                           FirstNode = NewFirst
+
+                       else:
+                           if FirstNode != -1:
+                               CurrentPointer = FirstNode
+                               PreviousNode = -1
+                               while(ItemToRemove != LinkedList[CurrentPointer][0] and CurrentPointer != -1):
+                                       PreviousNode = CurrentPointer
+                                       CurrentPointer = LinkedList[CurrentPointer][1]
+
+                                    if ItemToRemove == LinkedList[CurrentPointer][0]:
+                                        LinkedList[PreviousNode][1] = LinkedList[CurrentPointer][1]
+                                        LinkedList[CurrentPointer][0] = -1
+                                        LinkedList[CurrentPointer][1] = FirstEmpty
+                                        FirstEmpty = CurrentPointer
+
+ University Press &amp; Assessment 2024                       Page 33 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) with parameter</li><li>Checking data in FirstNode against parameter …</li><li>… (if found) updating FirstNode to LinkedList[FirstNode, 1]</li><li>(Otherwise) following pointers in loop/recursive call …</li><li>…comparing to data to remove each time</li><li>… storing previous pointer through each loop…</li><li>… when found, updating previous pointer to found node’s pointer</li><li>Adding deleted node to end of/start of empty list (and updating FirstEmpty if needed)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If LinkedList(FirstNode, 0) = ItemToRemove Then</li>
+<li>Dim NewFirst As Integer = LinkedList(FirstNode, 1)</li>
+<li>LinkedList(FirstNode, 1) = FirstEmpty</li>
+<li>FirstEmpty = FirstNode</li>
+<li>FirstNode = NewFirst</li>
+<li>Dim CurrentPointer As Integer = FirstNode</li>
+<li>Dim PreviousNode As Integer = -1</li>
+<li>Dim Flag As Boolean = True</li>
+<li>Dim Found As Boolean = False</li>
+<li>PreviousNode = CurrentPointer</li>
+<li>CurrentPointer = LinkedList(CurrentPointer, 1)</li>
+<li>Found = True</li>
+<li>Flag = False</li>
+<li>LinkedList(PreviousNode, 1) = LinkedList(CurrentPointer, 1)</li>
+<li>LinkedList(CurrentPointer, 0) = -1</li>
+<li>LinkedList(CurrentPointer, 1) = FirstEmpty</li>
+<li>FirstEmpty = CurrentPointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub RemoveData(ItemToRemove)
+                    If LinkedList(FirstNode, 0) = ItemToRemove Then
+                         Dim NewFirst As Integer = LinkedList(FirstNode, 1)
+                         LinkedList(FirstNode, 1) = FirstEmpty
+                         FirstEmpty = FirstNode
+                         FirstNode = NewFirst
+                    Else
+                         If FirstNode &lt;&gt; -1 Then
+                             Dim CurrentPointer As Integer = FirstNode
+                             Dim PreviousNode As Integer = -1
+                             Dim Flag As Boolean = True
+                             Dim Found As Boolean = False
+                             While Flag And Not (Found)
+                                 If (CurrentPointer &lt;&gt; -1) Then
+                                      If (ItemToRemove &lt;&gt; LinkedList(CurrentPointer, 0)) Then
+                                           PreviousNode = CurrentPointer
+                                           CurrentPointer = LinkedList(CurrentPointer, 1)
+                                      Else
+                                           Found = True
+                                      End If
+                                 Else
+                                      Flag = False
+                                 End If
+                             End While
+
+                            If Found Then
+                                LinkedList(PreviousNode, 1) = LinkedList(CurrentPointer, 1)
+                                LinkedList(CurrentPointer, 0) = -1
+                                LinkedList(CurrentPointer, 1) = FirstEmpty
+                                FirstEmpty = CurrentPointer
+                            End If
+                        End If
+                    End If
+                End Sub
+
+ University Press &amp; Assessment 2024                       Page 34 of 37
+
+9618/43                                            Cambridge International AS &amp; A Level – Mark Scheme           October/November 2024</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If LinkedList(FirstNode, 0) = ItemToRemove Then</li><li>Dim NewFirst As Integer = LinkedList(FirstNode, 1)</li><li>LinkedList(FirstNode, 1) = FirstEmpty</li><li>FirstEmpty = FirstNode</li><li>FirstNode = NewFirst</li><li>Dim CurrentPointer As Integer = FirstNode</li><li>Dim PreviousNode As Integer = -1</li><li>Dim Flag As Boolean = True</li><li>Dim Found As Boolean = False</li><li>PreviousNode = CurrentPointer</li><li>CurrentPointer = LinkedList(CurrentPointer, 1)</li><li>Found = True</li><li>Flag = False</li><li>LinkedList(PreviousNode, 1) = LinkedList(CurrentPointer, 1)</li><li>LinkedList(CurrentPointer, 0) = -1</li><li>LinkedList(CurrentPointer, 1) = FirstEmpty</li><li>FirstEmpty = CurrentPointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>LinkedList = []</li>
+<li>FirstNode = -1</li>
+<li>FirstEmpty = 0</li>
+<li>FirstNode = -1</li>
+<li>FirstEmpty = 0</li>
+<li>For x = 0 To 19</li>
+<li>LinkedList(x, 0) = -1</li>
+<li>LinkedList(x, 1) = x + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                    FirstNode = -1
+                    FirstEmpty = 0
+                    For x = 0 To 19
+                         LinkedList(x, 0) = -1
+                         LinkedList(x, 1) = x + 1
+                    Next
+                    InsertData()
+                    OutputLinkedList()
+                    RemoveData(5)
+                    Console.WriteLine(&quot;After&quot;)
+                    OutputLinkedList()
+                End Sub
+
+ University Press &amp; Assessment 2024                       Page 36 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2024</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>LinkedList = []
+                FirstNode = -1
+                FirstEmpty = 0
+                for x in range(0, 19):
+                     LinkedList.append([-1, x + 1])
+                InsertData()
+                OutputLinkedList()
+                RemoveData(5)
+                print(&quot;After&quot;)
+                OutputLinkedList()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>LinkedList = []</li><li>FirstNode = -1</li><li>FirstEmpty = 0</li><li>FirstNode = -1</li><li>FirstEmpty = 0</li><li>For x = 0 To 19</li><li>LinkedList(x, 0) = -1</li><li>LinkedList(x, 1) = x + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for input and output.  1
+
+  Test data 1:
+  Input 5 6 8 9 5
+  ‘After’
+  Output: 9 8 6 5
+
+  Test data 2:
+  Input 10 7 8 5 6
+  “After”
+  Output: 6 8 7 10
+
+ University Press &amp; Assessment 2024  Page 37 of 37</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/31 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/31 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q15">Q15</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  0  1  1  1  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  1  1  1  0  1  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  0  1  0  1  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  1  0  1  1  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per correct data type (Max 2)  2 Do not allow record.
+  set
+  class / object</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A user-defined data type that is used to reference a memory location  1 Do not allow point/pointer as the
+  purpose.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP2 = ^STRING</li>
+<li>TYPE Word = ^STRING</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP2 = ^STRING</li><li>TYPE Word = ^STRING</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  1  0  1  0  0  1  1  0  0  0  0  1  0  0
+
+  University Press &amp; Assessment 2026  Page 6 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  0  0  1  1  1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  1  0  1  1  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  0  0  0  1  1  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  0  0  1  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for an appropriate use of random file organisation (Max 1)  1 Do not allow DBMS.
+  Booking systems e.g. airline  Do not allow definitions of random file
+  Operating system file management systems  organisation.
+  Video games
+  Encryption utilities
+  Compression utilities</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2 Do not allow use of data/file instead of
+  MP1  Records are stored in no particular order / any available position  record
+  MP2  A record key is used to determine the location where the record is to be
+  stored  Do not accept random as the
+  MP3  … which is generated using a hash function on the key field  description.
+  MP4  New records are added in an empty location
+
+  University Press &amp; Assessment 2026  Page 5 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3 Do not allow use of data/file instead of
+  MP1  Direct file access is used  record
+  MP2  A hashing function is used on the key field to find the location in the file
+  where the record is stored  Allow open or closed hashing /
+  MP3  If the required record is found at the hashed location it is retrieved  addressing for MP4.
+  MP4  If the required record is not found, a collision resolution strategy is
+  employed // Records from that point are searched linearly until the
+  required record is found // Linear probing
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>10.8125 converted to binary positive binary version of 10.8125 = 01010.1101 //</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>10.8125 converted to binary positive binary version of 10.8125 = 01010.1101 //</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>correct application of exponent seen</li>
+<li>correct method to find the final answer</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>correct application of exponent seen</li><li>correct method to find the final answer</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correct line connecting a TCP/IP layer to its description  4
+  (Max 4).
+
+  TCP/IP layer  description
+
+  ensures packets arrive in sequence without
+  errors
+  Application
+
+  provides remote access to files on a host
+  server to access and manage files stored in a
+  remote location
+  Transport
+
+  interconnects nodes or hosts in a network,
+  encapsulates IP packets into frames and
+  ensures correct protocols are followed
+  Internet
+
+  identifies the intended network and host.
+
+  Link
+  contains all the programs that exchange data
+  and includes protocols: HTTP, FTP and
+  POP3
+
+  University Press &amp; Assessment 2026  Page 8 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correct benefit (Max 2)  4 MP2 do not allow the mark for ‘virtual
+  MP1  Virtual machines can provide an instruction set architecture that is  machines can be cheaper’, ‘cost saving’
+  different to the actual computer. // Multiple operating system  by itself, or similar. The answer must
+  environments can be used on the same computer. // You can run an  match the phrase in the mark scheme.
+  application / legacy software which is not compatible with the host
+  computer / operating system using a guest operating system that is
+  compatible with the application / software.
+  MP2  Costs can be saved by not having to purchase additional hardware to
+  test / use applications.
+  MP3  The guest operating system can crash without affecting the host
+  machine. // Guest operating system hosted on a virtual machine can be
+  used without impacting anything outside the virtual machine. // When
+  trying a piece of suspicious software, if it causes a problem, it will only
+  infect the virtual machine.
+
+  One mark for each correct limitation (Max 2)
+  MP4  Degraded performance. // A virtual machine is less efficient than real
+  machines because they access hardware indirectly. // The virtual
+  machine has to request access to the hardware from the host, which
+  slows usability. // If multiple virtual machines are running on the same
+  host, performance may be negatively affected if the host lacks sufficient
+  power to deal with all their requirements.
+  MP5  A virtual machine is dependent on the features / standard of the host
+  machine. // It may be affected by the weaknesses of the host machine //  MP6 do not allow for just saying ‘virtual
+  Not all hardware/software can be emulated.  machine can be expensive’. It has to
+  MP6  Managing and maintaining a virtual machine can be quite complex  have a reason e.g. expensive to
+  /specialised.  maintain.
+
+  University Press &amp; Assessment 2026  Page 9 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One mark for columns P, Q and R                                                                                         3</li>
+<li>One mark for column S</li>
+<li>One mark for column Z</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One mark for columns P, Q and R                                                                                         3</li><li>One mark for column S</li><li>One mark for column Z</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 1)  1 Makes it easier by itself is not enough.
+  Solving logic expressions using a K-map makes it easier because you don’t  Do not allow optimal sum-of-products
+  need to use Boolean algebra. // It is guaranteed to give you an optimal solution.  instead of optimal solution.
+  // Converts complex logic problems into simpler ones.
+
+  University Press &amp; Assessment 2026  Page 10 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AB</p>
+<div class='ms-raw'>One mark for each correct loop (Max 3)  3 Max 2 if incorrect loops seen.
+
+  AB
+
+  CD  00  01  11  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: AB</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2 Terms can be in any order.
+  MP1  One correct Boolean term with an OR (+) sign
+  MP2  All three correct Boolean terms connected by OR signs and no other
+  terms present.
+
+  A.B + B.D + C.D
+
+  University Press &amp; Assessment 2026  Page 11 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1 21 15 3 –
+  MP2 8 + * 7 /
+
+  Final correct expression</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1 (c + d)
+  MP2 (a - b) * (a - c)
+  MP3 /( MP2 )
+
+  Final correct expression
+  (c + d) / ((a - b) * (a - c))</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per ring (Max 3)  4 Do not allow operators in stacks
+  One mark for the interim total (48) and the final total (2).
+  Values in shaded areas are necessary
+  to award the marks in the rings.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Text encrypted from plain text using an encryption algorithm // The result of  1
+  putting plain text through an encryption algorithm.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A cryptographic/encryption key that can be obtained/used by anyone to send  1
+  encrypted messages. // A key that is part of a matched pair // An encryption key
+  known to all users // A decryption key obtained/used by anyone to decrypt
+  sender’s digital signature</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4 The correct sequence of steps that is
+  MP1  The organisation generates a matched pair of encryption keys  important.
+  MP2  The organisation makes its public key available to the individual
+  MP3  The individual uses the public key to encrypt their message
+  MP4  … and sends this message to the organisation
+  MP5  The organisation decrypts the message using their private key
+
+  Alternative answer
+
+  One mark per mark point (Max 4)
+  MP6  The individual generates a matched pair of encryption keys
+  MP7  The individual sends their public key to the organisation
+  MP8  The individual uses their private key to encrypt their message
+  MP9  … and sends this message to the organisation
+  MP10 The organisation decrypts the message using the individual’s public key
+
+  University Press &amp; Assessment 2026  Page 13 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>13  6  14  17  20  a node via different routes.
+
+  University Press &amp; Assessment 2026  Page 14 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>24  24  8  18  18  24</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4
+  MP1  Supervised learning makes use of labelled training data
+  MP2  … to predict future events based on past outcomes
+  MP3  Unsupervised learning makes use of unlabelled training data / training
+  data without instructions on what to do with it / does not use training
+  data with the correct/expected outcomes
+  MP4  … to search for hidden patterns/relationships/structures/similarities/
+  outliers within the data
+  MP5  … to therefore get closer to the desired outcome as the training
+  progresses.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point - working (Max 3)  5 MP1 a 0 on the Begin node in the
+  May be seen on diagram or in working section  diagram or clearly labelled in working
+  MP2 requires an  symbol on EVERY
+  MP1  Initialisation – setting Begin to 0  node except Begin in the diagram or
+  MP2  … and the rest of the nodes to   clearly labelled in working
+  MP3  Evidence to show values at nodes being updated  MP3 evidence of correct numbers being
+  MP4  Evidence to show ‘visited node(s)’  written on the diagram at the nodes to
+  MP5  Evidence to show a correct calculation of at least one route  represent ‘distance’ for a particular route
+  MP6  Evidence to show more than one route has been calculated for at least  MP4 any evidence of nodes being
+  one node  ‘visited’ in a route on the diagram OR
+  listing of nodes by letter in the working
+  Correct Answers (Max 2)  MP5 numbers on the diagram or in
+  Two marks for all six correct values  working that show a route being
+  One mark for four or five correct values.  calculated from the component
+  distances between nodes
+  MP6 numbers on the diagram or in
+  P  Q  R  S  T  U
+  working to show distances calculated to</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2>
+        <section class="part">
+          <p class="part-label">Part 10(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>WHILE Insert &gt;= 0 AND MemberID[Insert] &gt; Temp1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>WHILE Insert &gt;= 0 AND MemberID[Insert] &gt; Temp1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Array size // Number of elements in the array  Allow the opposite for MP2
+  MP2  … time efficiency will improve if the number of elements to be sorted  (worse/more).
+  are fewer
+  MP3  Initial order  Allow the opposite for MP4
+  MP4  … if the array is partially sorted the insertion sort works better  (reversed/slower).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>O(n2) // O(N2)  1 Must be completely correct (including
+  brackets).
+
+  University Press &amp; Assessment 2026  Page 15 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q11"><h2>Question 11</h2>
+        <section class="part">
+          <p class="part-label">Part 11(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correctly completed clause (Max 3)  3 Accept facts in any order.
+  The device names have been given in
+  (25) customer(betty).  clauses 02 and 04. Responses must
+  (26) owns(large_tv, betty).  match these.
+  (27) wants(bluray_player, betty).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Owner =) petrov, susan, sammy                                                                                              1 Can be in any order</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Owner =) petrov, susan, sammy                                                                                              1 Can be in any order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4 Allow MP1, MP2 and MP3 in any order.
+  MP1  device(D)
+  MP2  customer(A)
+  MP3  owns(D, A).  Accept \+ for NOT operator as Swish
+  MP4  All logic conditions / punctuation correct (accept , for AND)  Prolog.
+
+  Example answers
+
+  may_buy_device(D, A)
+  IF device(D) AND customer(A) AND NOT owns(D, A).
+
+  may_buy_device(D, A)
+  IF device(D), customer(A), NOT owns(D, A).
+
+  University Press &amp; Assessment 2026  Page 16 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q15"><h2>Question 15</h2>
+        <section class="part">
+          <p class="part-label">Part 15 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>15  6  6  6  6  48  48  48  48  2
+
+  University Press &amp; Assessment 2026  Page 12 of 16
+
+Trace ID: PC-6711E7F15B
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

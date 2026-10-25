@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/42 · October/November 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/42 · October/November 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked42/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Two arrays with correct identifiers of type string/character</li>
+<li>Each has 100 elements</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim StackVowel(0 To 99) As Char
+               Dim StackConsonant(0 To 99) As Char</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>StackVowel = [] #string 100
+               StackConsonant = [] #string 100
+
+ 2023                                                          Page 4 of 34
+
+9618/42                                         Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Two arrays with correct identifiers of type string/character</li><li>Each has 100 elements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring both variables as type integer global and initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim VowelTop As Integer = 0
+               Dim ConsonantTop As Integer = 0</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>global VowelTop #integer
+               global ConsonantTop #integer
+               #main
+               VowelTop = 0
+               ConsonantTop = 0
+
+ 2023                                                           Page 5 of 34
+
+9618/42                                       Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring both variables as type integer global and initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure PushData() heading (and end where appropriate) taking one parameter</li>
+<li>Checking if parameter is a (lowercase) vowel …</li>
+<li>… checking if StackVowel is full and outputting suitable message</li>
+<li>… otherwise inserting parameter in next position</li>
+<li>… incrementing VowelTop</li>
+<li>Repeated for Consonant</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure PushData() heading (and end where appropriate) taking one parameter</li><li>Checking if parameter is a (lowercase) vowel …</li><li>… checking if StackVowel is full and outputting suitable message</li><li>… otherwise inserting parameter in next position</li><li>… incrementing VowelTop</li><li>Repeated for Consonant</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If Letter = &quot;a&quot; Or Letter = &quot;e&quot; Or Letter = &quot;i&quot; Or Letter = &quot;o&quot; Or Letter = &quot;u&quot; Then</li>
+<li>If VowelTop = 100 Then</li>
+<li>StackVowel(VowelTop) = Letter</li>
+<li>VowelTop += 1</li>
+<li>If ConsonantTop = 100 Then</li>
+<li>StackConsonant(ConsonantTop) = Letter</li>
+<li>ConsonantTop += 1</li>
+<li>if Letter == &quot;a&quot; or Letter == &quot;e&quot; or Letter == &quot;i&quot; or Letter == &quot;o&quot; or Letter == &quot;u&quot;:</li>
+<li>if VowelTop == 100:</li>
+<li>VowelTop = VowelTop + 1</li>
+<li>if ConsonantTop == 100:</li>
+<li>ConsonantTop = ConsonantTop + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PushData(Letter As Char)
+                  If Letter = &quot;a&quot; Or Letter = &quot;e&quot; Or Letter = &quot;i&quot; Or Letter = &quot;o&quot; Or Letter = &quot;u&quot; Then
+                     If VowelTop = 100 Then
+                         Console.WriteLine(&quot;Vowel stack full&quot;)
+                     Else
+                         StackVowel(VowelTop) = Letter
+                         VowelTop += 1
+                     End If
+                  Else
+                     If ConsonantTop = 100 Then
+                         Console.WriteLine(&quot;Consonant stack full&quot;)
+                     Else
+                         StackConsonant(ConsonantTop) = Letter
+                         ConsonantTop += 1
+                     End If
+                  End If
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PushData(Letter):
+                  global VowelTop
+                  global ConsonantTop
+                  if Letter == &quot;a&quot; or Letter == &quot;e&quot; or Letter == &quot;i&quot; or Letter == &quot;o&quot; or Letter == &quot;u&quot;:
+                     if VowelTop == 100:
+                        print(&quot;Vowel stack full&quot;)
+                     else:
+                        StackVowel.append(Letter)
+                        VowelTop = VowelTop + 1
+                  else:
+                     if ConsonantTop == 100:
+                        print(&quot;Consonant stack full&quot;)
+                     else:
+                        StackConsonant.append(Letter)
+                        ConsonantTop = ConsonantTop + 1
+
+ 2023                                               Page 7 of 34
+
+9618/42                                        Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If Letter = &quot;a&quot; Or Letter = &quot;e&quot; Or Letter = &quot;i&quot; Or Letter = &quot;o&quot; Or Letter = &quot;u&quot; Then</li><li>If VowelTop = 100 Then</li><li>StackVowel(VowelTop) = Letter</li><li>VowelTop += 1</li><li>If ConsonantTop = 100 Then</li><li>StackConsonant(ConsonantTop) = Letter</li><li>ConsonantTop += 1</li><li>if Letter == &quot;a&quot; or Letter == &quot;e&quot; or Letter == &quot;i&quot; or Letter == &quot;o&quot; or Letter == &quot;u&quot;:</li><li>if VowelTop == 100:</li><li>VowelTop = VowelTop + 1</li><li>if ConsonantTop == 100:</li><li>ConsonantTop = ConsonantTop + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header ReadData() with no parameter</li>
+<li>Opening StackData.txt to read and closing file</li>
+<li>Looping until EOF // Looping 100 times</li>
+<li>Read each item from the file</li>
+<li>Calling PushData() with each value as parameter</li>
+<li>Appropriate exception handling with suitable output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                      Try
+                          Dim DataReader As New System.IO.StreamReader(&quot;StackData.txt&quot;)
+
+                           Do Until DataReader.EndOfStream
+                              PushData(DataReader.ReadLine())
+                           Loop
+                           DataReader.Close()
+ 2023                                                             Page 8 of 34
+
+9618/42                                  Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header ReadData() with no parameter</li><li>Opening StackData.txt to read and closing file</li><li>Looping until EOF // Looping 100 times</li><li>Read each item from the file</li><li>Calling PushData() with each value as parameter</li><li>Appropriate exception handling with suitable output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataFile = open(&quot;StackData.txt&quot;)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                  try:
+                     DataFile = open(&quot;StackData.txt&quot;)
+                     for Line in DataFile:
+                         PushData(Line.strip())
+                     DataFile.close()
+                  except:
+                     print(&quot;File not found&quot;)
+
+ 2023                                                 Page 9 of 34
+
+9618/42                                         Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataFile = open(&quot;StackData.txt&quot;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One function header with no parameter</li>
+<li>Checking if stack is empty and returning &quot;No data&quot;</li>
+<li>…otherwise, decrementing correct pointer</li>
+<li>Returning value at top of stack</li>
+<li>2nd function fully correct</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One function header with no parameter</li><li>Checking if stack is empty and returning &quot;No data&quot;</li><li>…otherwise, decrementing correct pointer</li><li>Returning value at top of stack</li><li>2nd function fully correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If VowelTop - 1 &gt;= 0 Then</li>
+<li>VowelTop -= 1</li>
+<li>Dim DataToReturn As Char = StackVowel(VowelTop)</li>
+<li>If ConsonantTop - 1 &gt;= 0 Then</li>
+<li>ConsonantTop -= 1</li>
+<li>Dim DataToReturn As Char = StackConsonant(ConsonantTop)</li>
+<li>if VowelTop - 1 &gt;= 0:</li>
+<li>VowelTop = VowelTop - 1</li>
+<li>DataToReturn = StackVowel[VowelTop]</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function PopVowel()
+                     If VowelTop - 1 &gt;= 0 Then
+                        VowelTop -= 1
+                        Dim DataToReturn As Char = StackVowel(VowelTop)
+                        Return DataToReturn
+                     Else
+                        Return &quot;No data&quot;
+                     End If
+                  End Function
+
+                  Function PopConsonant()
+                     If ConsonantTop - 1 &gt;= 0 Then
+                        ConsonantTop -= 1
+                        Dim DataToReturn As Char = StackConsonant(ConsonantTop)
+                        Return DataToReturn
+                     Else
+                        Return &quot;No data&quot;
+                     End If
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PopVowel():
+                  global VowelTop
+                  global ConsonantTop
+                  if VowelTop - 1 &gt;= 0:
+                     VowelTop = VowelTop - 1
+                     DataToReturn = StackVowel[VowelTop]
+                     del StackVowel[-1]
+                     return DataToReturn
+                  else:
+                     return &quot;No data&quot;
+
+ 2023                                               Page 11 of 34
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If VowelTop - 1 &gt;= 0 Then</li><li>VowelTop -= 1</li><li>Dim DataToReturn As Char = StackVowel(VowelTop)</li><li>If ConsonantTop - 1 &gt;= 0 Then</li><li>ConsonantTop -= 1</li><li>Dim DataToReturn As Char = StackConsonant(ConsonantTop)</li><li>if VowelTop - 1 &gt;= 0:</li><li>VowelTop = VowelTop - 1</li><li>DataToReturn = StackVowel[VowelTop]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if ConsonantTop - 1 &gt;= 0:</li>
+<li>ConsonantTop = ConsonantTop - 1</li>
+<li>DataToReturn = StackConsonant[ConsonantTop]</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if ConsonantTop - 1 &gt;= 0:</li><li>ConsonantTop = ConsonantTop - 1</li><li>DataToReturn = StackConsonant[ConsonantTop]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData()</li>
+<li>Looping until 5 letters successfully accessed</li>
+<li>Prompt and read in input of choice …</li>
+<li>… if vowel is input calling PopVowel() and if consonant calling PopConsonant() …</li>
+<li>… storing return values</li>
+<li>Outputting appropriate message if no vowels and if no consonants (stacks full) within loop</li>
+<li>Outputting the five returned letters on one line</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData()</li><li>Looping until 5 letters successfully accessed</li><li>Prompt and read in input of choice …</li><li>… if vowel is input calling PopVowel() and if consonant calling PopConsonant() …</li><li>… storing return values</li><li>Outputting appropriate message if no vowels and if no consonants (stacks full) within loop</li><li>Outputting the five returned letters on one line</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataAccessed = PopConsonant();</li>
+<li>if(DataAccessed.equals(&quot;No data&quot;) == false){</li>
+<li>Letters = Letters + DataAccessed;</li>
+<li>Flag = true;</li>
+<li>VowelTop = 0</li>
+<li>ConsonantTop = 0</li>
+<li>Dim Letters As String = &quot;&quot;</li>
+<li>Dim Flag As Boolean = False</li>
+<li>For x = 0 To 4</li>
+<li>Flag = False</li>
+<li>While Flag = False</li>
+<li>Choice = Console.ReadLine().ToLower()</li>
+<li>If Choice = &quot;vowel&quot; Then</li>
+<li>DataAccessed = PopVowel()</li>
+<li>Letters = Letters &amp; DataAccessed</li>
+<li>Flag = True</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                  VowelTop = 0
+                  ConsonantTop = 0
+                  ReadData()
+                  Dim Letters As String = &quot;&quot;
+                  Dim Flag As Boolean = False
+                  Dim Choice As String
+                  Dim DataAccessed As String
+                  For x = 0 To 4
+                     Flag = False
+                     While Flag = False
+                         Console.WriteLine(&quot;Vowel or Consonant?&quot;)
+                         Choice = Console.ReadLine().ToLower()
+                         If Choice = &quot;vowel&quot; Then
+                            DataAccessed = PopVowel()
+                            If DataAccessed &lt;&gt; &quot;No data&quot; Then
+                               Letters = Letters &amp; DataAccessed
+                               Flag = True
+                            Else
+                               Console.WriteLine(&quot;No vowels left&quot;)
+
+ 2023                                                 Page 14 of 34
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataAccessed = PopConsonant();</li><li>if(DataAccessed.equals(&quot;No data&quot;) == false){</li><li>Letters = Letters + DataAccessed;</li><li>Flag = true;</li><li>VowelTop = 0</li><li>ConsonantTop = 0</li><li>Dim Letters As String = &quot;&quot;</li><li>Dim Flag As Boolean = False</li><li>For x = 0 To 4</li><li>Flag = False</li><li>While Flag = False</li><li>Choice = Console.ReadLine().ToLower()</li><li>If Choice = &quot;vowel&quot; Then</li><li>DataAccessed = PopVowel()</li><li>Letters = Letters &amp; DataAccessed</li><li>Flag = True</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ElseIf Choice = &quot;consonant&quot; Then</li>
+<li>DataAccessed = PopConsonant()</li>
+<li>Letters = Letters &amp; DataAccessed</li>
+<li>Flag = True</li>
+<li>VowelTop = 0</li>
+<li>ConsonantTop = 0</li>
+<li>Letters = &quot;&quot;</li>
+<li>Flag = False</li>
+<li>Flag = False</li>
+<li>while Flag == False:</li>
+<li>Choice = input(&quot;Vowel or Consonant&quot;).lower()</li>
+<li>if Choice == &quot;vowel&quot;:</li>
+<li>DataAccessed = PopVowel()</li>
+<li>if DataAccessed != &quot;No data&quot;:</li>
+<li>Letters = Letters + DataAccessed</li>
+<li>Flag = True</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>#main
+               VowelTop = 0
+               ConsonantTop = 0
+               ReadData()
+               Letters = &quot;&quot;
+               Flag = False
+
+               for x in range(0, 5):
+                  Flag = False
+                  while Flag == False:
+                     Choice = input(&quot;Vowel or Consonant&quot;).lower()
+                     if Choice == &quot;vowel&quot;:
+                         DataAccessed = PopVowel()
+                         if DataAccessed != &quot;No data&quot;:
+                            Letters = Letters + DataAccessed
+                            Flag = True
+                         else:
+                            print(&quot;No vowels left&quot;)
+
+ 2023                                               Page 15 of 34
+
+9618/42                                       Cambridge International AS &amp; A Level – Mark Scheme       October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ElseIf Choice = &quot;consonant&quot; Then</li><li>DataAccessed = PopConsonant()</li><li>Letters = Letters &amp; DataAccessed</li><li>Flag = True</li><li>VowelTop = 0</li><li>ConsonantTop = 0</li><li>Letters = &quot;&quot;</li><li>Flag = False</li><li>Flag = False</li><li>while Flag == False:</li><li>Choice = input(&quot;Vowel or Consonant&quot;).lower()</li><li>if Choice == &quot;vowel&quot;:</li><li>DataAccessed = PopVowel()</li><li>if DataAccessed != &quot;No data&quot;:</li><li>Letters = Letters + DataAccessed</li><li>Flag = True</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>elif Choice == &quot;consonant&quot;:</li>
+<li>DataAccessed = PopConsonant()</li>
+<li>if DataAccessed != &quot;No data&quot;:</li>
+<li>Letters = Letters + DataAccessed</li>
+<li>Flag = True</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>elif Choice == &quot;consonant&quot;:</li><li>DataAccessed = PopConsonant()</li><li>if DataAccessed != &quot;No data&quot;:</li><li>Letters = Letters + DataAccessed</li><li>Flag = True</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark showing input in order vowel, cons, cons, vowel, vowel. Output is then utxoe  1
+
+  e.g.
+
+ 2023  Page 16 of 34
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked42/page-06.jpg" alt="Paper page 6 for Q2"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header with parameter</li>
+<li>Correct loop</li>
+<li>Modulus calculation</li>
+<li>Return of correct value at correct place</li>
+<li>Remainder of function correct</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function IterativeCalculate(Number As Integer)
+                      Dim total As Integer = 0
+                      Dim ToFind As Integer = Number
+                      While Number &lt;&gt; 0
+                         If ToFind Mod Number = 0 Then
+                             total = total + Number
+                         End If
+                         Number = Number - 1
+                      End While
+                      Return total
+                   End Function
+
+ 2023                                                       Page 17 of 34
+
+9618/42                                      Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header with parameter</li><li>Correct loop</li><li>Modulus calculation</li><li>Return of correct value at correct place</li><li>Remainder of function correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Total = 0</li>
+<li>ToFind = Number</li>
+<li>while Number != 0:</li>
+<li>if ToFind % Number == 0:</li>
+<li>Total = Total + Number</li>
+<li>Number = Number - 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def IterativeCalculate(Number):
+                  Total = 0
+                  ToFind = Number
+                  while Number != 0:
+                     if ToFind % Number == 0:
+                         Total = Total + Number
+                     Number = Number - 1
+                  return Total</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Total = 0</li><li>ToFind = Number</li><li>while Number != 0:</li><li>if ToFind % Number == 0:</li><li>Total = Total + Number</li><li>Number = Number - 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling IterativeCalculate(10)</li>
+<li>Outputting return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+
+                  Console.WriteLine(IterativeCalculate(10))
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(IterativeCalculate(10))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling IterativeCalculate(10)</li><li>Outputting return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot showing 18  1
+
+ 2023  Page 18 of 34
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Number = 0 THEN</li>
+<li>IF ToFind MODULUS Number = 0 THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Number = 0 THEN</li><li>IF ToFind MODULUS Number = 0 THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If Number = 0 Then</li>
+<li>If ToFind Mod Number = 0 Then</li>
+<li>if Number == 0:</li>
+<li>if ToFind % Number == 0:</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function RecursiveValue(Number As Integer, ToFind As Integer)
+                     If Number = 0 Then
+                        Return 0
+                     Else
+                        If ToFind Mod Number = 0 Then
+                            Return Number + RecursiveValue(Number - 1, ToFind)
+                        Else
+                            Return RecursiveValue(Number - 1, ToFind)
+                        End If
+                     End If
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def RecursiveValue(Number, ToFind):
+                  if Number == 0:
+                     return 0
+                  else:
+                     if ToFind % Number == 0:
+                         return Number + RecursiveValue(Number - 1, ToFind)
+                     else:
+                         return RecursiveValue(Number - 1, ToFind)
+
+ 2023                                               Page 20 of 34
+
+9618/42                                      Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If Number = 0 Then</li><li>If ToFind Mod Number = 0 Then</li><li>if Number == 0:</li><li>if ToFind % Number == 0:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for calling RecursiveValue(50,50)and outputting return value  1
+
+  Example program code:
+
+  VB.NET
+
+  Console.WriteLine(RecursiveValue(50,50))
+
+  Python
+
+  print(RecursiveValue(50,50))</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(RecursiveValue(50,50))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(RecursiveValue(50,50))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot showing 93  1
+
+ 2023  Page 21 of 34
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked42/page-10.jpg" alt="Paper page 10 for Q3"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class declaration</li>
+<li>Four attributes with correct data types</li>
+<li>Constructor header</li>
+<li>… taking 4 parameters</li>
+<li>Setting attributes to parameter values</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Character
+                  Private CharacterName As String
+                  Private DateOfBirth As Date
+                  Private Intelligence As Single
+                  Private Speed As Integer
+
+                   Sub New(CName, DBirth, Intell, SpeedP)
+                      CharacterName = CName
+                      DateOfBirth = DBirth
+
+ 2023                                                       Page 22 of 34
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class declaration</li><li>Four attributes with correct data types</li><li>Constructor header</li><li>… taking 4 parameters</li><li>Setting attributes to parameter values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Intelligence = Intell</li>
+<li>Speed = SpeedP</li>
+<li>self.__CharacterName = CName</li>
+<li>self.__DateOfBirth = DBirth</li>
+<li>self.__Intelligence = Intell</li>
+<li>self.__Speed = SpeedP</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Character:
+                  #self.__CharacterName string
+                  #self.__DateOfBirth date
+                  #self.__Intelligence real
+                  #self.__Speed integer
+
+                  def __init__(self, CName, DBirth, Intell, SpeedP):
+                     self.__CharacterName = CName
+                     self.__DateOfBirth = DBirth
+                     self.__Intelligence = Intell
+                     self.__Speed = SpeedP
+
+ 2023                                               Page 23 of 34
+
+9618/42                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Intelligence = Intell</li><li>Speed = SpeedP</li><li>self.__CharacterName = CName</li><li>self.__DateOfBirth = DBirth</li><li>self.__Intelligence = Intell</li><li>self.__Speed = SpeedP</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get header with no parameter …</li>
+<li>… returning attribute</li>
+<li>Second correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetIntelligence()
+                     Return Intelligence
+                  End Function
+
+                  Function GetName()
+                     Return CharacterName
+                  End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetIntelligence(self):
+                     return self.__Intelligence
+
+                  def GetName(self):
+                     return self.__CharacterName
+
+ 2023                                                    Page 24 of 34
+
+9618/42                                      Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get header with no parameter …</li><li>… returning attribute</li><li>Second correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Set header with 1 parameter …</li>
+<li>… assigns parameter to attribute</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SetIntelligence(NewValue)
+                     Intelligence = NewValue
+                  End Sub+</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetIntelligence(self, NewValue):
+                     self.__Intelligence = NewValue
+
+ 2023                                                     Page 25 of 34
+
+9618/42                                         Cambridge International AS &amp; A Level – Mark Scheme                       October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Set header with 1 parameter …</li><li>… assigns parameter to attribute</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Intelligence = Intelligence * 1.1</li>
+<li>self.__Intelligence = self.__Intelligence * 1.1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overridable Sub Learn()
+                      Intelligence = Intelligence * 1.1
+                   End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Learn(self):
+                      self.__Intelligence = self.__Intelligence * 1.1
+
+ 2023                                                           Page 26 of 34
+
+9618/42                                       Cambridge International AS &amp; A Level – Mark Scheme                 October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Intelligence = Intelligence * 1.1</li><li>self.__Intelligence = self.__Intelligence * 1.1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(v) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method (function) header (and end where appropriate) no parameter, returning a calculated age</li>
+<li>Extracting attribute year of birth from date and subtracting from 2023</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReturnAge()
+                  Return DateDiff(DateInterval.Year, DateOfBirth, #01/01/2023#)
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReturnAge(self):
+                      return 2023 - self.__DateOfBirth.year
+
+ 2023                                                       Page 27 of 34
+
+9618/42                                    Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method (function) header (and end where appropriate) no parameter, returning a calculated age</li><li>Extracting attribute year of birth from date and subtracting from 2023</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating new instance of Character with identifier FirstCharacter …</li>
+<li>… sending correct values as parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                  Dim FirstCharacter As Character
+                  FirstCharacter = New Character(&quot;Royal&quot;, #1/1/2019#, 70, 30)
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstCharacter = Character(&quot;Royal&quot;, datetime.datetime(2019, 1, 1), 70, 30)
+
+ 2023                                                   Page 28 of 34
+
+9618/42                                         Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating new instance of Character with identifier FirstCharacter …</li><li>… sending correct values as parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Learn() for FirstCharacter</li>
+<li>Calling ReturnAge() and outputting return value</li>
+<li>Outputting name and intelligence using gets with suitable message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>FirstCharacter.Learn()
+                       Console.WriteLine(FirstCharacter.GetName() &amp; &quot; is &quot; &amp; FirstCharacter.ReturnAge() &amp;
+               &quot; years old and has intelligence &quot; &amp; FirstCharacter.GetIntelligence())</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstCharacter.Learn()
+               print(FirstCharacter.GetName(), &quot;is&quot;, FirstCharacter.ReturnAge(), &quot;years old and has
+               intelligence&quot; , FirstCharacter.GetIntelligence())
+
+   3(b(iii)    One mark for screenshot with Royal, 4 years, 77 intelligence e.g.                                        1
+
+ 2023                                                          Page 29 of 34
+
+9618/42                                       Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Learn() for FirstCharacter</li><li>Calling ReturnAge() and outputting return value</li><li>Outputting name and intelligence using gets with suitable message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header inheriting from Character</li>
+<li>Declaring Element as string</li>
+<li>Constructor header taking 5 parameters …</li>
+<li>… calling parent constructor with the 4 parameters</li>
+<li>… assigning parameter to Element</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class MagicCharacter
+                      Inherits Character
+                      Private Element As String
+                      Sub New(ElementP, CName, DBirth, Intell, SpeedP)
+                         MyBase.New(CName, DBirth, Intell, SpeedP)
+                         Element = ElementP
+                      End Sub
+
+                   End Class
+
+ 2023                                                          Page 30 of 34
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header inheriting from Character</li><li>Declaring Element as string</li><li>Constructor header taking 5 parameters …</li><li>… calling parent constructor with the 4 parameters</li><li>… assigning parameter to Element</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.__Element = ElementP</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class MagicCharacter(Character):
+                  #self.__Element String
+
+                  def __init__(self, ElementP, CName, DBirth, Intell, SpeedP):
+                     super().__init__(CName, DBirth, Intell, SpeedP)
+                     self.__Element = ElementP
+
+ 2023                                               Page 31 of 34
+
+9618/42                                        Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.__Element = ElementP</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header overriding parent method but no parameters</li>
+<li>Checking element value …</li>
+<li>… correct calculations with attribute intelligence and storing</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overrides Sub Learn()
+                      If Element = &quot;fire&quot; Or Element = &quot;water&quot; Then
+                         SetIntelligence(GetIntelligence() * 1.2)
+                      ElseIf Element = &quot;earth&quot; Then
+                         SetIntelligence(GetIntelligence() * 1.3)
+                      Else
+                         SetIntelligence(GetIntelligence() * 1.1)
+                      End If
+
+                   End Sub
+
+ 2023                                                         Page 32 of 34
+
+9618/42                                    Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header overriding parent method but no parameters</li><li>Checking element value …</li><li>… correct calculations with attribute intelligence and storing</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if(self.__Element == &quot;fire&quot; or self.__Element == &quot;water&quot;):</li>
+<li>elif self.__Element == &quot;earth&quot;:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Learn(self):
+                     if(self.__Element == &quot;fire&quot; or self.__Element == &quot;water&quot;):
+                        super().SetIntelligence(super().GetIntelligence() * 1.2)
+                     elif self.__Element == &quot;earth&quot;:
+                        super().SetIntelligence(super().GetIntelligence() * 1.3)
+                     else:
+                        super().SetIntelligence(super().GetIntelligence() * 1.1)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if(self.__Element == &quot;fire&quot; or self.__Element == &quot;water&quot;):</li><li>elif self.__Element == &quot;earth&quot;:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring MagicCharacter with identifier FirstMagic …</li>
+<li>… with correct parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim FirstMagic As MagicCharacter
+               FirstMagic = New MagicCharacter(&quot;fire&quot;, &quot;Light&quot;, #3/3/2018#, 75, 22)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstMagic = MagicCharacter(&quot;fire&quot;, &quot;Light&quot;, datetime.datetime(2018, 3, 3), 75, 22)
+
+ 2023                                                   Page 33 of 34
+
+9618/42                                       Cambridge International AS &amp; A Level – Mark Scheme                       October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring MagicCharacter with identifier FirstMagic …</li><li>… with correct parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for calling Learn() for FirstMagic and outputting all required data in appropriate message using gets.  1
+
+  Example program code:
+
+  VB.NET
+
+  FirstMagic.Learn()
+  Console.WriteLine(FirstMagic.GetName() &amp; &quot; is &quot; &amp; FirstMagic.ReturnAge() &amp; &quot; years old and
+  has intelligence &quot; &amp; FirstMagic.GetIntelligence())
+
+  Python
+
+  FirstMagic.Learn()
+  print(FirstMagic.GetName(), &quot;is&quot;, FirstMagic.ReturnAge(), &quot;years old and has intelligence&quot;,
+  FirstMagic.GetIntelligence())</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>FirstMagic.Learn()
+               Console.WriteLine(FirstMagic.GetName() &amp; &quot; is &quot; &amp; FirstMagic.ReturnAge() &amp; &quot; years old and
+               has intelligence &quot; &amp; FirstMagic.GetIntelligence())</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstMagic.Learn()
+               print(FirstMagic.GetName(), &quot;is&quot;, FirstMagic.ReturnAge(), &quot;years old and has intelligence&quot;,
+               FirstMagic.GetIntelligence())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot e.g.  1
+
+ 2023  Page 34 of 34</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

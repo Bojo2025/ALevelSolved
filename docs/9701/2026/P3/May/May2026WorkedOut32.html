@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9701/32 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9701/32 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Records thermometer readings to .0 or .5 ºC                                                                    1 R if all .0 or all .5</li>
+<li>[M2]  1.0              2.0     2.5     3.0     3.5</li>
+<li>[M3]  0.5              1.0     1.5     2.0     2.5</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Records thermometer readings to .0 or .5 ºC                                                                    1 R if all .0 or all .5</li><li>[M2]  1.0              2.0     2.5     3.0     3.5</li><li>[M3]  0.5              1.0     1.5     2.0     2.5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Temperature on y-axis and time on x-axis                                                              1 A temp., T (for temperature axis name)</li>
+<li>[M2] Linear scales based on 1, 2 or 5 per large square                                                     1 A scales based on 4, 10, 20 etc. per large square</li>
+<li>[M3] All recorded points plotted correctly to within half a small                                          1 R if scale is non-linear in the region of plotting, but I</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Temperature on y-axis and time on x-axis                                                              1 A temp., T (for temperature axis name)</li><li>[M2] Linear scales based on 1, 2 or 5 per large square                                                     1 A scales based on 4, 10, 20 etc. per large square</li><li>[M3] All recorded points plotted correctly to within half a small                                          1 R if scale is non-linear in the region of plotting, but I</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M4] Two lines of best fit drawn                                                                             1 A (maximum of) 2 points to be circled or labelled as</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M4] Two lines of best fit drawn                                                                             1 A (maximum of) 2 points to be circled or labelled as</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>t = 2 min</li>
+<li>R if right hand line lower than Tmax where it crosses t =</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>t = 2 min</li><li>R if right hand line lower than Tmax where it crosses t =</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>(appearance of filtrate):  colourless (solution)  1 I clear, transparent etc. for colourless.
+  A ‘no colour’.
+  and
+
+  (appearance of residue):  pink-brown (solid/powder)  A pink / (dark) brown / black / black-grey / dark-grey.
+  R red.
+  R grey (alone).
+
+  University Press &amp; Assessment 2026  Page 10 of 17
+
+Trace ID: PC-76BECDC1FD
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9701/32 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9701/32 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9701/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Selects sodium hydroxide (aqueous)                                                                     1 A selects (aqueous) ammonia only</li>
+<li>[M1] and M2 ✓✓</li>
+<li>[M2] 1 I additional reagents and observations</li>
+<li>[M3] M is Zn / zinc                                                                                         1 M3 is dependent on correct observations in M2</li>
+<li>[M3] from incorrect tests / observations</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Selects sodium hydroxide (aqueous)                                                                     1 A selects (aqueous) ammonia only</li><li>[M1] and M2 ✓✓</li><li>[M2] 1 I additional reagents and observations</li><li>[M3] M is Zn / zinc                                                                                         1 M3 is dependent on correct observations in M2</li><li>[M3] from incorrect tests / observations</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M2] +(aq) + Cu(s)                                                                           metal selected is more reactive than Cu (even if not in</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M2] +(aq) + Cu(s)                                                                           metal selected is more reactive than Cu (even if not in</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>energy change = 25  4.18  T (J)                                                                          ECF use of incorrect T from 1(b)(ii)</li>
+<li>answer given to 2–4 significant figures                                                                     R c = 4.2 used in working</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>energy change = 25  4.18  T (J)                                                                          ECF use of incorrect T from 1(b)(ii)</li><li>answer given to 2–4 significant figures                                                                     R c = 4.2 used in working</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] shows use of data to calculate                                                                         1 M1 answer, if given, must be to 2 – 4 sf</li>
+<li>[M2] working to show enthalpy change                                                                        1 ECF M2 from M1 (e.g. use of 0.95 as moles)</li>
+<li>[M1] ) (kJ mol−1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] shows use of data to calculate                                                                         1 M1 answer, if given, must be to 2 – 4 sf</li><li>[M2] working to show enthalpy change                                                                        1 ECF M2 from M1 (e.g. use of 0.95 as moles)</li><li>[M1] ) (kJ mol−1)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] Unambiguous headings and correct units to cover 7 entries                                              1 A consistent omission of lid</li>
+<li>(mass of) crucible and lid                                                                                A two tables (balance readings and calculations)</li>
+<li>(mass of) crucible, lid and FB3 / hydrated salt / CuSO4•xH2O</li>
+<li>(mass of) crucible, lid and contents / anhydrous salt / CuSO4                                                A residue for anhydrous salt</li>
+<li>(mass of) crucible, lid and contents / etc after reheating                                                   A dehydrated for anhydrous</li>
+<li>(mass of) FB3 / hydrated salt / CuSO4•xH2O                                                                   R FB3 in headings after heating</li>
+<li>(mass of) residue / anhydrous salt / CuSO4                                                                   Third and fourth reading must be distinguished. e.g</li>
+<li>(mass) loss / water lost / water                                                                             ‘contents’ then ‘residue’ as implied in the method</li>
+<li>[M2] All balance readings given consistently either to 2 or to 3                                            1 A 4 dp</li>
+<li>[M3] Correct subtractions to determine mass of FB3 used and                                                      A values seen next to appropriate line in method</li>
+<li>[M4] Award if candidate’s mass ratio is within 10% of supervisor                                            1 IF fewer than 50% of candidate score M4, consider</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Unambiguous headings and correct units to cover 7 entries                                              1 A consistent omission of lid</li><li>(mass of) crucible and lid                                                                                A two tables (balance readings and calculations)</li><li>(mass of) crucible, lid and FB3 / hydrated salt / CuSO4•xH2O</li><li>(mass of) crucible, lid and contents / anhydrous salt / CuSO4                                                A residue for anhydrous salt</li><li>(mass of) crucible, lid and contents / etc after reheating                                                   A dehydrated for anhydrous</li><li>(mass of) FB3 / hydrated salt / CuSO4•xH2O                                                                   R FB3 in headings after heating</li><li>(mass of) residue / anhydrous salt / CuSO4                                                                   Third and fourth reading must be distinguished. e.g</li><li>(mass) loss / water lost / water                                                                             ‘contents’ then ‘residue’ as implied in the method</li><li>[M2] All balance readings given consistently either to 2 or to 3                                            1 A 4 dp</li><li>[M3] Correct subtractions to determine mass of FB3 used and                                                      A values seen next to appropriate line in method</li><li>[M4] Award if candidate’s mass ratio is within 10% of supervisor                                            1 IF fewer than 50% of candidate score M4, consider</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correctly calculates  1 A correct string of Ars for 159.6.
+  amount of CuSO4 = mass of residue / 159.6 (mol)  A use of their value from the table in (a) or a correct
+  and  restart value.
+  answer given to 2–4 sf  R incorrect Mr used in working.
+
+  Do not penalise sf more than once in 2(b).
+  Do not penalise sf if already penalised in 1(d).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] correctly calculates                                                                                   1 ECF use of mass of residue in (b)(ii) IF mass of water</li>
+<li>[M2] shows use of                                                                                           1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] correctly calculates                                                                                   1 ECF use of mass of residue in (b)(ii) IF mass of water</li><li>[M2] shows use of                                                                                           1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>2* = 1 mark                   5 * available, round down</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>2* = 1 mark                   5 * available, round down</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>copper oxide / CuO (formed)  1 R burns / combusts / oxidises.
+  or
+  sulfate / CuSO4 decomposes / (anhydrous solid / residue)
+  undergoes further decomposition
+
+  University Press &amp; Assessment 2026  Page 13 of 17
+
+Trace ID: PC-76BECDC1FD
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9701/32 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9701/32 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9701/32  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Mass loss increases therefore ‘x’ increases  1 A ‘it’ for ‘x’.
+  A mass of anhydrous salt will be smaller therefore ‘x’
+  increases.
+  A change would be (very) small so wouldn’t make
+  difference to overall integer value for ‘x’.
+  I calculated moles of water will be greater.
+  R more water is lost/removed.
+
+  Guidance
+
+  FB 4 is a mixture of CuCO3 and FeSO4•7H2O</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>* = 1 mark, maximum 3 marks                     8 * available − round down</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>* = 1 mark, maximum 3 marks                     8 * available − round down</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>* = 1 mark, maximum 2 marks                    5 * available, round down</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>* = 1 mark, maximum 2 marks                    5 * available, round down</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <ol>
+<li>* = 1 mark, maximum 5 marks</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>* = 1 mark, maximum 5 marks</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>green (solid) *  3
+  powder and crystals *
+
+  (on gentle heating)
+  (solid/powder) turns black *
+  condensation *
+
+  (stronger heating)
+  (black) solid jumps around *
+  gas turns (damp blue) litmus red *  A UI paper in place of litmus.
+  white specks / solid turns grey *  A gas forms white ppt * with limewater * but record the
+  white fumes *  mark in 3(b) – see below.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>[M1] (filtrate / FB6)                                                                                       3</li>
+<li>[M2] + M3 (residue + acid)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] (filtrate / FB6)                                                                                       3</li><li>[M2] + M3 (residue + acid)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 5</p>
+<div class='ms-raw'>5
+  test  observations
+  A dark green / dark grey / black (for green ppt).
+  Test 1  green ppt *
+  I grey (alone).
+  + NaOH  (which is insoluble in excess)
+  R grey-green ppt .
+  and warm  (damp red) litmus paper unchanged /
+  stays red *  A orange-brown / rust (for brown ppt).
+  A ppt turns brown * in either of top two boxes.
+  ppt turns brown / red-brown (at surface) *
+
+  + Al  effervescence *
+  gas ‘pops’ with a lighted splint *  R test gas with litmus goes red or blue.
+
+  Test 2  green ppt *  R grey-green ppt.
+  + NH3  insoluble in excess *  A (green) ppt darkens (for ppt turns brown).
+  ppt turns brown / red-brown (at surface) *  A orange-brown / rust (for brown ppt).
+
+  Test 3  white ppt *  R off-white / cream etc.
+  + Ba(NO3)2 (aq)  R use of additional reagent, e.g. HCl  I insoluble in excess (in Test 3).
+  R soluble in excess (in Test 3).
+  Test 4  white ppt / ppt insoluble / no change *
+  add hydrochloric  A Test 4 = addition of BaCl2 / Ba(NO3)2 and HCl / HNO3
+  or nitric acid to  Observation dependent on correct test  * then observation = white ppt (forms) *.
+  ppt from Test 3  R incorrect formula / H+ for reagents in Test 4.
+  *  R ‘no observation’ for ‘no change’.
+  I KMnO4 test (and result).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>FB 5 = copper(II) and carbonate</li>
+<li>Any 2 or 3 correct = 1 mark                                                                                        FB 6 = iron(II) and sulfate</li>
+<li>All 4 correct = 2 marks</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>FB 5 = copper(II) and carbonate</li><li>Any 2 or 3 correct = 1 mark                                                                                        FB 6 = iron(II) and sulfate</li><li>All 4 correct = 2 marks</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

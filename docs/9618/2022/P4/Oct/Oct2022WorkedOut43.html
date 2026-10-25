@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · October/November 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · October/November 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(global) 1D (Integer) array DataArray</li>
+<li>100 elements</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim DataArray(99) As Integer</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataArray = [0 for I in range (100)]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(global) 1D (Integer) array DataArray</li><li>100 elements</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure ReadFile() header (and end where appropriate)</li>
+<li>opening file IntegerData.txt (for read)</li>
+<li>looping through the 100 elements // looping to end of file</li>
+<li>reading each (and all) value from file and storing in array</li>
+<li>closing file (in appropriate place)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure ReadFile() header (and end where appropriate)</li><li>opening file IntegerData.txt (for read)</li><li>looping through the 100 elements // looping to end of file</li><li>reading each (and all) value from file and storing in array</li><li>closing file (in appropriate place)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>Exception Handling (for opening the file, or for reading values from the</li>
+<li>…with appropriate catch and output messages</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadFile():
+                 global DataArray
+
+                 try:
+                   TextFile = &quot;IntegerData.txt&quot;
+                   File = open(TextFile, &#x27;r&#x27;)
+                   for X in range(0, 100):
+                       DataArray[X] = File.readline()
+                       DataArray[X].rstrip(&#x27;\n&#x27;)
+                       DataArray[X] = int(DataArray[X])
+                   File.close()
+                 except IOError:
+                   print(&quot;Count not find file&quot;)
+
+ 2022                                   Page 3 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme    October/November
+                                             PUBLISHED                                     2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Exception Handling (for opening the file, or for reading values from the</li><li>…with appropriate catch and output messages</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim TextFile As String = &quot;IntegerData.txt&quot;</li>
+<li>For X = 0 To 99</li>
+<li>DataArray(X) = FileReader.ReadLine()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadFile()
+                 try
+                    Dim TextFile As String = &quot;IntegerData.txt&quot;
+                    Dim FileReader As New
+               System.IO.StreamReader(TextFile)
+                    For X = 0 To 99
+                      DataArray(X) = FileReader.ReadLine()
+                    Next
+                      FileReader.Close()
+                  Catch ex As Exception
+                    Console.WriteLine(&quot;Invalid file&quot;)
+                 End Try
+               End Sub</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim TextFile As String = &quot;IntegerData.txt&quot;</li><li>For X = 0 To 99</li><li>DataArray(X) = FileReader.ReadLine()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function FindValues() (and end where appropriate) and input of data</li>
+<li>…validation/casting(/storing as) of input as integer</li>
+<li>…validation of input between 1 and 100 (inclusive)</li>
+<li>looping through all 100 array elements…</li>
+<li>…comparing input to each array element…</li>
+<li>…initialising counter to 0 and then adding 1 each time it is found…</li>
+<li>Returning the total</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function FindValues() (and end where appropriate) and input of data</li><li>…validation/casting(/storing as) of input as integer</li><li>…validation of input between 1 and 100 (inclusive)</li><li>looping through all 100 array elements…</li><li>…comparing input to each array element…</li><li>…initialising counter to 0 and then adding 1 each time it is found…</li><li>Returning the total</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataToFind = -1</li>
+<li>DataToFind = int(input(&quot;Enter a number between 1</li>
+<li>Total = 0</li>
+<li>if DataArray[X] == DataToFind:</li>
+<li>Total = Total + 1</li>
+<li>DataToFind = Console.ReadLine()</li>
+<li>Loop Until (DataToFind &gt;= 1 And DataToFind &lt;= 100)</li>
+<li>Dim Total As Integer = 0</li>
+<li>For X = 0 To 99</li>
+<li>If DataArray(X) = DataToFind Then</li>
+<li>Total = Total + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function FindValues()
+                 Dim DataToFind As Integer
+                 Do
+                    Console.WriteLine(&quot;Enter a number between 1 and 100&quot;)
+                    DataToFind = Console.ReadLine()
+                 Loop Until (DataToFind &gt;= 1 And DataToFind &lt;= 100)
+                 Dim Total As Integer = 0
+                    For X = 0 To 99
+                      If DataArray(X) = DataToFind Then
+                         Total = Total + 1
+                      End If
+                    Next
+                 Return Total
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def FindValues():
+                 global DataArray
+
+                   DataToFind = -1
+
+                   while(DataToFind &lt; 1 or DataToFind &gt; 100):
+                       DataToFind = int(input(&quot;Enter a number between 1
+               and 100&quot;))
+                   Total = 0
+                   for X in range(0, 99):
+                       if DataArray[X] == DataToFind:
+                           Total = Total + 1
+                   return Total</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataToFind = -1</li><li>DataToFind = int(input(&quot;Enter a number between 1</li><li>Total = 0</li><li>if DataArray[X] == DataToFind:</li><li>Total = Total + 1</li><li>DataToFind = Console.ReadLine()</li><li>Loop Until (DataToFind &gt;= 1 And DataToFind &lt;= 100)</li><li>Dim Total As Integer = 0</li><li>For X = 0 To 99</li><li>If DataArray(X) = DataToFind Then</li><li>Total = Total + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadFile() and then FindValues() (in the main program)</li>
+<li>storing/using return value from FindValues() …</li>
+<li>…outputting return value with appropriate message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 ReadFile()
+                 Dim ReturnValue As Integer = FindValues()
+                 Console.WriteLine(&quot;The number was found &quot; &amp; ReturnValue
+               &amp; &quot; times&quot;)
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ReadFile()
+               print(&quot;The number appears &quot; + str(FindValues()) + &quot;
+               times&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadFile() and then FindValues() (in the main program)</li><li>storing/using return value from FindValues() …</li><li>…outputting return value with appropriate message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure declaration (and end where appropriate) and</li>
+<li>correct outer loop …</li>
+<li>… correct inner loop …</li>
+<li>… swapping all elements if in incorrect order</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def BubbleSort():
+                 global DataArray
+
+                   N = 100
+                   for I in range(N-1):
+                       for J in range(0, N-I-1):
+                            if DataArray[J] &gt; DataArray[J+1]:
+                                DataArray[J], DataArray[J+1] =
+               DataArray[J+1], DataArray[J]
+               #main
+               ReadFile()
+               print(&quot;The number appears &quot; + str(FindValues()) + &quot;
+               times&quot;)
+               BubbleSort()
+               print(DataArray)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure declaration (and end where appropriate) and</li><li>correct outer loop …</li><li>… correct inner loop …</li><li>… swapping all elements if in incorrect order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Outer As Integer = 100 - 1</li>
+<li>Inner = 0</li>
+<li>Swap = False</li>
+<li>Temp = DataArray(Inner)</li>
+<li>DataArray(Inner) = DataArray(Inner + 1)</li>
+<li>DataArray(Inner + 1) = Temp</li>
+<li>Swap = True</li>
+<li>Inner = Inner + 1</li>
+<li>Loop Until Inner = Outer</li>
+<li>Outer = Outer - 1</li>
+<li>Loop Until Swap = False Or Outer = 0</li>
+<li>For X = 0 To 99</li>
+<li>Dim ReturnValue As Integer = FindValues()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Bubblesort()
+                 Dim Outer As Integer = 100 - 1
+                 Dim Swap As Boolean
+                 Dim Inner As Integer
+                 Dim Temp As Integer
+                 Do
+                  Inner = 0
+                  Swap = False
+                  Do
+                     If DataArray(Inner) &gt; DataArray(Inner + 1) Then
+                       Temp = DataArray(Inner)
+                       DataArray(Inner) = DataArray(Inner + 1)
+                       DataArray(Inner + 1) = Temp
+                       Swap = True
+                     End If
+                     Inner = Inner + 1
+                     Loop Until Inner = Outer
+                     Outer = Outer - 1
+                 Loop Until Swap = False Or Outer = 0
+                 For X = 0 To 99
+                    Console.WriteLine(DataArray(X))
+                 Next
+               End Sub
+               Sub Main()
+                    ReadFile()
+                    Dim ReturnValue As Integer = FindValues()
+                    Console.WriteLine(&quot;The number was found &quot; &amp;
+               ReturnValue &amp; &quot; times&quot;)
+                    Bubblesort()
+               End Sub</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Outer As Integer = 100 - 1</li><li>Inner = 0</li><li>Swap = False</li><li>Temp = DataArray(Inner)</li><li>DataArray(Inner) = DataArray(Inner + 1)</li><li>DataArray(Inner + 1) = Temp</li><li>Swap = True</li><li>Inner = Inner + 1</li><li>Loop Until Inner = Outer</li><li>Outer = Outer - 1</li><li>Loop Until Swap = False Or Outer = 0</li><li>For X = 0 To 99</li><li>Dim ReturnValue As Integer = FindValues()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Root = -1 THEN</li>
+<li>IF ArrayNodes[Root,1] = ValueToFind THEN</li>
+<li>IF ArrayNodes[Root, 1] = -1 THEN</li>
+<li>if Root == -1:</li>
+<li>elif ArrayNodes[Root][1] == ValueToFind:</li>
+<li>elif ArrayNodes[Root][1] == -1:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def SearchValue(Root, ValueToFind):
+                 global ArrayNodes
+                 if Root == -1:
+                  return -1
+                 elif ArrayNodes[Root][1] == ValueToFind:
+                   return Root
+                 elif ArrayNodes[Root][1] == -1:
+                   return -1
+                 if(ArrayNodes[Root][1] &gt; ValueToFind):
+                   return SearchValue(ArrayNodes[Root][0], ValueToFind)
+                 if(ArrayNodes[Root][1] &lt; ValueToFind):
+                   return SearchValue(ArrayNodes[Root][2], ValueToFind)
+
+ 2022                                  Page 19 of 23
+
+9618/43               Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                          PUBLISHED                                    2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Root = -1 THEN</li><li>IF ArrayNodes[Root,1] = ValueToFind THEN</li><li>IF ArrayNodes[Root, 1] = -1 THEN</li><li>if Root == -1:</li><li>elif ArrayNodes[Root][1] == ValueToFind:</li><li>elif ArrayNodes[Root][1] == -1:</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>class Card declaration (and end where appropriate)</li>
+<li>Private attributes declared Number as integer and Colour as string</li>
+<li>constructor header (and end where appropriate)…</li>
+<li>…taking 2 parameters</li>
+<li>assigning parameters to attributes</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Card:
+                   #Number as integer
+                   #Colour as string
+                   def __init__(self, Number1, Colour1):
+                       self.__Number = Number1;
+                       self.__Colour = Colour1;
+
+ 2022                                  Page 8 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme       October/November
+                                             PUBLISHED                                        2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>class Card declaration (and end where appropriate)</li><li>Private attributes declared Number as integer and Colour as string</li><li>constructor header (and end where appropriate)…</li><li>…taking 2 parameters</li><li>assigning parameters to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Number = Number1</li>
+<li>Colour = Colourp</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Card
+                 Private Number As Integer
+                 Private Colour As String
+                 Sub New(Number1, Colourp)
+                   Number = Number1
+                   Colour = Colourp
+                 End Sub
+               End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Number = Number1</li><li>Colour = Colourp</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method as function (and end where appropriate) with no</li>
+<li>…returning the value</li>
+<li>2nd correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetNumber()
+                 Return Number
+               End Function
+
+               Function GetColour()
+                 Return Colour
+               End Function
+
+ 2022                                  Page 9 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                             PUBLISHED                                    2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetNumber(self):
+                   return self.__Number
+
+               def GetColour(self):
+                   return self.__Colour</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method as function (and end where appropriate) with no</li><li>…returning the value</li><li>2nd correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>one card initialised as type Card …</li>
+<li>… all 15 cards initialised correctly as type Card</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>OneRed = Card(1, &quot;red&quot;)
+               TwoRed = Card(2, &quot;red&quot;)
+               ThreeRed = Card(3, &quot;red&quot;)
+               FourRed = Card(4, &quot;red&quot;)
+               FiveRed = Card(5, &quot;red&quot;)
+
+               OneBlue = Card(1, &quot;blue&quot;)
+               TwoBlue = Card(2, &quot;blue&quot;)
+               ThreeBlue = Card(3, &quot;blue&quot;)
+               FourBlue = Card(4, &quot;blue&quot;)
+               FiveBlue = Card(5, &quot;blue&quot;)
+
+               OneYellow = Card(1, &quot;yellow&quot;)
+               TwoYellow = Card(2, &quot;yellow&quot;)
+               ThreeYellow = Card(3, &quot;yellow&quot;)
+               FourYellow = Card(4, &quot;yellow&quot;)
+               FiveYellow = Card(5, &quot;yellow&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>one card initialised as type Card …</li><li>… all 15 cards initialised correctly as type Card</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>VB.NET
+  Dim OneRed As New Card (1, &quot;red&quot;)
+  Dim TwoRed As New Card(2, &quot;red&quot;)
+  Dim ThreeRed As New Card(3, &quot;red&quot;)
+  Dim FourRed As New Card(4, &quot;red&quot;)
+  Dim FiveRed As New Card(5, &quot;red&quot;)
+  Dim OneBlue As New Card(1, &quot;blue&quot;)
+  Dim TwoBlue As New Card(2, &quot;blue&quot;)
+  Dim ThreeBlue As New Card(3, &quot;blue&quot;)
+  Dim FourBlue As New Card(4, &quot;blue&quot;)
+  Dim FiveBlue As New Card(5, &quot;blue&quot;)
+  Dim OneYellow As New Card(1, &quot;yellow&quot;)
+  Dim TwoYellow As New Card(2, &quot;yellow&quot;)
+  Dim ThreeYellow As New Card(3, &quot;yellow&quot;)
+  Dim FourYellow As New Card(4, &quot;yellow&quot;)
+  Dim FiveYellow As New Card(5, &quot;yellow&quot;)</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim OneRed As New Card (1, &quot;red&quot;)
+               Dim TwoRed As New Card(2, &quot;red&quot;)
+               Dim ThreeRed As New Card(3, &quot;red&quot;)
+               Dim FourRed As New Card(4, &quot;red&quot;)
+               Dim FiveRed As New Card(5, &quot;red&quot;)
+               Dim OneBlue As New Card(1, &quot;blue&quot;)
+               Dim TwoBlue As New Card(2, &quot;blue&quot;)
+               Dim ThreeBlue As New Card(3, &quot;blue&quot;)
+               Dim FourBlue As New Card(4, &quot;blue&quot;)
+               Dim FiveBlue As New Card(5, &quot;blue&quot;)
+               Dim OneYellow As New Card(1, &quot;yellow&quot;)
+               Dim TwoYellow As New Card(2, &quot;yellow&quot;)
+               Dim ThreeYellow As New Card(3, &quot;yellow&quot;)
+               Dim FourYellow As New Card(4, &quot;yellow&quot;)
+               Dim FiveYellow As New Card(5, &quot;yellow&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>class Hand declaration (and end where appropriate)</li>
+<li>private attribute declarations; FirstCard as integer, NumberCards as</li>
+<li>private attribute array named Cards of type Card with 10 elements</li>
+<li>constructor with 5 Card objects as parameters</li>
+<li>assigning each Card parameter to the array (in constructor)</li>
+<li>initialising FirstCard to 0 and NumberCards to 5 (in constructor)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Hand:
+                   #Cards[10] as Card
+                   #FirstCard as integer
+                   #NumberCards as integer
+
+                   def __init__(self, Card1, Card2, Card3, Card4,
+               Card5):
+                       self.__Cards = []
+                       self.__Cards.append(Card1)
+                       self.__Cards.append(Card2)
+                       self.__Cards.append(Card3)
+                       self.__Cards.append(Card4)
+                       self.__Cards.append(Card5)
+                       self.__FirstCard = 0
+                       self.__NumberCards = 5
+
+ 2022                                 Page 11 of 23
+
+9618/43                 Cambridge International AS &amp; A Level – Mark Scheme     October/November
+                                            PUBLISHED                                      2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>class Hand declaration (and end where appropriate)</li><li>private attribute declarations; FirstCard as integer, NumberCards as</li><li>private attribute array named Cards of type Card with 10 elements</li><li>constructor with 5 Card objects as parameters</li><li>assigning each Card parameter to the array (in constructor)</li><li>initialising FirstCard to 0 and NumberCards to 5 (in constructor)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Cards(0) = Card1</li>
+<li>Cards(1) = Card2</li>
+<li>Cards(2) = Card3</li>
+<li>Cards(3) = Card4</li>
+<li>Cards(4) = Card5</li>
+<li>FirstCard = 0</li>
+<li>NumberCards = 5</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>class Hand
+                 Private Cards(9) As Card
+                 Private FirstCard As Integer
+                 Private NumberCards As Integer
+
+                 Sub New(Card1, Card2, Card3, Card4, Card5)
+                   Cards(0) = Card1
+                   Cards(1) = Card2
+                   Cards(2) = Card3
+                   Cards(3) = Card4
+                   Cards(4) = Card5
+                   FirstCard = 0
+                   NumberCards = 5
+                 End Sub
+               End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Cards(0) = Card1</li><li>Cards(1) = Card2</li><li>Cards(2) = Card3</li><li>Cards(3) = Card4</li><li>Cards(4) = Card5</li><li>FirstCard = 0</li><li>NumberCards = 5</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>function GetCard() header (and end where appropriate) taking (integer)</li>
+<li>returning the card at parameter index in array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetCard(Position)
+                 Return Cards(Position)
+               End Function
+
+ 2022                                 Page 12 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme           October/November
+                                             PUBLISHED                                            2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetCard(self, Position):
+                   return self.__Cards[Position]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>function GetCard() header (and end where appropriate) taking (integer)</li><li>returning the card at parameter index in array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>2 variables (player 1 and player 2) of type Hand</li>
+<li>using constructor and sending the correct variables as parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Player1 As New Hand(OneRed, TwoRed, ThreeRed,
+               FourRed, OneYellow)
+               Dim Player2 As New Hand(TwoYellow, ThreeYellow,
+               FourYellow, FiveYellow, OneBlue)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Player1 = Hand(OneRed, TwoRed, ThreeRed, FourRed,
+               OneYellow)
+               Player2 = Hand(TwoYellow, ThreeYellow, FourYellow,
+               FiveYellow, OneBlue)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>2 variables (player 1 and player 2) of type Hand</li><li>using constructor and sending the correct variables as parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>function CalculateValue() header (and end where appropriate)</li>
+<li>looping through all 5 Card objects in parameter array…</li>
+<li>… adding 5 to score for red, 10 to score for blue, 15 to score if yellow</li>
+<li>… adding each card number to score</li>
+<li>Using GetCard(), GetColour() and GetNumber() correctly</li>
+<li>Returning calculated score</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def CalculateValue(Player):
+                   Score = 0
+                   for Count in range(0, 4):
+                       CardGot = Player.GetCard(Count)
+                       Score = Score + CardGot.GetNumber()
+                       Colour = CardGot.GetColour()
+                       if Colour == &quot;red&quot;:
+                           Score = Score + 5
+                       elif Colour == &quot;blue&quot;:
+                           Score = Score + 10
+                       else:
+                           Score = Score + 15
+                   return Score
+
+ 2022                                    Page 13 of 23
+
+9618/43                 Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                            PUBLISHED                                    2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>function CalculateValue() header (and end where appropriate)</li><li>looping through all 5 Card objects in parameter array…</li><li>… adding 5 to score for red, 10 to score for blue, 15 to score if yellow</li><li>… adding each card number to score</li><li>Using GetCard(), GetColour() and GetNumber() correctly</li><li>Returning calculated score</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Score As Integer = 0</li>
+<li>For Count = 0 To 4</li>
+<li>CardGot = Player.GetCard(Count)</li>
+<li>Score = Score + CardGot.GetNumber()</li>
+<li>Colour = CardGot.GetColour()</li>
+<li>If Colour = &quot;red&quot; Then</li>
+<li>Score = Score + 5</li>
+<li>ElseIf Colour = &quot;blue&quot; Then</li>
+<li>Score = Score + 10</li>
+<li>Score = Score + 15</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function CalculateValue(Player As Hand)
+                 Dim Score As Integer = 0
+                 Dim Colour As String
+                 Dim CardGot As Card
+                 For Count = 0 To 4
+                   CardGot = Player.GetCard(Count)
+                   Score = Score + CardGot.GetNumber()
+                   Colour = CardGot.GetColour()
+                   If Colour = &quot;red&quot; Then
+                      Score = Score + 5
+                   ElseIf Colour = &quot;blue&quot; Then
+                      Score = Score + 10
+                   Else
+                      Score = Score + 15
+                   End If
+                 Next
+                 Return Score
+               End Function
+
+ 2022                                Page 14 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme       October/November
+                                             PUBLISHED                                        2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Score As Integer = 0</li><li>For Count = 0 To 4</li><li>CardGot = Player.GetCard(Count)</li><li>Score = Score + CardGot.GetNumber()</li><li>Colour = CardGot.GetColour()</li><li>If Colour = &quot;red&quot; Then</li><li>Score = Score + 5</li><li>ElseIf Colour = &quot;blue&quot; Then</li><li>Score = Score + 10</li><li>Score = Score + 15</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>One function call of CalculateValue( ) for each player …</li>
+<li>…sending the player&#x27;s hand as parameter</li>
+<li>Comparing return values and outputting the player with the highest</li>
+<li>… or if there was a draw in appropriate message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Player1score As Integer
+               Dim Player2score As Integer
+               Player1score = CalculateValue(Player1)
+               Player2score = CalculateValue(Player2)
+               If Player1score &gt; Player2score Then
+                 Console.WriteLine(&quot;Player 1 wins&quot;)
+               ElseIf Player1score &lt; Player2score Then
+                 Console.WriteLine(&quot;Player 2 wins&quot;)
+               Else
+                 Console.WriteLine(&quot;It&#x27;s a draw&quot;)
+               End If</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Player1score = CalculateValue(Player1)
+               Player2score = CalculateValue(Player2)
+               if Player1score &gt; Player2score:
+                   print(&quot;Player 1 wins&quot;)
+               elif Player1score &lt; Player2score:
+                   print(&quot;Player 2 wins&quot;)
+               else:
+                   print(&quot;It&#x27;s a draw&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>One function call of CalculateValue( ) for each player …</li><li>…sending the player&#x27;s hand as parameter</li><li>Comparing return values and outputting the player with the highest</li><li>… or if there was a draw in appropriate message</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-08.jpg" alt="Paper page 8 for Q3"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring (global) 2D array ArrayNodes</li>
+<li>looping through all 20  3 elements of array …</li>
+<li>…. storing −1 in each element</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim ArrayNodes(19, 2) As Integer
+               Sub main()
+                 For X = 0 To 19
+                   For Y = 0 To 2
+                      ArrayNodes(X, Y) = -1
+                   Next
+                 Next
+               End Sub
+
+ 2022                                  Page 16 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme        October/November
+                                             PUBLISHED                                         2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ArrayNodes = []
+               for x in range(0, 20):
+                   ArrayNodes.append([-1, -1, -1])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring (global) 2D array ArrayNodes</li><li>looping through all 20  3 elements of array …</li><li>…. storing −1 in each element</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>initialising each of the first 6 array elements correctly</li>
+<li>declaring and initialising FreeNode to 6 and RootPointer to 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>ArrayNodes = [[1,20,5],[2,15,-1],[-1,3,3],[-1,9,4],[-
+               1,10,-1],[-1,58,-1]]
+               FreeNodes = 6
+               RootPointer = 0</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>initialising each of the first 6 array elements correctly</li><li>declaring and initialising FreeNode to 6 and RootPointer to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ArrayNodes(0, 0) = 1</li>
+<li>ArrayNodes(0, 1) = 20</li>
+<li>ArrayNodes(0, 2) = 5</li>
+<li>ArrayNodes(1, 0) = 2</li>
+<li>ArrayNodes(1, 1) = 15</li>
+<li>ArrayNodes(1, 2) = -1</li>
+<li>ArrayNodes(2, 0) = -1</li>
+<li>ArrayNodes(2, 1) = 3</li>
+<li>ArrayNodes(2, 2) = 3</li>
+<li>ArrayNodes(3, 0) = -1</li>
+<li>ArrayNodes(3, 1) = 9</li>
+<li>ArrayNodes(3, 2) = 4</li>
+<li>ArrayNodes(4, 0) = -1</li>
+<li>ArrayNodes(4, 1) = 10</li>
+<li>ArrayNodes(4, 2) = -1</li>
+<li>ArrayNodes(5, 0) = -1</li>
+<li>ArrayNodes(5, 1) = 58</li>
+<li>ArrayNodes(5, 2) = -1</li>
+<li>Dim FreeNode As Integer = 6</li>
+<li>Dim RootPointer As Integer = 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>ArrayNodes(0, 0) = 1
+               ArrayNodes(0, 1) = 20
+               ArrayNodes(0, 2) = 5
+
+               ArrayNodes(1, 0) = 2
+               ArrayNodes(1, 1) = 15
+               ArrayNodes(1, 2) = -1
+
+               ArrayNodes(2, 0) = -1
+               ArrayNodes(2, 1) = 3
+               ArrayNodes(2, 2) = 3
+
+               ArrayNodes(3, 0) = -1
+               ArrayNodes(3, 1) = 9
+               ArrayNodes(3, 2) = 4
+
+               ArrayNodes(4, 0) = -1
+               ArrayNodes(4, 1) = 10
+               ArrayNodes(4, 2) = -1
+
+               ArrayNodes(5, 0) = -1
+               ArrayNodes(5, 1) = 58
+               ArrayNodes(5, 2) = -1
+
+               Dim FreeNode As Integer = 6
+               Dim RootPointer As Integer = 0
+
+ 2022                              Page 18 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                             PUBLISHED                                    2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ArrayNodes(0, 0) = 1</li><li>ArrayNodes(0, 1) = 20</li><li>ArrayNodes(0, 2) = 5</li><li>ArrayNodes(1, 0) = 2</li><li>ArrayNodes(1, 1) = 15</li><li>ArrayNodes(1, 2) = -1</li><li>ArrayNodes(2, 0) = -1</li><li>ArrayNodes(2, 1) = 3</li><li>ArrayNodes(2, 2) = 3</li><li>ArrayNodes(3, 0) = -1</li><li>ArrayNodes(3, 1) = 9</li><li>ArrayNodes(3, 2) = 4</li><li>ArrayNodes(4, 0) = -1</li><li>ArrayNodes(4, 1) = 10</li><li>ArrayNodes(4, 2) = -1</li><li>ArrayNodes(5, 0) = -1</li><li>ArrayNodes(5, 1) = 58</li><li>ArrayNodes(5, 2) = -1</li><li>Dim FreeNode As Integer = 6</li><li>Dim RootPointer As Integer = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each completed statement (4)  5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If ArrayNodes(Root, 1) = ValueToFind Then</li>
+<li>ElseIf ArrayNodes(Root, 1) = -1 Then</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function SearchValue(ByVal Root, ByVal ValueToFind)
+
+                 If ArrayNodes(Root, 1) = ValueToFind Then
+                   Return Root
+                 ElseIf ArrayNodes(Root, 1) = -1 Then
+                   Return -1
+                 End If
+                 If ArrayNodes(Root, 1) &gt; ValueToFind Then
+                   Return SearchValue(ArrayNodes(Root, 0), ValueToFind)
+                 End If
+                 If ArrayNodes(Root, 1) &lt; ValueToFind Then
+                   Return SearchValue(ArrayNodes(Root, 2), ValueToFind)
+                 End If
+                 Return -1
+               End Function
+
+ 2022                              Page 20 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                             PUBLISHED                                    2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If ArrayNodes(Root, 1) = ValueToFind Then</li><li>ElseIf ArrayNodes(Root, 1) = -1 Then</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(procedure) header (and end where appropriate) with one parameter</li>
+<li>checking if left node is −1 …</li>
+<li>… if not recursive call with parameter as ArrayNodes[RootNode[0]]</li>
+<li>checking if right node is −1 …</li>
+<li>…if not recursive call with parameter as ArrayNodes[RootNode[2]]</li>
+<li>outputting the element at the parameter RootNode[]</li>
+<li>all 3 in the correct order</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PostOrder(RootNode() As Integer)
+                   Dim TempArray(2) As Integer
+                   If RootNode(0) &lt;&gt; -1 Then
+                       TempArray(0) = ArrayNodes(RootNode(0), 0)
+                       TempArray(1) = ArrayNodes(RootNode(0), 1)
+                       TempArray(2) = ArrayNodes(RootNode(0), 2)
+                       PostOrder(TempArray)
+                   End If
+                   If RootNode(2) &lt;&gt; -1 Then
+                       TempArray(0) = ArrayNodes(RootNode(2), 0)
+                       TempArray(1) = ArrayNodes(RootNode(2), 1)
+                       TempArray(2) = ArrayNodes(RootNode(2), 2)
+                       PostOrder(TempArray)
+                   End If
+                   Console.WriteLine(RootNode(1))
+               End Sub
+
+ 2022                                 Page 21 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                             PUBLISHED                                    2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PostOrder(RootNode):
+                   if RootNode[0] != -1:
+                       PostOrder(ArrayNodes[RootNode[0]])
+                   if RootNode[2] != -1:
+                       PostOrder(ArrayNodes[RootNode[2]])
+                   print(str(RootNode[1]))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(procedure) header (and end where appropriate) with one parameter</li><li>checking if left node is −1 …</li><li>… if not recursive call with parameter as ArrayNodes[RootNode[0]]</li><li>checking if right node is −1 …</li><li>…if not recursive call with parameter as ArrayNodes[RootNode[2]]</li><li>outputting the element at the parameter RootNode[]</li><li>all 3 in the correct order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>calling SearchValue() with 15 and rootPointer as a parameter …</li>
+<li>… if return value &gt; -1 output returned index and</li>
+<li>Calling PostOrder() with ArrayNodes[RootPointer] as a</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim returnvalue As Integer = SearchValue(RootPointer, 15)
+               If returnvalue = -1 Then
+                    Console.WriteLine(&quot;Not found&quot;)
+               Else
+                    Console.WriteLine(&quot;Found at &quot; &amp; returnvalue)
+               End If
+               Console.WriteLine(&quot;Post order&quot;)
+               Dim TempArray(2) As Integer
+               TempArray(0) = ArrayNodes(RootPointer, 0)
+               TempArray(1) = ArrayNodes(RootPointer, 1)
+               TempArray(2) = ArrayNodes(RootPointer, 2)
+               PostOrder(TempArray)
+
+ 2022                                 Page 22 of 23
+
+9618/43                  Cambridge International AS &amp; A Level – Mark Scheme   October/November
+                                             PUBLISHED                                    2022</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ReturnValue = SearchValue(RootPointer, 15)
+               if ReturnValue == -1:
+                   print(&quot;Not found&quot;)
+               else:
+                   print(&quot;Found at &quot; + str(ReturnValue))
+               PostOrder(ArrayNodes[RootPointer])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>calling SearchValue() with 15 and rootPointer as a parameter …</li><li>… if return value &gt; -1 output returned index and</li><li>Calling PostOrder() with ArrayNodes[RootPointer] as a</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Screenshot with result as shown, for example:  1
+
+ 2022  Page 23 of 23</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/33 · May/June 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/33 · May/June 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q17">Q17</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  0  1  0  0  1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  1  1  0  0  1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  0  0  0  0  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  0  0  0  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked33/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>+ 8/128 + 4/128 + 2/128 + 1/128 = 79/128 // 1/2 + 1/16 + 1/32 + 1/64 + 1/128 = 79/128</li>
+<li>MP3    correct answer = 316</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>+ 8/128 + 4/128 + 2/128 + 1/128 = 79/128 // 1/2 + 1/16 + 1/32 + 1/64 + 1/128 = 79/128</li><li>MP3    correct answer = 316</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(0)1100110.11  10011001.00  10011001.01 // -128 + 16 + 8 + 1 + 0.25 = –102.75</li>
+<li>MP2    exponent = 7 // Moving binary point the correct number of places</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(0)1100110.11  10011001.00  10011001.01 // -128 + 16 + 8 + 1 + 0.25 = –102.75</li><li>MP2    exponent = 7 // Moving binary point the correct number of places</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  0  1  1  0  0  1  0  1  0  0  0  1  1  1
+
+ University Press &amp; Assessment 2024  Page 4 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  0  1  0  0  0  0</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>0  1  1  0  1  0  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  0  0  0  0  1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  0  1  0  1  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Two marks for all protocols in correct position  2
+  One mark for at least two protocols in correct position
+
+  Application
+
+  Transport
+
+  Internet
+
+  Link</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  The transport layer is responsible for delivery of data from the source host to the destination host
+  MP2  It is where data is broken up into packets and sent to the internet layer
+  MP3  Adds the sequence number to the packet header
+  MP4  It establishes end to end contact
+  MP5  It ensures data arrives error free // It retransmits packets if lost.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for name of protocol and one mark for expansion (Max 2)  2
+
+  HTTP(S) – responsible for correct transfer of files / hypertext documents that make up web pages on the world wide web
+
+  FTP – used when transferring files from a server to a client on a network
+
+  POP3 – handles the receiving of emails
+
+  IMAP – handles the receiving of emails
+
+  SMTP – handles the sending of emails
+
+  BitTorrent – provides peer-to-peer file sharing
+
+ University Press &amp; Assessment 2024  Page 5 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  3
+  non-composite data types
+  MP1  Non-composite data types can both be user-defined or primitive
+  MP2  Non-composite data types do not refer to other data types in their definition / contain one data type in their
+  definition
+  MP3  Non-composite data types can be primitive/enumerated/pointer
+
+  One mark per mark point (Max 2)
+  composite data types
+  MP4  Composite data types can be user-defined or primitive
+  MP5  Composite data types refer to other data types in their definition/contain more than one data type in their
+  definition
+  MP6  Composite data types can be record/set/class</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for TYPE FootballClub and ENDTYPE correct  4
+  One mark for every two correct declarations
+
+  Example answer
+  TYPE FootballClub
+  DECLARE TeamName : STRING
+  DECLARE DateOfJoining : DATE
+  DECLARE MainTelephone : STRING
+  DECLARE ManagerName : STRING
+  DECLARE NumberOfMembers : INTEGER
+  DECLARE LeaguePosition : INTEGER
+  ENDTYPE
+
+ University Press &amp; Assessment 2024  Page 6 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>5  7  7  10  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q4"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  Sequential access method searches for records one after the other
+  MP2  … from the physical start of the file until the record is found/the end of file.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  For serial files, records are stored in chronological order
+  MP2  … every record needs to be checked until the record is found, or all records have been checked.
+  MP3  For sequential files, records are stored in order of a key field/index, and it is the key field/index that is compared.
+  MP4  … every record is checked until the record is found, or the key field of the current record is greater than the key
+  field of the target record.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per correct term (Max 3)  3
+  (5 + 2)
+  / (9 – 3)
+  * 3
+
+  Complete correct answer
+  ((5 + 2) / (9 - 3)) * 3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark 7 3 +  2
+  One mark 2 8 * - 6 /
+
+  Complete answer</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per ring (Max 4)  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q6"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for working, all four columns P, Q, R and S  3
+  One mark for first four rows of column Z
+  One mark for second four rows of column Z
+
+  Working space
+
+  A  B  C  P  Q  R  S  Z</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Z =) A.B.C + A.B.C + A.B.C + A.B.C + A.B.C</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Z =) A.B.C + A.B.C + A.B.C + A.B.C + A.B.C</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> BC</p>
+<div class='ms-raw'>Two marks if all correct  2
+  One mark if one error present
+
+  BC
+  A  00  01  11  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: BC</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> BC</p>
+<div class='ms-raw'>One mark for each correct loop (Max 2)  2
+
+  BC
+  A  00  01  11  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: BC</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A+B  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (max 3)  3
+  MP1  A digital certificate is an electronic/online document.
+  MP2  used to authenticate/prove the identity of a website/the online identity of an individual/organisation
+  MP3  typically issued by a CA
+  MP4  For example: it contains information identifying a website owner/individual and a public key</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (max 2)  2
+  MP1  The digital certificate provides the public key
+  MP2  … that can be used to validate the private key associated with the organisation/website/digital signature
+
+ University Press &amp; Assessment 2024  Page 10 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q8"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correctly completed clause (Max 3)  3
+
+  (23) feature(sliding_doors).
+  (24) available(sliding_doors, minivan).
+  (25) unavailable(sliding_doors, hatchback).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Options =) sunroof, reversing_camera                                                                               1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Options =) sunroof, reversing_camera                                                                               1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4
+  MP1  feature(F)
+  MP2  bodystyle(B)
+  MP3  unavailable(F, B)
+  MP4  all correct Boolean operators and punctuation (allow , for AND) and no additional lines of code
+
+  Example answers
+
+  may_choose_option(F, B)
+  IF
+
+  feature(F) AND bodystyle(B) AND NOT unavailable(F, B).
+
+  feature(F), bodystyle(B), NOT unavailable(F, B).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Deep learning learns by finding hidden patterns that are undetectable to humans.
+  MP2  It structures algorithms in layers: input layer, hidden layers and output layer.
+  MP3  … to create an artificial neural network to learn and make intelligent decisions on its own.
+  MP4  It is trained using large quantities of unlabelled data.
+  MP5  Deep learning requires/uses a large number of hidden layers.
+  MP6  … the larger the number of layers, the higher the level of success.
+
+ University Press &amp; Assessment 2024  Page 11 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2><div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q10"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 10(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark  1
+  The elements are sorted according to the compare function / in ascending / descending order.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>WHILE Found = FALSE AND NotInList = FALSE</li>
+<li>IF ToFind = Names[CurrentItem]// Names[CurrentItem] = ToFind THEN</li>
+<li>IF TopOfList &gt;= EndOfList THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>WHILE Found = FALSE AND NotInList = FALSE</li><li>IF ToFind = Names[CurrentItem]// Names[CurrentItem] = ToFind THEN</li><li>IF TopOfList &gt;= EndOfList THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Found = TRUE THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Found = TRUE THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark from  2
+  MP1  Big O for a binary search is O(Log2 n).
+  MP2  Big O notation is used to indicate the time/space complexity of an algorithm.
+
+  One mark from
+  MP3  The time taken to complete the search increases logarithmically as the number of search items increases linearly
+  MP4  The time taken to complete the search increases linearly as the number of search items increases exponentially
+  MP5  As the search field is repeatedly getting smaller, the number of comparisons made before the item is found, or the
+  number of items runs out, is relatively small.
+
+ University Press &amp; Assessment 2024  Page 13 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q11"><h2>Question 11</h2>
+        <section class="part">
+          <p class="part-label">Part 11(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  Uses hard-wired code/control units
+  MP2  Uses relatively few instructions / simple instructions
+  MP3  Uses relatively few addressing modes
+  MP4  Makes use of a single-cycle for each instruction
+  MP5  Makes use of fixed length / fixed format instructions
+  MP6  Makes use of general-purpose registers
+  MP7  Pipelining is straightforward to apply
+  MP8  The design emphasis is on the software
+  MP9  Processor chips require few transistors.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Once the processor detects an interrupt at the start/end of the fetch-execute cycle
+  MP2  … the current program is temporarily stopped and the status of each register stored on the stack.
+  MP3  After the interrupt has been serviced/the Interrupt Service Routine (ISR) has been executed …
+  MP4  … the registers can be restored to its original status before the interrupt was detected // … the data can be
+  restored from the stack.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Pipelining adds an additional complexity // there could be a number of instructions still in the pipeline when the
+  interrupt is received
+  MP2  All the instructions currently in operation are usually discarded except for the last one/the one at write back
+  MP3  … the interrupt handler routine is applied to the remaining instruction.
+  MP4  Once the interrupt has been serviced the processor can restart with the next instruction in the sequence.
+
+ University Press &amp; Assessment 2024  Page 14 of 14</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q17"><h2>Question 17</h2>
+        <section class="part">
+          <p class="part-label">Part 17 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>17  12  12  12  12  120  120  12
+
+ University Press &amp; Assessment 2024  Page 8 of 14
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

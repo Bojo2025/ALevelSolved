@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/33 · October/November 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/33 · October/November 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q00">Q00</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q12">Q12</a></nav>
+  <article class="q" id="q0"><h2>Question 0</h2>
+        <section class="part">
+          <p class="part-label">Part 0 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1  1  1  1  0  0  0  0  0  0  1  0  1  1  0
+
+ 2022  Page 4 of 15
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q00"><h2>Question 00</h2>
+        <section class="part">
+          <p class="part-label">Part 00 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> CD</p>
+<div class='ms-raw'>01  11  10
+  CD</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: CD</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked33/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Conversion to binary + 202 = 11001010 // repeated division by 2 // 128 + 64 + 8 + 2</li>
+<li>Appropriate shifting of binary point for + 202 = 0.1100101  28 // exponent = 8</li>
+<li>= 01100101 00001000 (stored as mantissa and exponent)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Conversion to binary + 202 = 11001010 // repeated division by 2 // 128 + 64 + 8 + 2</li><li>Appropriate shifting of binary point for + 202 = 0.1100101  28 // exponent = 8</li><li>= 01100101 00001000 (stored as mantissa and exponent)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Appropriate method of conversion e.g</li>
+<li>256 + 32 + 16 + 4 +2</li>
+<li>Realisation that the exponent doesn’t change // value of exponent = 8 // appropriate shifting of binary point</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Appropriate method of conversion e.g</li><li>256 + 32 + 16 + 4 +2</li><li>Realisation that the exponent doesn’t change // value of exponent = 8 // appropriate shifting of binary point</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The mantissa does not begin with 01/10 (as its most significant bits)  1
+  // the mantissa begins with 00 // first two digits are the same.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Correct mantissa</li>
+<li>Correct exponent</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct mantissa</li><li>Correct exponent</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked33/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each point (Max 3)  5
+
+  MP1  The Transport Layer breaks data into manageable packets / performs segmentation
+  MP2  It sequences the packets // adds data to the packet header // adds a packet header
+  MP3  It sends the packets to the Internet / Network Layer // It receives data from the Application Layer
+  MP4  It controls the flow of packets
+  MP5  It handles packet loss/corruption // Acknowledges receipt of complete error free packets
+
+  One mark for each point (Max 3)
+
+  MP6 The Internet Layer identifies the intended network and host
+  MP7 It transmits packets to the (Data) Link / Physical Layer
+  MP8 It routes the packets independently through the optimum route
+  MP9 It addresses packets with their source and destination IP addresses
+  MP10 It then uses an IP address and port number to form a socket.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A (user-defined non-composite) data type with an ordered list of possible values.  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A user-defined non-composite data type used to reference a memory location.  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>TYPE Quarter1 = (January, February, March)</li>
+<li>TYPE Quarter1 = [1]</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>TYPE Quarter1 = (January, February, March)</li><li>TYPE Quarter1 = [1]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE Pet1 : Pet  1
+
+ 2022  Page 5 of 15
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Correct assignment of all string data values</li>
+<li>Correct assignment of char data value</li>
+<li>Correct assignment of integer data value</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct assignment of all string data values</li><li>Correct assignment of char data value</li><li>Correct assignment of integer data value</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked33/page-05.jpg" alt="Paper page 5 for Q4"><div class="cap">Original paper page 5</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each correct line connecting one stage of compilation to a description  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q5"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>a b * b + d - 15 +  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>(a - b) * (c + d) / a  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>39                                                                                                      1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>39                                                                                                      1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q6"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A private key is the unpublished/secret key/never transmitted anywhere</li>
+<li>It has a matching public key</li>
+<li>It is used to decrypt data that was encrypted with its matching public key</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A private key is the unpublished/secret key/never transmitted anywhere</li><li>It has a matching public key</li><li>It is used to decrypt data that was encrypted with its matching public key</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The message to be sent is encrypted using the recipient’s public key. // The message to be sent is encrypted using</li>
+<li>The message is decrypted using the recipient’s private key. // The message is decrypted using the sender’s public</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The message to be sent is encrypted using the recipient’s public key. // The message to be sent is encrypted using</li><li>The message is decrypted using the recipient’s private key. // The message is decrypted using the sender’s public</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The message together with the digital signature is decrypted using the receiver’s private key</li>
+<li>The digital signature received is decrypted with the sender’s public key to recover the message digest sent</li>
+<li>The decrypted message received is hashed with the agreed hashing algorithm to reproduce the message digest of the</li>
+<li>The two message digests are compared</li>
+<li>… if both digests are the same the message has not been altered // if they are different the message has been</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The message together with the digital signature is decrypted using the receiver’s private key</li><li>The digital signature received is decrypted with the sender’s public key to recover the message digest sent</li><li>The decrypted message received is hashed with the agreed hashing algorithm to reproduce the message digest of the</li><li>The two message digests are compared</li><li>… if both digests are the same the message has not been altered // if they are different the message has been</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked33/page-07.jpg" alt="Paper page 7 for Q7"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AB</p>
+<div class='ms-raw'>Two marks if no errors present  2
+  One mark if one error present
+
+  AB</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: AB</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for correct loop (Max 2)  2
+
+ 2022  Page 9 of 15
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Any correct Boolean term</li>
+<li>Boolean terms and operator correct and no other terms present</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Any correct Boolean term</li><li>Boolean terms and operator correct and no other terms present</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q8"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Disk / secondary storage is used to extend the RAM / memory available</li>
+<li>… so the CPU appears to be able to access more memory space than the available RAM</li>
+<li>Only the data in use needs to be in main memory so data can be swapped between RAM and virtual memory as</li>
+<li>Virtual memory is created temporarily</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Disk / secondary storage is used to extend the RAM / memory available</li><li>… so the CPU appears to be able to access more memory space than the available RAM</li><li>Only the data in use needs to be in main memory so data can be swapped between RAM and virtual memory as</li><li>Virtual memory is created temporarily</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Paging allows the memory to be divided into fixed size blocks and</li>
+<li>The operating system divides the memory into pages, the compiler is responsible for calculating the segment size</li>
+<li>Access times for paging is faster than for segmentation</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Paging allows the memory to be divided into fixed size blocks and</li><li>The operating system divides the memory into pages, the compiler is responsible for calculating the segment size</li><li>Access times for paging is faster than for segmentation</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q9"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Uses artificial neural network(s)</li>
+<li>… that contain(s) a high number of hidden layers</li>
+<li>… modelled on the human brain</li>
+<li>Deep learning uses many layers to progressively extract higher level features from the (raw) input</li>
+<li>Deep learning is a specialised form of machine learning</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Uses artificial neural network(s)</li><li>… that contain(s) a high number of hidden layers</li><li>… modelled on the human brain</li><li>Deep learning uses many layers to progressively extract higher level features from the (raw) input</li><li>Deep learning is a specialised form of machine learning</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Deep learning makes good use of unstructured data</li>
+<li>Deep learning outperforms other methods if the data size is large</li>
+<li>Deep learning systems enable machines to process data with a nonlinear approach</li>
+<li>Deep learning is effective at identifying (hidden) patterns / patterns that humans might not be able to see / patterns that</li>
+<li>It can provide a more accurate outcome with higher numbers of hidden layers</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Deep learning makes good use of unstructured data</li><li>Deep learning outperforms other methods if the data size is large</li><li>Deep learning systems enable machines to process data with a nonlinear approach</li><li>Deep learning is effective at identifying (hidden) patterns / patterns that humans might not be able to see / patterns that</li><li>It can provide a more accurate outcome with higher numbers of hidden layers</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2><div class="diagram"><img src="worked33/page-09.jpg" alt="Paper page 9 for Q10"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 10(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Two marks for all five rows correct  2
+  One mark for four rows correct
+
+  Statement  RISC  CISC
+
+  uses a smaller instruction set  ✓
+
+  uses single-cycle instructions and limited addressing modes  ✓
+
+  uses fewer general-purpose registers  ✓
+
+  uses both hardwired and micro coded control unit  ✓
+
+  uses a system where cache is split between data and
+  ✓
+  instructions
+
+ 2022  Page 11 of 15
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Instructions are divided into subtasks / 5 stages</li>
+<li>… Instruction fetch / IF, Instruction decode / ID, operand fetch / OF, opcode/instruction execute IE, result store / write</li>
+<li>Each subtask is completed during one clock cycle</li>
+<li>No two instructions can execute their same stage at the same clock cycle</li>
+<li>The second instruction begins in the second clock cycle, while the first instruction has moved on to its second subtask</li>
+<li>The third instruction begins in the third clock cycle while the first and second instructions move on to their second and</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Instructions are divided into subtasks / 5 stages</li><li>… Instruction fetch / IF, Instruction decode / ID, operand fetch / OF, opcode/instruction execute IE, result store / write</li><li>Each subtask is completed during one clock cycle</li><li>No two instructions can execute their same stage at the same clock cycle</li><li>The second instruction begins in the second clock cycle, while the first instruction has moved on to its second subtask</li><li>The third instruction begins in the third clock cycle while the first and second instructions move on to their second and</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q11"><h2>Question 11</h2><div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q11"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 11(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Instance – an occurrence of an object // a specific object based on the class // an instantiation of a class</li>
+<li>Inheritance – the capability of defining a new class of objects that has all the attributes and methods from a parent</li>
+<li>Polymorphism – allows the same method to take on different behaviours depending on which class is instantiated //</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Instance – an occurrence of an object // a specific object based on the class // an instantiation of a class</li><li>Inheritance – the capability of defining a new class of objects that has all the attributes and methods from a parent</li><li>Polymorphism – allows the same method to take on different behaviours depending on which class is instantiated //</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 11(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Car and ENDCLASS</li>
+<li>Four declarations – must use the identifiers used in the assignments</li>
+<li>Constructor header – must use CarBodyType</li>
+<li>Two assignments – must use CarMake</li>
+<li>Constructor identifier for the car model and the identifier in the Model assignment statement match</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Car and ENDCLASS</li><li>Four declarations – must use the identifiers used in the assignments</li><li>Constructor header – must use CarBodyType</li><li>Two assignments – must use CarMake</li><li>Constructor identifier for the car model and the identifier in the Model assignment statement match</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q12"><h2>Question 12</h2><div class="diagram"><img src="worked33/page-11.jpg" alt="Paper page 11 for Q12"><div class="cap">Original paper page 11</div></div>
+        <section class="part">
+          <p class="part-label">Part 12(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Initialisation of upper bound</li>
+<li>Test if upper bound is less than lower bound</li>
+<li>Re-setting of mid value if current value is lower than the target</li>
+<li>Re-setting of mid value if current value is higher than the target</li>
+<li>Finding the value</li>
+<li>Correct termination of loop</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Initialisation of upper bound</li><li>Test if upper bound is less than lower bound</li><li>Re-setting of mid value if current value is lower than the target</li><li>Re-setting of mid value if current value is higher than the target</li><li>Finding the value</li><li>Correct termination of loop</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 12(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>O(n)  1
+
+ 2022  Page 14 of 15
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 12(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>O(log n) is a time complexity that uses logarithmic time</li>
+<li>The time taken goes up linearly as the number of items rises exponentially</li>
+<li>O(log n) is the worst case scenario (time complexity for a binary search)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>O(log n) is a time complexity that uses logarithmic time</li><li>The time taken goes up linearly as the number of items rises exponentially</li><li>O(log n) is the worst case scenario (time complexity for a binary search)</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/23 · October/November 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/23 · October/November 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per row  4
+
+  Variable use  Data type
+
+  Store the number of days in the current month  INTEGER
+
+  Store the first letter of the customer&#x27;s first name  CHAR
+
+  Store an indication of whether a year is a leap
+  BOOLEAN
+  year
+
+  Store the average amount spent per customer
+  REAL
+  visit</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Easier to manage/plan/cost // Clear deliverables produced at (end of) each  1
+  stage</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The problem definition</li>
+<li>Requirements specification // Client requirements</li>
+<li>Documentation related to current system (e.g. ER diagram of current</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The problem definition</li><li>Requirements specification // Client requirements</li><li>Documentation related to current system (e.g. ER diagram of current</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Modules are developed in parallel / as prototypes</li>
+<li>Minimal / no detailed planning is carried out // Allows for changes to</li>
+<li>Flexible development process</li>
+<li>Small incremental releases are made, each adding functionality</li>
+<li>Used for time critical development</li>
+<li>Client involved during (all stages) of development</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Modules are developed in parallel / as prototypes</li><li>Minimal / no detailed planning is carried out // Allows for changes to</li><li>Flexible development process</li><li>Small incremental releases are made, each adding functionality</li><li>Used for time critical development</li><li>Client involved during (all stages) of development</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Quicker development possible / Multiple areas can be worked on at</li>
+<li>Prototype produced (at early stage in process)</li>
+<li>Easier to change requirements / quicker delivery of usable modules</li>
+<li>Early review possible / closer cooperation between client and</li>
+<li>Difficult to estimate cost / time to complete project</li>
+<li>Documentation often omitted</li>
+<li>Lack of client availability throughout life cycle // too easy for client to</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Quicker development possible / Multiple areas can be worked on at</li><li>Prototype produced (at early stage in process)</li><li>Easier to change requirements / quicker delivery of usable modules</li><li>Early review possible / closer cooperation between client and</li><li>Difficult to estimate cost / time to complete project</li><li>Documentation often omitted</li><li>Lack of client availability throughout life cycle // too easy for client to</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each point (Max 2)  2
+
+  Examples include:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare two (REAL)variables for the two sum values AND initialise both
+  to zero</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Procedure heading and ending including four parameters...</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Provides a mechanism to allow calling program to pass data</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The program is checked by creating a trace table / going through the
+  program a line at a time</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>300  290  315  &#x27;A&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Function heading and ending including parameters</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declaration and initialisation of local integer for Count</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>(Conditional) loop terminating when item added OR end of array
+  reached</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>New technologies available to host website // changes made to library
+  modules used</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for name and two marks for use (Max 3 in total):  3
+
+  Examples include:
+
+  Module: SelectCharity()
+  Use: Allows the user to choose a particular charity
+
+  Module: SpecifyAmountAndType()
+  Use: Allows the user to specify a single or regular payment
+
+  Module: MakePayment()
+  Use: Make payment to the charity
+
+  Module: ValidatePayment()
+  Use: Validate payment details (by accessing bank computer)
+
+  Module: AddBankAccountDetails() / AddPaymentDetails()
+  Use: Allows the user to add bank account information that donation to be
+  taken from
+
+  Module: AddDonorDetails()
+  Use: Allows user to add details such as name and contact details</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>...and use of BYREF for the three extracted values</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>….to record/check variable (values) as they change</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&gt; 317  290  315  &#x27;R&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declaration of local variable for Result / alt mechanism</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-05.jpg" alt="Paper page 5 for Q3"><div class="cap">Original paper page 5</div></div>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Change in relevant legislation</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point, for example:  5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>If number greater than zero add to positive sum and If number less
+  than zero add to negative sum</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare integer variable for FrontOfQueuePointer</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Error may be indicated when variable given an unexpected value</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>317  290  315  &#x27;C&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>(Conditional) loop while error number input is in range // error code 999
+  reached</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Assignment of values to arrays // save index of first blank location and
+  assign after loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Operation: Add an item / Enqueue  4
+  Check: There are unused elements in the array // The queue is not full
+
+  Operation: Remove an item / Dequeue
+  Check: There are items in the array // The queue is not empty
+
+  One mark for reason and one mark for reason it could not be completed.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (Max 5):  5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare integer variable for EndOfQueuePointer</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Error may be indicated by an unexpected path through the program //
+  Faults in the logic of the program can be detected</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>288  290  315  &#x27;C&#x27;</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Set loop termination if empty element found in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked23/page-07.jpg" alt="Paper page 7 for Q5"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>After loop the Output SumPos and SumNeg</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Initialise FrontOfQueuePointer and EndOfQueuePointer to
+  represent an empty queue</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Calculation of length of SCost (remainder of string)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark each (Max 2):  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The new function will return an item of type StockItem</li>
+<li>Need to declare/use a (local) variable of type StockItem</li>
+<li>Costfield needs to be converted from a string to a real</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The new function will return an item of type StockItem</li><li>Need to declare/use a (local) variable of type StockItem</li><li>Costfield needs to be converted from a string to a real</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Makes the code easier to understand // Describes the purpose of the</li>
+<li>White space</li>
+<li>Indentation</li>
+<li>Keywords in capitals</li>
+<li>Comments</li>
+<li>Local variables // parameters</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Makes the code easier to understand // Describes the purpose of the</li><li>White space</li><li>Indentation</li><li>Keywords in capitals</li><li>Comments</li><li>Local variables // parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (Max 3)  3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check for Recheck (or just default to third option)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Check if this ErrCode needs to be output in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked23/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare integer variable or NumberInQueue</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Extract and assign SCost following an attempt at MP5
+
+  PROCEDURE UnPack(BYVAL TLine : STRING, BYREF SID, SDesc,
+  SCost : STRING)
+  SID  LEFT(TLine, 5)
+  SDesc  MID(TLine, 6, 32)
+  SCost  RIGHT(TLine, LENGTH(TLine) – 37)
+  ENDPROCEDURE</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per row  5
+
+  Examples:
+
+  Test  Component  Expected return
+  Min  Max
+  number  weight  value</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Accept = &#x27;A&#x27;</li>
+<li>CONSTANT Reject = &#x27;R&#x27;</li>
+<li>CONSTANT ReCheck = &#x27;C&#x27;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Accept = &#x27;A&#x27;</li><li>CONSTANT Reject = &#x27;R&#x27;</li><li>CONSTANT ReCheck = &#x27;C&#x27;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>if so check for blank error text in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Unused = 999</li>
+<li>IF ErrCode[Index] = Unused THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Unused = 999</li><li>IF ErrCode[Index] = Unused THEN</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Declare integer variable for SizeOfQueue to count / limit the max
+  number of items allowed // Reference to mechanism for defining &#x27;wrap&#x27;
+  of circular queue</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (Max 8):  8</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point:  6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per point (Max 3):  3
+
+  1.  Loop through 500 elements (while error number not found)
+  2.  Compare ErrCode for current element with the error number
+  3.  If same, set element value to 999 (and terminate loop)
+  4.  ... and call SortArrays() (to move 999 to the end) – once only
+
+ 2022  Page 9 of 9</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Initialise SizeOfQueue // Initialise NumberInQueue</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF ThisErr &gt;= First THEN</li>
+<li>IF ThisMess = &quot;&quot; THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF ThisErr &gt;= First THEN</li><li>IF ThisMess = &quot;&quot; THEN</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

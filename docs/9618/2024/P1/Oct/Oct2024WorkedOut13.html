@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/13 · October/November 2024 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/13 · October/November 2024 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked13/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for:  1
+
+  Output is only 1 if one input is 1 and the other is 0 // Output is only 1 if both
+  inputs are different // Output is only 0 if both inputs are the same</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>((A NOR B) AND (A OR B))</li>
+<li>NAND (B AND C)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>((A NOR B) AND (A OR B))</li><li>NAND (B AND C)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for NOT gate, 2 correct AND gates and the NAND gate  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for OR gate and the final AND gate</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> ADD 54</p>
+<div class='ms-raw'>ADD #4  158
+  ADD 54
+
+  LDI 53</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: ADD 54</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>A bit manipulation operation is required to set all the bits to zero</li>
+<li>Compare the result of the masking with 0</li>
+<li>… the result of comparison will be true if the register is cleared</li>
+<li>AND B00000000 / #00 / &amp;00</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A bit manipulation operation is required to set all the bits to zero</li><li>Compare the result of the masking with 0</li><li>… the result of comparison will be true if the register is cleared</li><li>AND B00000000 / #00 / &amp;00</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>mark for correct conversion
+
+  Denary value: −97</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DRAM requires constant refreshing, but SRAM does not need to be</li>
+<li>DRAM generally has greater capacities per chip, but SRAM generally has</li>
+<li>DRAM has slower access times than SRAM</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DRAM requires constant refreshing, but SRAM does not need to be</li><li>DRAM generally has greater capacities per chip, but SRAM generally has</li><li>DRAM has slower access times than SRAM</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The computer and the hard disk drive transmit and receive at different</li>
+<li>The buffer is used for temporary storage</li>
+<li>… so that the computer can transfer data to the buffer at the higher speed</li>
+<li>... and is not held up waiting for data to transfer</li>
+<li>… and so that data is transferred to hard disk drive from the buffer at the</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The computer and the hard disk drive transmit and receive at different</li><li>The buffer is used for temporary storage</li><li>… so that the computer can transfer data to the buffer at the higher speed</li><li>... and is not held up waiting for data to transfer</li><li>… and so that data is transferred to hard disk drive from the buffer at the</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> ADD 56</p>
+<div class='ms-raw'>DEC ACC  99
+  ADD 56
+
+  LDM #55</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: ADD 56</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked13/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <ol>
+<li>The system uses feedback</li>
+<li>The system acts independently</li>
+<li>Input data causes the car to brake</li>
+<li>… braking decreases the/changes the distance to the object</li>
+<li>… this new distance is used to determine whether/how hard the car</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The system uses feedback</li><li>The system acts independently</li><li>Input data causes the car to brake</li><li>… braking decreases the/changes the distance to the object</li><li>… this new distance is used to determine whether/how hard the car</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 50</p>
+<div class='ms-raw'>50
+  SUB #5</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 50</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Foreign key: BatchID, table BATCH</li>
+<li>Foreign key: CustomerID, table CUSTOMER</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Foreign key: BatchID, table BATCH</li><li>Foreign key: CustomerID, table CUSTOMER</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AND Date &gt;= #01/01/2023# AND Date &lt;= #31/12/2023#;</p>
+<ol>
+<li>SELECT SUM(Quantity)</li>
+<li>FROM SALE WHERE and one correct condition</li>
+<li>AND with remainder correct conditions</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>SELECT SUM(Quantity)</li><li>FROM SALE WHERE and one correct condition</li><li>AND with remainder correct conditions</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Create table BATCH with opening and closing brackets, all statements</li>
+<li>BatchID, Type and Flavour as varchar or equivalent</li>
+<li>…with suitable constraint(s)</li>
+<li>Size as decimal, SellingPrice as currency, EndDate as date (or</li>
+<li>Primary key identified as BatchID</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Create table BATCH with opening and closing brackets, all statements</li><li>BatchID, Type and Flavour as varchar or equivalent</li><li>…with suitable constraint(s)</li><li>Size as decimal, SellingPrice as currency, EndDate as date (or</li><li>Primary key identified as BatchID</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Ice cream table with an appropriate name</li>
+<li>… containing type, flavour, size, selling price</li>
+<li>… with suitable primary key</li>
+<li>… foreign key identified in BATCH that links to the primary key in</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Ice cream table with an appropriate name</li><li>… containing type, flavour, size, selling price</li><li>… with suitable primary key</li><li>… foreign key identified in BATCH that links to the primary key in</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A real-life object that is represented as a table</li>
+<li>An item of data about an entity</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A real-life object that is represented as a table</li><li>An item of data about an entity</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Referential integrity is enforced</li>
+<li>… such as cascade update/delete // if the data is changed in one place it</li>
+<li>... and ensures each foreign key has a corresponding primary key</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Referential integrity is enforced</li><li>… such as cascade update/delete // if the data is changed in one place it</li><li>... and ensures each foreign key has a corresponding primary key</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each correct licence  3
+
+  Statement  Software Licence
+
+  A fee is charged for the software. The source code
+  Commercial
+  cannot be accessed. Users do not get a free trial.
+
+  Users can try the software before buying it. Users
+  Shareware
+  may not be able to access all features during the trial.
+
+  Software is usually free of charge. Users can access  Open Source //
+  the source code and alter the program to their needs.  Free software
+
+ University Press &amp; Assessment 2024  Page 5 of 9
+
+9618/13  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The professional ethical body has ethical guidelines to follow</li>
+<li>… so clients/other staff know the standards being applied</li>
+<li>… so the computer programmer does not have to decide what is ethical</li>
+<li>Clients/staff know the computer programmer is reputable</li>
+<li>… there may be a test/requirement for entry</li>
+<li>… giving recognition of the computer programmer&#x27;s skills/knowledge</li>
+<li>The professional ethical body provides help and support</li>
+<li>… for example, if the computer programmer needs legal advice</li>
+<li>The professional ethical body runs training courses</li>
+<li>… to keep the computer programmer&#x27;s skills up to date</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The professional ethical body has ethical guidelines to follow</li><li>… so clients/other staff know the standards being applied</li><li>… so the computer programmer does not have to decide what is ethical</li><li>Clients/staff know the computer programmer is reputable</li><li>… there may be a test/requirement for entry</li><li>… giving recognition of the computer programmer&#x27;s skills/knowledge</li><li>The professional ethical body provides help and support</li><li>… for example, if the computer programmer needs legal advice</li><li>The professional ethical body runs training courses</li><li>… to keep the computer programmer&#x27;s skills up to date</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked13/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ASCII</li>
+<li>7/8 bits per character // represents 128/256 characters // represents all</li>
+<li>UNICODE</li>
+<li>8/16/32 bits per character // represents 256/65536+ characters //</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ASCII</li><li>7/8 bits per character // represents 128/256 characters // represents all</li><li>UNICODE</li><li>8/16/32 bits per character // represents 256/65536+ characters //</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for:  1
+
+  256 // 28</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for:  1
+
+  Increased file size</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>The change may not be noticeable // Data removed is usually not noticed</li>
+<li>… for example, changes in shade/detail</li>
+<li>It produces a larger decrease in file size compared to lossless // Lossy</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>The change may not be noticeable // Data removed is usually not noticed</li><li>… for example, changes in shade/detail</li><li>It produces a larger decrease in file size compared to lossless // Lossy</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Value/magnitude/size of the analogue sound wave is measured a set</li>
+<li>Each sample/reading/measurement is given the binary number and</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Value/magnitude/size of the analogue sound wave is measured a set</li><li>Each sample/reading/measurement is given the binary number and</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Decrease sample rate</li>
+<li>… fewer samples/readings/measurements stored per second // fewer bits</li>
+<li>Decrease sample resolution</li>
+<li>… fewer bits per sample/reading/measurement // each sample has</li>
+<li>Sound outside of set/human hearing range is removed</li>
+<li>… fewer measurements are stored / decreases the number of possible</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Decrease sample rate</li><li>… fewer samples/readings/measurements stored per second // fewer bits</li><li>Decrease sample resolution</li><li>… fewer bits per sample/reading/measurement // each sample has</li><li>Sound outside of set/human hearing range is removed</li><li>… fewer measurements are stored / decreases the number of possible</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked13/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark each:  3
+
+  Instructions  ACC content
+
+  LDD 50</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each bullet point for the explanation  3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for:  1
+
+  Denary value: 8107
+
+ University Press &amp; Assessment 2024  Page 7 of 9
+
+9618/13  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2024</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Flip each bit then add 1 …</li>
+<li>… method of converting the new binary number into denary</li>
+<li>Most significant 1 bit is treated as the corresponding negative</li>
+<li>… add the other positive corresponding denary values</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Flip each bit then add 1 …</li><li>… method of converting the new binary number into denary</li><li>Most significant 1 bit is treated as the corresponding negative</li><li>… add the other positive corresponding denary values</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A logical shift moves all bits to the right and inserts zeros in the</li>
+<li>An arithmetic shift moves all bits to the right but copies the sign bit into</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A logical shift moves all bits to the right and inserts zeros in the</li><li>An arithmetic shift moves all bits to the right but copies the sign bit into</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked13/page-16.jpg" alt="Paper page 16 for Q9"><div class="cap">Original paper page 16</div></div>
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>A WAN covers a large geographical area</li>
+<li>External/public infrastructure is used</li>
+<li>Non-dedicated hardware</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>A WAN covers a large geographical area</li><li>External/public infrastructure is used</li><li>Non-dedicated hardware</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Fibre optic</li>
+<li>Transmits data as pulses of light</li>
+<li>Radio waves / microwaves</li>
+<li>Transmits electromagnetic waves on different frequencies</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Fibre optic</li><li>Transmits data as pulses of light</li><li>Radio waves / microwaves</li><li>Transmits electromagnetic waves on different frequencies</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Data is compressed before transmitting</li>
+<li>The video and audio are transmitted continuously as a series of bits</li>
+<li>The video is uploaded to a media server</li>
+<li>On download, the media server sends the data to a buffer</li>
+<li>The buffer stores data from server until the receiving device can</li>
+<li>The receiving device receives the bit stream from the buffer</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Data is compressed before transmitting</li><li>The video and audio are transmitted continuously as a series of bits</li><li>The video is uploaded to a media server</li><li>On download, the media server sends the data to a buffer</li><li>The buffer stores data from server until the receiving device can</li><li>The receiving device receives the bit stream from the buffer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>So that the router is visible to the Internet/external network/WAN</li>
+<li>So that the router is identified to computers within the LAN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>So that the router is visible to the Internet/external network/WAN</li><li>So that the router is identified to computers within the LAN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>It allows the network to be divided into smaller networks</li>
+<li>… which reduces traffic in some parts of the network // reduces</li>
+<li>… because traffic only travels through the parts necessary</li>
+<li>… which hides the complexity of network</li>
+<li>… and allows for easier maintenance of the network</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>It allows the network to be divided into smaller networks</li><li>… which reduces traffic in some parts of the network // reduces</li><li>… because traffic only travels through the parts necessary</li><li>… which hides the complexity of network</li><li>… and allows for easier maintenance of the network</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

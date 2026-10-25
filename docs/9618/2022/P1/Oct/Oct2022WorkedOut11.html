@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/11 · October/November 2022 · Worked Solutions</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #fafafa; color: #222; }
+  header { border-bottom: 3px solid #6b0000; padding-bottom: 12px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 1.35em; color: #6b0000; }
+  header p { margin: 0; color: #555; font-size: 0.95em; }
+  .question { margin-bottom: 36px; }
+  .question > h2 { font-size: 1.15em; color: #6b0000; border-left: 4px solid #6b0000; padding-left: 10px; margin-bottom: 10px; }
+  .part { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; padding: 14px 16px; }
+  .part h3 { margin: 0 0 8px; font-size: 1em; color: #444; }
+  .q-text { margin-bottom: 10px; line-height: 1.6; }
+  .q-img { margin: 10px 0; }
+  .q-img img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+  .worked { background: #fff5f5; border-left: 4px solid #6b0000; padding: 12px 14px; margin-top: 10px; line-height: 1.65; }
+  .worked p { margin: 6px 0; }
+  .marks { background: #f9fff0; border-left: 4px solid #3a7a1a; padding: 10px 14px 10px 28px; margin: 10px 0 0; }
+  .marks li { margin: 4px 0; line-height: 1.55; }
+  table.q-table { border-collapse: collapse; margin: 8px 0; font-size: 0.9em; }
+  table.q-table th, table.q-table td { border: 1px solid #aaa; padding: 5px 10px; text-align: center; }
+  table.q-table th { background: #f5e0e0; }
+  .register-row { display: flex; gap: 0; margin: 6px 0; align-items: center; }
+  .register-cell { border: 1px solid #888; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 1.1em; font-weight: bold; background: #fff; }
+  .register-label { font-size: 0.85em; color: #555; margin-right: 8px; line-height: 36px; min-width: 60px; }
+  .answer-reg { background: #d4edda; }
+  pre { background: #f0f0f0; padding: 10px 14px; border-radius: 4px; font-size: 0.9em; overflow-x: auto; }
+  code { font-family: monospace; background: #f5e8e8; padding: 1px 4px; border-radius: 3px; }
+
+  .solution-open { margin-top: 10px; }
+  .part-label-note { font-size: 0.85em; color: #3a7a1a; font-weight: 700; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>9618/11 · October/November 2022 · Worked Solutions</h1>
+  <p>Cambridge International AS &amp; A Level Computer Science — Paper 1 Theory Fundamentals</p>
+</header>
+
+<main>
+
+<!-- ==================== QUESTION 1 ==================== -->
+<section class="question">
+<h2>Question 1 — Data Representation (8 marks)</h2>
+
+<div class="part">
+<h3>1 (a)(i) [1 mark]</h3>
+<div class="q-text"><p>Convert the unsigned binary integer <code>0010 0111</code> into denary.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Write out the place values for each bit position (128, 64, 32, 16, 8, 4, 2, 1):</p>
+<p>Bits set: bit 5 (32), bit 2 (4), bit 1 (2), bit 0 (1)</p>
+<p>Total: 32 + 4 + 2 + 1 = <strong>39</strong></p>
+</div>
+<ul class="marks"><li>39 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (a)(ii) [1 mark]</h3>
+<div class="q-text"><p>Convert the Binary Coded Decimal (BCD) <code>0010 0111</code> into denary.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>In BCD, each 4-bit group represents one decimal digit independently:</p>
+<p>Left nibble: <code>0010</code> = 2</p>
+<p>Right nibble: <code>0111</code> = 7</p>
+<p><strong>Answer: 27</strong></p>
+</div>
+<ul class="marks"><li>27 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (a)(iii) [1 mark]</h3>
+<div class="q-text"><p>Convert the 8-bit two's complement binary integer <code>1110 0111</code> into denary.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The MSB is 1, so this is a negative number. Find the magnitude by negating (invert then add 1):</p>
+<p>Invert <code>1110 0111</code>: → <code>0001 1000</code></p>
+<p>Add 1: → <code>0001 1001</code> = 16 + 8 + 1 = 25</p>
+<p>So the original value is <strong>−25</strong>.</p>
+</div>
+<ul class="marks"><li>−25 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b) [2 marks]</h3>
+<div class="q-text">
+<p>Perform the binary subtraction: <code>1011 0011</code> − <code>0111 0101</code>. Show your working.</p>
+<div class="q-img"><img src="worked11/fig_1b_sub.png" alt="Binary subtraction: 10110011 minus 01110101"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Method: Convert to two's complement subtraction.</strong></p>
+<p>A − B = A + (−B)</p>
+<p>Find two's complement of B (0111 0101):</p>
+<p>Invert: 1000 1010</p>
+<p>Add 1: <strong>1000 1011</strong></p>
+<p>Add to A:</p>
+<pre>  1011 0011  (A = 179 unsigned)
++ 1000 1011  (−B = −117)
+-----------
+ (1)0011 1110</pre>
+<p>Carry out from bit 7 = 1 (ignored for unsigned subtraction). Result: <strong>0011 1110</strong> = 62 (which is 179 − 117 = 62 ✓)</p>
+<p><strong>Answer: 0011 1110</strong></p>
+</div>
+<ul class="marks">
+<li>Working shown (borrowing method or two's complement). [1]</li>
+<li>Answer: 0011 1110 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (c) [3 marks]</h3>
+<div class="q-text"><p>Give one similarity and two differences between the ASCII and Unicode character sets.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Similarity:</strong> Both character sets represent each character using a unique numeric code. The ASCII characters are a subset of Unicode — all ASCII codes appear in Unicode with the same values, so both represent the same basic Latin alphabet characters.</p>
+<p><strong>Difference 1:</strong> Unicode can use up to 32 bits per character (UTF-32), whereas ASCII uses only 7 bits (or 8 bits in Extended ASCII). This gives Unicode far more capacity.</p>
+<p><strong>Difference 2:</strong> Unicode can represent characters from virtually every written language in the world (over 140,000 characters), while standard ASCII represents only 128 characters from one language (English/Latin).</p>
+</div>
+<ul class="marks">
+<li>Similarity: both use a unique code per character / Unicode contains all ASCII characters / both can use 8 bits. [1]</li>
+<li>Difference 1: Unicode uses more bits per character (up to 32) than ASCII (7 or 8). [1]</li>
+<li>Difference 2: Unicode represents more languages/characters than ASCII. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (d)(i) [1 mark]</h3>
+<div class="q-text"><p>State what is meant by <strong>sampling rate</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The sampling rate (or sampling frequency) is the <strong>number of samples taken per unit time</strong>, typically expressed in hertz (Hz) or kilohertz (kHz). For example, a sampling rate of 44,100 Hz means 44,100 measurements of the analogue sound wave are taken every second.</p>
+</div>
+<ul class="marks"><li>The number of samples taken per unit time / per second. [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (d)(ii) [2 marks]</h3>
+<div class="q-text"><p>Explain the effect of increasing the <strong>sampling resolution</strong> on the sound file.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The sampling resolution (bit depth) is the number of bits used to represent each individual sample. A higher resolution means each sample can take on a larger range of values.</p>
+<p><strong>Effect on accuracy:</strong> A higher sampling resolution means the amplitude of the sound wave is measured more precisely at each sample point. The digital representation more closely approximates the original analogue waveform, reducing quantisation errors (the error introduced by rounding each sample to the nearest representable value).</p>
+<p><strong>Effect on file size:</strong> More bits per sample means more data per unit time, so the <em>file size increases</em>.</p>
+</div>
+<ul class="marks">
+<li>Increases the number of bits per sample / larger range of amplitude values. [1]</li>
+<li>File size increases / sound is more accurate / quantisation errors reduced. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<section class="question">
+<h2>Question 2 — Security Features Matching (4 marks)</h2>
+
+<div class="part">
+<h3>2 [4 marks]</h3>
+<div class="q-text"><p>Draw one line from each security feature to its most appropriate description.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Security Feature</th><th>Description</th></tr>
+<tr><td>Firewall</td><td>Converts data to an alternative form</td></tr>
+<tr><td>Pharming</td><td>Redirects a user to a fake website</td></tr>
+<tr><td>Anti-virus software</td><td>Verifies the authenticity of data</td></tr>
+<tr><td>Encryption</td><td>Scans files on the hard drive for malicious software</td></tr>
+<tr><td></td><td>Accepts or rejects incoming and outgoing packets based on criteria</td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Firewall</strong> → <em>Accepts or rejects incoming and outgoing packets based on criteria.</em> A firewall examines network packets and allows or blocks them according to a defined set of rules (IP addresses, ports, protocols).</p>
+<p><strong>Pharming</strong> → <em>Redirects a user to a fake website.</em> Pharming attacks corrupt DNS records or host files so users are redirected to a fraudulent site even if they type the correct URL.</p>
+<p><strong>Anti-virus software</strong> → <em>Scans files on the hard drive for malicious software.</em> Anti-virus tools detect, quarantine, and remove viruses, trojans, and other malware.</p>
+<p><strong>Encryption</strong> → <em>Converts data to an alternative form.</em> Encryption scrambles plaintext into ciphertext using an algorithm, making it unreadable without the decryption key.</p>
+<p><em>(Note: "Verifies the authenticity of data" → digital signature — not directly listed as a feature here, so no match for that description in this question.)</em></p>
+</div>
+<ul class="marks">
+<li>Firewall ↔ Accepts/rejects packets based on criteria. [1]</li>
+<li>Pharming ↔ Redirects user to fake website. [1]</li>
+<li>Anti-virus ↔ Scans files for malicious software. [1]</li>
+<li>Encryption ↔ Converts data to alternative form. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<section class="question">
+<h2>Question 3 — Logic Gates (4 marks)</h2>
+
+<div class="part">
+<h3>3 (a) [2 marks]</h3>
+<div class="q-text"><p>Draw a logic circuit for the expression: <strong>X = NOT ((NOT A AND NOT B) OR (NOT B AND NOT C))</strong></p>
+<p><em>(The QP provides a blank drawing area with inputs A, B, C on the left and X on the right.)</em></p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Break the expression into layers:</p>
+<p><strong>Layer 1:</strong> NOT A, NOT B, NOT C — three separate NOT gates on inputs A, B, C.</p>
+<p><strong>Layer 2a:</strong> NOT A AND NOT B — an AND gate taking NOT A and NOT B as inputs.</p>
+<p><strong>Layer 2b:</strong> NOT B AND NOT C — an AND gate taking NOT B and NOT C as inputs.</p>
+<p><strong>Layer 3:</strong> (NOT A AND NOT B) OR (NOT B AND NOT C) — an OR gate combining the outputs of both AND gates.</p>
+<p><strong>Layer 4:</strong> NOT of the OR output — a final NOT gate gives X.</p>
+<p>This is equivalent to: X = (A OR B) AND (B OR C) by De Morgan's theorem.</p>
+</div>
+<ul class="marks">
+<li>NOT A AND NOT B and NOT B AND NOT C — correct gates for both sub-expressions. [1]</li>
+<li>Final OR gate and NOT gate (with correct inputs). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (b) [2 marks]</h3>
+<div class="q-text">
+<p>Complete the truth table for: <strong>X = NOT ((NOT A AND NOT B) OR (NOT B AND NOT C))</strong></p>
+<div class="q-img"><img src="worked11/fig_3b_truth.png" alt="Truth table template with columns A, B, C, Working space, X"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>For each row, evaluate: NOT A AND NOT B = only 1 when A=0,B=0. NOT B AND NOT C = only 1 when B=0,C=0. The OR of those is 1 when either is 1. The NOT of the OR is the final X.</p>
+<table class="q-table">
+<tr><th>A</th><th>B</th><th>C</th><th>¬A∧¬B</th><th>¬B∧¬C</th><th>OR</th><th>X</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td><strong>1</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>Rows 1–4 correct (0,0,1,1). [1]</li>
+<li>Rows 5–8 correct (0,1,1,1). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<section class="question">
+<h2>Question 4 — Database PHOTOGRAPHS (12 marks)</h2>
+<p style="margin:0 0 10px; color:#555; font-size:0.9em;">Tables: CUSTOMER(CustomerID, FirstName, LastName, Telephone) · PARTY(PartyID, CustomerID, PartyDate, StartTime) · PHOTO_DATA(PhotoID, PartyID, TimeTaken, CameraID) · CAMERA_DATA(CameraID, LensType, LightingType)</p>
+
+<div class="part">
+<h3>4 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Complete the entity-relationship (E-R) diagram for database PHOTOGRAPHS.</p>
+<div class="q-img"><img src="worked11/fig_4a_er.png" alt="E-R skeleton: PARTY, CUSTOMER, PHOTO_DATA, CAMERA_DATA boxes with blank relationships"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Analyse the foreign keys to determine relationships:</p>
+<p>• PARTY has CustomerID as a foreign key → links PARTY to CUSTOMER. One customer can have many parties: <strong>CUSTOMER 1:M PARTY</strong>.</p>
+<p>• PHOTO_DATA has PartyID and CameraID as foreign keys:</p>
+<p>  – One party can produce many photos: <strong>PARTY 1:M PHOTO_DATA</strong>.</p>
+<p>  – One camera can take many photos: <strong>CAMERA_DATA 1:M PHOTO_DATA</strong>.</p>
+<p>Place "1" and "M" (crow's foot) annotations on the connecting lines accordingly.</p>
+</div>
+<ul class="marks">
+<li>1:M between CUSTOMER and PARTY. [1]</li>
+<li>1:M between PARTY and PHOTO_DATA. [1]</li>
+<li>1:M between CAMERA_DATA and PHOTO_DATA. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b) [3 marks]</h3>
+<div class="q-text"><p>Describe the characteristics of a database in Third Normal Form (3NF).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A database in 3NF must satisfy three conditions:</p>
+<p><strong>1NF:</strong> All attribute values must be atomic (no repeating groups or multi-valued attributes within a single cell).</p>
+<p><strong>2NF:</strong> No partial key dependencies — every non-key attribute must depend on the <em>entire</em> primary key, not just part of it. (Relevant when the primary key is composite.)</p>
+<p><strong>3NF:</strong> No transitive dependencies (non-key dependencies) — no non-key attribute should depend on another non-key attribute. Every non-key attribute must depend <em>directly</em> on the primary key and only the primary key.</p>
+</div>
+<ul class="marks">
+<li>No repeating groups of attributes / data is atomic. [1]</li>
+<li>No partial key dependencies. [1]</li>
+<li>No non-key / transitive dependencies. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c)(i) [2 marks]</h3>
+<div class="q-text"><p>State what is meant by a <strong>tuple</strong>. Give an example from PHOTO_DATA.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A <strong>tuple</strong> is a single row in a relational database table. It represents one complete record — a set of attribute values that together describe one entity instance.</p>
+<p><strong>Example from PHOTO_DATA:</strong> (ST23-56, BD987, 08:34, NIK-02) — this is one tuple representing a single photograph (Photo ID ST23-56, taken at party BD987 at 08:34 using camera NIK-02).</p>
+</div>
+<ul class="marks">
+<li>A single row in a table. [1]</li>
+<li>Valid example from PHOTO_DATA (any complete row). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c)(ii) [4 marks]</h3>
+<div class="q-text"><p>Complete the SQL script to display the total number of photographs taken with a camera whose CameraID starts with 'CAN'.</p>
+<pre>SELECT ________ (________)
+FROM ________
+WHERE CameraID LIKE ________;</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>We need COUNT to get a total, specify PhotoID as the field to count, query PHOTO_DATA, and use LIKE with a wildcard for CameraIDs beginning with 'CAN'.</p>
+<pre>SELECT COUNT(PhotoID)
+FROM PHOTO_DATA
+WHERE CameraID LIKE 'CAN%';</pre>
+<p>(Use 'CAN*' in MS Access, 'CAN%' in standard SQL.)</p>
+</div>
+<ul class="marks">
+<li>COUNT [1]</li>
+<li>PhotoID [1]</li>
+<li>PHOTO_DATA [1]</li>
+<li>'CAN%' or 'CAN*' [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (d) [3 marks]</h3>
+<div class="q-text"><p>Write an SQL script to add two new fields to CAMERA_DATA: one for the number of photographs currently on the camera, and one for the date the camera was last used.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Use ALTER TABLE to add columns. Number of photographs is an integer; date last used is a DATE type.</p>
+<pre>ALTER TABLE CAMERA_DATA
+ADD NumberStored INTEGER,
+    LastUsed DATE;</pre>
+</div>
+<ul class="marks">
+<li>ALTER TABLE CAMERA_DATA [1]</li>
+<li>ADD NumberStored INTEGER [1]</li>
+<li>LastUsed DATE [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<section class="question">
+<h2>Question 5 — CPU Architecture (11 marks)</h2>
+
+<div class="part">
+<h3>5 (a) [1 mark]</h3>
+<div class="q-text"><p>State what is meant by the <strong>stored program concept</strong> in the Von Neumann model.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The stored program concept means that both <strong>instructions (program code) and data</strong> are stored together in the <strong>same main memory</strong> (RAM) in binary form. The CPU fetches instructions from memory one at a time and executes them sequentially. This allows programs to be modified in memory and enables general-purpose computing.</p>
+</div>
+<ul class="marks"><li>Instructions and data stored in the same memory / in main memory. [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b)(i) [3 marks]</h3>
+<div class="q-text"><p>State the role of the Program Counter (PC), Index Register (IX), and Status Register (SR).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Program Counter (PC):</strong> Stores the memory address of the <em>next instruction</em> to be fetched from RAM. It is incremented after each fetch so the CPU automatically moves to the next instruction in sequence.</p>
+<p><strong>Index Register (IX):</strong> Stores a value that is <em>added to a base address</em> to form the effective (final) memory address for indexed addressing mode. It allows sequential access to arrays or tables by incrementing IX.</p>
+<p><strong>Status Register (SR):</strong> Contains individual flag bits that are set or cleared based on the results of arithmetic/logic operations and events such as interrupts. Common flags include zero flag (result was zero), carry flag, overflow flag, and interrupt enable flag.</p>
+</div>
+<ul class="marks">
+<li>PC: stores address of next instruction to be fetched. [1]</li>
+<li>IX: stores a value added to an address to calculate a new address. [1]</li>
+<li>SR: stores flags set by arithmetic/logic operations and interrupt flags. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b)(ii) [1 mark]</h3>
+<div class="q-text"><p>Tick one box per row to identify the system bus used by the System Clock and the Memory Address Register (MAR).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>System clock</strong> → <em>Control bus.</em> The clock generates timing pulses that synchronise all CPU operations. Timing signals travel over the control bus.</p>
+<p><strong>Memory Address Register (MAR)</strong> → <em>Address bus.</em> The MAR holds the memory address the CPU wants to access. This address is placed onto the address bus to reach the correct memory location.</p>
+</div>
+<ul class="marks">
+<li>System clock → Control bus; MAR → Address bus (both correct for 1 mark). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b)(iii) [2 marks]</h3>
+<div class="q-text"><p>Describe the purpose of the Control Unit (CU) in a CPU.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The Control Unit coordinates and synchronises all the activities of the CPU and other system components. It:</p>
+<p>• Fetches instructions from memory (via the F-E cycle) and decodes them.</p>
+<p>• Sends control signals along the control bus to direct the activities of other components — telling the ALU what operation to perform, directing data flows between registers, and controlling memory reads/writes.</p>
+<p>• Manages the timing of operations so they occur in the correct sequence.</p>
+</div>
+<ul class="marks">
+<li>Coordinates/synchronises actions of components / sends control signals along control bus. [1]</li>
+<li>Manages execution of instructions in sequence / controls communication between components. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (c) [2 marks]</h3>
+<div class="q-text"><p>Describe the purpose of an interrupt in a computer system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An interrupt is a <strong>signal sent from a device or process</strong> to the CPU, requesting the CPU's immediate attention. It informs the processor that an event has occurred that requires handling — for example, a key press, a completed I/O operation, a hardware error, or a timer expiry. The interrupt temporarily suspends the current process so the CPU can attend to the urgent event.</p>
+</div>
+<ul class="marks">
+<li>To send a signal from a device or process. [1]</li>
+<li>Seeking the attention of the processor. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (d) [2 marks]</h3>
+<div class="q-text"><p>Identify two causes of a <strong>software interrupt</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Software interrupts are generated by the executing program itself (rather than external hardware). Causes include:</p>
+<p>1. <strong>Division by zero:</strong> A program attempts to divide a number by zero, which is mathematically undefined — the CPU generates a software interrupt to handle this exception.</p>
+<p>2. <strong>Attempt to access an invalid memory location:</strong> A program tries to read or write to a memory address outside its allowed region (segmentation fault / memory protection violation).</p>
+<p><em>Also valid: array index out of bounds; stack overflow.</em></p>
+</div>
+<ul class="marks">
+<li>Division by zero / runtime error. [1]</li>
+<li>Invalid memory access / array index out of bounds / stack overflow. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<section class="question">
+<h2>Question 6 — Assembly Language Program Trace &amp; Bit Operations (14 marks)</h2>
+
+<div class="part">
+<h3>6 (a)(i) [4 marks]</h3>
+<div class="q-text">
+<p>Trace the program in memory. Initial memory: 100=0, 101=0, 110=66, 111=65, 112=35. ASCII: 49='1', 50='2', 65='A', 66='B'.</p>
+<div class="q-img"><img src="worked11/fig_6ai_trace.png" alt="Trace table for assembly program counting letters"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The program iterates through memory locations 110, 111, 112. It compares each value to 35 (#). If it's 35 (end marker), it jumps to line 92 (OUT). Otherwise it adds the value at 100 (a counter) to ACC and stores, then increments the counter. The program counts how many non-# characters appear before the # marker and outputs the corresponding ASCII digit.</p>
+<p><strong>Completed trace (key rows):</strong></p>
+<table class="q-table" style="font-size:0.8em">
+<tr><th>Instr addr</th><th>ACC</th><th>IX</th><th>mem[100]</th><th>mem[101]</th><th>Output</th></tr>
+<tr><td>77</td><td></td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>78</td><td>66</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>81</td><td>66</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>82</td><td></td><td></td><td></td><td>66</td><td></td></tr>
+<tr><td>83</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>84</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>85</td><td></td><td></td><td>1</td><td></td><td></td></tr>
+<tr><td>86</td><td></td><td>1</td><td></td><td></td><td></td></tr>
+<tr><td>87</td><td>65</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>89</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>81</td><td>66</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>82</td><td></td><td></td><td></td><td>66</td><td></td></tr>
+<tr><td>83</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>84</td><td>2</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>85</td><td></td><td></td><td>2</td><td></td><td></td></tr>
+<tr><td>86</td><td></td><td>2</td><td></td><td></td><td></td></tr>
+<tr><td>87</td><td>35</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>90</td><td>2</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>91</td><td>50</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>92</td><td></td><td></td><td></td><td></td><td><strong>2</strong></td></tr>
+</table>
+<p>The program counted 2 non-# characters (B and A at addresses 110 and 111), then added #48 to get ASCII '2' (50), and output the character '2'.</p>
+</div>
+<ul class="marks">
+<li>First iteration (IX=0, compares 66≠35, adds to count): 1 mark per highlighted block. [4 total]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (a)(ii) [1 mark]</h3>
+<div class="q-text">
+<p>State the purpose of this code fragment:</p>
+<pre>LDD 100 / STO 165 / LDD 101 / STO 100 / LDD 165 / STO 101</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>This code uses address 165 as a temporary (swap) variable. It copies the value at address 100 to 165, then copies 101 to 100, then copies 165 (original 100) to 101. The net effect is to <strong>swap the contents of memory addresses 100 and 101</strong>.</p>
+</div>
+<ul class="marks"><li>Swaps the contents of memory addresses 100 and 101. [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(i) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6bi_reg.png" alt="ACC = 1 0 0 1 0 0 1 1. Show result after XOR B00011111"></div>
+<p>Show the result after <code>XOR B00011111</code> on ACC = <code>1001 0011</code>.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>XOR flips each bit where the mask is 1, leaves it unchanged where mask is 0:</p>
+<pre>  ACC:  1 0 0 1 0 0 1 1
+MASK:   0 0 0 1 1 1 1 1
+XOR:    1 0 0 0 1 1 0 0</pre>
+<p><strong>Result: 1000 1100</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks"><li>1000 1100 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(ii) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6bii_reg.png" alt="ACC = 1 0 0 1 0 0 1 1. Show result after AND B11110000"></div>
+<p>Show the result after <code>AND B11110000</code> on ACC = <code>1001 0011</code>.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>AND keeps a bit as 1 only where both ACC and mask are 1:</p>
+<pre>  ACC:  1 0 0 1 0 0 1 1
+MASK:   1 1 1 1 0 0 0 0
+AND:    1 0 0 1 0 0 0 0</pre>
+<p><strong>Result: 1001 0000</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks"><li>1001 0000 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(iii) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6biii_reg.png" alt="ACC = 1 0 0 1 0 0 1 1. Show result after OR B11001100"></div>
+<p>Show the result after <code>OR B11001100</code> on ACC = <code>1001 0011</code>.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>OR sets each bit to 1 if either ACC or mask is 1:</p>
+<pre>  ACC:  1 0 0 1 0 0 1 1
+MASK:   1 1 0 0 1 1 0 0
+OR:     1 1 0 1 1 1 1 1</pre>
+<p><strong>Result: 1101 1111</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div>
+</div>
+</div>
+<ul class="marks"><li>1101 1111 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(iv) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6biv_reg.png" alt="ACC = 1 0 0 1 0 0 1 1. Show result after LSR #2"></div>
+<p>Show the result after <code>LSR #2</code> on ACC = <code>1001 0011</code>.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>LSR (Logical Shift Right) by 2: shift all bits right by 2 positions, introducing 0s at the left end:</p>
+<pre>Before:  1 0 0 1 0 0 1 1
+LSR #2:  0 0 1 0 0 1 0 0  (bits 10010011 → 00100100, the rightmost 2 bits are lost)</pre>
+<p><strong>Result: 0010 0100</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks"><li>0010 0100 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c) [2 marks]</h3>
+<div class="q-text"><p>Tick one or more boxes to indicate whether each task is performed in the <strong>first pass</strong> or <strong>second pass</strong> of a two-pass assembler.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A two-pass assembler works as follows:</p>
+<p><strong>First pass:</strong> Reads through the source code, building a symbol table (recording labels and their addresses). Also removes comments, checks that opcodes are valid, reads the program line by line.</p>
+<p><strong>Second pass:</strong> Uses the symbol table from pass 1 to generate the final object code (machine code), resolving all label references to actual addresses. Also reads the program line by line again.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Task</th><th>First pass</th><th>Second pass</th></tr>
+<tr><td>Remove comments</td><td>✓</td><td></td></tr>
+<tr><td>Read the assembly language program one line at a time</td><td>✓</td><td>✓</td></tr>
+<tr><td>Generate the object code</td><td></td><td>✓</td></tr>
+<tr><td>Check the opcode is in the instruction set</td><td>✓</td><td></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>Remove comments → First; Read → Both; Generate object code → Second; Check opcode → First. [1 per correct pair of rows]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<section class="question">
+<h2>Question 7 — System Software &amp; Performance (13 marks)</h2>
+
+<div class="part">
+<h3>7 (a) [2 marks]</h3>
+<div class="q-text"><p>State two benefits to a programmer of using Dynamic Link Library (DLL) files.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>1. <strong>Reduced memory requirements:</strong> DLL files are only loaded into memory when needed and are shared among multiple programs that use them simultaneously, so each program doesn't need its own copy of the library code in memory.</p>
+<p>2. <strong>No recompilation needed for updates:</strong> If a bug is fixed or a feature is improved in the DLL, the programmer can update the DLL file without recompiling the main program. The main executable file is smaller because it doesn't embed the library code.</p>
+</div>
+<ul class="marks">
+<li>Memory requirements reduced / DLL loaded once / shared. [1]</li>
+<li>No need to recompile main program when DLL is updated / executable file is smaller. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (b) [2 marks]</h3>
+<div class="q-text"><p>Describe the ways in which memory management organises and allocates RAM.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The OS memory manager divides RAM into <strong>blocks (pages or segments)</strong> and dynamically allocates blocks to programs and processes as needed. It keeps track of which blocks are in use and which are free, reclaiming memory when a process finishes. It also ensures two processes cannot occupy the same RAM area simultaneously, preventing data corruption. It may also manage virtual memory — temporarily moving less-used data from RAM to disk (paging/swapping) to allow more programs to run than would physically fit in RAM.</p>
+</div>
+<ul class="marks">
+<li>RAM assigned into blocks / dynamic allocation to programs. [1]</li>
+<li>Reclaims unused blocks / prevents two processes occupying the same area / manages paging/virtual memory. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (c) [3 marks]</h3>
+<div class="q-text"><p>Describe one appropriate method of compressing a text file.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Method: Run-Length Encoding (RLE)</strong> — a lossless compression technique.</p>
+<p>The algorithm scans the text file and identifies runs of consecutive identical characters. Instead of storing each character individually, it replaces each run with a pair: (character, count of repetitions).</p>
+<p>For example, "AAAAAABBBCCCC" (13 characters) becomes [A,6][B,3][C,4] — just 6 values — significantly reducing file size when there are long runs of repeated characters.</p>
+<p>The original text can be perfectly reconstructed from the compressed form (lossless).</p>
+</div>
+<ul class="marks">
+<li>Lossless compression / Run-Length Encoding. [1]</li>
+<li>Identifies repeated sequences of characters. [1]</li>
+<li>Replaces with a single copy and a count. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (d) [2 marks]</h3>
+<div class="q-text"><p>Explain the reasons why increasing the amount of cache memory can improve CPU performance.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Cache memory is a small, very fast memory bank located physically close to or on the CPU die. It stores copies of frequently accessed instructions and data.</p>
+<p>When the CPU needs data, it first checks the cache. If found (a cache hit), the data is retrieved much faster than if the CPU had to access RAM. If not found (a cache miss), the CPU must wait for slower RAM access.</p>
+<p><strong>More cache memory</strong> means more frequently used instructions and data can be stored simultaneously. This leads to more cache hits, fewer costly RAM accesses, and less time the CPU spends idle waiting for data — overall improving throughput and performance.</p>
+</div>
+<ul class="marks">
+<li>Cache is fast-access memory that stores frequently used instructions/data. [1]</li>
+<li>More cache → more data stored for fast access → less swapping with RAM / prevents CPU idling. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (e) [2 marks]</h3>
+<div class="q-text"><p>State the name of a peripheral device port that provides a physical connection for: (1) a 3D printer, (2) a monitor.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>3D printer:</strong> <strong>USB port</strong> (USB-A or USB-B). Most 3D printers connect via USB. Some may also use a COM (serial) port.</p>
+<p><strong>Monitor:</strong> <strong>HDMI port</strong> (most common on modern computers). Also valid: VGA, DisplayPort, USB-C (with DisplayPort Alt Mode).</p>
+</div>
+<ul class="marks">
+<li>3D printer: USB / COM port. [1]</li>
+<li>Monitor: HDMI / VGA / DisplayPort / USB. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<section class="question">
+<h2>Question 8 — CSMA/CD in a Bus Network (4 marks)</h2>
+
+<div class="part">
+<h3>8 [4 marks]</h3>
+<div class="q-text"><p>Describe how CSMA/CD is used in a bus network.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>CSMA/CD (Carrier Sense Multiple Access / Collision Detection)</strong> manages shared access to the bus cable:</p>
+<p>1. Before transmitting, a device <strong>listens</strong> to the bus (carrier sense). If the channel is busy (another device is transmitting), it waits until the channel becomes free.</p>
+<p>2. When the channel is free, the device <strong>transmits</strong> its data. However, because multiple devices share the bus (multiple access), two devices might detect a free channel at the same instant and start transmitting simultaneously.</p>
+<p>3. This simultaneous transmission causes a <strong>collision</strong> — the data signals corrupt each other.</p>
+<p>4. Both devices <strong>detect the collision</strong> (the signal on the wire differs from what was sent) and immediately abort transmission. They broadcast a <strong>jamming signal</strong> to alert all devices that a collision has occurred.</p>
+<p>5. Each device waits a <strong>random</strong> back-off time before attempting to retransmit. The randomness prevents both devices retrying at the same time and colliding again.</p>
+</div>
+<ul class="marks">
+<li>Device listens / checks channel is free before transmitting. [1]</li>
+<li>Multiple computers on same medium — two can transmit at once, causing a collision. [1]</li>
+<li>Collision detected — transmission aborted / jamming signal sent. [1]</li>
+<li>Devices wait a random time before retrying. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<section class="question">
+<h2>Question 9 — Embedded Systems &amp; EEPROM (4 marks)</h2>
+
+<div class="part">
+<h3>9 (a) [2 marks]</h3>
+<div class="q-text"><p>Explain why modern televisions are embedded systems.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An embedded system is a computing system integrated into a larger device to perform a specific, dedicated function.</p>
+<p>Modern televisions qualify because their processor and memory are <strong>built into / integrated inside</strong> the television hardware — you cannot remove the "computer" from the TV.</p>
+<p>The TV's computer system is designed to perform a <strong>specific set of functions</strong> (decoding video signals, managing channels, rendering the user interface, handling remotes) — it is not a general-purpose computer that the owner can freely reprogram.</p>
+</div>
+<ul class="marks">
+<li>Embedded system is built into / integrated into the TV. [1]</li>
+<li>Combination of hardware and software designed for a specific function / not easily changed by owner. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>9 (b) [2 marks]</h3>
+<div class="q-text"><p>Describe one benefit of using EEPROMs in an embedded system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>EEPROM (Electrically Erasable Programmable ROM) can be <strong>erased and reprogrammed using electrical signals</strong> without removing it from the device. This means:</p>
+<p>The firmware (software in the embedded system) can be <strong>updated</strong> remotely or by a technician without disassembling the device. For example, a smart TV manufacturer can push firmware updates over the internet to add features or fix bugs, without requiring the TV to be sent for repair. This is a significant practical benefit compared to ROM (which cannot be updated at all) or EPROM (which requires UV light and physical removal).</p>
+</div>
+<ul class="marks">
+<li>Can be reprogrammed / erased without removing from device. [1]</li>
+<li>Firmware can be updated (e.g. by non-technical users over the internet). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+</main>
+</body>
+</html>

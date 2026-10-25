@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/21 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/21 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Count-control(led) loop // Count-control(led) iteration  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 4 1</p>
+<div class='ms-raw'>4  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4 1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>BOOLEAN  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MainsOn (= TRUE) AND WaterOn (= TRUE)                                                                         1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MainsOn (= TRUE) AND WaterOn (= TRUE)                                                                         1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> OR:</p>
+<div class='ms-raw'>IF  3
+  MainsOn AND (Tray1 OR Tray2) THEN
+
+  MP1  MP2
+
+  WashStart  TRUE
+
+  MP3
+
+  ENDIF
+
+  OR:
+  MP2
+
+  WashStart  MainsOn AND (Tray1 OR Tray2)
+
+  MP1
+  MP3</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: OR:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Report window // Watch window  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 103 1</p>
+<div class='ms-raw'>103  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 103 1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  Investigate the current system /any example  3
+  // investigate any other similar systems
+  MP2  Discussion/interviews with managers
+  MP3  Discussion/interviews with staff who operate the system
+  MP4  Carry out a survey of employees/customers
+  // carry out a focus group of employees/customers
+  MP5  Observe the current system in use
+  MP6  Produce the requirements specification
+  MP7  Decide on the (program development) life cycle to be used
+
+  Max 3
+
+  University Press &amp; Assessment 2026  Page 6 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Before any programming is started, the DESIGN stage for the proposed new  6
+  system must be completed.
+
+  For this large project, the tasks will be broken down into
+  several MODULES // SUB-TASKS each will be coded by a different
+  programming team.
+
+  Once each team has completed its work, INTEGRATION // UNIT testing must
+  be carried out.
+
+  Before the new system is delivered to the business, ALPHA testing
+  is carried out in-house.
+
+  It is decided to install the software initially in only one of the call centres where
+  BETA testing is carried out.
+
+  The new software is finally rolled out to all five call centres. In the first week of
+  its use, staff report that the software still requires extra features which were
+  not originally agreed.
+  The software is withdrawn until ADAPTIVE maintenance is completed.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  4
+
+  Initialise Count to zero
+  REPEAT
+  INPUT integer number
+  IF integer number &gt; 0 then increment the count
+  UNTIL integer number equals 0
+  OUTPUT Count
+
+  Mark as follows:
+
+  MP1  Initialise Count to zero and later evidence of use of counter
+  MP2  Conditional loop and terminated when 0 is input
+  MP3  Test for number &gt; 0 and increment count inside the loop
+  MP4  Output the count (either ‘sum’ or ‘count’)
+
+  Max 4
+
+
+
+  University Press &amp; Assessment 2026  Page 7 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  4
+
+  FUNCTION BulbCost(Quantity : INTEGER) RETURNS REAL
+  DECLARE Cost : REAL
+  DECLARE Twenty : INTEGER
+  DECLARE Other : INTEGER
+
+  Twenty  Quantity DIV 20
+  Other  Quantity MOD 20
+  Cost  (Twenty * 30) + (Other * 1.75)
+  RETURN Cost
+  ENDFUNCTION
+
+  Mark as follows:
+  MP1  Function header and single parameter and returns REAL and end
+  MP2  Declaration of required local variable(s)
+  MP3  Correct calculation of ‘multiples of 20’ and ‘other’ amounts
+  using MOD and DIV // alternative method
+  MP4  Cost is returned</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>TotalCost  BulbCost(NumberPurchased)  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 6 · 44424344</p>
+<div class='ms-raw'>6
+
+  44424344</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 6</li><li>Correct result: 44424344</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  LEFT(DataPacket, 3) // MID(DataPacket, 1, 3)  2
+
+  MP2  MID(DataPacket, 5, 1)
+
+  University Press &amp; Assessment 2026  Page 8 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> OR:</p>
+<div class='ms-raw'>Example solution:  4
+
+  FUNCTION RejectDescription(ThisReject : STRING)
+  RETURNS STRING
+  DECLARE Description : STRING
+  Description  MID(ThisReject, 7,
+  Part 1
+  LENGTH(ThisReject) - 6)
+  Part 2
+  OR:
+
+  Description  RIGHT(ThisReject, LENGTH(ThisReject) - 6)
+  Part 1  Part 2
+
+  RETURN Description
+  ENDFUNCTION
+
+  Mark as follows:
+
+  MP1  Function header and end function (and string parameter)
+  MP2  Calculation for description expression (part 1)
+  using MID/RIGHT
+  MP3  Calculation for description expression (part 2)
+  using the LENGTH function
+  MP4  Return of a calculated value and RETURN STRING in the header
+
+  University Press &amp; Assessment 2026  Page 9 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: OR:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(ThisMachine = &#x27;B&#x27; OR ThisMachine = &#x27;C&#x27;) THEN</li>
+<li>(ThisMachine = ‘B‘ OR ThisMachine = ‘C‘)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(ThisMachine = &#x27;B&#x27; OR ThisMachine = &#x27;C&#x27;) THEN</li><li>(ThisMachine = ‘B‘ OR ThisMachine = ‘C‘)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2>
+        <section class="part">
+          <p class="part-label">Part 7(a)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Printer queue on a computer network // modelling/simulation of a real-world  1
+  problem using a queue //accept anything reasonable</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>The queue operates on the principle the first item to join the queue will be the  2
+  next item to leave
+  MP1  First in – first out ‘feel’
+  MP2  Must refer to their application stated in part (i)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP1  DECLARE MyQueue : ARRAY [1:8] OF STRING  2
+
+  MP2  DECLARE Front : INTEGER
+  DECLARE Rear : INTEGER
+
+  University Press &amp; Assessment 2026  Page 10 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Queue  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 8</p>
+<div class='ms-raw'>8
+
+  Mark as follows:
+
+  MP1  Correct sequence of five values in locations 2–6
+
+  MP2  Front points to DOG in location 2 and
+  Rear points to CAT in location 6</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 8</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MyQueue  2</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  3
+
+  PROCEDURE InitialiseQueue()
+  DECLARE i : INTEGER
+  Front  0 /….7/8
+  Rear  0 / … 7/8
+  FOR i  1 TO 8
+  MyQueue[i]  &quot;&quot;
+  NEXT i
+  ENDPROCEDURE
+
+  Mark as follows:
+
+  MP1  Front and Rear are each assigned a value in range
+  MP2  Correct FOR-NEXT loop // other loop structure
+  MP3  MyQueue[i] assigned an empty string  in a loop</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>&quot;GERBIL&quot;
+
+  Mark as follows:
+
+  MP1  MONKEY and SNAKE in locations 1, 2 with correct Rear pointer
+  MP2  GIRAFFE in 5 with Front pointer
+  and TIGER, ANT, GERBIL in locations 6, 7 and 8
+
+  University Press &amp; Assessment 2026  Page 11 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>LeftPointer  RightPointer  MidPointer  4</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Found 6  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 8(c) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 6 1</p>
+<div class='ms-raw'>6  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 6 1</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2>
+        <section class="part">
+          <p class="part-label">Part 9(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>DECLARE Version1 : ARRAY [0:2, 1:15] OF CHAR  2
+
+  MP1  MP2
+
+  University Press &amp; Assessment 2026  Page 12 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>IF Version1[FloorNumber, RoomNumber] = ‘ A‘ THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF Version1[FloorNumber, RoomNumber] = ‘ A‘ THEN</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Example solution:  3
+
+  TYPE RoomData
+  (DECLARE Available : CHAR)
+  DECLARE RoomType : CHAR
+  DECLARE View : BOOLEAN
+  DECLARE Grade : STRING
+  ENDTYPE
+
+  Mark as follows:
+
+  MP1 and MP2
+  Two variables correct  1 mark
+  Three variables correct  2 marks
+  MP3 ENDTYPE
+
+  University Press &amp; Assessment 2026  Page 13 of 14
+
+Trace ID: PC-8DDFDAF021
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9618/21 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9618/21 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9618/21  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 9(c)(ii) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AND Version2[Floor, Room].View = BoolView · AND Version2[Floor, Room].RoomGrade = · AND Version2[Floor, Room].Available = &#x27;A’THEN</p>
+<ol>
+<li>IF TO_UPPER(InputView) = &quot;TRUE&quot; THEN</li>
+<li>IF Version2[Floor, Room].RoomType = MyRoomType</li>
+<li>AND Version2[Floor, Room].View = BoolView</li>
+<li>AND Version2[Floor, Room].RoomGrade =</li>
+<li>AND Version2[Floor, Room].Available = &#x27;A’THEN</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>IF TO_UPPER(InputView) = &quot;TRUE&quot; THEN</li><li>IF Version2[Floor, Room].RoomType = MyRoomType</li><li>AND Version2[Floor, Room].View = BoolView</li><li>AND Version2[Floor, Room].RoomGrade =</li><li>AND Version2[Floor, Room].Available = &#x27;A’THEN</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

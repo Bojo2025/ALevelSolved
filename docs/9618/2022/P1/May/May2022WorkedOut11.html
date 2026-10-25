@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/11 · May/June 2022 · Worked Solutions</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #fafafa; color: #222; }
+  header { border-bottom: 3px solid #003366; padding-bottom: 12px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 1.35em; color: #003366; }
+  header p { margin: 0; color: #555; font-size: 0.95em; }
+  .question { margin-bottom: 36px; }
+  .question > h2 { font-size: 1.15em; color: #003366; border-left: 4px solid #003366; padding-left: 10px; margin-bottom: 10px; }
+  .part { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; padding: 14px 16px; }
+  .part h3 { margin: 0 0 8px; font-size: 1em; color: #444; }
+  .q-text { margin-bottom: 10px; line-height: 1.6; }
+  .q-text p { margin: 4px 0; }
+  .q-img { margin: 10px 0; }
+  .q-img img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+.worked { background: #f0f6ff; border-left: 4px solid #003366; padding: 12px 14px; margin-top: 10px; line-height: 1.65; }
+  .worked p { margin: 6px 0; }
+  .worked .step { margin: 8px 0; }
+  .worked code, code { font-family: monospace; background: #e8eef7; padding: 1px 4px; border-radius: 3px; }
+  .marks { background: #f9fff0; border-left: 4px solid #3a7a1a; padding: 10px 14px 10px 28px; margin: 10px 0 0; }
+  .marks li { margin: 4px 0; line-height: 1.55; }
+  table.q-table { border-collapse: collapse; margin: 8px 0; font-size: 0.9em; }
+  table.q-table th, table.q-table td { border: 1px solid #aaa; padding: 5px 10px; text-align: center; }
+  table.q-table th { background: #e0e8f5; }
+  .register-row { display: flex; gap: 0; margin: 6px 0; }
+  .register-cell { border: 1px solid #888; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 1.1em; font-weight: bold; background: #fff; }
+  .register-label { font-size: 0.85em; color: #555; margin-right: 8px; line-height: 36px; }
+  .answer-reg { background: #d4edda; }
+  pre { background: #f0f0f0; padding: 10px 14px; border-radius: 4px; font-size: 0.9em; overflow-x: auto; }
+
+  .solution-open { margin-top: 10px; }
+  .part-label-note { font-size: 0.85em; color: #3a7a1a; font-weight: 700; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>9618/11 · May/June 2022 · Worked Solutions</h1>
+  <p>Cambridge International AS &amp; A Level Computer Science — Paper 1 Theory Fundamentals</p>
+</header>
+
+<main>
+
+<!-- ==================== QUESTION 1 ==================== -->
+<section class="question">
+<h2>Question 1 — Data Representation (6 marks)</h2>
+
+<div class="part">
+<h3>1 (a) [1 mark]</h3>
+<div class="q-text"><p>State the difference between a <strong>tebibyte</strong> and a <strong>terabyte</strong>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The prefixes differ in their base. A <strong>terabyte (TB)</strong> is a decimal unit: 1 TB = 10<sup>12</sup> bytes = 1 000 000 000 000 bytes (powers of 10). A <strong>tebibyte (TiB)</strong> is a binary unit: 1 TiB = 2<sup>40</sup> bytes = 1 099 511 627 776 bytes (powers of 2).</p>
+<p>In other words, one tebibyte is 1024 gibibytes, whereas one terabyte is 1000 gigabytes.</p>
+</div>
+<ul class="marks">
+<li>One tebibyte = 1024 gibibytes; one terabyte = 1000 gigabytes (or equivalent statement about binary vs decimal bases). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b) [1 mark]</h3>
+<div class="q-text"><p>Convert the signed denary value <strong>−100</strong> into an 8-bit two's complement binary integer.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Step 1:</strong> Convert +100 to 8-bit binary: 100 = 64 + 32 + 4 = <code>0110 0100</code>.</p>
+<p><strong>Step 2:</strong> Invert all bits (one's complement): <code>0110 0100</code> → <code>1001 1011</code>.</p>
+<p><strong>Step 3:</strong> Add 1 to the result: <code>1001 1011</code> + 1 = <code>1001 1100</code>.</p>
+<p><strong>Answer: <code>1001 1100</code></strong></p>
+<p><em>Verification:</em> −128 + 28 = −128 + 16 + 8 + 4 = −128 + 28 = −100. ✓</p>
+</div>
+<ul class="marks">
+<li>1001 1100 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (c) [2 marks]</h3>
+<div class="q-text"><p>Convert the denary number <strong>251</strong> into hexadecimal. Show your working.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Method 1 — repeated division by 16:</strong></p>
+<p>251 ÷ 16 = 15 remainder 11 → F remainder B</p>
+<p>15 ÷ 16 = 0 remainder 15 → F</p>
+<p>Reading remainders bottom to top: <strong>FB</strong></p>
+<p><strong>Method 2 — via binary:</strong> 251 = 11111011₂ → split into nibbles: <code>1111</code> = F, <code>1011</code> = B → <strong>FB</strong></p>
+<p><strong>Answer: FB</strong></p>
+</div>
+<ul class="marks">
+<li>Working shown (e.g. division by 16, or binary conversion). [1]</li>
+<li>Answer: FB [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (d) [1 mark]</h3>
+<div class="q-text">
+<p>Add the following unsigned binary integers:</p>
+<pre>  01010000
++ 00111110</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Perform column-by-column binary addition:</p>
+<pre>  01010000
++ 00111110
+----------</pre>
+<p>Right to left: 0+0=0; 0+1=1; 0+1=1; 0+1=1; 1+1=10 (write 0 carry 1); 0+1+1=10 (write 0 carry 1); 1+0+1=10 (write 0 carry 1); 0+0+1=1.</p>
+<p><strong>Answer: <code>1000 1110</code></strong></p>
+</div>
+<ul class="marks">
+<li>1000 1110 [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<section class="question">
+<h2>Question 2 — Computer Hardware (17 marks)</h2>
+
+<div class="part">
+<h3>2 (a)(i) [5 marks]</h3>
+<div class="q-text"><p>Complete the description of computer memory (fill-in blanks about RAM, ROM, SRAM, DRAM).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>RAM and ROM are both examples of <strong>primary memory</strong>.</p>
+<p>One item stored in RAM: <strong>currently running software / data / part of the OS</strong>. (RAM is volatile and holds items the CPU is actively using.)</p>
+<p>One item stored in ROM: <strong>start-up/boot-up instructions (BIOS/firmware)</strong>. (ROM is non-volatile and permanently stores the bootstrap program.)</p>
+<p>SRAM uses transistors arranged as <strong>flip-flops (latches)</strong>. Each bit is held by a set of transistors forming a bistable circuit — no refresh needed, very fast.</p>
+<p>DRAM uses transistors and <strong>capacitors</strong>. Each bit is a charge on a capacitor. Capacitors leak, so DRAM must be constantly refreshed — slower and denser than SRAM.</p>
+</div>
+<ul class="marks">
+<li>Primary memory. [1]</li>
+<li>Currently running software / data / OS. [1]</li>
+<li>Start-up / boot-up instructions / BIOS. [1]</li>
+<li>Flip-flops / latches. [1]</li>
+<li>Capacitors. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (a)(ii) [3 marks]</h3>
+<div class="q-text"><p>Explain the difference between PROM, EPROM, and EEPROM.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>PROM (Programmable ROM)</strong> can be programmed exactly once by blowing fuses. Once set, its contents cannot be changed.</p>
+<p><strong>EPROM (Erasable Programmable ROM)</strong> can be erased and reprogrammed multiple times, but it must be <em>physically removed</em> from the circuit to be erased by exposure to <strong>ultraviolet (UV) light</strong>. The entire chip must be erased before rewriting.</p>
+<p><strong>EEPROM (Electrically Erasable Programmable ROM)</strong> can also be reprogrammed multiple times, but it is erased using an <strong>electrical voltage</strong>, meaning it can be erased and rewritten while still in the device (in situ). Unlike EPROM, individual bytes can be erased selectively rather than the entire chip at once. EEPROM is the basis of flash storage.</p>
+</div>
+<ul class="marks">
+<li>PROM can be set once; EPROM and EEPROM can be overwritten multiple times. [1]</li>
+<li>EPROM must be removed from device to erase (UV light); EEPROM can be erased in situ. [1]</li>
+<li>EPROM uses UV light; EEPROM uses electrical voltage / EEPROM is flash storage; EPROM must be entirely erased while EEPROM does not. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (b) [5 marks]</h3>
+<div class="q-text"><p>Describe the principal operations of a magnetic hard disk.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A magnetic hard disk stores data using magnetic patterns on rotating platters. Here is how it works:</p>
+<p><strong>Structure:</strong> The disk contains one or more circular <em>platters</em> (disks) coated with a ferromagnetic material (ferrous oxide) that can be magnetised. The platters are mounted on a central spindle inside a sealed aluminium enclosure to keep out dust.</p>
+<p><strong>Rotation:</strong> The spindle motor spins the platters at high speed (typically 5,400–15,000 rpm). This brings any part of the disk surface under the read/write heads quickly.</p>
+<p><strong>Read/Write heads:</strong> Each surface of each platter has a read/write head mounted on an arm that floats just above the surface. Electronic circuits (the actuator) move the arm to position the head over the required track.</p>
+<p><strong>Organisation:</strong> Each platter surface is divided into concentric circular <em>tracks</em>, and each track is divided into <em>sectors</em>. The basic unit of storage is a block (one track segment in one sector).</p>
+<p><strong>Writing:</strong> Varying the current through the head coil produces a varying magnetic field that magnetises domains on the disk surface in different orientations, encoding binary data.</p>
+<p><strong>Reading:</strong> As the disk rotates, variations in the magnetic field on the surface induce a varying current in the read head coil, which is decoded back to binary data.</p>
+</div>
+<ul class="marks">
+<li>Has one or more platters / disks. [1]</li>
+<li>Platters are coated with ferromagnetic material / can be magnetised. [1]</li>
+<li>Platters mounted on a spindle and spin at high speed. [1]</li>
+<li>Read/write heads on arms positioned just above surface; arms move to position heads over required track. [1]</li>
+<li>Surface divided into tracks and sectors; writing varies current in head; reading detects magnetic variations inducing current. [1 for any one further valid point]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (c)(i) [4 marks]</h3>
+<div class="q-text"><p>Complete the table: write one set of values (Input 1 and Input 2) for each gate that gives output 1.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Recall the truth tables:</p>
+<p><strong>AND gate:</strong> Output = 1 only when ALL inputs are 1. So Input 1 = <strong>1</strong>, Input 2 = <strong>1</strong>.</p>
+<p><strong>NAND gate:</strong> Output = 1 when NOT all inputs are 1. Any input combination except (1,1) works. E.g. Input 1 = <strong>0</strong>, Input 2 = <strong>0</strong> (or 0,1 or 1,0).</p>
+<p><strong>XOR gate:</strong> Output = 1 when inputs are <em>different</em>. So Input 1 = <strong>0</strong>, Input 2 = <strong>1</strong> (or 1,0).</p>
+<p><strong>NOR gate:</strong> Output = 1 only when ALL inputs are 0. So Input 1 = <strong>0</strong>, Input 2 = <strong>0</strong>.</p>
+
+<table class="q-table">
+<tr><th>Gate</th><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+<tr><td>AND</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>NAND</td><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>XOR</td><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>NOR</td><td>0</td><td>0</td><td>1</td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>AND: (1,1). [1]</li>
+<li>NAND: any pair except (1,1), e.g. (0,0) or (0,1) or (1,0). [1]</li>
+<li>XOR: (0,1) or (1,0). [1]</li>
+<li>NOR: (0,0). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (c)(ii) [3 marks]</h3>
+<div class="q-text">
+<p>Write the logic expression for the given logic circuit:</p>
+<div class="q-img"><img src="worked11/fig_2cii_circuit.png" alt="Logic circuit: A,B → NAND gate; B,C → XOR gate; both → OR gate → X"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Trace the circuit from inputs to output:</p>
+<p><strong>Gate 1 (top left — NAND):</strong> Inputs are A and B. Output = A NAND B.</p>
+<p><strong>Gate 2 (bottom left — XOR):</strong> Inputs are B and C. Output = B XOR C.</p>
+<p><strong>Gate 3 (right — OR):</strong> Inputs are the outputs of Gate 1 and Gate 2. Output = (A NAND B) OR (B XOR C).</p>
+<p><strong>Full expression: X = (A NAND B) OR (B XOR C)</strong></p>
+</div>
+<ul class="marks">
+<li>A NAND B [1]</li>
+<li>B XOR C [1]</li>
+<li>(A NAND B) OR (B XOR C) [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<section class="question">
+<h2>Question 3 — Security and Privacy (7 marks)</h2>
+
+<div class="part">
+<h3>3 (a) [1 mark]</h3>
+<div class="q-text"><p>State the difference between the <strong>security</strong> of data and the <strong>privacy</strong> of data.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Security</strong> of data refers to protecting data from being <em>lost, damaged, or accessed</em> without authorisation — i.e., preventing unauthorised access or accidental loss.</p>
+<p><strong>Privacy</strong> of data refers to ensuring that personal data is only accessible to those who are <em>authorised</em> to see it — it is about controlling who can view the data.</p>
+<p>In short: security prevents against loss/damage, while privacy prevents against unauthorised viewing/disclosure.</p>
+</div>
+<ul class="marks">
+<li>Security prevents loss/damage; privacy prevents unauthorised access. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>3 (b) [6 marks]</h3>
+<div class="q-text"><p>Identify and describe two threats to examination paper data on a laptop connected to the internet. Identify one different security measure for each threat.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Threat 1: Malware (e.g. a virus or ransomware)</strong><br>
+<em>Description:</em> Malicious software that installs itself (often via email attachments or downloads) and may replicate, delete, corrupt, or encrypt the examination papers, making them inaccessible or stolen.<br>
+<em>Security measure:</em> Install and regularly update anti-malware / anti-virus software, which scans for and removes malicious programs.</p>
+
+<p><strong>Threat 2: Hacking / Unauthorised access</strong><br>
+<em>Description:</em> A hacker gains illegal access to the teacher's computer (e.g. by exploiting a vulnerability or cracking a weak password) with the intent to steal, alter, or leak the examination papers.<br>
+<em>Security measure:</em> Use a firewall to monitor and filter incoming/outgoing network traffic, blocking suspicious connections; also use strong/complex passwords or multi-factor authentication.</p>
+</div>
+<ul class="marks">
+<li>Threat 1 identified (e.g. malware / virus / spyware). [1]</li>
+<li>Description of Threat 1 (e.g. replicates and can delete/damage papers). [1]</li>
+<li>Security measure for Threat 1 (e.g. anti-malware / anti-virus software). [1]</li>
+<li>Threat 2 identified (e.g. hacker / unauthorised access). [1]</li>
+<li>Description of Threat 2 (e.g. illegal access to delete/damage papers). [1]</li>
+<li>Security measure for Threat 2 (e.g. firewall / strong passwords). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<section class="question">
+<h2>Question 4 — Relational Database MARKS (16 marks)</h2>
+<p style="margin:0 0 10px; color:#555; font-size:0.9em;">Tables: STUDENT(StudentID, FirstName, LastName) · TEST(TestID, Description, TotalMarks) · STUDENT_TEST(StudentID, TestID, Mark)</p>
+
+<div class="part">
+<h3>4 (a) [4 marks]</h3>
+<div class="q-text"><p>Describe the advantages of using a relational database compared to a file-based approach.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>1. Reduced data redundancy:</strong> In a relational database each piece of data is stored in one place (e.g. a student's name appears once in STUDENT, not repeated in every test record). In a file-based system, the same data might be duplicated across multiple files.</p>
+<p><strong>2. Data consistency / integrity:</strong> Because data is stored once, any update automatically applies everywhere it is referenced through foreign keys. File-based systems risk inconsistencies when the same fact is stored in multiple files.</p>
+<p><strong>3. Program–data independence:</strong> The database structure (schema) is separate from the programs that use it. Changing the structure does not require rewriting every application program, unlike flat-file systems where data format is embedded in the code.</p>
+<p><strong>4. Complex queries are easier to run:</strong> SQL lets users join multiple tables and filter data with a single statement. In a file-based approach, programmers must write custom code to cross-reference files.</p>
+<p><strong>5. Controlled access / multiple views:</strong> A DBMS can provide different views of the data to different users, so each user sees only what they need.</p>
+</div>
+<ul class="marks">
+<li>Reduced data redundancy / less repeated data — each item stored once. [1]</li>
+<li>Data consistency / integrity maintained — changes in one table auto-update linked data. [1]</li>
+<li>Program–data independence — structure changes don't require rewriting programs. [1]</li>
+<li>Complex queries easier to run / can provide different views to different users. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b) [3 marks]</h3>
+<div class="q-text"><p>Give the highest level of Normal Form (NF) the database MARKS is in and justify your choice.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Answer: Third Normal Form (3NF)</strong></p>
+<p><strong>Justification:</strong></p>
+<p><em>1NF:</em> All attributes are atomic (single values), and there are no repeating groups. ✓</p>
+<p><em>2NF:</em> STUDENT_TEST has a composite primary key (StudentID, TestID). The attribute Mark depends on <em>both</em> StudentID and TestID together (it's the mark for a specific student on a specific test) — no partial dependencies exist. The other tables have simple primary keys. ✓</p>
+<p><em>3NF:</em> There are no transitive dependencies. In STUDENT, FirstName and LastName depend only on StudentID (no non-key attribute depends on another non-key attribute). Likewise in TEST and STUDENT_TEST. ✓</p>
+<p>Because it satisfies all three levels without repeating attributes, no partial dependencies, and no transitive dependencies, the database is in 3NF.</p>
+</div>
+<ul class="marks">
+<li>3NF [1]</li>
+<li>No repeating attributes / already in 2NF / fully dependent on corresponding primary key. [1]</li>
+<li>No transitive dependencies / no non-key dependencies. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c)(i) [5 marks]</h3>
+<div class="q-text">
+<p>Write an SQL script to create the table STUDENT_TEST. Sample data:</p>
+<table class="q-table"><tr><th>StudentID</th><th>TestID</th><th>Mark</th></tr>
+<tr><td>12</td><td>A1</td><td>50</td></tr><tr><td>12</td><td>P10</td><td>100</td></tr>
+<tr><td>13</td><td>A1</td><td>75</td></tr><tr><td>14</td><td>P10</td><td>60</td></tr></table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Looking at the data: StudentID is a whole number (INTEGER), TestID is a text code (VARCHAR), Mark is a whole number (INTEGER). The primary key is the combination (StudentID, TestID) — a composite key. StudentID is a foreign key referencing STUDENT, and TestID is a foreign key referencing TEST.</p>
+<pre>CREATE TABLE STUDENT_TEST (
+    StudentID INTEGER,
+    TestID VARCHAR(10),
+    Mark INTEGER,
+    PRIMARY KEY (StudentID, TestID),
+    FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID),
+    FOREIGN KEY (TestID) REFERENCES TEST(TestID)
+);</pre>
+</div>
+<ul class="marks">
+<li>CREATE TABLE with table name and brackets. [1]</li>
+<li>StudentID and Mark declared as INTEGER. [1]</li>
+<li>TestID declared as VARCHAR / text type. [1]</li>
+<li>PRIMARY KEY (StudentID, TestID) correctly set up. [1]</li>
+<li>Both FOREIGN KEY references correctly set up. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c)(ii) [3 marks]</h3>
+<div class="q-text"><p>Write an SQL script to find the average mark of students in test A7.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>We need to compute an average, which uses the <code>AVG()</code> aggregate function. We query the STUDENT_TEST table and filter rows where TestID equals 'A7'.</p>
+<pre>SELECT AVG(Mark)
+FROM STUDENT_TEST
+WHERE TestID = 'A7';</pre>
+</div>
+<ul class="marks">
+<li>AVG(Mark) [1]</li>
+<li>SELECT ... FROM STUDENT_TEST [1]</li>
+<li>WHERE TestID = 'A7' [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (d) [4 marks]</h3>
+<div class="q-text"><p>Explain how <strong>data validation</strong> and <strong>data verification</strong> can be used when entering a mark (a whole number between 0 and the test's maximum mark, inclusive).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Data validation</strong> is automatic checking by the computer that data is reasonable and within expected bounds:</p>
+<p>• <em>Range check:</em> The system checks that the entered mark is between 0 and TotalMarks (from the TEST table) inclusive. Any value outside this range is rejected.</p>
+<p>• <em>Type check:</em> The system verifies that the entered value is an integer (whole number), not a decimal or text.</p>
+<p>• <em>Presence check:</em> The system ensures a mark has actually been entered before saving the record.</p>
+
+<p><strong>Data verification</strong> checks that data has been entered accurately (matches the source):</p>
+<p>• <em>Double entry:</em> The user enters the mark twice; the system compares both entries and only accepts them if they match.</p>
+<p>• <em>Visual (proof-read) check:</em> The person entering the mark manually compares what is shown on screen with the mark on the original paper/document before submitting.</p>
+</div>
+<ul class="marks">
+<li>Range check — ensures mark is between 0 and maximum. [1]</li>
+<li>Type check — ensures an integer is entered. [1] (or presence check)</li>
+<li>Double entry verification — enter mark twice; system compares. [1]</li>
+<li>Visual check — manually compare entered mark with source document. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<section class="question">
+<h2>Question 5 — IDE, Licences, Libraries (9 marks)</h2>
+
+<div class="part">
+<h3>5 (a) [4 marks]</h3>
+<div class="q-text"><p>Draw one line from each IDE feature to its correct description.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>IDE Feature</th><th>Description</th></tr>
+<tr><td>Context-sensitive prompt</td><td>Executes one line of the program and then stops</td></tr>
+<tr><td>Dynamic syntax check</td><td>Underlines or highlights statements that do not meet the rules of the language</td></tr>
+<tr><td>Breakpoint</td><td>Outputs the contents of variables and data structures</td></tr>
+<tr><td>Single stepping</td><td>Stops the code executing at a set line</td></tr>
+<tr><td>Report window</td><td>Displays predictions of the code being entered</td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The correct matching is:</p>
+<p>• <strong>Context-sensitive prompt</strong> → <em>Displays predictions of the code being entered.</em> (It suggests completions as you type, like autocomplete.)</p>
+<p>• <strong>Dynamic syntax check</strong> → <em>Underlines or highlights statements that do not meet the rules of the language.</em> (Real-time syntax highlighting shows errors while coding.)</p>
+<p>• <strong>Breakpoint</strong> → <em>Stops the code executing at a set line.</em> (You mark a line; execution pauses there.)</p>
+<p>• <strong>Single stepping</strong> → <em>Executes one line of the program and then stops.</em> (Allows line-by-line trace-through.)</p>
+<p>• <strong>Report window</strong> → <em>Outputs the contents of variables and data structures.</em> (Shows variable values during debugging.)</p>
+</div>
+<ul class="marks">
+<li>Context-sensitive prompt ↔ Displays predictions of the code being entered. [1]</li>
+<li>Dynamic syntax check ↔ Underlines/highlights statements not meeting language rules. [1]</li>
+<li>Breakpoint ↔ Stops code at a set line. [1]</li>
+<li>Single stepping ↔ Executes one line then stops. [1]</li>
+<li>(All 5 correct = 4 marks; scoring 1,2,3,4 for 1,2,3–4,5 correct lines respectively)</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b) [2 marks]</h3>
+<div class="q-text"><p>The programmer wants to allow users to edit, improve and redistribute the program. Identify two different types of software licence that could be used.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>For software that users can edit, improve, and redistribute, the programmer should use an <strong>open-source licence</strong>. Two recognised bodies that certify such licences are:</p>
+<p>1. <strong>Open Source Initiative (OSI)</strong> — certifies licences such as the MIT, Apache, and GPL licences that allow use, modification, and redistribution of source code.</p>
+<p>2. <strong>Free Software Foundation (FSF)</strong> — certifies licences such as the GNU GPL and GNU LGPL that guarantee the freedoms to run, study, share, and modify software.</p>
+</div>
+<ul class="marks">
+<li>Open Source Initiative [1]</li>
+<li>Free Software Foundation [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (c) [3 marks]</h3>
+<div class="q-text"><p>Explain the benefits to the programmer of using program libraries.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>1. Saves time:</strong> Library routines have already been written and do not need to be coded from scratch. The programmer can simply call the routine rather than re-implementing complex functionality (e.g. a sorting algorithm, a mathematical function, or a GUI component).</p>
+<p><strong>2. Reliability — code is already tested:</strong> Library routines have been extensively tested by their developers. Using them reduces the risk of bugs compared to writing the same code fresh, making the final program more robust.</p>
+<p><strong>3. Automatic updates:</strong> If the library is improved or a bug is fixed, the program benefits automatically when the updated library is linked, without the programmer needing to change or recompile the main program.</p>
+</div>
+<ul class="marks">
+<li>Saves programming/testing time — no need to write/re-write code from scratch. [1]</li>
+<li>Code already tested, so more reliable / robust / less likely to have bugs. [1]</li>
+<li>Improvements to the library automatically update the program. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<section class="question">
+<h2>Question 6 — Von Neumann Architecture & Instruction Set (18 marks)</h2>
+
+<div class="part">
+<h3>6 (a)(i) [5 marks]</h3>
+<div class="q-text"><p>Describe the role of the registers in the Fetch-Execute (F-E) cycle.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The Fetch-Execute cycle uses four key registers:</p>
+<p><strong>Program Counter (PC):</strong> Holds the memory address of the <em>next</em> instruction to be fetched. At the start of each cycle, its value is copied to the MAR, and then the PC is incremented to point to the following instruction.</p>
+<p><strong>Memory Address Register (MAR):</strong> Holds the address in memory from which the CPU wishes to read (or write). During fetch, MAR receives the address from the PC so the memory can be accessed at that location.</p>
+<p><strong>Memory Data Register (MDR):</strong> Holds the data that has just been fetched from the address in the MAR. After a memory read, the instruction word arrives in the MDR.</p>
+<p><strong>Current Instruction Register (CIR):</strong> Receives the instruction from the MDR. The control unit decodes the instruction held in the CIR and directs the appropriate execution actions.</p>
+</div>
+<ul class="marks">
+<li>PC holds address of next instruction; its contents are incremented each cycle. [1]</li>
+<li>MAR holds the address to fetch data from (receives value from PC). [1]</li>
+<li>MDR holds the data at the address in MAR. [1]</li>
+<li>Instruction transferred to CIR for decoding and execution. [1]</li>
+<li>Any additional correct detail (e.g. PC copied to MAR as first step). [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (a)(ii) [5 marks]</h3>
+<div class="q-text"><p>Describe when interrupts are detected in the F-E cycle and how they are handled.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Detection:</strong> Interrupts are checked for at the <em>end of each F-E cycle</em> (after the execute stage, before starting the next fetch). The processor checks a flag in the status register or an interrupt line.</p>
+<p><strong>Handling:</strong></p>
+<p>1. The processor checks the <em>priority</em> of the pending interrupt against the current process priority.</p>
+<p>2. If the interrupt is of <em>lower priority</em> than the current process, it is ignored and the next F-E cycle begins normally.</p>
+<p>3. If the interrupt is of <em>higher priority</em>, the CPU saves the current state (contents of all registers, including PC) onto the <em>stack</em> so the process can be resumed later.</p>
+<p>4. The processor identifies the type/location of the interrupt and looks up the corresponding <em>Interrupt Service Routine (ISR)</em> address.</p>
+<p>5. The ISR is executed to handle the interrupt.</p>
+<p>6. When the ISR finishes, the processor checks for further high-priority interrupts; if none, it pops the saved state from the stack and resumes the interrupted process.</p>
+</div>
+<ul class="marks">
+<li>Detected at end/start of F-E cycle. [1]</li>
+<li>Priority of interrupt checked. [1]</li>
+<li>If lower priority — continue with F-E cycle. [1]</li>
+<li>If higher priority — state of current process / registers saved on stack. [1]</li>
+<li>Appropriate ISR called; when finished, load data from stack and continue. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b) [2 marks]</h3>
+<div class="q-text"><p>Identify one factor that can affect the performance of the computer system and state how it impacts performance.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Factor: Clock speed</strong><br>
+<em>Impact:</em> A higher clock speed means more F-E cycles can be completed per second, so more instructions are executed per second, increasing overall performance.</p>
+<p><em>(Alternative valid answers: Number of cores — more cores allow more instructions to be executed simultaneously in parallel; Bus width — a wider bus allows more data to be transferred in each operation; Cache size — a larger cache allows more frequently used data/instructions to be stored for fast access, reducing time the CPU spends waiting for RAM.)</em></p>
+</div>
+<ul class="marks">
+<li>Factor identified (e.g. clock speed / number of cores / bus width / cache). [1]</li>
+<li>Correct corresponding impact stated. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c)(i) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6ci_reg.png" alt="Register before: 0 1 1 0 1 1 0 1. Complete register after AND #2"></div>
+<p>Complete the register to show the result after <code>AND #2</code> is executed.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>#2 in binary is <code>0000 0010</code>. The AND operation is applied bit by bit:</p>
+<pre>  ACC:    0 1 1 0 1 1 0 1
+AND #2:   0 0 0 0 0 0 1 0
+          ---------------
+Result:   0 0 0 0 0 0 0 0</pre>
+<p>Only bit 1 (value 2) can survive an AND, and in the ACC, bit 1 is 0, so the result is all zeros.</p>
+<p><strong>Register after: <code>0000 0000</code></strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks">
+<li>0000 0000 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c)(ii) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6cii_reg.png" alt="Register before: 0 1 1 0 1 1 0 1. Complete register after OR #8"></div>
+<p>Complete the register to show the result after <code>OR #8</code> is executed.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>#8 in binary is <code>0000 1000</code>. The OR operation sets a bit to 1 if <em>either</em> input is 1:</p>
+<pre>  ACC:    0 1 1 0 1 1 0 1
+ OR #8:   0 0 0 0 1 0 0 0
+          ---------------
+Result:   0 1 1 0 1 1 0 1</pre>
+<p>Bit 3 (value 8) is already 1 in ACC, so OR #8 does not change anything. All other bits retain their ACC values.</p>
+<p><strong>Register after: <code>0110 1101</code></strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div>
+</div>
+</div>
+<ul class="marks">
+<li>0110 1101 [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c)(iii) [1 mark]</h3>
+<div class="q-text">
+<div class="q-img"><img src="worked11/fig_6ciii_reg.png" alt="Register before: 0 1 1 0 1 1 0 1. Complete register after LSL #4"></div>
+<p>Complete the register to show the result after <code>LSL #4</code> is executed.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>LSL (Logical Shift Left) by 4 places shifts all bits four positions to the left. Zeros are introduced on the right end; bits shifted off the left end are discarded.</p>
+<pre>Before:  0 1 1 0 1 1 0 1
+LSL #4:  shift left by 4
+After:   1 1 0 1 0 0 0 0</pre>
+<p>The left four bits (0110) are lost; the right four bits (1101) become bits 7–4; zeros fill bits 3–0.</p>
+<p><strong>Register after: <code>1101 0000</code></strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks">
+<li>1101 0000 [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+</main>
+</body>
+</html>

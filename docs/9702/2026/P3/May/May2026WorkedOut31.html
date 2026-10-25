@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9702/31 · May/June 2026 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9702/31 · May/June 2026 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Final value of V1 to at least the nearest 0.001 V and in the  1 If OOR check SV  0.050 V.
+  range 0.380–0.470 V with correct unit  Allow negative values of V.
+  and
+  any raw values of V1 all to at least the nearest 0.001 V.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>V2 ˃ V1  1 Ignore precision and units.
+  Ignore negative signs.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>V1  1 Answer must be correct to the number of significant figures
+  Correct calculation of  .
+  V2 − V1  used by the candidate.
+  Ignore unit if given.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Without help from Supervisor: six sets of readings (different  3 Record the total number of sets of readings in a ring to left of
+  values of R) scores 3 marks, five sets scores 2 marks, four  the table.
+  sets scores 1 mark, three or fewer scores 0 marks.  Allow more than six sets of readings.
+
+  If minor help given (correcting/connecting one component):
+  six sets of readings scores 2 marks, five sets of readings
+  scores 1 mark, four or fewer sets of readings scores 0
+  marks.
+
+  If unspecified help, or major help, given e.g. building circuit:
+  six sets of readings scores 1 mark, five sets of readings
+  scores 0 marks.
+
+  Indicate help with SR on script front with details near table.
+
+  Values recorded in a table for R, V1, and V2.  1 All data must be in a table for this mark.
+
+  Trend correct [V1 and V2 increase as R increases].  1 Judge trend from table not from graph.
+  Judge trend from mean V1 (and mean V2) if available.
+  If no V1 values, judge trend on V2 and V1 / (V2 – V1).
+  If no V2 values, judge trend on V1 and V1 / (V2 – V1).
+  Do not award if two (or more) values of V1 or V2 are equal.
+  Do not award if one or more values in the table is ‘out of
+  trend’. This may not affect the quality mark on the graph.
+
+  University Press &amp; Assessment 2026  Page 7 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Range of R: must include 12  and 39 .  1 Ring minimum and maximum values in the table.
+  If SR indicates a different range of resistors used (e.g. 10 
+  rather than 12 ) then the range must include the smallest
+  and the largest values of resistors available.
+
+  Column headings:  1 Ignore units in the body of the table.
+  Each column heading must contain a quantity and a unit  Ignore POT errors.
+  where appropriate.  Accept separating mark as a solidus, brackets around units
+  or &#x27;in&#x27;, but not a comma.
+  The presentation of quantity and unit must conform to  V1
+  accepted scientific convention.  Do not credit V / V for unit of  .
+  V2 − V1
+
+  Significant figures:  1 Check consistency in every row.
+  V1
+  All values of  must be given to the same number as,
+  V2 − V1
+  or one more than, the least number of s.f. in V1 and V2.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Axes:  1  V1
+  Accept labels on axes ONLY as  and R.
+  Axes must be labelled with the correct quantities.  V2 − V1
+  Actual numbers on the axes need not correspond to labels.
+  Scales must be chosen so that the plotted points occupy at
+  Ignore any units given on axes labels.
+  least half the graph grid in both the x and y directions.
+  Do not allow reversed numerical scales e.g., 10, 9, 8, 7…
+  left to right.
+  Scale markings on both axes are no more than 2 cm (one
+  Allow 8:10 scales.
+  large square) apart.
+  Do not allow awkward markings (e.g. 2.57, 3.57, 4.57 an
+  Sensible scales must be used, no awkward scales (e.g. 3:10
+  awkward offset of a sensible linear scale).
+  or fractions).
+  Minimum 6 large squares on long axis and 4 large squares
+  on short axis.
+  Ignore point(s) plotted off the grid and assess on remaining
+  points.
+  Do not award if non-linear scale (ignore false zeros at the
+  origin).
+  Indicate x-axis false origin with FO.
+
+  University Press &amp; Assessment 2026  Page 8 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>any table value is not plotted;</li>
+<li>any point has diameter larger than half a small square</li>
+<li>the point furthest from the line is plotted more than half</li>
+<li>a point is (or should be) off the grid (check any point on</li>
+<li>non-linear scale in region of the points;</li>
+<li>wrong quantity plotted or calculated</li>
+<li>any data point in the table is not plotted</li>
+<li>there are 4 or fewer plotted points</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>any table value is not plotted;</li><li>any point has diameter larger than half a small square</li><li>the point furthest from the line is plotted more than half</li><li>a point is (or should be) off the grid (check any point on</li><li>non-linear scale in region of the points;</li><li>wrong quantity plotted or calculated</li><li>any data point in the table is not plotted</li><li>there are 4 or fewer plotted points</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>rotation or translation achieves a better fit;</li>
+<li>line is thicker than 1 mm or ‘hairy’;</li>
+<li>there are 4 or fewer points plotted</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>rotation or translation achieves a better fit;</li><li>line is thicker than 1 mm or ‘hairy’;</li><li>there are 4 or fewer points plotted</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Gradient: gradient sign on answer line consistent with graph  1 Allow hypotenuse to be exactly half the length of the drawn
+  drawn.  line.
+  Correct substitution must be shown. Do not check beyond
+  The hypotenuse of the triangle used should be greater than  the substitution regardless of the method used.
+  half the length of the drawn straight line.  If a read-off is incorrect, write in correct value(s).
+  Ignore units.
+  Both read-offs must be accurate to half a small square in  Ignore POT error if it is the same for both x values or both y
+  both the x and y directions.  values.
+  Allow use of points from the table ONLY if they are less than
+  Method of calculation must be correct, not x / y.  or equal to half a small square from the line. Check the
+  plotting of these points.
+
+  Other valid methods:</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Check correct substitution in y = mx + c</li>
+<li>Intercept read directly from the graph, with read-off at R = 0,                                       Allow ecf of gradient value, m, in a correct substitution</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Check correct substitution in y = mx + c</li><li>Intercept read directly from the graph, with read-off at R = 0,                                       Allow ecf of gradient value, m, in a correct substitution</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>P = candidate’s gradient value and Q = candidate’s intercept                                        1 Allow a correctly rounded value (to 2 or more sf)</li>
+<li>candidate makes a correction at this point (true gradient =</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>P = candidate’s gradient value and Q = candidate’s intercept                                        1 Allow a correctly rounded value (to 2 or more sf)</li><li>candidate makes a correction at this point (true gradient =</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>/ candidate’s gradient and true intercept = – candidate’s</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>/ candidate’s gradient and true intercept = – candidate’s</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>on the grid (except at R = 0).                                                                        Allow if trend negative</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>on the grid (except at R = 0).                                                                        Allow if trend negative</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Counting squares x scale factor (must see a triangle);</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Final value of l0 to the nearest mm with unit.  1 Allow answer line value to 0.1 mm only if all repeats to the
+  Any raw values of l0 must all be to the nearest mm.  nearest mm are seen.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Final value of T0 in the range 0.50 s to 0.90 s with unit (seen  1 Ignore precision.
+  somewhere).  Do not allow if frequency on answer line for T0.
+
+  At least two values of nT where n ⩾ 5.  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Value of l and correct calculation of e.  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Absolute uncertainty in e in range 2–6 mm.  1 With  100 seen or implied.
+
+  Correct method of calculation to find percentage uncertainty
+  e.g. absolute uncertainty/value from 2(c)(i)  100.
+
+  If repeated readings have been taken, then the uncertainty  If repeated readings used, need to see repeats either here
+  can be half the range if the working is clearly shown, but  or in 2(c)(i). Allow new mean e if repeated here rather than
+  NOT zero if values are equal.  2(c)(i).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>T &lt; T0.  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Correct calculation of (T0 ̶ T).  1 Check value of (T0 ̶ T) when rounded to 2 sf is the same as
+  the examiner’s when also rounded to 2 sf.
+  Check to 1 sf if candidate’s value is to 1 sf.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Second values of m and l.  1 Different value of m, different value of l.
+  Ignore units, ignore precision.
+
+  Second values of T0 and T.  1 If unit missing for T, T0, m or l then assume same units as
+  on page 8 and 9.
+
+  Second value of (T0 ̶ T)  first value of (T0 ̶ T).  1 If either value of (T0 – T) is negative then do not award the
+  mark here.
+
+  University Press &amp; Assessment 2026  Page 12 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Two values of C calculated correctly.  1 Allow C to 1 sf only if (T0 – T) is to 1 sf.
+  Check second C value using values from 2(e) on page 10.
+  The final C values must not be written as fractions.  C value on answer line when rounded to 2 sf must be the
+  same as the examiner’s value when also rounded to 2 sf.
+  If small difference in rounding, check calculation from
+  candidate’s raw values if necessary.
+  Ignore POT errors if the same for both C values.
+  Allow the second C value to be written on either answer line.
+  If no working shown still award mark if C value correct.
+  If candidate C value is incorrect, write the correct value near
+  the answer line.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(g) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Allow the statement C1 = C2 only if the values are the same</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Allow the statement C1 = C2 only if the values are the same</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(h)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A  4 Allow reference to ‘k’ to mean ‘C’.
+  Two (sets of) readings are not enough to draw a valid  Allow ‘too few readings to draw a conclusion’.
+  conclusion  Allow reference to ‘relationship’ to mean the ‘conclusion’.
+  or  Allow ‘values of C are insufficient to make a conclusion’.
+  two C values are not enough to draw a conclusion.  Allow ‘one or two readings are not enough to draw a
+  conclusion’.
+  Allow ‘…to conclude (experiment)’.
+  Do not allow ‘repeat readings’ on its own.
+  Do not allow ‘two readings are not enough for (accurate)
+  results’/ ‘to find C’.
+  Do not allow ‘…to conclude the results’.
+  Do not allow ‘too few readings’ on its own.
+  Do not allow ‘(only) one reading’ or ‘(only) three readings’
+  etc.
+
+  B  Accept ‘extended spring length’ for l (reference to extended
+  Difficulty with measuring l with a reason e.g. parallax  length must be clear).
+  error / spring moves if touched / unclear where coiled section  Do not credit ‘spring moves’ on its own.
+  of spring begins and ends.  Ignore ‘ruler is not precise / accurate enough’.
+  Ignore ‘ruler has zero error’.
+  Ignore ‘metre ruler is clumsy / awkward to use’.
+  Ignore reference to moving / unsteady hands.
+
+  C  Accept ‘parallel to the bench’ for ‘horizontal’.
+  Difficulty with the setup with a reason e.g. stands  Do not credit ‘spring (A) is / may not be level’.
+  unstable / slide on table (at longer spring extensions),  Ignore references to the accuracy of the mass value.
+  difficult to judge when spring (A) is horizontal / other springs  Do not allow ‘tell’ (when spring is horizontal / vertical).
+  are vertical / difficult to keep spring (A) horizontal (when
+  stretched) / difficult to set springs vertical and spring (A)
+  horizontal at the same time.
+
+  D  Allow if related to either the setup of the apparatus or
+  Springs slide along rod / fall off rod.  to the oscillations but only credit once.
+
+  University Press &amp; Assessment 2026  Page 14 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(h)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>E  Do not allow wind, ideas of air conditioning/fans.
+  Difficulty with measuring the time period or T of oscillations  Do not allow ‘mass is not pulled to exactly the same
+  with a reason e.g. other modes of oscillation present / small  distance each time’ or words to that effect.
+  amplitude / high damping  Do not allow ‘see’ or ‘observe’ oscillations.
+  or  Ignore ‘force applied to mass is not constant’.
+  difficulty with measuring the time period or T e.g. difficult to  Do not credit references to human reaction (time).
+  judge / determine / decide / find / identify / know the start or  Do not credit ‘oscillations are too quick’ or words to that
+  end of an oscillation or a complete oscillation  effect.
+
+  University Press &amp; Assessment 2026  Page 15 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(h)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>A  4 Allow reference to ‘k’ to mean ‘C’.
+  Take more readings (for different values of m and l ) and  Allow ‘repeat readings and plot a graph’.
+  plot a graph  Do not allow ‘repeat readings and draw line / plot a diagram’
+  or  (need to mention graph).
+  take more readings and compare C values.  Do not allow ‘repeat readings’ on its own.
+  Do not allow ‘take more readings and (calculate) average C.
+
+  B  Ignore references to micrometer / travelling microscope.
+  Method of improving length measurement e.g. measure the  Use of markers or pointers must be qualified with positioning
+  entire length of spring rather than coiled section / clamp a  at the ends of the spring.
+  ruler (to measure l ) / use a caliper (to measure l ) / use
+  markers or pointers placed at ends of spring.
+
+  C  Allow ‘use a plumb line and set square to ensure spring A is
+  Method of improving the setup e.g. add weights to base of  horizontal’.
+  stands / (G) clamp stands to bench / use plumb line to get  Do not allow ‘set square’ on its own.
+  springs vertical / use a set square between the vertical  Do not allow ‘use a spirit level’ on its own.
+  springs and spring A / use a spirit level to set spring A
+  horizontal.
+
+  D  Must be clear that the method of fixing is to the rods (i.e. not
+  Method of preventing the spring sliding on the rod e.g. make  just ‘use adhesive putty / tape’ etc.
+  notches or grooves in the rods / use clip / clamp / stopper on
+  end of rod / use adhesive putty / tape / string to fix the springs
+  to the rod / turn rod by 90° to prevent spring sliding.
+
+  University Press &amp; Assessment 2026  Page 16 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(h)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>E  Allow in-built timer / timestamp for timer.
+  Video / record / film oscillations with a timer in view (or  Allow use of motion sensor (with data logger) placed
+  playback frame by frame) or use a fiducial marker at the  beneath the oscillating mass (must indicate position of the
+  centre / middle / equilibrium of the oscillation  sensor).
+  Do not allow light gates.
+  Ignore references to ‘slow motion camera’ or ‘camera’.
+  Do not allow ‘slow motion camera’ in place of video / record /
+  film.
+  Do not allow use of ‘guides’ (to keep oscillations vertical).
+  Ignore references to release mechanisms (for starting the
+  mass oscillating).
+
+  University Press &amp; Assessment 2026  Page 17 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Using only y and x (without read-offs) – check these
+  values to one small square using their triangle (triangle must
+  be shown).
+  Do not award if points on a CURVED line are used in
+  y / x.
+
+  University Press &amp; Assessment 2026  Page 10 of 17
+
+Trace ID: PC-4F4D1D2CEC
+Re-uploading, mirroring or re-hosting this file on any other website or domain is unauthorised and traceable.
+Licensed for hosting on papacambridge.com only.
+PapaCambridge
+9702/31 Mark  Scheme June ·  papacambridge.com
+  2026 | Source:  papacambridge.com  9702/31 Mark Scheme June 2026
+Downloaded from PapaCambridge - https://papacambridge.com/
+
+  9702/31  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2026
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

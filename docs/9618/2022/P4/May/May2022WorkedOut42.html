@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/42 · May/June 2022 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/42 · May/June 2022 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked42/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>declaring array StackData and pointer StackPointer as (global data structures)</li>
+<li>StackData has 10 integer elements</li>
+<li>StackPointer initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim StackData(9) As Integer
+               Dim StackPointer As Integer
+               Sub Main()
+                 StackPointer = 0
+               end Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>global StackData #integer
+               global StackPointer
+               StackData = [0,0,0,0,0,0,0,0,0,0] #integer
+               StackPointer = 0</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>declaring array StackData and pointer StackPointer as (global data structures)</li><li>StackData has 10 integer elements</li><li>StackPointer initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure header with sensible identifier (and end where appropriate)</li>
+<li>outputting StackPointer</li>
+<li>outputting all 10 elements in array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PrintArray()
+                       Console.WriteLine(StackPointer)
+                       For x = 0 To 9
+                            Console.WriteLine(StackData(x))
+                       Next
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PrintArray():
+                   global StackData
+                   global StackPointer
+                   print(StackPointer)
+                   for x in range (0, 10):
+                       print(StackData[x])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure header with sensible identifier (and end where appropriate)</li><li>outputting StackPointer</li><li>outputting all 10 elements in array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>function Push() taking an integer parameter</li>
+<li>checking if stack is full …</li>
+<li>…and returning FALSE</li>
+<li>(if not full) storing parameter to stack at StackPointer …</li>
+<li>…incrementing StackPointer</li>
+<li>…returning TRUE</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Push(DataToPush)
+                 If StackPointer = 10 Then
+                   Return False
+                 Else
+                   StackData(StackPointer) = DataToPush
+                   StackPointer = StackPointer + 1
+                   Return True
+                 End If
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Push(DataToPush):
+                   global StackData
+                   global StackPointer
+                   if StackPointer == 10:
+                       return False
+                   else:
+                       StackData[StackPointer] = DataToPush
+                       StackPointer = StackPointer + 1
+                       return True
+
+ 2022                                                         Page 6 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>function Push() taking an integer parameter</li><li>checking if stack is full …</li><li>…and returning FALSE</li><li>(if not full) storing parameter to stack at StackPointer …</li><li>…incrementing StackPointer</li><li>…returning TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Inputting 11 numbers …</li>
+<li>…calling Push() with each number input as a parameter …</li>
+<li>…outputting appropriate message if TRUE returned</li>
+<li>…outputting appropriate message if FALSE returned</li>
+<li>Calling their output procedure after all 11 additions</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 StackPointer = 0
+                 Dim TempNumber As Integer
+                 For x = 0 To 10
+                   Console.WriteLine(&quot;Enter a number&quot;)
+                   TempNumber = Console.ReadLine()
+
+                   If Push(TempNumber) Then
+                      Console.WriteLine(&quot;Stored&quot;)
+                   Else
+                      Console.WriteLine(&quot;Stack full&quot;)
+                   End If
+                 Next
+                 PrintArray()
+                 Console.ReadLine()
+               End Sub
+
+ 2022                                                               Page 8 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Inputting 11 numbers …</li><li>…calling Push() with each number input as a parameter …</li><li>…outputting appropriate message if TRUE returned</li><li>…outputting appropriate message if FALSE returned</li><li>Calling their output procedure after all 11 additions</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>StackPointer = 0</li>
+<li>StackData = [0,0,0,0,0,0,0,0,0,0]</li>
+<li>TempNumber = int(input(&quot;Enter a number&quot;))</li>
+<li>if Push(TempNumber) == True:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>#main
+               StackPointer = 0
+               StackData = [0,0,0,0,0,0,0,0,0,0]
+               for x in range(0, 11):
+                   TempNumber = int(input(&quot;Enter a number&quot;))
+
+                   if Push(TempNumber) == True:
+                       print(&quot;Stored&quot;)
+                   else:
+                       print(&quot;Stack full&quot;)
+               PrintArray()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>StackPointer = 0</li><li>StackData = [0,0,0,0,0,0,0,0,0,0]</li><li>TempNumber = int(input(&quot;Enter a number&quot;))</li><li>if Push(TempNumber) == True:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for inputting all 11 numbers, message for first 10 saying added (11 to 20), message stating 11th number stating  1
+  stack full. Full array contents output (11 12 13 14 15 16 17 18 19 20).
+  e.g.
+
+ 2022  Page 10 of 36
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Pop() function header (and close where appropriate) and returning a number in all possible situations</li>
+<li>checking if stack is empty (StackPointer is 0) and returning -1</li>
+<li>(otherwise) accessing the item at the top of the stack …</li>
+<li>…decrementing the stack pointer</li>
+<li>…returning the item removed</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Pop()
+                 Dim ReturnData As Integer
+                 If StackPointer = 0 Then
+                   Return -1
+                 Else
+                   ReturnData = StackData(StackPointer – 1)
+                   StackPointer = StackPointer - 1
+                   Return ReturnData
+                 End If
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Pop():
+                   global StackData
+                   global StackPointer
+                   if StackPointer == 0:
+                       return -1
+                   else:
+                       ReturnData = StackData[StackPointer - 1]
+                       StackPointer = StackPointer - 1
+                       return ReturnData
+
+ 2022                                                       Page 11 of 36
+
+9618/42                                         Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Pop() function header (and close where appropriate) and returning a number in all possible situations</li><li>checking if stack is empty (StackPointer is 0) and returning -1</li><li>(otherwise) accessing the item at the top of the stack …</li><li>…decrementing the stack pointer</li><li>…returning the item removed</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>output of before removed with 11 inputs</li>
+<li>output of stack (after, this could be 11–20, 11–18, or 11–18 then ‘null’ ‘null’s)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>output of before removed with 11 inputs</li><li>output of stack (after, this could be 11–20, 11–18, or 11–18 then ‘null’ ‘null’s)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1 — solution</p>
+          <div class="solution">
+            <ol>
+<li>function declaration taking appropriate parameters and recursive calls</li>
+<li>remainder of the function is accurate including appropriate DIV operator</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function BinarySearch(ByVal SearchArray(,) As Integer, Lower As Integer, Upper As Integer,
+               SearchValue As Integer)
+                 Dim Mid As Integer
+                 If Upper &gt;= 0 Then
+                   Mid = (Lower + (Upper - 1)) \ 2
+                   If SearchArray(0, Mid) = SearchValue Then
+                     Return Mid
+                   ElseIf SearchArray(0, Mid) &gt; SearchValue Then
+                     Return BinarySearch(SearchArray, Lower, Mid - 1, SearchValue)
+                   Else
+                     Return BinarySearch(SearchArray, Mid + 1, Upper, SearchValue)
+                   End If
+                 End If
+                 Return -1
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def BinarySearch(SearchArray, Lower, Upper, SearchValue):
+                   if Upper &gt;= 0:
+                       Mid = int((Lower + (Upper - 1)) / 2)
+                       If SearchArray[0][Mid] == SearchValue:
+                           return Mid
+                       elif SearchArray[0][Mid] &gt; SearchValue:
+                           return BinarySearch(SearchArray, Lower, Mid-1, SearchValue)
+                       else:
+                           return BinarySearch(SearchArray, Mid+1, Upper, SearchValue)
+                   return -1
+
+ 2022                                                        Page 22 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme             May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>function declaration taking appropriate parameters and recursive calls</li><li>remainder of the function is accurate including appropriate DIV operator</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked42/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>in main local 2D array declared …</li>
+<li>… with 10  10 integer elements</li>
+<li>initialising all array elements to a number…</li>
+<li>…that is random between 1 and 100 (allow inclusive or exclusive)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 Dim Random As New Random
+                 Dim ArrayData(10, 10) As Integer
+                 For x = 0 To 9
+                   For y = 0 To 9
+                      ArrayData(x, y) = Random.Next(1, 100)
+                   Next
+                 Next
+                 Console.ReadLine()
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>import random
+               #main
+               ArrayData= [[0]*10 for i in range(10)] #integer
+               for x in range(0, 10):
+                   for y in range(0,10):
+                       ArrayData[x][y] = random.randint(1, 100)
+
+ 2022                                                      Page 13 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>in main local 2D array declared …</li><li>… with 10  10 integer elements</li><li>initialising all array elements to a number…</li><li>…that is random between 1 and 100 (allow inclusive or exclusive)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1st outer loop (dimension 1)</li>
+<li>2nd loop (dimension 2)</li>
+<li>inner for loop for all second dimension</li>
+<li>Selection statement …</li>
+<li>…swapping the numbers correctly</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim TempNumber As Integer
+               Dim ArrayLength As Integer = 10
+               For X = 0 To ArrayLength - 1
+                 For Y = 0 To ArrayLength - 2
+                   For Z = 0 To ArrayLength - Y - 2
+                      if ArrayData(X, Z) &gt; ArrayData(X, Z + 1) then
+                        TempNumber = ArrayData(X, Z)
+                        ArrayData(X, Z) = ArrayData(X, Z+1)
+                        ArrayData(X, Z + 1) = TempNumber
+                      end if
+                   Next Z
+                 Next Y
+               Next X</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ArrayLength = 10
+               for X in range(0, ArrayLength):
+                   for Y in range(0, ArrayLength-1):
+                          for Z in range(0, ArrayLength - Y - 1):
+                               if(ArrayData[X][Z] &gt; ArrayData[X][Z+1]):
+                                   TempNumber = ArrayData[X][Z]
+                                   ArrayData[X][Z] = ArrayData[X][Z+1]
+                                   ArrayData[X][Z+1] = TempNumber
+               Accept for MP5:
+               ArrayData[X][Z], ArrayData[X][Z+1] = ArrayData[X][Z+1], ArrayData[X][Z]
+
+ 2022                                                      Page 15 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1st outer loop (dimension 1)</li><li>2nd loop (dimension 2)</li><li>inner for loop for all second dimension</li><li>Selection statement …</li><li>…swapping the numbers correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>procedure header (and end where appropriate)</li>
+<li>Outputting all 10  10 values with each 2nd dimension on a complete line</li>
+<li>Calling procedure before and after bubble sort</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 Dim random As New Random
+                 Dim ArrayData(10, 10) As Integer
+                 For x = 0 To 9
+                   For y = 0 To 9
+                      ArrayData(x, y) = random.Next(1, 100)
+                   Next
+                 Next
+                 Console.WriteLine(&quot;before&quot;)
+                 printarray(ArrayData)
+
+                 Dim TempNumber As Integer
+                 Dim ArrayLength As Integer = 10
+                 For X = 0 To ArrayLength - 1
+                   For Y = 0 To ArrayLength - 2
+                     For Z = 0 To ArrayLength - Y - 2
+                        if ArrayData(X, Z) &gt; ArrayData(X, Z + 1) then
+                          TempNumber = ArrayData(X, Z)
+                          ArrayData(X, Z) = ArrayData(X, Z+1)
+                          ArrayData(X, Z + 1) = TempNumber
+                        end if
+                     Next Z
+                   Next Y
+                 Next X
+
+                 Console.WriteLine(&quot;after&quot;)
+                 printarray(ArrayData)
+                 Console.ReadLine()
+               End Sub
+
+ 2022                                                       Page 17 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>procedure header (and end where appropriate)</li><li>Outputting all 10  10 values with each 2nd dimension on a complete line</li><li>Calling procedure before and after bubble sort</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 0 To 9</li>
+<li>For y = 0 To 9</li>
+<li>print(ArrayData[x][y], &quot; &quot;, end=&#x27;&#x27;)</li>
+<li>ArrayData= [[0]*10 for i in range(10)] #integer</li>
+<li>ArrayData[x][y] = random.randint(1, 100)</li>
+<li>ArrayLength = 10</li>
+<li>TempNumber = ArrayData[X][Z]</li>
+<li>ArrayData[X][Z] = ArrayData[X][Z+1]</li>
+<li>ArrayData[X][Z+1] = TempNumber</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>import random
+
+               def Printarray(ArrayData):
+                   for x in range(0, 10):
+                       for y in range(0, 10):
+                           print(ArrayData[x][y], &quot; &quot;, end=&#x27;&#x27;)
+                       print(&quot;&quot;)
+               #main
+               ArrayData= [[0]*10 for i in range(10)] #integer
+               for x in range(0, 10):
+                   for y in range(0,10):
+                       ArrayData[x][y] = random.randint(1, 100)
+               print(&quot;Before&quot;)
+               printarray(ArrayData)
+               ArrayLength = 10
+               for X in range(0, ArrayLength):
+                   for Y in range(0, ArrayLength):
+                       for Z in range(0, ArrayLength - Y - 1):
+                           if(ArrayData[X][Z] &gt; ArrayData[X][Z+1]):
+                                TempNumber = ArrayData[X][Z]
+                                ArrayData[X][Z] = ArrayData[X][Z+1]
+                                ArrayData[X][Z+1] = TempNumber
+
+               print(&quot;After&quot;)
+               Printarray(ArrayData)
+
+ 2022                                               Page 18 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 0 To 9</li><li>For y = 0 To 9</li><li>print(ArrayData[x][y], &quot; &quot;, end=&#x27;&#x27;)</li><li>ArrayData= [[0]*10 for i in range(10)] #integer</li><li>ArrayData[x][y] = random.randint(1, 100)</li><li>ArrayLength = 10</li><li>TempNumber = ArrayData[X][Z]</li><li>ArrayData[X][Z] = ArrayData[X][Z+1]</li><li>ArrayData[X][Z+1] = TempNumber</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>TempNumber = ArrayData[X][Z];</li>
+<li>ArrayData[X][Z] = ArrayData[X][Z+1];</li>
+<li>ArrayData[X][Z + 1] = TempNumber;</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>TempNumber = ArrayData[X][Z];</li><li>ArrayData[X][Z] = ArrayData[X][Z+1];</li><li>ArrayData[X][Z + 1] = TempNumber;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing array unsorted and then sorted on 1 of the dimensions  1
+  e.g.
+
+ 2022  Page 21 of 36
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for each completed statement (6)  8</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>screenshot outputting the index when Number is found</li>
+<li>screenshot outputting –1 with a Number not found</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>screenshot outputting the index when Number is found</li><li>screenshot outputting –1 with a Number not found</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked42/page-07.jpg" alt="Paper page 7 for Q3"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Card class declaration (and end where appropriate)</li>
+<li>Both attributes (Number and Colour) declared with suitable data types …</li>
+<li>…as private</li>
+<li>correct constructor header (and end where appropriate) with two parameters …</li>
+<li>…both parameters assigned to the attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Card
+                 Private Number As Integer
+                 Private Colour As String
+                 Sub New(Numberp, Colourp)
+                   Number = Numberp
+                   Colour = Colourp
+                 End Sub
+               End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Card:
+                   #Number as Integer
+                   #Colour as string
+                   def __init__(self, Numberp, Colourp):
+                       self.__Number = Numberp
+                       self.__Colour = Colourp
+
+ 2022                                                       Page 25 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Card class declaration (and end where appropriate)</li><li>Both attributes (Number and Colour) declared with suitable data types …</li><li>…as private</li><li>correct constructor header (and end where appropriate) with two parameters …</li><li>…both parameters assigned to the attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method header (and close where appropriate) with no parameter …</li>
+<li>… returning attribute</li>
+<li>2nd correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetNumber()
+                   Return Number
+                 End Function
+                 Function GetColour()
+                   Return Colour
+                 End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetNumber(self):
+                       return self.__Number
+                   def GetColour(self):
+                       return self.__Colour</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method header (and close where appropriate) with no parameter …</li><li>… returning attribute</li><li>2nd correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaration of array with 30 elements of type Card</li>
+<li>Opening the text file CardValues.txt for read</li>
+<li>Looping until EOF/30 times</li>
+<li>Reading in all sets of 2 lines (number then colour) …</li>
+<li>…creating object of type Card…</li>
+<li>…with number and colour read in from file …</li>
+<li>…storing in next array element</li>
+<li>Try and catch for file handling…s</li>
+<li>….with appropriate outputs</li>
+<li>Closing the file in a suitable place</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                 Dim CardArray(0 To 29) As Card
+                 Dim NumberRead As Integer
+                 Dim ColourRead As String
+
+                   Try
+                   Dim Filename As String = &quot;CardValues.txt&quot;
+                   Dim FileReader As New System.IO.StreamReader(filename)
+                     For x = 0 To 29
+                       NumberRead = FileReader.ReadLine()
+                       ColourRead = FileReader.ReadLine()
+                       CardArray(x) = New Card(NumberRead, ColourRead)
+                     Next
+                     FileReader.close()
+                     Catch ex As Exception
+
+ 2022                                                          Page 28 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme           May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaration of array with 30 elements of type Card</li><li>Opening the text file CardValues.txt for read</li><li>Looping until EOF/30 times</li><li>Reading in all sets of 2 lines (number then colour) …</li><li>…creating object of type Card…</li><li>…with number and colour read in from file …</li><li>…storing in next array element</li><li>Try and catch for file handling…s</li><li>….with appropriate outputs</li><li>Closing the file in a suitable place</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CardArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] #integer</li>
+<li>Filename = &quot;CardValues.txt&quot;</li>
+<li>File = open(Filename,&#x27;r&#x27;)</li>
+<li>NumberRead = int(File.readline())</li>
+<li>ColourRead = File.readline()</li>
+<li>CardArray[x] = Card(NumberRead, ColourRead)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>CardArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] #integer
+
+               try:
+               Filename = &quot;CardValues.txt&quot;
+               File = open(Filename,&#x27;r&#x27;)
+               for x in range(0,30):
+               NumberRead = int(File.readline())
+               ColourRead = File.readline()
+               CardArray[x] = Card(NumberRead, ColourRead)
+
+               File.close
+               except IOError:
+               print(&quot;Could not find file&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CardArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] #integer</li><li>Filename = &quot;CardValues.txt&quot;</li><li>File = open(Filename,&#x27;r&#x27;)</li><li>NumberRead = int(File.readline())</li><li>ColourRead = File.readline()</li><li>CardArray[x] = Card(NumberRead, ColourRead)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>catch(FileNotFoundException ex){
+  }
+  catch(IOException ex){
+  }
+  }
+
+ 2022  Page 30 of 36
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Implementing a suitable way of storing which card have been selected</li>
+<li>Function ChooseCard() header (and close) and returning an integer (index) in all cases</li>
+<li>Reading in array index from the user …</li>
+<li>…with suitable validation looping until it is between 1 and 30 (inclusive)</li>
+<li>Converting input to array index (e.g. –1 each time)</li>
+<li>Check if the input is already selected…</li>
+<li>… if it is selected, loop until index input is not already selected</li>
+<li>… returning index of available card selected</li>
+<li>Stores the valid Card chosen as taken (using any suitable method)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim NumbersChosen(0 To 29) As Boolean
+               Sub Main()
+                  For x = 0 To 29
+                    NumbersChosen(x) = False
+                  Next
+               ….
+               End Sub
+               Function chooseCard()
+                  Dim CardSelected As Integer
+                  Dim flagContinue As Boolean = True
+                  While flagContinue = True
+                    Console.WriteLine(&quot;Select a Card from 1 to 30&quot;)
+                    CardSelected = Console.ReadLine()
+                    If CardSelected &lt; 1 Or CardSelected &gt; 30 Then
+                       Console.WriteLine(&quot;Number must be between &quot;)
+
+ 2022                                                             Page 31 of 36
+
+9618/42                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Implementing a suitable way of storing which card have been selected</li><li>Function ChooseCard() header (and close) and returning an integer (index) in all cases</li><li>Reading in array index from the user …</li><li>…with suitable validation looping until it is between 1 and 30 (inclusive)</li><li>Converting input to array index (e.g. –1 each time)</li><li>Check if the input is already selected…</li><li>… if it is selected, loop until index input is not already selected</li><li>… returning index of available card selected</li><li>Stores the valid Card chosen as taken (using any suitable method)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ElseIf NumbersChosen(CardSelected - 1) = True Then</li>
+<li>flagContinue = False</li>
+<li>NumbersChosen(CardSelected - 1) = True</li>
+<li>flagContinue = True</li>
+<li>while flagContinue == true:</li>
+<li>CardSelected = int(input(&quot;Select a Card from 1 to 30&quot;))</li>
+<li>elif NumbersChosen(CardSelected - 1) == True:</li>
+<li>flagContinue = False</li>
+<li>NumbersChosen[CardSelected-1] = True</li>
+<li>NumbersChosen = [False for i in range(30)]</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>global NumbersChosen
+               …
+               def chooseCard ():
+                   global NumbersChosen
+                   flagContinue = True
+                   while flagContinue == true:
+                       CardSelected = int(input(&quot;Select a Card from 1 to 30&quot;))
+                       if CardSelected &lt; 1 or CardSelected &gt; 30:
+                           print(&quot;Number must be between 1 and 30&quot;)
+                       elif NumbersChosen(CardSelected - 1) == True:
+                           print(&quot;Already taken&quot;)
+                       else:
+                           print(&quot;Valid&quot;)
+                           flagContinue = False
+                   NumbersChosen[CardSelected-1] = True
+                   return CardSelected-1
+               …
+               #main
+               …
+               NumbersChosen = [False for i in range(30)]
+
+ 2022                                               Page 32 of 36
+
+9618/42                                  Cambridge International AS &amp; A Level – Mark Scheme   May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ElseIf NumbersChosen(CardSelected - 1) = True Then</li><li>flagContinue = False</li><li>NumbersChosen(CardSelected - 1) = True</li><li>flagContinue = True</li><li>while flagContinue == true:</li><li>CardSelected = int(input(&quot;Select a Card from 1 to 30&quot;))</li><li>elif NumbersChosen(CardSelected - 1) == True:</li><li>flagContinue = False</li><li>NumbersChosen[CardSelected-1] = True</li><li>NumbersChosen = [False for i in range(30)]</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>declaring array Player1 of type Card</li>
+<li>calling the function ChooseCard() four times</li>
+<li>storing the card, that is in the index returned, in the array Player1</li>
+<li>outputting all four numbers and colours in Player1 …</li>
+<li>…. using the get methodss</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Player1(0 To 3) As Card
+               For x = 0 To 3
+                 Player1(x) = CardArray(ChooseCard(NumbersChosen))
+               Next
+               for x = 0 to 3
+                 console.writeline(Player1(x).GetColour)
+                 console.writeline(Player1(x).GetNumber)
+               next x</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Player1 = [] #of type Card
+               for x in range(0, 4):
+                   ReturnNumber = ChooseCard ()
+                   Player1.append(CardArray[ReturnNumber])
+               for x in range(0, 4):
+                   print(Player1[x].GetColour())
+                   print(Player1[x].GetNumber())
+
+ 2022                                                         Page 34 of 36
+
+9618/42                                        Cambridge International AS &amp; A Level – Mark Scheme               May/June 2022</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>declaring array Player1 of type Card</li><li>calling the function ChooseCard() four times</li><li>storing the card, that is in the index returned, in the array Player1</li><li>outputting all four numbers and colours in Player1 …</li><li>…. using the get methodss</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for both tests  1
+  Test 1: inputting 1, 5, 9, 10. Outputting: 1 red 9 green 9 orange 10 red
+  Test 2: inputting 2 2 3 4 4 5. Outputting: 2 already taken. Then 5 black 2 while 4 red 9 green
+  Test 1 e.g.
+
+ 2022  Page 35 of 36
+
+9618/42  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2022</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Test 2 e.g.
+
+ 2022  Page 36 of 36</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

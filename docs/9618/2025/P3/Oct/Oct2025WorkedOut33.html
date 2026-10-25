@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/33 · October/November 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/33 · October/November 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q12">Q12</a> <a href="#q13">Q13</a> <a href="#q24">Q24</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked33/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>MP1    TYPE Spectrum =</li>
+<li>TYPE Spectrum = (Red, Orange, Yellow, Green, Blue,</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>MP1    TYPE Spectrum =</li><li>TYPE Spectrum = (Red, Orange, Yellow, Green, Blue,</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  the list is ordered/ordinal
+  MP2  the list contains all possible values
+  MP3  no duplicate values in list
+  MP4  all values are the same data type</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for TYPE ColourData and ENDTYPE correct  4
+  One mark for correct use of DECLARE in all declarations
+  One mark for correct use of Spectrum in declaration
+  One mark for remaining four declarations correct (STRING, INTEGER,
+  REAL, BOOLEAN)
+
+  Example answer
+  TYPE ColourData
+  DECLARE ColourCode : STRING
+  DECLARE Colour : Spectrum
+  DECLARE Wavelength : INTEGER
+  DECLARE Frequency : REAL
+  DECLARE PrimaryColour : BOOLEAN
+  ENDTYPE
+
+ University Press &amp; Assessment 2025  Page 6 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  the precision of the number stored in the mantissa will be reduced
+  MP2  the number of bits available for the exponent will increase to 6
+  MP3  … this will increase the range of numbers that can be stored.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  a process involving a calculation / the multiplication of two large
+  numbers could take place
+  MP2  the result might be outside of the range of values possible to store
+  in the given system
+  MP3  … leading to the most significant bits of the mantissa/exponent
+  being lost (which is an overflow).
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2>
+        <section class="part">
+          <p class="part-label">Part 3 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4
+  MP1  the message is divided into small chunks called packets
+  MP2  each packet is given a header with important data including source
+  and destination IP addresses
+  MP3  each packet is sent independently // packets can be sent through
+  different routes
+  MP4  packets are sent through the optimum route // packets can be re-
+  routed if a route is unavailable
+  MP5  packets are reassembled at the destination into the whole message
+
+ University Press &amp; Assessment 2025  Page 7 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q4"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for a correct protocol and one mark for a correct corresponding  6
+  description (Max 6)
+
+  Three from:
+  HTTP/S [1] a protocol/secure protocol used to transfer hypermedia
+  documents / web pages / (data) files between networked devices [1]
+  FTP [1] a protocol to download, upload and transfer files from one location to
+  another on a network [1]
+  POP3 [1] a protocol used to retrieve/receive emails from a mail server to a
+  computer [1]
+  IMAP [1] allows users to access/read their emails from any device without
+  removing the message from the mail server // synchronises emails on any
+  device [1]
+  SMTP [1] a protocol used to send emails between mail servers // a protocol
+  used to send emails from a computer to a mail server [1]
+  BitTorrent [1] a communication protocol used for peer-to-peer file sharing [1]
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>12  12  18  12  12  36</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q5"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 5(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>To enable multiple programs/processes to be executed at the same time  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 5(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  the operating system monitors the state of each task/process
+  MP2  using scheduling to ensure hardware resources are used efficiently
+  MP3  … and making sure that tasks/processes do not clash.
+
+ University Press &amp; Assessment 2025  Page 8 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q6"><h2>Question 6</h2>
+        <section class="part">
+          <p class="part-label">Part 6(a)(i) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> AB</p>
+<div class='ms-raw'>One mark for each correct loop (Max 3)  3
+
+  AB
+
+  CD  00  01  11  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: AB</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  One correct Boolean term with an OR sign
+  MP2  All three correct Boolean terms connected by OR signs and no
+  other terms present.
+
+  A.C.D + B.D + A.C
+
+ University Press &amp; Assessment 2025  Page 9 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>X = A+B+C + B+C</li>
+<li>(X=) A.B.C + B.C ………………………………….(De Morgan’s)</li>
+<li>(X=) A.B.C + B.C ………………………………….(Double negation)</li>
+<li>(X=) C.(A.B + B) …………………………………..(Distributive)</li>
+<li>(X=) C.(A + B) ……………………………………..(Redundancy)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>X = A+B+C + B+C</li><li>(X=) A.B.C + B.C ………………………………….(De Morgan’s)</li><li>(X=) A.B.C + B.C ………………………………….(Double negation)</li><li>(X=) C.(A.B + B) …………………………………..(Distributive)</li><li>(X=) C.(A + B) ……………………………………..(Redundancy)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 6 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>10  13  18  21  28
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q7"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 7(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  To identify and remove redundant code / To simplify expressions /
+  To reorder the code
+  MP2  … so that storage size/memory use/power consumption/program
+  execution time/CPU time is minimized.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  3
+  MP1 6 12 +
+  MP2 16 10 – /
+  MP3 18 *
+
+  Final correct expression</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 7(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per ring (Max 3)  4
+  One mark for the interim total (360) and the final total (10).</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point - working (Max 3)  5
+  May be seen on diagram or in working section
+
+  MP1  Initialisation – setting Start to 0
+  MP2  … and the rest of the towns to 
+  MP3  Evidence to show values at nodes being updated
+  MP4  Evidence to show ‘visited node(s)’
+  MP5  Evidence to show a correct calculation of at least one route
+  MP6  Evidence to show more than one route has been calculated for at
+  least one town
+
+  Correct Answers (Max 2)
+  Two marks for all six correct values
+  One mark for four or five correct values.
+  T  V  W  X  Y  Z</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q9"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 9 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 4)  4
+  MP1  the company generates a public and private key pair locally using a
+  web browser and an RSA key generator tool, which may be part of
+  the CA’s web page
+  MP2  the company requests a digital certificate from a Certificate
+  Authority (CA)
+  MP3  the CA responds with its public key and digital certificate,
+  MP4  … signed with its private key
+  MP5  the company gathers authentication information e.g. its public key
+  MP6  … and sends it to the CA signed with the company’s private key and
+  encrypted with the CA’s public key
+  MP7  the CA verifies the received information and generates/issues the
+  digital certificate.
+
+ University Press &amp; Assessment 2025  Page 12 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q10"><h2>Question 10</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q10"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 10(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CONSTANT Maximum = 100</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CONSTANT Maximum = 100</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 10(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Correct procedure definition structure
+  MP2  Base pointer with appropriate value (0 or 1)
+  MP3  Top pointer with appropriate value (–1, 0, 1)
+
+  Example answer
+  PROCEDURE InitialiseStack()
+  Base  0
+  Top  0
+  ENDPROCEDURE
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q11"><h2>Question 11</h2>
+        <section class="part">
+          <p class="part-label">Part 11 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  Recursion is beneficial for problems that can be broken down into
+  smaller, repetitive problems
+  MP2  … especially for problems that have many possible branches / are
+  too complex for an iterative approach
+  MP3  An example e.g. solving mathematical series, sorting a pile of
+  documents, etc.
+
+ University Press &amp; Assessment 2025  Page 13 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q12"><h2>Question 12</h2>
+        <section class="part">
+          <p class="part-label">Part 12(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 3)  3
+  MP1  An exception is an unplanned / unexpected event that occurs
+  when a program is running
+  MP2  … due to an error in programming/logic that wasn’t detected during
+  program construction/compilation
+  MP3  The effect of an exception can be that the program halts
+  unexpectedly.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 12(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 2)  2
+  MP1  One mark for an example of an exception (see list in guidance)
+  MP2  One mark for the reason for the given exception
+
+  Example answer
+  Division by zero
+  The processor will not be able to evaluate this answer because a number
+  divided by zero is infinity, so the program will crash.
+
+ University Press &amp; Assessment 2025  Page 14 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q13"><h2>Question 13</h2><div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q13"><div class="cap">Original paper page 10</div></div>
+        <section class="part">
+          <p class="part-label">Part 13 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark per mark point (Max 7)  7
+  MP1  LDM #250 seen
+  MP2  Correct use of LDD 563
+  MP3  Correct use of ADD with labelled address X
+  MP4  Correct use of SUB with address 899
+  MP5  At least one correct use of STO
+
+  Opcode  Operand
+
+  LDM #250
+
+  STO X
+
+  LDD 563
+
+  STO Y
+
+  ADD X
+
+  SUB 899
+
+  STO Total
+
+ University Press &amp; Assessment 2025  Page 15 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 13 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>MP6  Correct setting up of at least one labelled address and its value
+  MP7  Correct setting up of remaining two labelled addresses and their
+  values
+
+  Label  Contents
+
+  X:  250
+
+  Y:  125
+
+  Total:  312
+
+ University Press &amp; Assessment 2025  Page 16 of 16</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q24"><h2>Question 24</h2>
+        <section class="part">
+          <p class="part-label">Part 24 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>24  20  20  20  20  360  360  360  360  10
+
+ University Press &amp; Assessment 2025  Page 11 of 16
+
+9618/33  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025
+
+  Guidance</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

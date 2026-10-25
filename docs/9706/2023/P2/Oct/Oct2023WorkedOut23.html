@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9706/23 · October/November 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9706/23 · October/November 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q8">Q8</a> <a href="#q17">Q17</a> <a href="#q26">Q26</a> <a href="#q30">Q30</a> <a href="#q45">Q45</a> <a href="#q49">Q49</a> <a href="#q75">Q75</a> <a href="#q79">Q79</a> <a href="#q82">Q82</a> <a href="#q84">Q84</a> <a href="#q99">Q99</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Prepare an extract from the statement of profit or loss for the year ended  10</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 157 510</p>
+<div class='ms-raw'>Prepare the statement of financial position at 30 September 2023.  15
+
+  B Limited
+  Statement of financial position at 30 September 2023
+
+  $
+
+  Assets
+
+  Non-current assets  263 700 (1)
+
+  Current assets
+
+  Inventory  74 000 (1)
+
+  Trade receivables  W1  77 140 (1)
+
+  Other receivables  W2  1 690 (1)
+
+  Cash and cash equivalents  4 680 (1)
+
+  157 510
+
+  Total assets  421 210 (1)OF
+
+  Equity and liabilities
+
+  Equity
+
+  Share capital  220 000
+
+  Retained earnings  W3  65 220 (4)OF
+
+  Total equity  285 220
+
+  Non-current liabilities
+
+  8% debentures (2025)  60 000 (1)
+
+  Current liabilities
+
+  Trade payables  57 150 (1)
+
+  Other payables  W4  6 340 (1)
+
+  Taxation  12 500 (1)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 157 510</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Rights issue is a permanent source of capital (1)</li>
+<li>Dividend payment is discretionary (1)</li>
+<li>Will issue be fully subscribed? (1)</li>
+<li>Will raise $60 500 cash (1)</li>
+<li>Debenture will have to be repaid (1)</li>
+<li>Interest must be paid whether profits or losses (1)</li>
+<li>Interest payments will reduce profits (1)</li>
+<li>Security may be required (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Rights issue is a permanent source of capital (1)</li><li>Dividend payment is discretionary (1)</li><li>Will issue be fully subscribed? (1)</li><li>Will raise $60 500 cash (1)</li><li>Debenture will have to be repaid (1)</li><li>Interest must be paid whether profits or losses (1)</li><li>Interest payments will reduce profits (1)</li><li>Security may be required (1)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked23/page-09.jpg" alt="Paper page 9 for Q2"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 23150</p>
+<ol>
+<li> 365 = 45 days (1)OF</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li> 365 = 45 days (1)OF</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>State the formula used to calculate the rate of inventory turnover  1
+  (times).
+
+  Cost of sales
+  (1)
+  Average inventory</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Cost of sales = 56 380  75/25 = 169 140 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Cost of sales = 56 380  75/25 = 169 140 (1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Purchases = 169 140 + 23 185 – 19 100 = 173 225</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Purchases = 169 140 + 23 185 – 19 100 = 173 225</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Advise Alex whether his understanding is correct. Justify your answer.  5
+
+  Different businesses may use different accounting methods (1) which will
+  invalidate the comparison (1).
+
+  Also, financial statements only take account of monetary data (1), ignoring
+  non-financial matters such as staff morale, location of the business etc (1).
+
+  Valid comparison is only useful if related to businesses of similar size in the
+  same business sector (1)
+
+  Max 4 for comments
+
+  Advice supported by a comment (1)
+
+  Accept other valid responses.
+
+ 2023  Page 9 of 13
+
+9706/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q3"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Prepare the following ledger accounts to record the transactions. Dates  9
+  are not required.
+
+  Share capital
+
+  Details  $  Details  $
+
+  Balance c/d  99 000  Balance b/d  60 000
+
+  Bank  12 000 (1)
+
+  Share premium  26 600 (1)
+
+  Retained earnings  400 (1)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>State three disadvantages of introducing a computerised accounting  3
+  system.
+
+  Installing a computerised accounting system can be expensive (1)
+  May involve extra expense in staff training (1)
+  Data may be vulnerable to hacking (1)
+  Data may be vulnerable to viruses (1)
+
+  Max 3
+  Accept other valid responses</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>State three ways in which the security of data in a computerised  3
+  accounting system can be assured.
+
+  Strong unique password protection (1)
+  Virus protection software (1)
+  Data encryption (1)
+  VPN (1)
+
+  Max 3
+  Accept other valid responses</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-15.jpg" alt="Paper page 15 for Q4"><div class="cap">Original paper page 15</div></div>
+        <section class="part">
+          <p class="part-label">Part 4(a) — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> OR</p>
+<div class='ms-raw'>Explain one difference between marginal costing and absorption  2
+  costing.
+
+  Marginal costing values inventory at variable cost only (1) whereas absorption
+  costing values inventory at full cost (1)
+  OR
+  Marginal costing treats fixed overheads as period costs (1) whereas
+  absorption costing treats fixed overheads as a product cost (1)
+
+  Accept other valid responses</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: OR</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(b) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Explain one difference between a direct cost and an indirect cost.  2
+  Direct costs can be specifically allocated to units of production (1)
+  whereas indirect costs cannot economically be specifically attributed to units
+  of production (1)
+
+  Accept other valid responses</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>State the meaning of the following terms:  1
+
+  break-even point
+
+  Break-even point is the point at which total revenue equals total cost / there is
+  no profit and no loss (1)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>margin of safety  1
+
+  Margin of safety is the difference between actual / budgeted output and break-
+  even point (1)
+
+ 2023  Page 11 of 13
+
+9706/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(d) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>State three situations where marginal costing can help in decision  3
+  making.
+
+  Make or buy decisions (1)
+  Accepting a special order (1)
+  In limiting resource situations (1)
+  Closure of business unit (1)
+  Discontinuance of a product line (1)
+
+  Max 3
+  Accept other valid responses</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Contribution: 11.00 – (3.20 + 2.60 + 1.90) = $3.30</li>
+<li>Fixed costs: 60 000 + 33 000 = $93 000</li>
+<li>Break-even point: $93 000 (1) / $3.30 (1) = 28 182 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Contribution: 11.00 – (3.20 + 2.60 + 1.90) = $3.30</li><li>Fixed costs: 60 000 + 33 000 = $93 000</li><li>Break-even point: $93 000 (1) / $3.30 (1) = 28 182 (1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(f) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Contribution: 8.50 – (3.20 + 2.60 + 1.90) = $0.80</li>
+<li>Fixed costs: 35 000 + 44 000 = $79 000</li>
+<li>Break-even point: $79 000 (1) / $0.80 (1) = 98 750 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Contribution: 8.50 – (3.20 + 2.60 + 1.90) = $0.80</li><li>Fixed costs: 35 000 + 44 000 = $79 000</li><li>Break-even point: $79 000 (1) / $0.80 (1) = 98 750 (1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(g) — solution</p>
+          <div class="solution">
+            <ol>
+<li>0.80 – 0.45 + 0.85 = 1.20  96 000                        115 200 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>0.80 – 0.45 + 0.85 = 1.20  96 000                        115 200 (1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(h) — solution</p>
+          <div class="solution">
+            <ol>
+<li>3.30 – 0.44 = 2.86  90 000                                 257 400 (1)</li>
+<li>= $151 000</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>3.30 – 0.44 = 2.86  90 000                                 257 400 (1)</li><li>= $151 000</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 4(i) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Advise Dev which option he should choose. Justify your answer.  5
+
+  Option 1
+  Produces higher overall profit than option 2 (1)
+  Will existing Bee customers favour the upgraded model? (1)
+  How reliable is estimated 20% sales growth? (1)
+
+  Option 2
+  Will redundancies affect staff morale? (1)
+  Will discontinuing Bee have negative affect on sales of Aye? (1)
+  How reliable is estimated 50% sales growth? (1)
+  Additional advertising and redundancy costs are one-off expenses. (1)
+
+  Max 4 for comments
+
+  Advice supported with a comment (1)
+
+  Accept other valid responses
+
+ 2023  Page 13 of 13</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q8"><h2>Question 8</h2>
+        <section class="part">
+          <p class="part-label">Part 8 — solution</p>
+          <div class="solution">
+            <ol>
+<li>= ((169 140/8)  2) = 42 285 (1)</li>
+<li>Closing inventory = 42 285 – 19 100 = $23 185 (1)OF</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>= ((169 140/8)  2) = 42 285 (1)</li><li>Closing inventory = 42 285 – 19 100 = $23 185 (1)OF</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q17"><h2>Question 17</h2>
+        <section class="part">
+          <p class="part-label">Part 17 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 370</p>
+<ol>
+<li> 365 = 37 days (1)OF</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li> 365 = 37 days (1)OF</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q26"><h2>Question 26</h2>
+        <section class="part">
+          <p class="part-label">Part 26 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>600  26 600
+
+  Retained earnings
+
+  Details  $  Details  $
+
+  Bank  2 400 (1)  Balance b/d  32 600
+
+  Share capital  400  Statement of profit or  16 500 (1)
+  loss
+
+  Bank  3 960 (1)
+
+  Balance c/d  42 340</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q30"><h2>Question 30</h2>
+        <section class="part">
+          <p class="part-label">Part 30 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>September 2023 commencing with the gross profit for the year.
+
+  B Limited
+  Statement of profit or loss for the year ended 30 September 2023
+
+  $
+
+  Gross profit  321 070
+
+  Distribution costs  W1  (91 520) (3)OF
+
+  Administrative expenses  W2  (176 730) (5)OF
+
+  Profit from operations  52 820
+
+  Finance costs  (5 950) (1)
+
+  Profit before taxation  46 870
+
+  Taxation  (12 500)
+
+  Profit for the year  34 370  (1)OF
+
+  W1 Distribution costs</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q45"><h2>Question 45</h2>
+        <section class="part">
+          <p class="part-label">Part 45 — solution</p>
+          <div class="solution">
+            <ol>
+<li>850 + 34 370 (OF) – 4000 (1) – 6000 (1) – 5000 (1) = $65 220 (1)OF</li>
+<li>1860 + 2480 + 2000 = $6340 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>850 + 34 370 (OF) – 4000 (1) – 6000 (1) – 5000 (1) = $65 220 (1)OF</li><li>1860 + 2480 + 2000 = $6340 (1)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q49"><h2>Question 49</h2>
+        <section class="part">
+          <p class="part-label">Part 49 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>100  49 100
+
+  Balance b/d  42 340 (1)OF
+
+ 2023  Page 10 of 13
+
+9706/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q75"><h2>Question 75</h2>
+        <section class="part">
+          <p class="part-label">Part 75 — solution</p>
+          <div class="solution">
+            <p class='answer'><strong>Answer:</strong> 990</p>
+<div class='ms-raw'>990
+
+  Total liabilities  135 990
+
+  Total equity and liabilities  421 210 (1)OF
+
+ 2023  Page 7 of 13
+
+9706/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023
+
+
+
+  W1 Trade receivables.</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 990</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q79"><h2>Question 79</h2>
+        <section class="part">
+          <p class="part-label">Part 79 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>000 + 18 000  (97 000) (1)
+
+  Revised profit Bee  18 200 (1)
+
+  Profit Aye  105 000 (1)
+
+  Revised total profit  123 200 (1)OF
+
+ 2023  Page 12 of 13
+
+9706/23  Cambridge International AS &amp; A Level – Mark Scheme  October/November
+  PUBLISHED  2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q82"><h2>Question 82</h2>
+        <section class="part">
+          <p class="part-label">Part 82 — solution</p>
+          <div class="solution">
+            <ol>
+<li>680 – 1480 – 4060 = $77 140 (1)</li>
+<li>940 + 750 = $1690 (1)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>680 – 1480 – 4060 = $77 140 (1)</li><li>940 + 750 = $1690 (1)</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q84"><h2>Question 84</h2>
+        <section class="part">
+          <p class="part-label">Part 84 — solution</p>
+          <div class="solution">
+            <ol>
+<li>650 + 7620 (1) – 750 (1) = $91 520 (1)OF</li>
+<li>161 100 + 1480 (1) + 240 (1) + 11 430 (1) + 2480 (1) = $176 730 (1)OF</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>650 + 7620 (1) – 750 (1) = $91 520 (1)OF</li><li>161 100 + 1480 (1) + 240 (1) + 11 430 (1) + 2480 (1) = $176 730 (1)OF</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q99"><h2>Question 99</h2>
+        <section class="part">
+          <p class="part-label">Part 99 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>000  99 000
+
+  Balance b/d  99 000 (1)OF
+
+  Share premium
+
+  Details  $  Details  $
+
+  Share capital  26 600  Balance b/d  21 800
+
+  Bank  4 800 (1)</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

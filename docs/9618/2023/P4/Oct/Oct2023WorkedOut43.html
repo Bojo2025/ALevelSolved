@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · October/November 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · October/November 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) taking one string parameter</li>
+<li>Calculating length of parameter string</li>
+<li>Looping correct number of times</li>
+<li>Checking the first character against all vowels</li>
+<li>Accessing the remainder of the string</li>
+<li>Remainder of function correct with nothing extra i.e. totalling, must match structure of given algorithm</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function IterativeVowels(Value)
+    Dim Total As Integer = 0
+    Dim FirstCharacter As Char
+    For x = 0 To Len(Value) - 1
+       FirstCharacter = Left(Value, 1)
+       If FirstCharacter = &quot;a&quot; Or FirstCharacter = &quot;e&quot; Or FirstCharacter = &quot;i&quot; Or FirstCharacter = &quot;o&quot; Or
+ FirstCharacter = &quot;u&quot; Then
+           Total = Total + 1
+       End If
+       Value = Right(Value, Len(Value) - 1)
+    Next
+    Return Total
+ End Function
+
+ 2023                                          Page 5 of 37
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme                       October/November 2023</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def IterativeVowels(Value):
+    Total = 0
+    for X in range(0, len(Value)):
+       FirstCharacter = Value[0]
+       if FirstCharacter == &#x27;a&#x27; or FirstCharacter == &#x27;e&#x27; or FirstCharacter == &#x27;i&#x27; or FirstCharacter == &#x27;o&#x27;
+ or FirstCharacter == &#x27;u&#x27;:
+           Total = Total + 1
+
+         Value = Value[1:len(Value)]
+      return Total</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) taking one string parameter</li><li>Calculating length of parameter string</li><li>Looping correct number of times</li><li>Checking the first character against all vowels</li><li>Accessing the remainder of the string</li><li>Remainder of function correct with nothing extra i.e. totalling, must match structure of given algorithm</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling the function with &quot;house&quot;</li>
+<li>Outputting the return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(IterativeVowels(&quot;house&quot;))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(IterativeVowels(&quot;house&quot;))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling the function with &quot;house&quot;</li><li>Outputting the return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot outputting 3  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Recursive call</li>
+<li>Function header (and end where appropriate) taking string parameter (returning integer where given)</li>
+<li>Base case checking (length is 0) and returning 0</li>
+<li>Extracting first character and checking if a vowel …</li>
+<li>… if it is a vowel, returning 1 + recursive call with 1 less character</li>
+<li>… if not a vowel, return recursive call with 1 less character</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function RecursiveVowels(Value)
+    Dim firstCharacter As Char
+    If Len(Value) = 0 Then
+       Return 0
+    Else
+       firstCharacter = Left(Value, 1)
+       If firstCharacter = &quot;a&quot; Or firstCharacter = &quot;e&quot; Or firstCharacter = &quot;i&quot; Or firstCharacter = &quot;o&quot; Or
+ firstCharacter = &quot;u&quot; Then
+           Return 1 + RecursiveVowels(Right(Value, Len(Value) - 1))
+       Else
+           Return RecursiveVowels(Right(Value, Len(Value) - 1))
+
+ 2023                                          Page 7 of 37
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme    October/November 2023
+
+       End If
+    End If
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def RecursiveVowels(Value):
+    if len(Value) == 0:
+       return 0
+    else:
+       FirstCharacter = Value[0]
+    if FirstCharacter == &#x27;a&#x27; or FirstCharacter == &#x27;e&#x27; or FirstCharacter == &#x27;i&#x27; or FirstCharacter == &#x27;o&#x27; or
+ FirstCharacter == &#x27;u&#x27;:
+       return 1 + RecursiveVowels(Value[1:len(Value)])
+    else:
+       return RecursiveVowels(Value[1:len(Value)])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Recursive call</li><li>Function header (and end where appropriate) taking string parameter (returning integer where given)</li><li>Base case checking (length is 0) and returning 0</li><li>Extracting first character and checking if a vowel …</li><li>… if it is a vowel, returning 1 + recursive call with 1 less character</li><li>… if not a vowel, return recursive call with 1 less character</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for calling recursive function with &quot;imagine&quot; and outputting return value  1
+
+  Example program code:
+
+  VB.NET
+  Console.WriteLine(RecursiveVowels(&quot;imagine&quot;))
+
+  Python
+  print(RecursiveVowels(&quot;imagine&quot;))</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(RecursiveVowels(&quot;imagine&quot;))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>print(RecursiveVowels(&quot;imagine&quot;))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot showing 4  1
+
+ 2023  Page 8 of 37
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) array with identifier Queue with (minimum) 50 elements (of type string)</li>
+<li>TailPointer (integer) initialised to 0, HeadPointer (integer) initialised to -1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Queue(50) As String
+               Dim HeadPointer As Integer
+               Dim TailPointer As Integer
+               Sub Main(args As String())
+                  HeadPointer = -1
+                  TailPointer = 0
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>global Queue #string 50 elements
+               global HeadPointer
+               global TailPointer
+               #main
+               Queue = []
+               HeadPointer = -1
+               TailPointer = 0
+
+ 2023                                                         Page 9 of 37
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme         October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) array with identifier Queue with (minimum) 50 elements (of type string)</li><li>TailPointer (integer) initialised to 0, HeadPointer (integer) initialised to -1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure Enqueue() header (and close where appropriate) with one (string) parameter</li>
+<li>Checking if queue is full and outputting suitable message</li>
+<li>… otherwise inserting parameter to next space</li>
+<li>… increment TailPointer and set HeadPointer to 0 if first item (HeadPointer = -1)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Enqueue(Data)
+                  If TailPointer = 50 Then
+                     Console.WriteLine(&quot;Queue full&quot;)
+                  Else
+                     Queue(TailPointer) = Data
+                     TailPointer = TailPointer + 1
+                     If (HeadPointer = -1) Then
+                         HeadPointer = 0
+                     End If
+                  End If
+               End Sub
+
+ 2023                                                     Page 10 of 37
+
+9618/43                               Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure Enqueue() header (and close where appropriate) with one (string) parameter</li><li>Checking if queue is full and outputting suitable message</li><li>… otherwise inserting parameter to next space</li><li>… increment TailPointer and set HeadPointer to 0 if first item (HeadPointer = -1)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if TailPointer == 50:</li>
+<li>TailPointer +=1</li>
+<li>if HeadPointer == -1:</li>
+<li>HeadPointer = 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(Data):
+                  global TailPointer
+                  global HeadPointer
+                  global Queue
+                  if TailPointer == 50:
+                     print(&quot;Queue full&quot;)
+                  else:
+                     Queue.append(Data)
+                     TailPointer +=1
+                     if HeadPointer == -1:
+                         HeadPointer = 0
+
+ 2023                                              Page 11 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if TailPointer == 50:</li><li>TailPointer +=1</li><li>if HeadPointer == -1:</li><li>HeadPointer = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header Dequeue() (and end where appropriate) with no parameter</li>
+<li>Checking if empty …</li>
+<li>… outputting suitable message and returning &quot;Empty&quot;</li>
+<li>(otherwise) incrementing head pointer</li>
+<li>returning next value (at head pointer before incrementing)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue()
+                  If HeadPointer = -1 Or HeadPointer = TailPointer Then
+                     Console.WriteLine(&quot;Queue empty&quot;)
+                     Return &quot;Empty&quot;
+                  Else
+                     HeadPointer = HeadPointer + 1
+                     Return Queue(HeadPointer - 1)
+                  End If
+               End Function
+
+ 2023                                                    Page 12 of 37
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header Dequeue() (and end where appropriate) with no parameter</li><li>Checking if empty …</li><li>… outputting suitable message and returning &quot;Empty&quot;</li><li>(otherwise) incrementing head pointer</li><li>returning next value (at head pointer before incrementing)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if HeadPointer == -1 or HeadPointer == TailPointer:</li>
+<li>HeadPointer +=1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue():
+                  global Queue
+                  global HeadPointer
+                  if HeadPointer == -1 or HeadPointer == TailPointer:
+                     print(&quot;Queue empty&quot;)
+                     return &quot;Empty&quot;
+                  else:
+                     HeadPointer +=1
+                     return Queue[HeadPointer - 1]
+
+ 2023                                               Page 13 of 37
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if HeadPointer == -1 or HeadPointer == TailPointer:</li><li>HeadPointer +=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header ReadData() with no parameters</li>
+<li>Opening file …</li>
+<li>… and closing file</li>
+<li>Looping until EOF/set amount</li>
+<li>Reading in each value</li>
+<li>… calling Enqueue() with each value</li>
+<li>Use of exception handling with appropriate output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                  Try
+                      Dim DataReader As New System.IO.StreamReader(&quot;QueueData.txt&quot;)
+                      Do Until DataReader.EndOfStream
+                         Enqueue(DataReader.ReadLine())
+
+ 2023                                                           Page 14 of 37
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header ReadData() with no parameters</li><li>Opening file …</li><li>… and closing file</li><li>Looping until EOF/set amount</li><li>Reading in each value</li><li>… calling Enqueue() with each value</li><li>Use of exception handling with appropriate output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataFile = open(&quot;QueueData.txt&quot;)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                   try:
+                      DataFile = open(&quot;QueueData.txt&quot;)
+                      for Line in DataFile:
+                         Enqueue(Line.strip())
+                      DataFile.close()
+                   except IOError:
+                      print(&quot;No file&quot;)
+
+ 2023                                               Page 15 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataFile = open(&quot;QueueData.txt&quot;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaration of record type/class RecordData</li>
+<li>ID as a string and total as an Integer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Structure RecordData
+                     Dim ID As String
+                     Dim Total As Integer
+                  End Structure</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class RecordData:
+
+                  #self. ID string
+                  #self. Total integer
+                  def init (self, IDP, TotalP):
+                     self. ID = IDP
+                     self. Total = TotalP
+
+ 2023                                                    Page 16 of 37
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaration of record type/class RecordData</li><li>ID as a string and total as an Integer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self. ID = Value</li>
+<li>self. Total = Value</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self. ID = Value</li><li>self. Total = Value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(global) 1D Array named Records of type RecordData</li>
+<li>(global) NumberRecords declared as integer and initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Records(49) As RecordData Dim NumberRecords As Integer
+               Sub Main(args As String())
+                  NumberRecords = 0
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>#main
+               Records = [] #50 elements of type RecordData NumberRecords = 0
+
+ 2023                                                      Page 17 of 37
+
+9618/43                                         Cambridge International AS &amp; A Level – Mark Scheme        October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(global) 1D Array named Records of type RecordData</li><li>(global) NumberRecords declared as integer and initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Incrementing NumberRecords each time (twice) a new record is added</li>
+<li>Procedure header (and end) and using Dequeue() and storing/using return value</li>
+<li>Checking if NumberRecords is 0 and creating a new record with ID and total as 1:</li>
+<li>Looping through all array elements to find matching ID and incrementing total if found</li>
+<li>Adding new record if record is not found, storing ID and total as 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>loop end
+                       IF Records[X].ID = DataAccessed THEN
+                           Records[X].Total  Records[X].Total + 1
+                           Flag  TRUE
+                       ENDIF
+                   NEXT X
+               •   Adding new record if record is not found, storing ID and total as 1
+                   IF Flag = FALSE THEN
+                       Records[NumberRecords].ID  DataAccessed
+                       Records[NumberRecords].Total  1
+                       NumberRecords  NumberRecords + 1
+                   ENDIF
+
+ 2023                                                          Page 18 of 37
+
+9618/43                                    Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Incrementing NumberRecords each time (twice) a new record is added</li><li>Procedure header (and end) and using Dequeue() and storing/using return value</li><li>Checking if NumberRecords is 0 and creating a new record with ID and total as 1:</li><li>Looping through all array elements to find matching ID and incrementing total if found</li><li>Adding new record if record is not found, storing ID and total as 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Example program code:</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub TotalData()
+                  Dim DataAccessed As String
+                  Dim Flag As Boolean = False
+                  DataAccessed = Dequeue()
+
+ 2023                                                   Page 19 of 37
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Example program code:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If NumberRecords = 0 Then</li>
+<li>Records(NumberRecords).ID = DataAccessed</li>
+<li>Records(NumberRecords).Total = Records(NumberRecords).Total + 1</li>
+<li>NumberRecords = NumberRecords + 1</li>
+<li>Flag = True</li>
+<li>For X = 0 To NumberRecords – 1</li>
+<li>If Records(X).ID = DataAccessed Then</li>
+<li>Records(X).Total = Records(X).Total + 1</li>
+<li>Flag = True</li>
+<li>If Flag = False Then</li>
+<li>Records(NumberRecords).ID = DataAccessed</li>
+<li>Records(NumberRecords).Total = Records(NumberRecords).Total + 1</li>
+<li>NumberRecords = NumberRecords + 1</li>
+<li>Flag = False</li>
+<li>DataAccessed = Dequeue()</li>
+<li>if NumberRecords == 0:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def TotalData():
+                  global NumberRecords
+                  global Records
+                  Flag = False
+                  DataAccessed = Dequeue()
+
+                  if NumberRecords == 0:
+                     Records.append(RecordData(DataAccessed, 1))
+
+ 2023                                               Page 20 of 37
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If NumberRecords = 0 Then</li><li>Records(NumberRecords).ID = DataAccessed</li><li>Records(NumberRecords).Total = Records(NumberRecords).Total + 1</li><li>NumberRecords = NumberRecords + 1</li><li>Flag = True</li><li>For X = 0 To NumberRecords – 1</li><li>If Records(X).ID = DataAccessed Then</li><li>Records(X).Total = Records(X).Total + 1</li><li>Flag = True</li><li>If Flag = False Then</li><li>Records(NumberRecords).ID = DataAccessed</li><li>Records(NumberRecords).Total = Records(NumberRecords).Total + 1</li><li>NumberRecords = NumberRecords + 1</li><li>Flag = False</li><li>DataAccessed = Dequeue()</li><li>if NumberRecords == 0:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>NumberRecords += 1</li>
+<li>Flag = True</li>
+<li>if(Records[X].GetID() == DataAccessed):</li>
+<li>Flag = True</li>
+<li>if Flag == False:</li>
+<li>NumberRecords += 1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>NumberRecords += 1</li><li>Flag = True</li><li>if(Records[X].GetID() == DataAccessed):</li><li>Flag = True</li><li>if Flag == False:</li><li>NumberRecords += 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Looping through all array elements and outputting ID and total in correct format</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputRecords()
+    For X = 0 To NumberRecords - 1
+       Console.WriteLine(&quot;ID &quot; &amp; Records(X).ID &amp; &quot; Total &quot; &amp; Records(X).Total)
+    Next
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputRecords():
+    for X in range(0, NumberRecords):
+       print(&quot;ID&quot;, Records[X].GetID(), &quot; Total &quot;, Records[X].GetTotal())
+
+ 2023                                          Page 22 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme       October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Looping through all array elements and outputting ID and total in correct format</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() first and OutputRecords() last</li>
+<li>Looping through all queue elements and calling TotalData() for each queue element</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+                  HeadPointer = 0
+                  TailPointer = 0
+                  ReadData()
+                  NumberRecords = 0
+                  While HeadPointer &lt;&gt; TailPointer
+                     TotalData()
+                  End While
+                  OutputRecords()
+               End Sub
+
+ 2023                                                    Page 23 of 37
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() first and OutputRecords() last</li><li>Looping through all queue elements and calling TotalData() for each queue element</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>#main Queue = []</li>
+<li>Records = []</li>
+<li>HeadPointer = 0</li>
+<li>TailPointer = 0</li>
+<li>NumberRecords = 0</li>
+<li>while HeadPointer != TailPointer:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>#main Queue = []
+               Records = []
+               HeadPointer = 0
+               TailPointer = 0
+               ReadData()
+               NumberRecords = 0
+
+               while HeadPointer != TailPointer:
+                  TotalData()
+                     OutputRecords()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>#main Queue = []</li><li>Records = []</li><li>HeadPointer = 0</li><li>TailPointer = 0</li><li>NumberRecords = 0</li><li>while HeadPointer != TailPointer:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for screenshot e.g.  1
+
+ 2023  Page 24 of 37
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-08.jpg" alt="Paper page 8 for Q3"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate)</li>
+<li>Three attributes with correct names and data types</li>
+<li>Constructor header (and end where appropriate) with 3 parameters</li>
+<li>Within constructor, assigns attributes to parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Character
+                  Private XPosition As Integer
+                  Private YPosition As Integer
+                  Private Name As String
+
+                  Sub New(XPositionP, YPositionP, NameP)
+                     XPosition = XPositionP
+                     YPosition = YPositionP
+                     Name = NameP
+                  End Sub
+               End Class
+
+ 2023                                                     Page 25 of 37
+
+9618/43                                  Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate)</li><li>Three attributes with correct names and data types</li><li>Constructor header (and end where appropriate) with 3 parameters</li><li>Within constructor, assigns attributes to parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.XPosition = XPositionP</li>
+<li>self.YPosition = YPositionP</li>
+<li>self.Name = NameP</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Character:
+                  #self.XPosition integer
+                  #self.YPosition integer
+                  #self.Name string
+
+                  def     init (self, XPositionP, YPositionP, NameP):
+                        self.XPosition = XPositionP
+                        self.YPosition = YPositionP
+                        self.Name = NameP
+
+ 2023                                                 Page 26 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.XPosition = XPositionP</li><li>self.YPosition = YPositionP</li><li>self.Name = NameP</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get header with no parameter …</li>
+<li>… returning correct value</li>
+<li>2nd get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetXPosition()
+                  Return XPosition
+               End Function
+               Function GetYPosition()
+                  Return YPosition
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetXPosition(self):
+                  return self. XPosition
+
+               def GetYPosition(self):
+                  return self. YPosition
+
+ 2023                                                    Page 27 of 37
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme             October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get header with no parameter …</li><li>… returning correct value</li><li>2nd get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 set method header (and end where appropriate) with parameter …</li>
+<li>… adding parameter to X/Y Position attribute and storing in the X/Y attribute</li>
+<li>If (resulting value is) more than 10 000 limiting to 10 000 and if less than 0 limiting to 0</li>
+<li>Second correct set method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function SetXPosition(Value)
+                  XPosition = XPosition + Value
+                  If XPosition &gt; 10000 Then
+                     XPosition = 10000
+
+ 2023                                                            Page 28 of 37
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 set method header (and end where appropriate) with parameter …</li><li>… adding parameter to X/Y Position attribute and storing in the X/Y attribute</li><li>If (resulting value is) more than 10 000 limiting to 10 000 and if less than 0 limiting to 0</li><li>Second correct set method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>XPosition = 0</li>
+<li>YPosition = YPosition + Value</li>
+<li>YPosition = 10000</li>
+<li>YPosition = 0</li>
+<li>self. XPosition = self. XPosition + Value</li>
+<li>self.XPosition = 10000</li>
+<li>self.XPosition = 0</li>
+<li>self.YPosition = self.YPosition + Value</li>
+<li>self.YPosition = 10000</li>
+<li>self.YPosition = 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetXPosition(self, Value):
+                  self. XPosition = self. XPosition + Value
+                  if(self.XPosition &gt; 10000):
+                     self.XPosition = 10000
+                  elif self.XPosition &lt; 0:
+                     self.XPosition = 0
+
+               def SetYPosition(self, Value):
+                  self.YPosition = self.YPosition + Value
+                  if(self.YPosition &gt; 10000):
+                     self.YPosition = 10000
+                  elif self.YPosition &lt; 0:
+                     self.YPosition = 0
+
+ 2023                                               Page 29 of 37
+
+9618/43                                  Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>XPosition = 0</li><li>YPosition = YPosition + Value</li><li>YPosition = 10000</li><li>YPosition = 0</li><li>self. XPosition = self. XPosition + Value</li><li>self.XPosition = 10000</li><li>self.XPosition = 0</li><li>self.YPosition = self.YPosition + Value</li><li>self.YPosition = 10000</li><li>self.YPosition = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header with (string) parameter</li>
+<li>Checking parameter for direction …</li>
+<li>… using SetYPosition() and SetXPosition() correctly …</li>
+<li>… with correct parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overridable Sub Move(Direction)
+                  If Direction = &quot;up&quot; Then
+                     SetYPosition(10)
+                  ElseIf Direction = &quot;down&quot; Then
+                     SetYPosition(-10)
+                  ElseIf Direction = &quot;right&quot; Then
+                     SetXPosition(10)
+                  ElseIf Direction = &quot;left&quot; Then
+                     SetXPosition(-10)
+                  End If
+               End Sub
+
+ 2023                                                 Page 30 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header with (string) parameter</li><li>Checking parameter for direction …</li><li>… using SetYPosition() and SetXPosition() correctly …</li><li>… with correct parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if(Direction == &quot;up&quot;):</li>
+<li>elif(Direction == &quot;down&quot;):</li>
+<li>elif(Direction == &quot;right&quot;):</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Move(self, Direction):
+                  if(Direction == &quot;up&quot;):
+                     self.SetYPosition(10)
+                  elif(Direction == &quot;down&quot;):
+                     self.SetYPosition(-10)
+                  elif(Direction == &quot;right&quot;):
+                     self.SetXPosition(10)
+                  else:
+                     self.SetXPosition(-10)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if(Direction == &quot;up&quot;):</li><li>elif(Direction == &quot;down&quot;):</li><li>elif(Direction == &quot;right&quot;):</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>New instance of Character created with identifier Jack …</li>
+<li>… correct constructor called and values passed</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Jack As Character = New Character(50, 50, &quot;Jack&quot;)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Jack = Character(50, 50, &quot;Jack&quot;)
+
+ 2023                                                    Page 31 of 37
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>New instance of Character created with identifier Jack …</li><li>… correct constructor called and values passed</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header inheriting from Character</li>
+<li>Constructor taking all 3 parameters …</li>
+<li>… calling parent/super constructor with the 3 parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class BikeCharacter
+                  Inherits Character
+
+                  Sub New(XPositionP, YPositionP, NameP)
+                     MyBase.New(XPositionP, YPositionP, NameP)
+                  End Sub
+               End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class BikeCharacter(Character):
+                  def init (self, XPositionP, YPositionP, NameP):
+                     super(). init (XPositionP, YPositionP, NameP)
+
+ 2023                                                       Page 32 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header inheriting from Character</li><li>Constructor taking all 3 parameters …</li><li>… calling parent/super constructor with the 3 parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header taking parameter and overriding parent/super Move()</li>
+<li>Correct changes to method to update values by 20</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overrides Sub
+                  Move(Direction) If
+                  Direction = &quot;up&quot; Then
+                     SetYPosition(20)
+                  ElseIf Direction = &quot;down&quot; Then
+                     SetYPosition(-20)
+                  ElseIf Direction = &quot;right&quot; Then
+                     SetXPosition(20)
+                  ElseIf Direction = &quot;left&quot; Then
+                     SetXPosition(-20)
+
+                  End If
+               End Sub
+
+ 2023                                                    Page 33 of 37
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header taking parameter and overriding parent/super Move()</li><li>Correct changes to method to update values by 20</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if(Direction == &quot;up&quot;):</li>
+<li>elif(Direction == &quot;down&quot;):</li>
+<li>elif(Direction == &quot;right&quot;):</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Move(self, Direction):
+                  if(Direction == &quot;up&quot;):
+                     super().SetYPosition(20)
+                  elif(Direction == &quot;down&quot;):
+                     super().SetYPosition(-20)
+                  elif(Direction == &quot;right&quot;):
+                     super().SetXPosition(2)
+                  else:
+                     super().SetXPosition(-20)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if(Direction == &quot;up&quot;):</li><li>elif(Direction == &quot;down&quot;):</li><li>elif(Direction == &quot;right&quot;):</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Declaring new BikeCharacter with correct values e.g</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Karla As BikeCharacter = New BikeCharacter(100, 50, &quot;Karla&quot;)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Karla = BikeCharacter(100, 50, &quot;Karla&quot;)
+
+ 2023                                                    Page 34 of 37
+
+9618/43                                         Cambridge International AS &amp; A Level – Mark Scheme                       October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Declaring new BikeCharacter with correct values e.g</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Reading in both values (character and direction) with appropriate prompts</li>
+<li>Character name is validated as e.g. Jack/Karla, and direction is validated as e.g. up/down/left/right</li>
+<li>Calling Move() for the character input, with direction input as a parameter</li>
+<li>Outputting character&#x27;s new X and Y position in a suitable format …</li>
+<li>… using get methods</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Reading in both values (character and direction) with appropriate prompts</li><li>Character name is validated as e.g. Jack/Karla, and direction is validated as e.g. up/down/left/right</li><li>Calling Move() for the character input, with direction input as a parameter</li><li>Outputting character&#x27;s new X and Y position in a suitable format …</li><li>… using get methods</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CharacterToMove = Console.ReadLine.ToLower()</li>
+<li>CharacterToMove = Console.ReadLine</li>
+<li>Direction = Console.ReadLine.ToLower()</li>
+<li>Direction = Console.ReadLine</li>
+<li>If CharacterToMove = &quot;jack&quot;</li>
+<li>Console.WriteLine(&quot;Jack&#x27;s new position is X = &quot; &amp; Jack.GetXPosition &amp; &quot; Y = &quot; &amp;</li>
+<li>Console.WriteLine(&quot;Karla&#x27;s new position is X = &quot; &amp; Karla.GetXPosition &amp; &quot; Y = &quot; &amp;</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Would you like to move Jack or Karla?&quot;)
+               CharacterToMove = Console.ReadLine.ToLower()
+               While CharacterToMove &lt;&gt; &quot;jack&quot; And CharacterToMove &lt;&gt; &quot;karla&quot;
+                  Console.WriteLine(&quot;Invalid try again&quot;)
+                  CharacterToMove = Console.ReadLine
+               End While
+               Console.WriteLine(&quot;Which direction? Up, down, left or right&quot;)
+               Direction = Console.ReadLine.ToLower()
+               While Direction &lt;&gt; &quot;up&quot; And Direction &lt;&gt; &quot;down&quot; And Direction &lt;&gt; &quot;left&quot; And Direction &lt;&gt;
+               &quot;right&quot;
+                  Console.WriteLine(&quot;Invalid try again&quot;)
+                  Direction = Console.ReadLine
+               End While
+               If CharacterToMove = &quot;jack&quot;
+                  Then Jack.Move(Direction)
+                  Console.WriteLine(&quot;Jack&#x27;s new position is X = &quot; &amp; Jack.GetXPosition &amp; &quot; Y = &quot; &amp;
+               Jack.GetYPosition)
+               Else
+                  Karla.Move(Direction)
+                  Console.WriteLine(&quot;Karla&#x27;s new position is X = &quot; &amp; Karla.GetXPosition &amp; &quot; Y = &quot; &amp;
+               Karla.GetYPosition)
+               End If
+               Console.WriteLine(&quot;Would you like to Continue? Enter True to continue, or anything else to
+               quit&quot;)
+
+ 2023                                               Page 36 of 37
+
+9618/43                                 Cambridge International AS &amp; A Level – Mark Scheme     October/November 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CharacterToMove = Console.ReadLine.ToLower()</li><li>CharacterToMove = Console.ReadLine</li><li>Direction = Console.ReadLine.ToLower()</li><li>Direction = Console.ReadLine</li><li>If CharacterToMove = &quot;jack&quot;</li><li>Console.WriteLine(&quot;Jack&#x27;s new position is X = &quot; &amp; Jack.GetXPosition &amp; &quot; Y = &quot; &amp;</li><li>Console.WriteLine(&quot;Karla&#x27;s new position is X = &quot; &amp; Karla.GetXPosition &amp; &quot; Y = &quot; &amp;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CharacterToMove = input(&quot;Would you like to move Jack or Karla?&quot;).lower()</li>
+<li>while CharacterToMove != &quot;jack&quot; and CharacterToMove != &quot;karla&quot;:</li>
+<li>CharacterToMove = input(&quot;Invalid try again&quot;)</li>
+<li>Direction = input(&quot;Which direction? Up, down, left or right?&quot;)</li>
+<li>while Direction != &quot;up&quot; and Direction != &quot;down&quot; and Direction != &quot;left&quot; and Direction !=</li>
+<li>Direction = input(&quot;Invalid try again&quot;)</li>
+<li>if CharacterToMove == &quot;jack&quot;:</li>
+<li>print(&quot;Jack&#x27;s new position is X =&quot;, Jack.GetXPosition(), &quot;Y =&quot;, Jack.GetYPosition())</li>
+<li>print(&quot;Karla&#x27;s new position is X =&quot;, Karla.GetXPosition(), &quot;Y =&quot;, Karla.GetYPosition())</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>CharacterToMove = input(&quot;Would you like to move Jack or Karla?&quot;).lower()
+               while CharacterToMove != &quot;jack&quot; and CharacterToMove != &quot;karla&quot;:
+                  CharacterToMove = input(&quot;Invalid try again&quot;)
+               Direction = input(&quot;Which direction? Up, down, left or right?&quot;)
+               while Direction != &quot;up&quot; and Direction != &quot;down&quot; and Direction != &quot;left&quot; and Direction !=
+               &quot;right&quot;:
+                  Direction = input(&quot;Invalid try again&quot;)
+                  if CharacterToMove == &quot;jack&quot;:
+                     Jack.Move(Direction)
+                     print(&quot;Jack&#x27;s new position is X =&quot;, Jack.GetXPosition(), &quot;Y =&quot;, Jack.GetYPosition())
+               else:
+                  Karla.Move(Direction)
+               print(&quot;Karla&#x27;s new position is X =&quot;, Karla.GetXPosition(), &quot;Y =&quot;, Karla.GetYPosition())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CharacterToMove = input(&quot;Would you like to move Jack or Karla?&quot;).lower()</li><li>while CharacterToMove != &quot;jack&quot; and CharacterToMove != &quot;karla&quot;:</li><li>CharacterToMove = input(&quot;Invalid try again&quot;)</li><li>Direction = input(&quot;Which direction? Up, down, left or right?&quot;)</li><li>while Direction != &quot;up&quot; and Direction != &quot;down&quot; and Direction != &quot;left&quot; and Direction !=</li><li>Direction = input(&quot;Invalid try again&quot;)</li><li>if CharacterToMove == &quot;jack&quot;:</li><li>print(&quot;Jack&#x27;s new position is X =&quot;, Jack.GetXPosition(), &quot;Y =&quot;, Jack.GetYPosition())</li><li>print(&quot;Karla&#x27;s new position is X =&quot;, Karla.GetXPosition(), &quot;Y =&quot;, Karla.GetYPosition())</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>One mark for each test  2
+
+ 2023  Page 37 of 37</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

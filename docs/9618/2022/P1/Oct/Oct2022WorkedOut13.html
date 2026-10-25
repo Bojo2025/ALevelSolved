@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/13 · October/November 2022 · Worked Solutions</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 860px; margin: 0 auto; padding: 20px; background: #fafafa; color: #222; }
+  header { border-bottom: 3px solid #6b0000; padding-bottom: 12px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 4px; font-size: 1.35em; color: #6b0000; }
+  header p { margin: 0; color: #555; font-size: 0.95em; }
+  .question { margin-bottom: 36px; }
+  .question > h2 { font-size: 1.15em; color: #6b0000; border-left: 4px solid #6b0000; padding-left: 10px; margin-bottom: 10px; }
+  .part { background: #fff; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 14px; padding: 14px 16px; }
+  .part h3 { margin: 0 0 8px; font-size: 1em; color: #444; }
+  .q-text { margin-bottom: 10px; line-height: 1.6; }
+  .q-img { margin: 10px 0; }
+  .q-img img { max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+  .worked { background: #fff5f5; border-left: 4px solid #6b0000; padding: 12px 14px; margin-top: 10px; line-height: 1.65; }
+  .worked p { margin: 6px 0; }
+  .marks { background: #f9fff0; border-left: 4px solid #3a7a1a; padding: 10px 14px 10px 28px; margin: 10px 0 0; }
+  .marks li { margin: 4px 0; line-height: 1.55; }
+  table.q-table { border-collapse: collapse; margin: 8px 0; font-size: 0.9em; }
+  table.q-table th, table.q-table td { border: 1px solid #aaa; padding: 5px 10px; text-align: center; }
+  table.q-table th { background: #f5e0e0; }
+  .register-row { display: flex; gap: 0; margin: 6px 0; align-items: center; }
+  .register-cell { border: 1px solid #888; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: monospace; font-size: 1.1em; font-weight: bold; background: #fff; }
+  .register-label { font-size: 0.85em; color: #555; margin-right: 8px; min-width: 50px; }
+  .answer-reg { background: #d4edda; }
+  pre { background: #f0f0f0; padding: 10px 14px; border-radius: 4px; font-size: 0.9em; overflow-x: auto; }
+  code { font-family: monospace; background: #f5e8e8; padding: 1px 4px; border-radius: 3px; }
+
+  .solution-open { margin-top: 10px; }
+  .part-label-note { font-size: 0.85em; color: #3a7a1a; font-weight: 700; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>9618/13 · October/November 2022 · Worked Solutions</h1>
+  <p>Cambridge International AS &amp; A Level Computer Science — Paper 1 Theory Fundamentals</p>
+</header>
+
+<main>
+
+<!-- ==================== QUESTION 1 ==================== -->
+<section class="question">
+<h2>Question 1 — Digital Audio (7 marks)</h2>
+
+<div class="part">
+<h3>1 (a) [2 marks]</h3>
+<div class="q-text">
+<p>Tick one box per row to show the effect of each action on the accuracy of the recording.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Action</th><th>Accuracy increases</th><th>Accuracy decreases</th><th>No change</th></tr>
+<tr><td>Change sampling rate from 40 kHz to 60 kHz</td><td></td><td></td><td></td></tr>
+<tr><td>Change duration from 20 minutes to 40 minutes</td><td></td><td></td><td></td></tr>
+<tr><td>Change sampling resolution from 24 bits to 16 bits</td><td></td><td></td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Change sampling rate 40 → 60 kHz:</strong> More samples per second means more detail of the waveform is captured. <em>Accuracy increases.</em></p>
+<p><strong>Change duration 20 → 40 minutes:</strong> The recording is longer — more data is recorded, but the sampling rate and resolution (and hence the quality of each sample) are unchanged. <em>Accuracy does not change.</em> (The file size doubles, but accuracy per unit time is the same.)</p>
+<p><strong>Change sampling resolution 24 → 16 bits:</strong> Fewer bits per sample means fewer possible amplitude levels, increasing quantisation errors and reducing the fidelity of each measurement. <em>Accuracy decreases.</em></p>
+<table class="q-table" style="text-align:left">
+<tr><th>Action</th><th>Accuracy increases</th><th>Accuracy decreases</th><th>No change</th></tr>
+<tr><td>Sampling rate 40→60 kHz</td><td>✓</td><td></td><td></td></tr>
+<tr><td>Duration 20→40 min</td><td></td><td></td><td>✓</td></tr>
+<tr><td>Resolution 24→16 bits</td><td></td><td>✓</td><td></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>1 mark for any one or two correct ticks, 2 marks for all three correct. [2]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (b) [2 marks]</h3>
+<div class="q-text"><p>Calculate the file size of a recording made at 50 kHz, 16-bit resolution, 20 minutes long. Give your answer in megabytes.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Working:</strong></p>
+<p>File size = sampling rate × duration × bits per sample</p>
+<p>Duration in seconds = 20 × 60 = 1200 seconds</p>
+<p>Size in bits = 50,000 × 1200 × 16 = 960,000,000 bits</p>
+<p>Convert to bytes: 960,000,000 ÷ 8 = 120,000,000 bytes</p>
+<p>Convert to megabytes: 120,000,000 ÷ 1,000,000 = <strong>120 megabytes</strong></p>
+</div>
+<ul class="marks">
+<li>Working: 50,000 × 1200 × 16 ÷ 8. [1]</li>
+<li>Answer: 120 megabytes. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>1 (c) [3 marks]</h3>
+<div class="q-text"><p>Explain the purpose of a buffer in a computer system, using one other example.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Purpose of a buffer:</strong> A buffer is a temporary storage area in memory that holds data <em>between two processes operating at different speeds</em>. It decouples the producer of data from the consumer, so neither has to wait idly for the other.</p>
+<p>For playing back an audio message: the audio data is downloaded or read from storage into a buffer. The playback system reads from the buffer smoothly, even if the data source (network/disk) delivers data in bursts. This prevents interruptions in playback when the network slows momentarily.</p>
+<p><strong>Example:</strong> A <em>printer buffer</em> — when a computer sends a document to a printer, the data is placed in a buffer. The computer finishes sending quickly and can continue working, while the printer reads from the buffer at its own (slower) speed. The buffer allows the two devices to operate at different speeds without one waiting for the other.</p>
+</div>
+<ul class="marks">
+<li>Temporary storage to allow processes/devices to operate at different speeds. [1]</li>
+<li>Before the data is used by the receiving device / stores downloaded data. [1]</li>
+<li>Correct example (printer buffer / video streaming buffer / keyboard buffer). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 2 ==================== -->
+<section class="question">
+<h2>Question 2 — Database ASTRONOMY (14 marks)</h2>
+<p style="margin:0 0 10px; color:#555; font-size:0.9em;">Tables: COMPANY(TelephoneNumber, CompanyID, CompanyName) · PHOTOGRAPH(PhotoID, TelescopeID, DateTaken, TimeTaken, Elevation) · TELESCOPE(TelescopeID, CompanyID, SerialNumber)</p>
+
+<div class="part">
+<h3>2 (a) [3 marks]</h3>
+<div class="q-text"><p>Complete the table for the ASTRONOMY database.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Item</th><th>Answer</th></tr>
+<tr><td>A suitable field for the primary key in COMPANY</td><td></td></tr>
+<tr><td>A candidate key in TELESCOPE</td><td></td></tr>
+<tr><td>The degree of relationship between TELESCOPE and PHOTOGRAPH</td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Primary key for COMPANY:</strong> CompanyID. TelephoneNumber could also theoretically be unique, but CompanyID is the designed primary key — a unique identifier for each company.</p>
+<p><strong>Candidate key in TELESCOPE:</strong> TelescopeID (the primary key) or SerialNumber (also potentially unique for each telescope). Both are minimal attributes that could uniquely identify each tuple.</p>
+<p><strong>Relationship between TELESCOPE and PHOTOGRAPH:</strong> One-to-Many (1:M). One telescope can take many photographs, but each photograph is taken by one telescope (TelescopeID in PHOTOGRAPH is a foreign key referencing TELESCOPE).</p>
+</div>
+<ul class="marks">
+<li>CompanyID [1]</li>
+<li>SerialNumber or TelescopeID [1]</li>
+<li>1:M (one-to-many) [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (b) [1 mark]</h3>
+<div class="q-text"><p>Identify the DBMS feature that describes the relationship between data and its structure.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The feature that describes the relationship between data and its structure — i.e., the overall blueprint of how the database is organised — is the <strong>logical schema</strong>. It models the entities, their attributes, and the relationships between them (often shown as an E-R diagram).</p>
+</div>
+<ul class="marks"><li>Logical schema [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (c) [4 marks]</h3>
+<div class="q-text"><p>Complete the SQL script to return the total number of telescopes owned by the company whose ID begins with 'HW'.</p>
+<pre>SELECT _______ (_______)
+FROM TELESCOPE
+WHERE _______ LIKE _______;</pre>
+</div>
+<div class="solution-open">
+<div class="worked">
+<pre>SELECT COUNT (TelescopeID)
+FROM TELESCOPE
+WHERE CompanyID LIKE 'HW%';</pre>
+</div>
+<ul class="marks">
+<li>COUNT [1]</li>
+<li>TelescopeID [1]</li>
+<li>CompanyID [1]</li>
+<li>'HW%' [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (d) [2 marks]</h3>
+<div class="q-text"><p>Write the SQL script to add one field to PHOTOGRAPH to store the resolution (e.g. 1920 × 1068).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The resolution "1920 × 1068" is a text string (contains digits, '×', space). Use TEXT or VARCHAR as the data type.</p>
+<pre>ALTER TABLE PHOTOGRAPH
+ADD Resolution TEXT;</pre>
+</div>
+<ul class="marks">
+<li>ALTER TABLE PHOTOGRAPH [1]</li>
+<li>ADD [appropriate field name] TEXT / VARCHAR(11) [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (e) [2 marks]</h3>
+<div class="q-text"><p>Complete the statements about bitmap images.</p>
+<p>The _______ of a bitmap image is the number of bits used to store each pixel.</p>
+<p>Metadata about the image is stored in the _______ of the file.</p>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The <strong>bit depth</strong> (also called colour depth) of a bitmap image is the number of bits used to store each pixel. More bits per pixel = more possible colours.</p>
+<p>Metadata (such as file format, dimensions, colour depth, and file size) is stored in the <strong>header</strong> of the file — a section at the start of the file that describes the file's properties.</p>
+</div>
+<ul class="marks">
+<li>Bit depth [1]</li>
+<li>Header [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>2 (f) [2 marks]</h3>
+<div class="q-text"><p>Describe the purpose of a query processor in a DBMS.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The query processor is the DBMS component that handles requests (queries) for data from the user or application. It:</p>
+<p>1. <strong>Accepts criteria</strong> entered by the user (e.g. an SQL SELECT statement specifying conditions).</p>
+<p>2. <strong>Searches the database</strong> for records that match those criteria.</p>
+<p>3. <strong>Organises and returns the results</strong> to the user in the requested format (e.g. a table, report, or list).</p>
+</div>
+<ul class="marks">
+<li>Allows the user to enter criteria / searches for data meeting criteria. [1]</li>
+<li>Organises and displays results to the user. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 3 ==================== -->
+<section class="question">
+<h2>Question 3 — OS Management Tasks Matching (4 marks)</h2>
+
+<div class="part">
+<h3>3 [4 marks]</h3>
+<div class="q-text"><p>Draw one line from each OS management task to its most appropriate description.</p>
+<table class="q-table" style="text-align:left">
+<tr><th>OS Management task</th><th>Description</th></tr>
+<tr><td>Hardware management</td><td>Dynamically allocates memory to processes</td></tr>
+<tr><td>Security management</td><td>Marks unallocated file storage for availability</td></tr>
+<tr><td>Memory management</td><td>Installs programs for devices connected to external ports</td></tr>
+<tr><td>Process management</td><td>Validates user and process authenticity</td></tr>
+<tr><td></td><td>Allows processes to transfer data to and from each other</td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Match each task to its best description:</p>
+<p>• <strong>Hardware management</strong> → <em>Installs programs for devices connected to external ports.</em> (Installing/using device drivers for printers, keyboards, USB devices etc.)</p>
+<p>• <strong>Security management</strong> → <em>Validates user and process authenticity.</em> (Manages logins, passwords, access control.)</p>
+<p>• <strong>Memory management</strong> → <em>Dynamically allocates memory to processes.</em> (Assigns and reclaims RAM as processes start and stop.)</p>
+<p>• <strong>Process management</strong> → <em>Allows processes to transfer data to and from each other.</em> (Inter-process communication; scheduling; deciding which process runs next.)</p>
+<p><em>(The remaining description "marks unallocated file storage for availability" relates to file management — not directly one of the four listed tasks, so it remains unmatched in this version of the question.)</em></p>
+</div>
+<ul class="marks">
+<li>Hardware management ↔ Installs programs for devices at external ports. [1]</li>
+<li>Security management ↔ Validates user and process authenticity. [1]</li>
+<li>Memory management ↔ Dynamically allocates memory to processes. [1]</li>
+<li>Process management ↔ Allows processes to transfer data to/from each other. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 4 ==================== -->
+<section class="question">
+<h2>Question 4 — CPU Components (7 marks)</h2>
+
+<div class="part">
+<h3>4 (a)(i) [2 marks]</h3>
+<div class="q-text"><p>State the roles of the Memory Address Register (MAR) and the Memory Data Register (MDR).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>MAR (Memory Address Register):</strong> Holds the address in main memory from which data is to be <em>read</em> (fetched) or to which data is to be <em>written</em>. The address bus carries the MAR's contents to the memory system to locate the correct memory location.</p>
+<p><strong>MDR (Memory Data Register):</strong> Holds the data that has just been read from the address in the MAR (during a fetch), or the data that is about to be written to that address (during a store). It is the buffer between the CPU and main memory.</p>
+</div>
+<ul class="marks">
+<li>MAR: holds address in memory from which data is read / to which data is written. [1]</li>
+<li>MDR: holds the data read from / to be written to the address in the MAR. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (a)(ii) [1 mark]</h3>
+<div class="q-text"><p>State when interrupts are detected during the Fetch-Execute (F-E) cycle.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Interrupts are detected <strong>after the execute stage is completed</strong> — i.e., at the end of each F-E cycle, before the next fetch begins. (Some sources describe this as "at the start of the next F-E cycle".)</p>
+</div>
+<ul class="marks"><li>After completion of the execute stage / before the cycle begins (end of F-E cycle). [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (b) [2 marks]</h3>
+<div class="q-text"><p>Describe the purpose of the system clock.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>The system clock generates a regular stream of <strong>timing signals (pulses)</strong> at a fixed frequency (the clock speed, measured in GHz). Every component in the CPU and on the motherboard synchronises its operations to these pulses — ensuring that data transfers happen at precisely the right time, in the correct sequence, and without one component getting ahead of another. The clock thus coordinates all CPU operations and processes them in the correct order.</p>
+</div>
+<ul class="marks">
+<li>Synchronises operations / creates timing signals. [1]</li>
+<li>To process operations in the correct order / sequence / keeps track of time. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>4 (c) [2 marks]</h3>
+<div class="q-text"><p>Identify one hardware upgrade (other than SSD) that can improve performance, and explain why.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Upgrade: Increase the amount of RAM</strong></p>
+<p><strong>Explanation:</strong> With more RAM, more application programs and data can reside in memory simultaneously. This reduces the need to swap data in and out of slower secondary storage (virtual memory/paging), saving time and improving multitasking speed and responsiveness.</p>
+<p><em>(Other valid: increase clock speed → more FE cycles/second; increase cache → fewer RAM accesses; add more processor cores → more instructions in parallel.)</em></p>
+</div>
+<ul class="marks">
+<li>Upgrade: increase RAM / clock speed / cache / cores. [1]</li>
+<li>Explanation: correct corresponding reason. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 5 ==================== -->
+<section class="question">
+<h2>Question 5 — Logic Gates (5 marks)</h2>
+
+<div class="part">
+<h3>5 (a) [3 marks]</h3>
+<div class="q-text">
+<p>Draw a logic circuit for: <strong>X = NOT ((NOT (A AND B)) OR (NOT (B AND C)))</strong></p>
+<div class="q-img"><img src="worked13/fig_5a_logic.png" alt="Blank logic circuit drawing area with inputs A, B, C and output X"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Decompose the expression layer by layer:</p>
+<p><strong>Layer 1:</strong> A AND B → AND gate. B AND C → AND gate.</p>
+<p><strong>Layer 2:</strong> NOT (A AND B) → NOT gate on first AND output. NOT (B AND C) → NOT gate on second AND output.</p>
+<p><strong>Layer 3:</strong> (NOT (A AND B)) OR (NOT (B AND C)) → OR gate.</p>
+<p><strong>Layer 4:</strong> NOT of OR output → final NOT gate → X.</p>
+<p>This is equivalent to (A AND B) AND (B AND C) = A AND B AND C by De Morgan's theorem.</p>
+</div>
+<ul class="marks">
+<li>NOT (A AND B) sub-circuit correct. [1]</li>
+<li>NOT (B AND C) sub-circuit correct. [1]</li>
+<li>NOT (OR gate) as final output, correct inputs. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>5 (b) [2 marks]</h3>
+<div class="q-text">
+<p>Complete the truth table for: <strong>Y = (NOT P AND Q) OR (Q AND NOT R)</strong></p>
+<div class="q-img"><img src="worked13/fig_5b_truth.png" alt="Truth table template with P, Q, R columns and Y"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>Evaluate each row: NOT P AND Q (1 when P=0,Q=1); Q AND NOT R (1 when Q=1,R=0). Y=1 if either is true.</p>
+<table class="q-table">
+<tr><th>P</th><th>Q</th><th>R</th><th>¬P∧Q</th><th>Q∧¬R</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td><strong>1</strong></td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td><strong>0</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>Rows 1–4 correct (0,0,1,1). [1]</li>
+<li>Rows 5–8 correct (0,0,1,0). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 6 ==================== -->
+<section class="question">
+<h2>Question 6 — Assembly Language (11 marks)</h2>
+
+<div class="part">
+<h3>6 (a)(i) [4 marks]</h3>
+<div class="q-text">
+<p>Trace the program in memory. Initial memory: mem[100]=1, mem[101]=0, mem[110]=97, mem[111]=98, mem[112]=97. ASCII: 49='1', 65='A', 66='B', 67='C'.</p>
+<div class="q-img"><img src="worked13/fig_6ai_trace.png" alt="Trace table for the assembly program that counts uppercase letters"></div>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p>The program iterates through memory starting at address 110 (via IX). It loads each value, subtracts 32 (converting from lowercase ASCII to uppercase range conceptually), then compares to 65. If ≥65 (i.e. if it's an uppercase or letter character), it increments mem[101] (a count). mem[100] counts the loop iterations (the current index). After 2 iterations (mem[100]=2), the loop ends and LDD 101 → ADD #48 → OUT outputs the count as a digit character.</p>
+<p>Initial: mem[100]=1 (loop counter starts at 1), mem[101]=0 (letter count), mem[110]=97 (='a'), mem[111]=98 (='b'), mem[112]=97.</p>
+<p><strong>First iteration (IX=0):</strong> LDD 100: ACC=1. CMP #2: 1≠2, JPN fails, continue. LDX 110: ACC=mem[110+0]=97. SUB #32: ACC=65. CMP #65: 65=65, JPN 86 NOT taken. LDM #1: ACC=1. ADD 101: ACC=1+0=1. STO 101: mem[101]=1. LDM #1: ACC=1. ADD 100: ACC=1+1=2. STO 100: mem[100]=2. INC IX: IX=1. JMP 76.</p>
+<p><strong>Second iteration (IX=1):</strong> LDD 100: ACC=2. CMP #2: 2=2, JPE 91 taken → jump to 91. LDD 101: ACC=1. ADD #48: ACC=1+48=49. OUT: output ASCII 49 = '1'.</p>
+<table class="q-table" style="font-size:0.8em">
+<tr><th>Addr</th><th>ACC</th><th>IX</th><th>m[100]</th><th>m[101]</th><th>Output</th></tr>
+<tr><td>75</td><td></td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>76</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>79</td><td>97</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>80</td><td>65</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>83</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>84</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>85</td><td></td><td></td><td></td><td>1</td><td></td></tr>
+<tr><td>87</td><td>2</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>88</td><td></td><td></td><td>2</td><td></td><td></td></tr>
+<tr><td>89</td><td></td><td>1</td><td></td><td></td><td></td></tr>
+<tr><td>76</td><td>2</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>91</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>92</td><td>49</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>93</td><td></td><td></td><td></td><td></td><td><strong>1</strong></td></tr>
+</table>
+</div>
+<ul class="marks">
+<li>[4 marks, 1 per highlighted block of the trace]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (a)(ii) [2 marks]</h3>
+<div class="q-text"><p>Explain the purpose of <strong>relative addressing</strong> in an assembly language program.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Relative addressing specifies a target address as an offset (displacement) from the current instruction's address (or the program counter), rather than an absolute fixed memory location.</p>
+<p><strong>Why it is used:</strong> It allows programs to be <strong>relocatable</strong> — the code can be loaded and executed at any location in memory, not just at a specific fixed address. Since all branch/jump targets are expressed as relative offsets, moving the entire program to a different memory region does not require any address values within the code to be changed. The operating system can load the program wherever convenient.</p>
+</div>
+<ul class="marks">
+<li>Allows relocatable code. [1]</li>
+<li>All addresses specified as base address + offset, so program can run from any memory location. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(i) [1 mark]</h3>
+<div class="q-text"><p>Show the result after <code>AND B01001100</code> on ACC = <code>0011 0110</code>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<pre>  0011 0110
+  0100 1100
+AND:
+  0000 0100</pre>
+<p><strong>Result: 0000 0100</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div>
+</div>
+</div>
+<ul class="marks"><li>0000 0100 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(ii) [1 mark]</h3>
+<div class="q-text"><p>Show the result after <code>OR B01001111</code> on ACC = <code>1001 0101</code>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<pre>  1001 0101
+  0100 1111
+OR:
+  1101 1111</pre>
+<p><strong>Result: 1101 1111</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div>
+</div>
+</div>
+<ul class="marks"><li>1101 1111 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (b)(iii) [1 mark]</h3>
+<div class="q-text"><p>Show the result after <code>LSR #2</code> on ACC = <code>1001 1101</code>.</p></div>
+<div class="solution-open">
+<div class="worked">
+<pre>Before: 1001 1101
+LSR #2: shift right 2; 0s introduced left; 01 dropped from right
+After:  0010 0111</pre>
+<p><strong>Result: 0010 0111</strong></p>
+<div class="register-row">
+  <span class="register-label">After:</span>
+  <div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">0</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div><div class="register-cell answer-reg">1</div>
+</div>
+</div>
+<ul class="marks"><li>0010 0111 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>6 (c) [1 mark]</h3>
+<div class="q-text"><p>Give the name of one other instruction group (other than data movement).</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Valid instruction groups: <strong>Arithmetic operations</strong> (ADD, SUB, MUL, DIV) / Input and output of data / Unconditional and conditional jump/branch instructions / Compare instructions.</p>
+</div>
+<ul class="marks"><li>Any valid name: arithmetic / input-output / jump / compare. [1]</li></ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 7 ==================== -->
+<section class="question">
+<h2>Question 7 — Networking &amp; Cloud Computing (8 marks)</h2>
+
+<div class="part">
+<h3>7 (a) [3 marks]</h3>
+<div class="q-text"><p>Complete the table about the cloud diagram (Laptop → Firewall → Device A → Internet Service Provider → Cloud X with Application B).</p>
+<table class="q-table" style="text-align:left">
+<tr><th>Question</th><th>Answer</th></tr>
+<tr><td>Name of device A (connects laptop to internet)</td><td></td></tr>
+<tr><td>A type of cloud, X</td><td></td></tr>
+<tr><td>An example of application B (runs on cloud)</td><td></td></tr>
+</table>
+</div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Device A:</strong> A <strong>router</strong>. The router connects the local network (where the laptop is) to the wider internet via the ISP. It routes packets between the private LAN and the public internet.</p>
+<p><strong>Type of cloud X:</strong> <strong>Public cloud</strong>. The diagram shows access via the public internet to a cloud service that is accessible to any user — this describes a public cloud. (A private cloud would only be accessible within an organisation's own network.)</p>
+<p><strong>Application B:</strong> Any cloud-based application — e.g. <strong>email</strong> (e.g. webmail), word processor, spreadsheet, database, cloud storage, video streaming, etc.</p>
+</div>
+<ul class="marks">
+<li>Device A: Router [1]</li>
+<li>Type of cloud X: Public (cloud) [1]</li>
+<li>Application B: Any valid cloud application (email / word processor / etc.) [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (b) [3 marks]</h3>
+<div class="q-text"><p>Give one advantage and two disadvantages of transmitting data using satellites instead of copper cables.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Advantage:</strong> Satellites can provide connectivity to <em>remote or rural areas</em> that are not served by terrestrial cable infrastructure. They are <em>not fixed to a single location</em> — any area within a satellite's footprint can receive the signal.</p>
+<p><strong>Disadvantage 1:</strong> <em>High latency</em> — signals must travel large distances to the satellite (typically ~36,000 km for geostationary orbit) and back, introducing a significant delay (300–700ms round trip). This makes satellite links unsuitable for real-time applications like video calls or online gaming.</p>
+<p><strong>Disadvantage 2:</strong> <em>Signal affected by bad weather</em> — heavy rain, storms, or snow can attenuate satellite signals (rain fade), causing intermittent dropouts. Also, the transmission speed is typically slower than fibre broadband.</p>
+</div>
+<ul class="marks">
+<li>Advantage: not fixed to a location / access in remote/rural areas. [1]</li>
+<li>Disadvantage 1: high latency / slow to connect. [1]</li>
+<li>Disadvantage 2: signal affected by weather / slower speed than fixed line. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>7 (c)(i) [2 marks]</h3>
+<div class="q-text"><p>Give two benefits of dividing a network into subnetworks by subnetting.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>1. <strong>Improved security:</strong> Traffic between subnetworks must pass through a router, which can enforce access control policies. This limits the spread of attacks — a compromise in one subnet does not automatically give access to others.</p>
+<p>2. <strong>Reduced congestion:</strong> Broadcast traffic is limited to the local subnet and not forwarded to all subnets. This reduces unnecessary traffic on each subnet, improving performance.</p>
+<p><em>Also valid: allows network extension / aids management / improves performance.</em></p>
+</div>
+<ul class="marks">
+<li>Improved security. [1]</li>
+<li>Reduced congestion / better performance / easier management / allows extension. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 8 ==================== -->
+<section class="question">
+<h2>Question 8 — Software Licensing &amp; AI (6 marks)</h2>
+
+<div class="part">
+<h3>8 (a)(i) [2 marks]</h3>
+<div class="q-text"><p>Explain why some programs are distributed under an open source licence.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An open source licence gives users the right to view, modify, and redistribute the source code. Developers choose this model for several reasons:</p>
+<p>1. <strong>Community contribution:</strong> By making the source code available, users from around the world can report bugs, suggest improvements, and contribute fixes. The developer benefits from a large community of testers and contributors who can identify and resolve errors they might never find alone.</p>
+<p>2. <strong>Transparency and trust:</strong> Open source code can be audited by anyone, promoting transparency and building user trust — especially important for security tools.</p>
+</div>
+<ul class="marks">
+<li>Allows users to customise / report / fix errors / add features. [1]</li>
+<li>Allows collaboration / improves the code through community input. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>8 (a)(ii) [2 marks]</h3>
+<div class="q-text"><p>Explain how a programmer benefits from distributing a program under a commercial licence.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>A commercial (proprietary) licence keeps the source code private and gives the programmer exclusive rights over the software:</p>
+<p>1. <strong>Revenue:</strong> The programmer can <em>charge a fee</em> for the software (purchase price, subscription, or per-user licence fee), generating income from the work they have created.</p>
+<p>2. <strong>Intellectual property protection:</strong> The licence prevents others from <em>copying, redistributing, or modifying</em> the software without permission. This protects the programmer's investment and prevents competitors from freely using or improving the program.</p>
+</div>
+<ul class="marks">
+<li>Can charge a fee / enables copyright. [1]</li>
+<li>Prevents illegal copying / modification / protects source code. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>8 (b) [2 marks]</h3>
+<div class="q-text"><p>Describe one economic impact the AI fault diagnosis module may have on the vehicle repair garage.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Economic impact: Reduced costs and increased productivity</strong></p>
+<p>The AI module can diagnose faults quickly and accurately, reducing the time technicians spend on diagnosis. This means technicians can spend more of their time on the actual repair work. As a result, the garage can complete <em>more repair jobs per day</em>, increasing revenue without hiring additional staff. Alternatively, the garage might need <em>fewer skilled diagnostic technicians</em>, reducing labour costs. These efficiency gains may allow the garage to pass savings on to customers through lower prices, potentially attracting more business.</p>
+</div>
+<ul class="marks">
+<li>Economic impact identified (e.g. reduce costs / increase profits). [1]</li>
+<li>Corresponding explanation (e.g. less time on diagnosis → more repairs per day). [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 9 ==================== -->
+<section class="question">
+<h2>Question 9 — Number Representations (4 marks)</h2>
+
+<div class="part">
+<h3>9 (a)(i) [1 mark]</h3>
+<div class="q-text"><p>Convert the unsigned binary value <code>1001 0011</code> into hexadecimal.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Split into nibbles: <code>1001</code> = 9; <code>0011</code> = 3. <strong>Answer: 93</strong></p>
+</div>
+<ul class="marks"><li>93 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>9 (a)(ii) [1 mark]</h3>
+<div class="q-text"><p>Convert the unsigned binary value <code>1001 0011</code> into denary.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>128 + 16 + 2 + 1 = <strong>147</strong></p>
+</div>
+<ul class="marks"><li>147 [1]</li></ul>
+</div>
+</div>
+
+<div class="part">
+<h3>9 (b) [2 marks]</h3>
+<div class="q-text"><p>State two benefits of using Binary Coded Decimal (BCD) to represent values.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>1. <strong>Straightforward conversion between BCD and denary:</strong> BCD directly encodes each decimal digit, so conversion to/from decimal is simple — no division or remainder operations needed. This simplifies programming and reduces complexity in applications that handle decimal numbers.</p>
+<p>2. <strong>Exact representation of decimal fractions:</strong> BCD can represent monetary values exactly (e.g. £12.99 with no rounding errors). Standard binary floating point cannot exactly represent many decimal fractions (e.g. 0.1 in binary is a repeating fraction), causing rounding errors in financial calculations.</p>
+</div>
+<ul class="marks">
+<li>Straightforward to convert to/from denary / simpler to encode and decode. [1]</li>
+<li>Can represent monetary values exactly / digital display is easier. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ==================== QUESTION 10 ==================== -->
+<section class="question">
+<h2>Question 10 — Control Systems &amp; Embedded Systems (8 marks)</h2>
+
+<div class="part">
+<h3>10 (a) [3 marks]</h3>
+<div class="q-text"><p>Explain the importance of feedback in a control system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>Feedback is the mechanism by which a control system monitors its own output and uses this information to adjust future actions.</p>
+<p>In a control system, sensors continuously measure the state of the controlled environment (e.g. temperature, pressure, speed). This measured output is fed back to the controller, which <em>compares it against a desired set point</em>. If there is a difference (an error), the controller sends corrective signals to actuators to reduce the error.</p>
+<p>Without feedback, the system operates open-loop — it cannot detect or correct deviations from the desired state caused by external disturbances or changes in the environment. <strong>Feedback enables the system to automatically maintain the correct output</strong>, even when conditions change unpredictably, ensuring the system operates within given criteria.</p>
+</div>
+<ul class="marks">
+<li>To ensure the system operates within given criteria. [1]</li>
+<li>By enabling system output to affect subsequent system input. [1]</li>
+<li>Allowing conditions to be automatically adjusted. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>10 (b)(i) [2 marks]</h3>
+<div class="q-text"><p>Identify one sensor that could be used in a car alarm system and justify your choice.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p><strong>Sensor: Infra-red (motion) sensor</strong></p>
+<p><strong>Justification:</strong> An infra-red sensor detects the heat emitted by a person's body. If an intruder enters the car (or approaches it closely), the sensor detects their body heat and triggers the alarm. This is effective because it activates only when a warm body (human or animal) is detected, reducing false alarms from vibrations alone.</p>
+<p><em>(Also valid: sound sensor — if a sound occurs inside the car the alarm activates; pressure sensor — an intruder sitting in the seat triggers the alarm.)</em></p>
+</div>
+<ul class="marks">
+<li>Sensor identified (infra-red / sound / pressure). [1]</li>
+<li>Justification explaining how it detects an intrusion. [1]</li>
+</ul>
+</div>
+</div>
+
+<div class="part">
+<h3>10 (b)(ii) [3 marks]</h3>
+<div class="q-text"><p>Describe the characteristics of an embedded system.</p></div>
+<div class="solution-open">
+<div class="worked">
+<p>An embedded system has the following characteristics:</p>
+<p>1. It is <strong>built into (integrated within)</strong> a larger device — the computing components are physically incorporated into the product rather than being a separate, standalone unit.</p>
+<p>2. It combines <strong>hardware and software designed for a specific function</strong> — unlike a general-purpose computer, it performs a dedicated task (e.g. controlling a car alarm, regulating a washing machine cycle, managing a pacemaker).</p>
+<p>3. It must have <strong>a processor, memory, and input/output</strong> to function — even basic embedded systems have a microprocessor or microcontroller, ROM for firmware, RAM for working data, and I/O interfaces for sensors and actuators.</p>
+<p>4. The system is <strong>not easily changed or reprogrammed</strong> by the end user — it is purpose-built and typically runs the same program throughout its lifetime.</p>
+</div>
+<ul class="marks">
+<li>Built into / integrated into the device (car alarm). [1]</li>
+<li>Hardware and software designed for a specific function. [1]</li>
+<li>Must have processor, memory, I/O / not easily changed by the end user. [1]</li>
+</ul>
+</div>
+</div>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/41 · May/June 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/41 · May/June 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q20">Q20</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked41/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(global) Declaration of 1D array Queue, 20 elements initialised with –1</li>
+<li>(global) HeadPointer and TailPointer initialised to –1, NumberItems initialised with 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Queue(20) As Integer
+ Dim HeadPointer As Integer
+ Dim TailPointer As Integer
+ Dim NumberItems As Integer
+ For x = 0 To 19
+    Queue(x) = -1
+ Next
+ HeadPointer = -1
+ TailPointer = -1
+ NumberItems = 0</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Queue = [-1 for x in range(20)]
+ HeadPointer = -1
+ TailPointer = -1
+ NumberItems = 0</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(global) Declaration of 1D array Queue, 20 elements initialised with –1</li><li>(global) HeadPointer and TailPointer initialised to –1, NumberItems initialised with 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and close) taking 1 (integer) parameter and returning a Boolean value in all cases</li>
+<li>Checking if queue is full (NumberItems = 20) and returning FALSE</li>
+<li>Checking if queue is empty (NumberItems = 0) then and updating TailPointer and HeadPointer appropriately</li>
+<li>Incrementing TailPointer and NumberItems in appropriate place …</li>
+<li>… looping back to 0 for TailPointer if at end of structure</li>
+<li>Storing parameter in Queue[TailPointer] (after increment) and returning TRUE</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(InputData)
+    If NumberItems &gt;= 20 Then
+        Return False
+    End If
+
+      If TailPointer &lt;= -1 Then
+         TailPointer = 0
+         HeadPointer = 0
+         Queue(TailPointer) = InputData
+
+ University Press &amp; Assessment 2025                       Page 10 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+    Else
+       TailPointer = TailPointer + 1
+       If TailPointer = 20 Then
+            TailPointer = 0
+       End If
+       Queue(TailPointer) = InputData
+    End If
+    NumberItems = NumberItems + 1
+    Return True
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(InputData):
+      global Queue
+      global HeadPointer
+      global TailPointer
+      global NumberItems
+      if NumberItems &gt;= 20:
+          return False
+
+        if TailPointer &lt;= -1:
+            TailPointer = 0
+            HeadPointer = 0
+            Queue[TailPointer] = InputData
+        else:
+            TailPointer = TailPointer + 1
+            if TailPointer == 20:
+                TailPointer = 0
+
+            Queue[TailPointer] = InputData
+        NumberItems +=1
+        return True</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and close) taking 1 (integer) parameter and returning a Boolean value in all cases</li><li>Checking if queue is full (NumberItems = 20) and returning FALSE</li><li>Checking if queue is empty (NumberItems = 0) then and updating TailPointer and HeadPointer appropriately</li><li>Incrementing TailPointer and NumberItems in appropriate place …</li><li>… looping back to 0 for TailPointer if at end of structure</li><li>Storing parameter in Queue[TailPointer] (after increment) and returning TRUE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Enqueue() with 1 to 25 (inclusive) in order</li>
+<li>… storing/using return value in selection …outputting Successful with integer and outputting Unsuccessful with</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim ReturnValue As Boolean
+ For x = 1 To 25
+    ReturnValue = Enqueue(x)
+    If ReturnValue = True Then
+        Console.WriteLine(x &amp; &quot;Successful &quot; )
+    Else
+        Console.WriteLine(x &amp; &quot;Unsuccessful &quot;)
+    End If
+ Next x</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>for X in range(1, 26):
+      ReturnValue = Enqueue(X)
+      if ReturnValue == True:
+          print(x,&quot;Successful&quot;)
+      else:
+          print(x,&quot;Unsuccessful&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Enqueue() with 1 to 25 (inclusive) in order</li><li>… storing/using return value in selection …outputting Successful with integer and outputting Unsuccessful with</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dequeue() header (and close) and checking if queue is empty (NumberItems = 0) and returning –1</li>
+<li>Returning data at HeadPointer</li>
+<li>Incrementing HeadPointer …</li>
+<li>… and catching if = 20 to return to 0</li>
+<li>Decrementing NumberItems</li>
+<li>Resetting HeadPointer and TailPointer when queue is empty</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue()
+    Dim ReturnValue As Integer
+    If NumberItems &lt;= 0 Then
+         Return -1
+    Else
+        ReturnValue = Queue(HeadPointer)
+        HeadPointer = HeadPointer + 1
+        If HeadPointer &gt;= 20 Then
+           HeadPointer = 0
+        End If
+        NumberItems = NumberItems – 1
+        If NumberItems = 0 Then
+           HeadPointer = -1
+           TailPointer = -1
+
+ University Press &amp; Assessment 2025                       Page 14 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+       End If
+       Return ReturnValue
+    End If
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue():
+      global Queue
+      global HeadPointer
+      global TailPointer
+      global NumberItems
+      if NumberItems &lt;= 0:
+          return -1
+      else:
+          ReturnValue = Queue[HeadPointer]
+          HeadPointer +=1
+          if HeadPointer &gt;= 20:
+              HeadPointer = 0
+          NumberItems -=1
+          if NumberItems == 0:
+              HeadPointer = -1
+              TailPointer = -1
+          return ReturnValue</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dequeue() header (and close) and checking if queue is empty (NumberItems = 0) and returning –1</li><li>Returning data at HeadPointer</li><li>Incrementing HeadPointer …</li><li>… and catching if = 20 to return to 0</li><li>Decrementing NumberItems</li><li>Resetting HeadPointer and TailPointer when queue is empty</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Dequeue() twice</li>
+<li>… outputting return value from both calls</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim NextValue As Integer
+ NextValue = Dequeue()
+ Console.WriteLine(NextValue)
+ NextValue = Dequeue()
+ Console.WriteLine(NextValue)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>NextValue = Dequeue()
+ print(NextValue)
+ NextValue = Dequeue()
+ print(NextValue)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Dequeue() twice</li><li>… outputting return value from both calls</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 to 20 with Successful</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 to 20 with Successful</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked41/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end)</li>
+<li>Prompt to enter filename and reading input</li>
+<li>Opening the file (to read) and closing the file in an appropriate place</li>
+<li>Looping until EOF …</li>
+<li>… reading each line in the file …</li>
+<li>… (removing line break and) inserting in array</li>
+<li>Returning populated array</li>
+<li>Exception handling try catch with appropriate output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function ReadData()
+    Dim DataList(100) As String
+    Console.WriteLine(&quot;Enter the filename&quot;)
+    Dim FileName As String = Console.ReadLine()
+    NumberItems = 0
+
+      Try
+       Dim FileReader As New System.IO.StreamReader(FileName)
+       While Not FileReader.EndOfStream
+           DataList(NumberItems) = FileReader.ReadLine()
+           NumberItems = NumberItems + 1
+       End While
+       FileReader.Close()
+    Catch ex As Exception
+       Console.WriteLine(&quot;Cannot open or read from file&quot;)
+    End Try
+    Return DataList
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 19 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+      DataList = []
+      FileName = input(&quot;Enter the filename&quot;)
+      try:
+          File = open(FileName)
+          for Line in File:
+              DataList.append(Line)
+          File.close()
+      except:
+          print(&quot;Cannot open file&quot;)
+      return DataList</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end)</li><li>Prompt to enter filename and reading input</li><li>Opening the file (to read) and closing the file in an appropriate place</li><li>Looping until EOF …</li><li>… reading each line in the file …</li><li>… (removing line break and) inserting in array</li><li>Returning populated array</li><li>Exception handling try catch with appropriate output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking (1D array) DataArray (of strings) as a parameter</li>
+<li>Declaration/use of 6 1D arrays (equivalent), one for each colour</li>
+<li>Looping through each line in parameter DataArray …</li>
+<li>… splitting by comma</li>
+<li>Comparing 2nd value/colour to each colour to select array …</li>
+<li>… storing 1st value/integer in correct array</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SplitData(DataArray())
+    Dim Red(30) As String
+    Dim Green(30) As String
+    Dim Blue(30) As String
+    Dim Orange(30) As String
+    Dim Yellow(30) As String
+    Dim Pink(30) As String
+
+ University Press &amp; Assessment 2025                       Page 22 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+      Dim RedNumber As Integer = 0
+      Dim GreenNumber As Integer = 0
+      Dim BlueNumber As Integer = 0
+      Dim OrangeNumber As Integer = 0
+      Dim YellowNumber As Integer = 0
+      Dim PinkNumber As Integer = 0
+      Dim x As Integer = 0
+      Dim TempDataFromFile(1) As String
+      Dim DataList(100, 1) As String
+
+      For x = 0 To NumberItems - 1
+         TempDataFromFile = (DataArray(x)).Split(&quot;,&quot;)
+         DataList(x, 0) = TempDataFromFile(0)
+         DataList(x, 1) = TempDataFromFile(1)
+      Next x
+      x = 0
+      While DataList(x, 0) IsNot Nothing
+         If DataList(x, 1) = &quot;red&quot; Then
+             Red(RedNumber) = DataList(x, 0)
+             RedNumber = RedNumber + 1
+         ElseIf DataList(x, 1) = &quot;green&quot; Then
+             Green(GreenNumber) = DataList(x, 0)
+             GreenNumber = GreenNumber + 1
+         ElseIf DataList(x, 1) = &quot;blue&quot; Then
+             Blue(BlueNumber) = DataList(x, 0)
+             BlueNumber = BlueNumber + 1
+         ElseIf DataList(x, 1) = &quot;orange&quot; Then
+             Orange(OrangeNumber) = DataList(x, 0)
+             OrangeNumber = OrangeNumber + 1
+         ElseIf DataList(x, 1) = &quot;yellow&quot; Then
+             Yellow(YellowNumber) = DataList(x, 0)
+             YellowNumber = YellowNumber + 1
+         ElseIf DataList(x, 1) = &quot;pink&quot; Then
+             Pink(PinkNumber) = DataList(x, 0)
+             PinkNumber = PinkNumber + 1
+         End If
+
+ University Press &amp; Assessment 2025                       Page 23 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+       x = x + 1
+    End While
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SplitData(DataArray):
+      Red = []
+      Green = []
+      Blue = []
+      Orange = []
+      Yellow = []
+      Pink = []
+
+        for Line in DataArray:
+            SplitLine = Line.split(&quot;,&quot;)
+
+              if SplitLine[1].strip() == &quot;red&quot;:
+                  Red.append(SplitLine[0])
+              elif SplitLine[1].strip() == &quot;green&quot;:
+                  Green.append(SplitLine[0])
+              elif SplitLine[1].strip() == &quot;blue&quot;:
+                  Blue.append(SplitLine[0])
+              elif SplitLine[1].strip() == &quot;orange&quot;:
+                  Orange.append(SplitLine[0])
+              elif SplitLine[1].strip() == &quot;yellow&quot;:
+                  Yellow.append(SplitLine[0])
+              else:
+                  Pink.append(SplitLine[0])</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking (1D array) DataArray (of strings) as a parameter</li><li>Declaration/use of 6 1D arrays (equivalent), one for each colour</li><li>Looping through each line in parameter DataArray …</li><li>… splitting by comma</li><li>Comparing 2nd value/colour to each colour to select array …</li><li>… storing 1st value/integer in correct array</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header taking (1D) array and filename as parameters, opening file to append and closing file (in appropriate</li>
+<li>Looping through each item in array parameter …</li>
+<li>… writing to the file</li>
+<li>… with new line break between each line</li>
+<li>Using exception handling try and catch with suitable output</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub StoreData(DataToStore(), FileName)
+    Dim FileWriter As IO.StreamWriter = New IO.StreamWriter(FileName, False)
+    Dim x As Integer = 0
+    Try
+        While DataToStore(x) IsNot Nothing
+           FileWriter.WriteLine(DataToStore(x))
+           x = x + 1
+        End While
+        FileWriter.Close()
+    Catch ex As Exception
+        Console.WriteLine(&quot;Cannot open or write to file&quot;)
+    End Try
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 26 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def StoreData(DataToStore, FileName):
+      try:
+          File = open(FileName,&quot;a+&quot;)
+          for Item in DataToStore:
+              File.write(Item)
+              File.write(&quot;\n&quot;)
+          File.close()
+      except:
+          print(&quot;Cannot create or write to file&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header taking (1D) array and filename as parameters, opening file to append and closing file (in appropriate</li><li>Looping through each item in array parameter …</li><li>… writing to the file</li><li>… with new line break between each line</li><li>Using exception handling try and catch with suitable output</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling StoreData with one array and filename</li>
+<li>Calling StoreData with remaining 5 arrays and filename</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>StoreData(Red, &quot;Red.txt&quot;)
+ StoreData(Green, &quot;Green.txt&quot;)
+ StoreData(Blue, &quot;Blue.txt&quot;)
+ StoreData(Orange, &quot;Orange.txt&quot;)
+ StoreData(Yellow, &quot;Yellow.txt&quot;)
+ StoreData(Pink, &quot;Pink.txt&quot;)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>StoreData(Red, &quot;Red.txt&quot;)
+ StoreData(Green, &quot;Green.txt&quot;)
+ StoreData(Blue, &quot;Blue.txt&quot;)
+ StoreData(Orange, &quot;Orange.txt&quot;)
+ StoreData(Yellow, &quot;Yellow.txt&quot;)
+ StoreData(Pink, &quot;Pink.txt&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling StoreData with one array and filename</li><li>Calling StoreData with remaining 5 arrays and filename</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() …</li>
+<li>… and storing/using return value</li>
+<li>Calling SplitData() with returned array as a parameter</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+    Dim DataFromFile(,) As String = ReadData()
+    SplitData(DataFromFile)
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataFromFile = ReadData()
+ SplitData(DataFromFile)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() …</li><li>… and storing/using return value</li><li>Calling SplitData() with returned array as a parameter</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Prompt and input of filename TheData.txt</li>
+<li>Screenshot of data in red file. Filename must be shown in same screenshot as data</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Prompt and input of filename TheData.txt</li><li>Screenshot of data in red file. Filename must be shown in same screenshot as data</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked41/page-06.jpg" alt="Paper page 6 for Q3"><div class="cap">Original paper page 6</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate)</li>
+<li>Constructor header (and end where appropriate) with (min) one parameter (integer) within class</li>
+<li>3 attributes with correct data types</li>
+<li>NodeData has parameter assigned, LeftNode and RightNode are assigned null within constructor</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Node
+    Private NodeData As Integer
+    Private LeftNode As Node
+    Private RightNode As Node
+    Sub New(pNodeData)
+        NodeData = pNodeData
+        LeftNode = Nothing
+        RightNode = Nothing
+    End Sub
+ End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Node:
+      def init (self, pNodeData):
+         self. NodeData = pNodeData #integer
+         self. LeftNode = None #node
+         self. RightNode = None #node</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate)</li><li>Constructor header (and end where appropriate) with (min) one parameter (integer) within class</li><li>3 attributes with correct data types</li><li>NodeData has parameter assigned, LeftNode and RightNode are assigned null within constructor</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method with no parameter …</li>
+<li>… returning correct value</li>
+<li>2nd and 3rd correct get methods</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetLeft()
+    Return LeftNode
+ End Function
+ Function GetRight()
+    Return RightNode
+ End Function
+ Function GetData()
+    Return NodeData
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetLeft(self):
+      return self. LeftNode
+ def GetRight(self):
+      return self. RightNode
+ def GetData(self):
+      return self. NodeData</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method with no parameter …</li><li>… returning correct value</li><li>2nd and 3rd correct get methods</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 set method taking parameter of type Node …</li>
+<li>… assigning to correct attribute</li>
+<li>2nd correct set method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SetLeft(NewNode)
+    LeftNode = NewNode
+ End Sub
+ Sub SetRight(NewNode)
+    RightNode = NewNode
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetLeft(self, NewNode):
+      self. LeftNode = NewNode
+ def SetRight(self, NewNode):
+      self. RightNode = NewNode</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 set method taking parameter of type Node …</li><li>… assigning to correct attribute</li><li>2nd correct set method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating 1 instance of Node with a correct value and storing the node …</li>
+<li>… remaining 4 correct</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim FirstNode As Node = New Node(10)
+ Dim SecondNode As Node = New Node(20)
+ Dim ThirdNode As Node = New Node(5)
+ Dim FourthNode As Node = New Node(15)
+ Dim FifthNode As Node = New Node(7)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstNode = Node(10)
+ SecondNode = Node(20)
+ ThirdNode = Node(5)
+ FourthNode = Node(15)
+ FifthNode = Node(7)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating 1 instance of Node with a correct value and storing the node …</li><li>… remaining 4 correct</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Tree header (and end) no inheritance and constructor header (and end) taking 1 node parameter within class …</li>
+<li>… storing parameter in FirstNode declared as a Node data type</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Tree
+    Private FirstNode As Node
+    Sub New(pFirstNode)
+        FirstNode = pFirstNode
+    End Sub
+ End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Tree:
+      def init (self, FirstNode):
+         self. FirstNode = FirstNode #node</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Tree header (and end) no inheritance and constructor header (and end) taking 1 node parameter within class …</li><li>… storing parameter in FirstNode declared as a Node data type</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Get method header (and end) with no parameter, returning FirstNode</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetRootNode()
+    Return FirstNode
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetRootNode(self):
+      return self. FirstNode</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Get method header (and end) with no parameter, returning FirstNode</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Insert method header (and end) taking 1 node parameter</li>
+<li>If parameter &lt; first node, checking if there is a left node …</li>
+<li>… storing node in left node if it is null</li>
+<li>If parameter &gt;= first node, checking if there is a right node …</li>
+<li>… storing node in right node if it is null</li>
+<li>Looping until correct position is found // recursive calls</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Insert(NewNode)
+    Dim CurrentNode As Node
+    CurrentNode = FirstNode
+    Dim Inserted As Boolean = True
+    While Inserted
+        If NewNode.GetData() &lt; CurrentNode.GetData() Then
+           If CurrentNode.GetLeft() Is Nothing Then
+              CurrentNode.SetLeft(NewNode)
+              Return True
+           Else
+              CurrentNode = CurrentNode.GetLeft()
+           End If
+
+ University Press &amp; Assessment 2025                       Page 38 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+       Else
+           If CurrentNode.GetRight() Is Nothing Then
+              CurrentNode.SetRight(NewNode)
+              Return True
+           Else
+              CurrentNode = CurrentNode.GetRight()
+           End If
+       End If
+    End While
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Insert(self, NewNode):
+      CurrentNode = self. FirstNode
+      Inserted = True
+      while Inserted:
+          if NewNode.GetData() &lt; CurrentNode.GetData():
+              if CurrentNode.GetLeft() == None:
+                  CurrentNode.SetLeft(NewNode)
+                  return True
+              else:
+                  CurrentNode = CurrentNode.GetLeft()
+          else:
+              if CurrentNode.GetRight() == None:
+                  CurrentNode.SetRight(NewNode)
+                  return True
+              else:
+                  CurrentNode = CurrentNode.GetRight()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Insert method header (and end) taking 1 node parameter</li><li>If parameter &lt; first node, checking if there is a left node …</li><li>… storing node in left node if it is null</li><li>If parameter &gt;= first node, checking if there is a right node …</li><li>… storing node in right node if it is null</li><li>Looping until correct position is found // recursive calls</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end) taking node as parameter, that is recursive</li>
+<li>Checking if left is null and recursive call if not null</li>
+<li>Outputting node&#x27;s data</li>
+<li>Checking if right is null and recursive call if not null</li>
+<li>Correct order</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputInOrder(RootNode)
+    If RootNode.GetLeft() IsNot Nothing Then
+        OutputInOrder(RootNode.GetLeft())
+    End If
+    Console.WriteLine(RootNode.GetData())
+    If RootNode.GetRight() IsNot Nothing Then
+        OutputInOrder(RootNode.GetRight())
+    End If
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputInOrder(RootNode):
+      if RootNode.GetLeft() != None:
+          OutputInOrder(RootNode.GetLeft())
+      print(RootNode.GetData())
+      if RootNode.GetRight() != None:
+          OutputInOrder(RootNode.GetRight())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end) taking node as parameter, that is recursive</li><li>Checking if left is null and recursive call if not null</li><li>Outputting node&#x27;s data</li><li>Checking if right is null and recursive call if not null</li><li>Correct order</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creation of Tree object with the Node with value 10 as parameter</li>
+<li>Calling method Insert() for tree with the nodes for 20, 5, 15 and 7 in order</li>
+<li>Calling OutputInOrder() with tree&#x27;s root node as parameter</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+    Dim FirstNode As Node = New Node(10)
+    Dim SecondNode As Node = New Node(20)
+    Dim ThirdNode As Node = New Node(5)
+    Dim FourthNode As Node = New Node(15)
+    Dim FifthNode As Node = New Node(7)
+    Dim MyTree As Tree = New Tree(FirstNode)
+    MyTree.Insert(SecondNode)
+    MyTree.Insert(ThirdNode)
+    MyTree.Insert(FourthNode)
+    MyTree.Insert(FifthNode)
+    OutputInOrder(MyTree.GetRootNode())
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 42 of 43
+
+9618/41                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>FirstNode = Node(10)
+ SecondNode = Node(20)
+ ThirdNode = Node(5)
+ FourthNode = Node(15)
+ FifthNode = Node(7)
+ MyTree = Tree(FirstNode)
+ MyTree.Insert(SecondNode)
+ MyTree.Insert(ThirdNode)
+ MyTree.Insert(FourthNode)
+ MyTree.Insert(FifthNode)
+ OutputInOrder(MyTree.GetRootNode())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creation of Tree object with the Node with value 10 as parameter</li><li>Calling method Insert() for tree with the nodes for 20, 5, 15 and 7 in order</li><li>Calling OutputInOrder() with tree&#x27;s root node as parameter</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Output of  1</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q20"><h2>Question 20</h2>
+        <section class="part">
+          <p class="part-label">Part 20 — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>University Press &amp; Assessment 2025  Page 43 of 43</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

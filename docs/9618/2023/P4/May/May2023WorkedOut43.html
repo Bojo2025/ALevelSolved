@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · May/June 2023 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · May/June 2023 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1D array with name DataArray (with 25 elements of type Integer)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim DataArray(24) As Integer</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataArray = [] #25 elements Integer
+
+ 2023                                                     Page 4 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1D array with name DataArray (with 25 elements of type Integer)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Opening file Data.txt to read</li>
+<li>Looping through all the 25/EOF …</li>
+<li>… reading each line and storing/appending into array</li>
+<li>Exception handling with appropriate output</li>
+<li>Closing the file (in an appropriate place)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>try
+                 Dim DataReader As New System.IO.StreamReader(&quot;Data.txt&quot;)
+                 Dim X As Integer = 0
+                 Do Until DataReader.EndOfStream
+                    DataArray(X) = DataReader.ReadLine()
+                    X = X + 1
+                 Loop
+                 DataReader.Close()
+               Catch ex As Exception
+                 Console.WriteLine(&quot;Invalid file&quot;)
+               End Try
+
+ 2023                                                      Page 5 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Opening file Data.txt to read</li><li>Looping through all the 25/EOF …</li><li>… reading each line and storing/appending into array</li><li>Exception handling with appropriate output</li><li>Closing the file (in an appropriate place)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataFile = open(&quot;Data.txt&quot;,&#x27;r&#x27;)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>try:
+                 DataFile = open(&quot;Data.txt&quot;,&#x27;r&#x27;)
+                 for Line in DataFile:
+                    DataArray.append(int(Line))
+                 DataFile.close()
+               except IOError:
+                 print(&quot;Could not find file&quot;)
+
+ 2023                                               Page 6 of 38
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme                May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataFile = open(&quot;Data.txt&quot;,&#x27;r&#x27;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and close where appropriate) with (at least) one (integer array) parameter</li>
+<li>Outputting all (25) array elements …</li>
+<li>…on one line</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub PrintArray(DataArray)
+                    Dim OutputData As String = &quot;&quot;;
+                    For x = 0 To DataArray.length - 1
+                         OutputData = OutputData &amp; DataArray(x) &amp; &quot; &quot;
+                    Next
+                    Console.WriteLine(OutputData)
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PrintArray(DataArray):
+                   output = &quot;&quot;
+                   for X in range(0, len(DataArray)):
+                       output = output + str((DataArray[X])) + &quot; &quot;
+                   print(output)
+
+ 2023                                                        Page 7 of 38
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and close where appropriate) with (at least) one (integer array) parameter</li><li>Outputting all (25) array elements …</li><li>…on one line</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for calling PrintArray with the array as a parameter  1
+  Example program code:
+
+  VB.NET
+  PrintArray(DataArray)
+
+  Python
+  PrintArray(DataArray)</div>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>PrintArray(DataArray)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>PrintArray(DataArray)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot  1
+
+  e.g.
+
+ 2023  Page 8 of 38
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and close where appropriate) taking array and search value as parameters</li>
+<li>Looping through each array element and keeping count of the number of times the parameter appears</li>
+<li>Returning the calculated count value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function LinearSearch(DataArray, DataToFind)
+                   Dim Count As Integer = 0
+                   For x = 0 To DataArray.length - 1
+                        If DataArray(x) = DataToFind Then
+                            Count = Count + 1
+                        End If
+                   Next
+                   Return Count
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def LinearSearch(DataArray, DataToFind):
+                   Count = 0
+                   for X in range(0, len(DataArray)):
+                       if(DataArray[X] == DataToFind):
+                           Count +=1
+                   return Count
+
+ 2023                                                      Page 9 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme          May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and close where appropriate) taking array and search value as parameters</li><li>Looping through each array element and keeping count of the number of times the parameter appears</li><li>Returning the calculated count value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Prompt and reading input …</li>
+<li>…with validation for whole number between 0 and 100 inclusive</li>
+<li>Calling LinearSearch() with array and valid data input and storing/using return value</li>
+<li>Output of the message with return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Console.WriteLine(&quot;Enter a number to find &quot;)
+               Dim DataToFind As Integer = -1
+               Do Until DataToFind &gt;= 0 And DataToFind &lt;= 100
+                    DataToFind = Console.ReadLine()
+               Loop
+               Dim NumberTimes = LinearSearch(DataArray, DataToFind)
+               Console.WriteLine(&quot;The number &quot; &amp; DataToFind &amp; &quot; is found &quot; &amp; NumberTimes &amp; &quot; times.&quot;)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataToFind = int(input(&quot;Enter a number to find &quot;))
+               while DataToFind &lt; 0 or DataToFind &gt; 100:
+                   DataToFind = int(input(&quot;Enter a number to find &quot;))
+               NumberTimes = LinearSearch(DataArray, DataToFind)
+               print(&quot;The number&quot;, DataToFind, &quot;is found&quot;, NumberTimes, &quot;times&quot;)
+
+ 2023                                                      Page 10 of 38
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Prompt and reading input …</li><li>…with validation for whole number between 0 and 100 inclusive</li><li>Calling LinearSearch() with array and valid data input and storing/using return value</li><li>Output of the message with return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot e.g.  1
+
+ 2023  Page 11 of 38
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and close where appropriate)</li>
+<li>5 (private) attribute declarations including data types</li>
+<li>Constructor header (and close where appropriate) taking 3 parameters (min)</li>
+<li>Assigning ID, MaxSpeed and IncreaseAmount to parameters</li>
+<li>Assigning CurrentSpeed and HorizontalPosition to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Vehicle
+                       Private ID As String
+                       Private MaxSpeed As Integer
+                       Private CurrentSpeed As Integer
+                       Private IncreaseAmount As Integer
+                       Private HorizontalPosition As Integer
+
+                       Sub New(IDP, MaxSpeedP, IncreaseAmountP)
+                           ID = IDP
+                           MaxSpeed = MaxSpeedP
+                           CurrentSpeed = 0
+                           IncreaseAmount = IncreaseAmountP
+                           HorizontalPosition = 0
+                       End Sub
+               End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and close where appropriate)</li><li>5 (private) attribute declarations including data types</li><li>Constructor header (and close where appropriate) taking 3 parameters (min)</li><li>Assigning ID, MaxSpeed and IncreaseAmount to parameters</li><li>Assigning CurrentSpeed and HorizontalPosition to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>ID = IDP;</li>
+<li>MaxSpeed = MaxSpeedP;</li>
+<li>IncreaseAmount = IncreaseAmountP;</li>
+<li>CurrentSpeed = 0;</li>
+<li>HorizontalPosition = 0;</li>
+<li>self.__ID = IDP</li>
+<li>self.__MaxSpeed = MaxSpeedP</li>
+<li>self.__IncreaseAmount = IncreaseAmountP</li>
+<li>self.__CurrentSpeed = 0</li>
+<li>self.__HorizontalPosition = 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Vehicle:
+                   #self.__ID string
+                   #self.__MaxSpeed integer
+                   #self.__CurrentSpeed integer
+                   #self.__IncreaseAmount integer
+                   #self.__HorizontalPosition
+
+                   def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
+                       self.__ID = IDP
+                       self.__MaxSpeed = MaxSpeedP
+                       self.__IncreaseAmount = IncreaseAmountP
+                       self.__CurrentSpeed = 0
+                       self.__HorizontalPosition = 0
+
+ 2023                                               Page 13 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>ID = IDP;</li><li>MaxSpeed = MaxSpeedP;</li><li>IncreaseAmount = IncreaseAmountP;</li><li>CurrentSpeed = 0;</li><li>HorizontalPosition = 0;</li><li>self.__ID = IDP</li><li>self.__MaxSpeed = MaxSpeedP</li><li>self.__IncreaseAmount = IncreaseAmountP</li><li>self.__CurrentSpeed = 0</li><li>self.__HorizontalPosition = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get function header (and end where appropriate) with no parameter …</li>
+<li>…returning attribute (without overwriting)</li>
+<li>3 further correct get methods</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetCurrentSpeed()
+                   Return CurrentSpeed
+               End Function
+               Function GetIncreaseAmount()
+                   Return IncreaseAmount
+               End Function
+               Function GetHorizontalPosition()
+                   Return HorizontalPosition
+               End Function
+               Function GetMaxSpeed()
+                   Return MaxSpeed
+               End Function</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get function header (and end where appropriate) with no parameter …</li><li>…returning attribute (without overwriting)</li><li>3 further correct get methods</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Python
+  def GetCurrentSpeed(self):
+  return self.__CurrentSpeed
+  def GetIncreaseAmount(self):
+  return self.__IncreaseAmount
+  def GetHorizontalPosition(self):
+  return self.__HorizontalPosition
+  def GetMaxSpeed(self):
+  return self.__MaxSpeed
+
+ 2023  Page 15 of 38
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetCurrentSpeed(self):
+                   return self.__CurrentSpeed
+               def GetIncreaseAmount(self):
+                   return self.__IncreaseAmount
+               def GetHorizontalPosition(self):
+                   return self.__HorizontalPosition
+               def GetMaxSpeed(self):
+                   return self.__MaxSpeed
+
+ 2023                                               Page 15 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 set procedure (and end where appropriate) taking parameter …</li>
+<li>… assigns parameter to the attribute (without overriding)</li>
+<li>Second correct set method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SetCurrentSpeed(CSp)
+                   CurrentSpeed = CSp
+               End Sub
+               Sub SetHorizontalPosition(HPP)
+                   HorizontalPosition = HPP
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetCurrentSpeed(self, CSP):
+                   self.__CurrentSpeed = CSP
+               def SetHorizontalPosition(self, HPP):
+                   self.__HorizontalPosition = HPP
+
+ 2023                                                     Page 16 of 38
+
+9618/43                                    Cambridge International AS &amp; A Level – Mark Scheme                         May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 set procedure (and end where appropriate) taking parameter …</li><li>… assigns parameter to the attribute (without overriding)</li><li>Second correct set method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (and close where appropriate) with no parameter and adding IncreaseAmount to CurrentSpeed</li>
+<li>Checking if MaxSpeed is exceeded and limiting to max speed (remove increase or assign maximum)</li>
+<li>Adding updated CurrentSpeed to HorizontalPosition in all cases (whether MaxSpeed is exceeded or not)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub IncreaseSpeed()
+                   CurrentSpeed = CurrentSpeed + IncreaseAmount
+                   If CurrentSpeed &gt; MaxSpeed Then
+                       CurrentSpeed = MaxSpeed
+                   End If
+                   HorizontalPosition = HorizontalPosition + CurrentSpeed
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def IncreaseSpeed(self):
+                   self.__CurrentSpeed = self.__CurrentSpeed + self.__IncreaseAmount
+                   if(self.__CurrentSpeed &gt; self.__MaxSpeed):
+                        self.__CurrentSpeed = self.__MaxSpeed
+                   self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
+
+ 2023                                                   Page 17 of 38
+
+9618/43                                    Cambridge International AS &amp; A Level – Mark Scheme          May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (and close where appropriate) with no parameter and adding IncreaseAmount to CurrentSpeed</li><li>Checking if MaxSpeed is exceeded and limiting to max speed (remove increase or assign maximum)</li><li>Adding updated CurrentSpeed to HorizontalPosition in all cases (whether MaxSpeed is exceeded or not)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate) inheriting from Vehicle</li>
+<li>3 (private) attribute declarations with data types</li>
+<li>Constructor (and end where appropriate) with (min) 5 parameters</li>
+<li>Calling parent constructor with appropriate parameters</li>
+<li>Initialising VerticalPosition to 0 and VerticalChange and MaxHeight to attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Helicopter
+                       Inherits Vehicle
+                       Private VerticalPosition As Integer
+                       Private VerticalChange As Integer
+                       Private MaxHeight As Integer
+
+                        Sub New(IDP, MaxSpeedP, IncreaseAmountP, VertChangeP, MaxHeightP)
+                            MyBase.New(IDP, MaxSpeedP, IncreaseAmountP)
+                            VerticalPosition = 0
+                            VerticalChange = VertChangeP
+                            MaxHeight = MaxHeightP
+
+                       End Sub
+               End Class</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate) inheriting from Vehicle</li><li>3 (private) attribute declarations with data types</li><li>Constructor (and end where appropriate) with (min) 5 parameters</li><li>Calling parent constructor with appropriate parameters</li><li>Initialising VerticalPosition to 0 and VerticalChange and MaxHeight to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>VerticalPosition = 0;</li>
+<li>VerticalChange = VertChangeP;</li>
+<li>MaxHeight = MaxHeightP;</li>
+<li>self.__VerticalPosition = 0</li>
+<li>self.__VerticalChange = VertChangeP</li>
+<li>self.__MaxHeight = MaxHeightP</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Helicopter(Vehicle):
+                   #VerticalPosition Integer
+                   #VerticalChange Integer
+                   #MaxHeight Integer
+
+                   def __init__(self, IDP, MaxSpeedP, IncreaseAmountP, VertChangeP, MaxHeightP):
+                        Vehicle.__init__(self,IDP, MaxSpeedP, IncreaseAmountP)
+                        self.__VerticalPosition = 0
+                        self.__VerticalChange = VertChangeP
+                        self.__MaxHeight = MaxHeightP
+
+ 2023                                               Page 19 of 38
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme         May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>VerticalPosition = 0;</li><li>VerticalChange = VertChangeP;</li><li>MaxHeight = MaxHeightP;</li><li>self.__VerticalPosition = 0</li><li>self.__VerticalChange = VertChangeP</li><li>self.__MaxHeight = MaxHeightP</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method header (overriding where required) with no parameter</li>
+<li>Adding vertical change to vertical position …</li>
+<li>…limiting to maximum height</li>
+<li>Repeating/calling/using the code from original for horizontal increase (in every case)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Overrides Sub IncreaseSpeed()
+                   VerticalPosition = VerticalPosition + VerticalChange
+                   If VerticalPosition &gt; MaxHeight Then
+                       VerticalPosition = MaxHeight
+                   End If
+                   Me.SetCurrentSpeed(GetCurrentSpeed() + GetIncreaseAmount())
+                   If Me.GetCurrentSpeed() &gt; Me.GetMaxSpeed() Then
+                       Me.SetCurrentSpeed(Me.GetMaxSpeed())
+                   End If
+                   Me.SetHorizontalPosition(Me.GetHorizontalPosition() + Me.GetCurrentSpeed())
+               End Sub</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method header (overriding where required) with no parameter</li><li>Adding vertical change to vertical position …</li><li>…limiting to maximum height</li><li>Repeating/calling/using the code from original for horizontal increase (in every case)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange</li>
+<li>self.__VerticalPosition = MaxHeight</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def IncreaseSpeed(self):
+                   self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange
+                   if(self.__VerticalPosition &gt; self.__MaxHeight):
+                       self.__VerticalPosition = MaxHeight
+                   Vehicle.SetCurrentSpeed(self, Vehicle.GetCurrentSpeed(self) +
+               Vehicle.GetIncreaseAmount(self))
+                   if(Vehicle.GetCurrentSpeed(self) &gt; Vehicle.GetMaxSpeed(self)):
+                       Vehicle.SetCurrentSpeed(self, Vehicle.GetMaxSpeed(self));
+                   Vehicle.SetHorizontalPosition(self, Vehicle.GetHorizontalPosition(self) +
+               Vehicle.GetCurrentSpeed(self))
+
+ 2023                                               Page 21 of 38
+
+9618/43                                        Cambridge International AS &amp; A Level – Mark Scheme                                   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange</li><li>self.__VerticalPosition = MaxHeight</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Suitable method/procedure heading (and end where appropriate) and outputting horizontal position and current speed</li>
+<li>Checking if object is a Vehicle or Helicopter // overriding methods in each class for output // one method in each class</li>
+<li>…outputting vertical position only if helicopter with appropriate message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputCurrentPosition(ObjectToOutput)
+                    Console.WriteLine(&quot;Current position = &quot; &amp; ObjectToOutput.GetHorizontalPosition())
+                    Console.WriteLine(&quot;Current speed = &quot; &amp; ObjectToOutput.GetCurrentSpeed())
+                    If TypeOf ObjectToOutput Is Helicopter Then
+                        Console.WriteLine(&quot;Current vertical position = &quot; &amp;
+               ObjectToOutput.GetVerticalPosition())
+                    End If
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputCurrentPosition(self):
+                   print(&quot;Current position = &quot;, self.__HorizontalPosition)
+                   print(&quot;Current speed = &quot;, self.__CurrentSpeed)
+
+ 2023                                                         Page 22 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Suitable method/procedure heading (and end where appropriate) and outputting horizontal position and current speed</li><li>Checking if object is a Vehicle or Helicopter // overriding methods in each class for output // one method in each class</li><li>…outputting vertical position only if helicopter with appropriate message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>print(&quot;Current position = &quot;, Vehicle.GetHorizontalPosition(self))</li>
+<li>print(&quot;Current speed = &quot;, Vehicle.GetCurrentSpeed(self))</li>
+<li>print(&quot;Current verticalposition = &quot;, self.__VerticalPosition)</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>print(&quot;Current position = &quot;, Vehicle.GetHorizontalPosition(self))</li><li>print(&quot;Current speed = &quot;, Vehicle.GetCurrentSpeed(self))</li><li>print(&quot;Current verticalposition = &quot;, self.__VerticalPosition)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Instantiating an object of type Vehicle with correct parameters (&quot;Tiger&quot;, 100, 20)</li>
+<li>Instantiating an object of type Helicopter with correct parameters (&quot;Lion&quot;, 350, 40, 3, 100)</li>
+<li>Calling IncreaseSpeed() twice for the car</li>
+<li>Calling IncreaseSpeed() twice for the helicopter</li>
+<li>Calling the output for both objects</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                   Dim Car As Vehicle
+                   Car = New Vehicle(&quot;Tiger&quot;, 100, 20)
+                   Dim Heli1 As Helicopter
+                   Heli1 = New Helicopter(&quot;Lion&quot;, 350, 40, 3, 100)
+                   Car.IncreaseSpeed()
+                   Car.IncreaseSpeed()
+                   OutputCurrentPosition(Car)
+                   Console.WriteLine(&quot;&quot;)
+                   Heli1.IncreaseSpeed()
+                   Heli1.IncreaseSpeed()
+                   OutputCurrentPosition(Heli1)
+               End Sub</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Instantiating an object of type Vehicle with correct parameters (&quot;Tiger&quot;, 100, 20)</li><li>Instantiating an object of type Helicopter with correct parameters (&quot;Lion&quot;, 350, 40, 3, 100)</li><li>Calling IncreaseSpeed() twice for the car</li><li>Calling IncreaseSpeed() twice for the helicopter</li><li>Calling the output for both objects</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Car = Vehicle(&quot;Tiger&quot;, 100, 20)</li>
+<li>Heli1 = Helicopter(&quot;Lion&quot;, 350, 40, 3, 100)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>#main
+               Car = Vehicle(&quot;Tiger&quot;, 100, 20)
+               Heli1 = Helicopter(&quot;Lion&quot;, 350, 40, 3, 100)
+               Car.IncreaseSpeed()
+               Car.IncreaseSpeed()
+               Car.OutputCurrentPosition()
+               print(&quot;&quot;)
+               Heli1.IncreaseSpeed()
+               Heli1.IncreaseSpeed()
+               Heli1.OutputCurrentPosition()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Car = Vehicle(&quot;Tiger&quot;, 100, 20)</li><li>Heli1 = Helicopter(&quot;Lion&quot;, 350, 40, 3, 100)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>Screenshot of results e.g.  1
+
+ 2023  Page 25 of 38
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2023</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-08.jpg" alt="Paper page 8 for Q3"><div class="cap">Original paper page 8</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) Animal array (with 20 string elements)</li>
+<li>(Global) Colour array (with 10 string elements)</li>
+<li>(Global) AnimalTopPointer and ColourTopPointer initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Animal(0 to 19) As String
+               Dim Colour(0 to 9) As String
+               Dim AnimalTopPointer As Integer = 0
+               Dim ColourTopPointer As Integer = 0</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Animal = [] #20 elements
+               Colour = [] #10 elements
+               global AnimalTopPointer
+               global ColourTopPointer
+               AnimalTopPointer = 0
+               ColourTopPointer = 0
+
+ 2023                                                   Page 26 of 38
+
+9618/43                                       Cambridge International AS &amp; A Level – Mark Scheme                                 May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) Animal array (with 20 string elements)</li><li>(Global) Colour array (with 10 string elements)</li><li>(Global) AnimalTopPointer and ColourTopPointer initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and close where appropriate) with parameter, checking if full (AnimalTopPointer = 20) and returning</li>
+<li>If not full, inserting parameter value into AnimalTopPointer</li>
+<li>…incrementing pointer and returning true</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function PushAnimal(DataToPush)
+                  If AnimalTopPointer = 20 Then
+                       Return False
+                  Else
+                       Animal(AnimalTopPointer) = DataToPush
+                       AnimalTopPointer = AnimalTopPointer + 1
+                       Return True
+                  End If
+               End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def PushAnimal(DataToPush):
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   if AnimalTopPointer == 20:
+                       return False
+
+ 2023                                                        Page 27 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme                                 May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and close where appropriate) with parameter, checking if full (AnimalTopPointer = 20) and returning</li><li>If not full, inserting parameter value into AnimalTopPointer</li><li>…incrementing pointer and returning true</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>AnimalTopPointer +=1</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>AnimalTopPointer +=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate) with no parameter, checking if empty (AnimalTopPointer = 0) and</li>
+<li>If not empty returning the top data item (AnimalTopPointer-1)</li>
+<li>… and decrementing AnimalTopPointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function PopAnimal()
+                   Dim ReturnData As String
+                   If AnimalTopPointer = 0 Then
+                        Return &quot;&quot;
+                   Else
+                        ReturnData = Animal(AnimalTopPointer - 1)
+                        AnimalTopPointer = AnimalTopPointer - 1
+                        Return ReturnData
+                   End If
+               End Function
+
+ 2023                                                      Page 28 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate) with no parameter, checking if empty (AnimalTopPointer = 0) and</li><li>If not empty returning the top data item (AnimalTopPointer-1)</li><li>… and decrementing AnimalTopPointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if AnimalTopPointer == 0:</li>
+<li>ReturnData = Animal[AnimalTopPointer - 1]</li>
+<li>AnimalTopPointer -=1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def PopAnimal():
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   if AnimalTopPointer == 0:
+                       return &quot;&quot;
+                   else:
+                       ReturnData = Animal[AnimalTopPointer - 1]
+                       AnimalTopPointer -=1
+                       return ReturnData
+
+ 2023                                               Page 29 of 38
+
+9618/43                                         Cambridge International AS &amp; A Level – Mark Scheme        May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if AnimalTopPointer == 0:</li><li>ReturnData = Animal[AnimalTopPointer - 1]</li><li>AnimalTopPointer -=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and close where appropriate) and opening correct file for read</li>
+<li>Looping until end of file // looping until all animal names read in // looping 8 times</li>
+<li>Calling PushAnimal() with each line read from file (for all lines)</li>
+<li>Closing the file</li>
+<li>Exception handling with appropriate error message</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                 try
+                   Dim AnimalFile As String = &quot;AnimalData.txt&quot;
+                   Dim AnimalFileReader As New System.IO.StreamReader(AnimalFile)
+                   Do Until AnimalFileReader.EndOfStream
+                         PushAnimal(AnimalFileReader.ReadLine())
+                   Loop
+                   AnimalFileReader.Close()
+                 Catch ex As Exception
+                   Console.WriteLine(&quot;Invalid file&quot;)
+                 End Try
+
+               End Sub
+
+ 2023                                                           Page 30 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and close where appropriate) and opening correct file for read</li><li>Looping until end of file // looping until all animal names read in // looping 8 times</li><li>Calling PushAnimal() with each line read from file (for all lines)</li><li>Closing the file</li><li>Exception handling with appropriate error message</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                 try:
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)
+                   for Line in AnimalFile:
+                       PushAnimal(Line)
+                   AnimalFile.close()
+                 except IOError:
+                   print(&quot;Could not find file&quot;)
+
+ 2023                                               Page 31 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>PushColour function</li>
+<li>PopColour function</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function PushColour(DataToPush)
+                  If ColourTopPointer = 10 Then
+                     Return False
+                  Else
+                     Colour(ColourTopPointer) = DataToPush
+                     ColourTopPointer = ColourTopPointer + 1
+                     Return True
+                  End If
+
+ 2023                                               Page 32 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>PushColour function</li><li>PopColour function</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If ColourTopPointer = 0 Then</li>
+<li>ReturnData = Colour(ColourTopPointer - 1)</li>
+<li>ColourTopPointer = ColourTopPointer - 1</li>
+<li>if ColourTopPointer == 10:</li>
+<li>ColourTopPointer +=1</li>
+<li>if ColourTopPointer == 0:</li>
+<li>ReturnData = Colour[ColourTopPointer - 1]</li>
+<li>ColourTopPointer -=1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def PushColour(DataToPush):
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   if ColourTopPointer == 10:
+                       return False
+                   else:
+                       Colour.append(DataToPush)
+                       ColourTopPointer +=1
+                       return True
+
+               def PopColour():
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   if ColourTopPointer == 0:
+                       return &quot;&quot;
+                   else:
+                       ReturnData = Colour[ColourTopPointer - 1]
+                       ColourTopPointer -=1
+                       return ReturnData
+
+ 2023                                               Page 33 of 38
+
+9618/43                                      Cambridge International AS &amp; A Level – Mark Scheme           May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If ColourTopPointer = 0 Then</li><li>ReturnData = Colour(ColourTopPointer - 1)</li><li>ColourTopPointer = ColourTopPointer - 1</li><li>if ColourTopPointer == 10:</li><li>ColourTopPointer +=1</li><li>if ColourTopPointer == 0:</li><li>ReturnData = Colour[ColourTopPointer - 1]</li><li>ColourTopPointer -=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(v) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Opening ColourData.txt to read, reading until EOF, closing file and exception handling</li>
+<li>Using PushColour() to store each item read from the file for all lines</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                 try
+                   Dim AnimalFile As String = &quot;AnimalData.txt&quot;
+                   Dim AnimalFileReader As New System.IO.StreamReader(AnimalFile)
+                   Do Until AnimalFileReader.EndOfStream
+                       PushAnimal(AnimalFileReader.ReadLine())
+
+ 2023                                                      Page 34 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Opening ColourData.txt to read, reading until EOF, closing file and exception handling</li><li>Using PushColour() to store each item read from the file for all lines</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(v) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim ColourFile As String = &quot;ColourData.txt&quot;</li>
+<li>AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)</li>
+<li>ColourFile = open(&quot;ColourData.txt&quot;, &#x27;r&#x27;)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+                 try:
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)
+                   for Line in AnimalFile:
+                       PushAnimal(Line)
+                   AnimalFile.close()
+
+                   ColourFile = open(&quot;ColourData.txt&quot;, &#x27;r&#x27;)
+                   for Line in ColourFile:
+                       PushColour(Line)
+                   ColourFile.close()
+                 except IOError:
+                   print(&quot;Could not find file&quot;)
+
+ 2023                                               Page 35 of 38
+
+9618/43                                     Cambridge International AS &amp; A Level – Mark Scheme                            May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim ColourFile As String = &quot;ColourData.txt&quot;</li><li>AnimalFile = open(&quot;AnimalData.txt&quot;, &#x27;r&#x27;)</li><li>ColourFile = open(&quot;ColourData.txt&quot;, &#x27;r&#x27;)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure heading (and close where appropriate) and outputting the colour and animal using PopColour() and</li>
+<li>Checking if no colour and outputting &quot;No colour&quot; …</li>
+<li>….pushing the removed animal back onto the stack</li>
+<li>Checking if no animal and outputting &quot;No animal&quot; …</li>
+<li>…pushing the removed colour back onto the stack</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputItem()
+                  Dim ColourReturned As String = PopColour()
+                  Dim Animalreturned As String = PopAnimal()
+                  If ColourReturned = &quot;&quot; Then
+                      Console.WriteLine(&quot;No colour&quot;)
+                      PushAnimal(AnimalReturned)
+
+ 2023                                                     Page 36 of 38
+
+9618/43                                Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure heading (and close where appropriate) and outputting the colour and animal using PopColour() and</li><li>Checking if no colour and outputting &quot;No colour&quot; …</li><li>….pushing the removed animal back onto the stack</li><li>Checking if no animal and outputting &quot;No animal&quot; …</li><li>…pushing the removed colour back onto the stack</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If Animalreturned = &quot;&quot; Then</li>
+<li>ColourReturned = PopColour()</li>
+<li>AnimalReturned = PopAnimal()</li>
+<li>if ColourReturned == &quot;&quot;:</li>
+<li>if AnimalReturned == &quot;&quot;:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputItem():
+                   global AnimalTopPointer
+                   global ColourTopPointer
+                   ColourReturned = PopColour()
+                   AnimalReturned = PopAnimal()
+                   if ColourReturned == &quot;&quot;:
+                       print(&quot;No colour&quot;)
+                       PushAnimal(AnimalReturned)
+                   else:
+                       if AnimalReturned == &quot;&quot;:
+                           print(&quot;No animal&quot;)
+                           PushColour(ColourReturned)
+                       else:
+                           print(ColourReturned, AnimalReturned)
+
+ 2023                                               Page 37 of 38
+
+9618/43                                    Cambridge International AS &amp; A Level – Mark Scheme   May/June 2023</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If Animalreturned = &quot;&quot; Then</li><li>ColourReturned = PopColour()</li><li>AnimalReturned = PopAnimal()</li><li>if ColourReturned == &quot;&quot;:</li><li>if AnimalReturned == &quot;&quot;:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() and calling OutputItem() 4 times</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                   ReadData()
+                   OutputItem()
+                   OutputItem()
+                   OutputItem()
+                   OutputItem()
+               End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>ReadData()
+               OutputItem()
+               OutputItem()
+               OutputItem()
+               OutputItem()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() and calling OutputItem() 4 times</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output  1
+  e.g.
+
+ 2023  Page 38 of 38</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

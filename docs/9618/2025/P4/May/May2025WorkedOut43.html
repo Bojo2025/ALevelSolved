@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · May/June 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · May/June 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>(Global) Queue array with 50 integer elements …</li>
+<li>… all initialised to –1</li>
+<li>(Global) HeadPointer and TailPointer initialised with –1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Queue(49) As Integer
+ Dim HeadPointer As Integer
+ Dim TailPointer As Integer
+ Sub Main(args As String())
+    HeadPointer = -1
+    TailPointer = -1
+    For x = 0 To 49
+        Queue(x) = -1
+    Next
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Queue = [] #integer 50 elements
+ HeadPointer = -1
+ TailPointer = -1
+ #main
+ HeadPointer = -1
+ TailPointer = -1
+ for x in range(50):
+      Queue.append(-1)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>(Global) Queue array with 50 integer elements …</li><li>… all initialised to –1</li><li>(Global) HeadPointer and TailPointer initialised with –1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function Enqueue() header (and end) taking one (integer) parameter</li>
+<li>Checking if Queue is full …</li>
+<li>…returning FALSE if full and TRUE if not full</li>
+<li>(Otherwise) storing data item at TailPointer + 1 (check incrementing)</li>
+<li>Incrementing TailPointer</li>
+<li>Checking if this is the first element and incrementing/storing 0 in HeadPointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(DataValue As Integer)
+    If TailPointer &lt; 49 Then
+        TailPointer = TailPointer + 1
+        Queue(TailPointer) = DataValue
+        If HeadPointer = -1 Then
+           HeadPointer = 0
+        End If
+        Return True
+    Else
+        Return False
+    End If
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 10 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(Data):
+      global Queue
+      global TailPointer
+      global HeadPointer
+
+        if TailPointer &lt; 49:
+            TailPointer = TailPointer + 1
+            Queue[TailPointer] = Data
+
+            if HeadPointer == -1:
+                HeadPointer = 0
+            return True
+        else:
+            return False</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function Enqueue() header (and end) taking one (integer) parameter</li><li>Checking if Queue is full …</li><li>…returning FALSE if full and TRUE if not full</li><li>(Otherwise) storing data item at TailPointer + 1 (check incrementing)</li><li>Incrementing TailPointer</li><li>Checking if this is the first element and incrementing/storing 0 in HeadPointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function Dequeue() header (and close) and returning appropriate value in all cases</li>
+<li>Checking if queue is empty …</li>
+<li>… and returning –1 if empty</li>
+<li>Accessing and returning element at Queue[HeadPointer] (before HeadPointer is incremented)</li>
+<li>Incrementing HeadPointer</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue()
+    Dim ReturnValue As Integer
+    If HeadPointer &gt; -1 And HeadPointer &lt;= TailPointer Then
+        ReturnValue = Queue(HeadPointer)
+        HeadPointer = HeadPointer + 1
+        Return ReturnValue
+    Else
+        Return -1
+    End If
+ End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue():
+      global Queue
+      global HeadPointer
+      if HeadPointer &gt; -1 and HeadPointer &lt;= TailPointer:
+          ReturnValue = Queue[HeadPointer]
+          HeadPointer = HeadPointer + 1
+          return ReturnValue
+      else:
+          return -1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function Dequeue() header (and close) and returning appropriate value in all cases</li><li>Checking if queue is empty …</li><li>… and returning –1 if empty</li><li>Accessing and returning element at Queue[HeadPointer] (before HeadPointer is incremented)</li><li>Incrementing HeadPointer</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>CreateQueue() header (and end) and opening the file to read and closing file in appropriate place</li>
+<li>Looping until end of file</li>
+<li>Reading in each/all lines (and converting to integer and removing new line)</li>
+<li>… calling Enqueue() once with each value …</li>
+<li>… checking return value and outputting &quot;Queue full&quot; if full (can output once or many times)</li>
+<li>Exception try, catch with appropriate output. All file access within try</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub CreateQueue()
+    Dim ReturnValue As Boolean
+    Dim ReadData As Integer
+    Try
+        Dim FileReader As New System.IO.StreamReader(&quot;QueueData.txt&quot;)
+        While Not FileReader.EndOfStream
+           ReadData = FileReader.ReadLine()
+           ReturnValue = Enqueue(ReadData)
+           If ReturnValue = False Then
+              Console.WriteLine(&quot;Queue full&quot;)
+           End If
+        End While
+        FileReader.Close()
+    Catch ex As Exception
+        Console.WriteLine(&quot;Cannot open or read file&quot;)
+    End Try
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 15 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def CreateQueue():
+      try:
+          File = open(&quot;QueueData.txt&quot;)
+          for Line in File:
+              ReturnValue = Enqueue(int(Line))
+              if ReturnValue == False:
+                  print(&quot;Queue full&quot;)
+                  break;
+          File.close()
+      except:
+          print(&quot;Cannot open or read file&quot;)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>CreateQueue() header (and end) and opening the file to read and closing file in appropriate place</li><li>Looping until end of file</li><li>Reading in each/all lines (and converting to integer and removing new line)</li><li>… calling Enqueue() once with each value …</li><li>… checking return value and outputting &quot;Queue full&quot; if full (can output once or many times)</li><li>Exception try, catch with appropriate output. All file access within try</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling CreateQueue()</li>
+<li>Calling Dequeue() and storing/using return value …</li>
+<li>… repeatedly until return value is –1</li>
+<li>… adding together all return values to create a total within the loop …</li>
+<li>… outputting the total</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>CreateQueue()
+ Dim Total As Integer = 0
+ Dim ReturnValue As Integer = 0
+ While ReturnValue &gt; -1
+    ReturnValue = Dequeue()
+    If ReturnValue &lt;&gt; -1 Then
+        Total = Total + ReturnValue
+    End If
+ End While
+ Console.WriteLine(&quot;The total is &quot; &amp; Total)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>CreateQueue()
+ Total = 0
+ ReturnValue = 0
+
+ while ReturnValue &gt; -1:
+     ReturnValue = Dequeue()
+     if ReturnValue != -1:
+         Total = Total + ReturnValue
+ print(&quot;The total is&quot;, Total)
+
+ University Press &amp; Assessment 2025                       Page 17 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling CreateQueue()</li><li>Calling Dequeue() and storing/using return value …</li><li>… repeatedly until return value is –1</li><li>… adding together all return values to create a total within the loop …</li><li>… outputting the total</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(e)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing 3059  1
+
+ University Press &amp; Assessment 2025  Page 18 of 45
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>DataArray = [0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1]</li>
+<li>Dim DataArray() As Integer = {0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1}</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim DataArray() As Integer = {0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1}
+
+ University Press &amp; Assessment 2025                       Page 19 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                        May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>DataArray = [0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1]</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>DataArray = [0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1]</li><li>Dim DataArray() As Integer = {0, 3, 4, 56, 67, 44, 43, 32, 31, 345, 45, 6, 54, 1}</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>InsertionSort() header (and close) taking array as a parameter and returning (attempt at) sorted array</li>
+<li>Looping through/for each element</li>
+<li>Extracting element and comparing to sorted list …</li>
+<li>… moving elements in sorted list</li>
+<li>… and inserting element in correct position (ascending order)</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function InsertionSort(DataArray)
+    Dim CurrentValue As Integer
+    Dim Y As Integer
+    If (DataArray.length()) &lt;= 1 Then
+        Return DataArray
+    End If
+    For X = 1 To DataArray.length() - 1
+        CurrentValue = DataArray(X)
+        Y = X - 1
+        While Y &gt;= 0 AndAlso CurrentValue &lt; DataArray(Y)
+           DataArray(Y + 1) = DataArray(Y)
+           Y = Y - 1
+        End While
+        DataArray(Y + 1) = CurrentValue
+    Next X
+    Return DataArray
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 22 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertionSort(DataArray):
+      if (len(DataArray)) &lt;= 1:
+          return DataArray
+      for X in range(1, len(DataArray)):
+          CurrentValue = DataArray[X]
+          Y = X-1
+          while Y &gt;=0 and CurrentValue &lt; DataArray[Y]:
+              DataArray[Y+1] = DataArray[Y]
+              Y = Y -1
+          DataArray[Y+1] = CurrentValue
+      return DataArray</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>InsertionSort() header (and close) taking array as a parameter and returning (attempt at) sorted array</li><li>Looping through/for each element</li><li>Extracting element and comparing to sorted list …</li><li>… moving elements in sorted list</li><li>… and inserting element in correct position (ascending order)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>OutputArray() header (and close) taking an array parameter and outputting the array contents …</li>
+<li>… in correct format</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub OutputArray(DataArray)
+    Dim Output As String = &quot;&quot;
+    Dim X As Integer = 0
+    While X &lt; DataArray.length
+        If DataArray(X) &lt;&gt; -1 Then
+           Output = Output &amp; DataArray(X) &amp; &quot; &quot;
+        End If
+        X = X + 1
+    End While
+    Console.WriteLine(Output)
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 24 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def OutputArray(DataArray):
+      Output = &quot;&quot;
+      for Item in DataArray:
+          Output = Output + str(Item) + &quot; &quot;
+      print(Output)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>OutputArray() header (and close) taking an array parameter and outputting the array contents …</li><li>… in correct format</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling InsertionSort() with array parameter and storing/using return array</li>
+<li>… calling OutputArray() with array parameter before and after InsertionSort()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>OutputArray(DataArray)
+ DataArray = InsertionSort(DataArray)
+ OutputArray(DataArray)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>OutputArray(DataArray)
+ DataArray = InsertionSort(DataArray)
+ OutputArray(DataArray)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling InsertionSort() with array parameter and storing/using return array</li><li>… calling OutputArray() with array parameter before and after InsertionSort()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing unsorted then sorted array  1
+
+  e.g.
+
+ University Press &amp; Assessment 2025  Page 25 of 45
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Search() header (and close) taking array and integer as parameters</li>
+<li>Looping/recursive calls until no elements left/Low&lt;=High and returning –1 if not found</li>
+<li>… calculating middle index and accessing this value</li>
+<li>… comparison of array at middle value to integer parameter</li>
+<li>… if they are equal return mid</li>
+<li>… if array[mid] &lt; parameter update low to middle + 1, if array[mid] &gt; parameter update high to middle – 1 // recursive</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Search(DataArray, ItemToFind)
+    Dim Low As Integer = 0
+    Dim High As Integer = DataArray.length() - 1
+    Dim Middle As Integer = 0
+    While Low &lt;= High
+        Middle = (High + Low) \ 2
+        If DataArray(Middle) &lt; ItemToFind Then
+           Low = Middle + 1
+        ElseIf DataArray(Middle) &gt; ItemToFind Then
+           High = Middle - 1
+        Else
+           Return Middle
+        End If
+    End While
+    Return -1
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 28 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Search(DataArray, ItemToFind):
+      Low = 0
+      High = len(DataArray) - 1
+      Middle = 0
+
+        while Low &lt;= High:
+            Middle = (High + Low) // 2
+            if DataArray[Middle] &lt; ItemToFind:
+                Low = Middle + 1
+            elif DataArray[Middle] &gt; ItemToFind:
+                High = Middle - 1
+            else:
+                return Middle
+        return -1</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Search() header (and close) taking array and integer as parameters</li><li>Looping/recursive calls until no elements left/Low&lt;=High and returning –1 if not found</li><li>… calculating middle index and accessing this value</li><li>… comparison of array at middle value to integer parameter</li><li>… if they are equal return mid</li><li>… if array[mid] &lt; parameter update low to middle + 1, if array[mid] &gt; parameter update high to middle – 1 // recursive</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling Search() with all four sets of values 0 345 67 2</li>
+<li>… outputting &#x27;not found&#x27; or index in appropriate message each time</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Location As Integer = Search(DataArray, 0)
+ If Location = -1 Then
+    Console.WriteLine(&quot;Data not found&quot;)
+ Else
+    Console.WriteLine(&quot;Data found at &quot; &amp; Location)
+ End If
+
+ University Press &amp; Assessment 2025                       Page 31 of 45
+
+9618/43                                           Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+ Location = Search(DataArray, 345)
+ If Location = -1 Then
+    Console.WriteLine(&quot;Data not found&quot;)
+ Else
+    Console.WriteLine(&quot;Data found at &quot; &amp; Location)
+ End If
+ Location = Search(DataArray, 67)
+ If Location = -1 Then
+    Console.WriteLine(&quot;Data not found&quot;)
+ Else
+    Console.WriteLine(&quot;Data found at &quot; &amp; Location)
+ End If
+ Location = Search(DataArray, 2)
+ If Location = -1 Then
+    Console.WriteLine(&quot;Data not found&quot;)
+ Else
+    Console.WriteLine(&quot;Data found at &quot; &amp; Location)
+ End If</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Location = Search(DataArray, 0)
+ if Location == -1:
+      print(&quot;Data not found&quot;)
+ else:
+      print(&quot;Data found at&quot;, Location)
+ Location = Search(DataArray, 345)
+ if Location == -1:
+      print(&quot;Data not found&quot;)
+ else:
+      print(&quot;Data found at&quot;, Location)
+
+ Location = Search(DataArray, 67)
+ if Location == -1:
+     print(&quot;Data not found&quot;)
+ else:
+     print(&quot;Data found at&quot;, Location)
+ Location = Search(DataArray, 2)
+ if Location == -1:
+     print(&quot;Data not found&quot;)
+ else:
+     print(&quot;Data found at&quot;, Location)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling Search() with all four sets of values 0 345 67 2</li><li>… outputting &#x27;not found&#x27; or index in appropriate message each time</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for output showing locations for first 3 and not found for 4th  1
+
+ e.g.
+
+ University Press &amp; Assessment 2025  Page 32 of 45
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  May/June 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-07.jpg" alt="Paper page 7 for Q3"><div class="cap">Original paper page 7</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class Node header (and end)</li>
+<li>TheData declared as Integer, NextNode declared as Node</li>
+<li>Constructor header (and end) taking (min) 1 parameter …</li>
+<li>… storing parameter to TheData within constructor and storing null value to NextNode within constructor</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class Node
+    Public TheData As Integer
+    Public NextNode As Node
+    Sub New(NodeData)
+        TheData = NodeData
+        NextNode = Nothing
+    End Sub
+ End Class
+
+ University Press &amp; Assessment 2025                       Page 33 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class Node:
+      def init (self, NodeData):
+          self. TheData = NodeData #Integer
+          self. NextNode = None #Node</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class Node header (and end)</li><li>TheData declared as Integer, NextNode declared as Node</li><li>Constructor header (and end) taking (min) 1 parameter …</li><li>… storing parameter to TheData within constructor and storing null value to NextNode within constructor</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get method header (and close) taking no parameters …</li>
+<li>… returning correct value (without overwriting)</li>
+<li>2nd correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetData()
+    Return TheData
+ End Function
+ Function GetNextNode()
+    Return NextNode
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 34 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetData(self):
+      return self. TheData
+ def GetNextNode(self):
+      return self. NextNode</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get method header (and close) taking no parameters …</li><li>… returning correct value (without overwriting)</li><li>2nd correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>SetNextNode() method header (and close) taking 1 parameter (of type Node) …</li>
+<li>… storing parameter in NextNode</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SetNextNode(pNextNode)
+    NextNode = pNextNode
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 35 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme            May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetNextNode(self, pNextNode):
+      self. NextNode = pNextNode</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>SetNextNode() method header (and close) taking 1 parameter (of type Node) …</li><li>… storing parameter in NextNode</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class LinkedList header (and close) and constructor header with no parameter (and close) …</li>
+<li>… declaring HeadNode as type Node and storing null value in constructor</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Class LinkedList
+    Private HeadNode As Node
+    Sub New()
+        HeadNode = Nothing
+    End Sub
+ End Class
+
+ University Press &amp; Assessment 2025                       Page 36 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class LinkedList:
+      def init (self):
+          self. HeadNode = None #Node</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class LinkedList header (and close) and constructor header with no parameter (and close) …</li><li>… declaring HeadNode as type Node and storing null value in constructor</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>InsertNode()method header (and close) taking one (integer) parameter</li>
+<li>Creating new instance of Node with the parameter as the argument</li>
+<li>Calling SetNextNode() for new node with HeadNode as parameter</li>
+<li>Replacing HeadNode with new node</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub InsertNode(NodeData)
+    Dim TheNode As Node = New Node(NodeData)
+    TheNode.SetNextNode(HeadNode)
+    HeadNode = TheNode
+ End Sub
+
+ University Press &amp; Assessment 2025                       Page 37 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def InsertNode(self, NodeData):
+      TheNode = Node(NodeData)
+      TheNode.SetNextNode(self. HeadNode)
+      self. HeadNode = TheNode</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>InsertNode()method header (and close) taking one (integer) parameter</li><li>Creating new instance of Node with the parameter as the argument</li><li>Calling SetNextNode() for new node with HeadNode as parameter</li><li>Replacing HeadNode with new node</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Traverse() method header (and close) with no parameter and returns created string</li>
+<li>Starts at head node and follows nodes using GetNextNode() until no nodes left …</li>
+<li>… concatenates the data from each node and formats correctly</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Traverse()
+    Dim ReturnValue As String = &quot;&quot;
+    Dim CurrentNode As Node = HeadNode
+
+    While CurrentNode IsNot Nothing
+       ReturnValue = ReturnValue &amp; CurrentNode.GetData() &amp; &quot; &quot;
+       CurrentNode = CurrentNode.GetNextNode()
+    End While
+    Return ReturnValue
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 39 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                      May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Traverse(self):
+      ReturnValue = &quot;&quot;
+      CurrentNode = self. HeadNode
+      while(CurrentNode != None):
+          ReturnValue = ReturnValue + str(CurrentNode.GetData())+ &quot; &quot;
+          CurrentNode = CurrentNode.GetNextNode()
+      return ReturnValue</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Traverse() method header (and close) with no parameter and returns created string</li><li>Starts at head node and follows nodes using GetNextNode() until no nodes left …</li><li>… concatenates the data from each node and formats correctly</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>RemoveNode() method header (and close) taking (integer) parameter and returning Boolean in all cases</li>
+<li>Checking if head node is null and returning FALSE</li>
+<li>Checking if head node equals parameter and returning TRUE if true …</li>
+<li>… and updating HeadNode to HeadNode.GetNextNode()</li>
+<li>Following nodes comparing data from each node to parameter …</li>
+<li>... if found updating next node and returning TRUE</li>
+<li>… if end of list returning FALSE</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function RemoveNode(DataToRemove)
+    If HeadNode Is Nothing Then
+
+         Return False
+      ElseIf HeadNode.GetData() = DataToRemove Then
+         HeadNode = HeadNode.GetNextNode()
+         Return True
+      End If
+      Dim Found As Boolean = False
+      Dim CurrentNode As Node = HeadNode
+      While Not (Found) And CurrentNode IsNot Nothing
+
+       If ((CurrentNode).GetNextNode()).GetData() = DataToRemove Then
+           CurrentNode.SetNextNode(CurrentNode.GetNextNode().GetNextNode())
+           Found = True
+       Else
+           CurrentNode = CurrentNode.GetNextNode()
+       End If
+    End While
+    Return Found
+ End Function
+
+ University Press &amp; Assessment 2025                       Page 42 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                                   May/June 2025</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def RemoveNode(self, DataToRemove):
+      if self. HeadNode == None:
+          return False
+      elif self. HeadNode.GetData() == DataToRemove:
+          self. HeadNode = self. HeadNode.GetNextNode()
+          return True
+      Found = False
+      CurrentNode = self. HeadNode
+      while not(Found) and CurrentNode != None:
+          if ((CurrentNode).GetNextNode()).GetData() == DataToRemove:
+              CurrentNode.SetNextNode(CurrentNode.GetNextNode().GetNextNode())
+              Found = True
+          else:
+              CurrentNode = CurrentNode.GetNextNode()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>RemoveNode() method header (and close) taking (integer) parameter and returning Boolean in all cases</li><li>Checking if head node is null and returning FALSE</li><li>Checking if head node equals parameter and returning TRUE if true …</li><li>… and updating HeadNode to HeadNode.GetNextNode()</li><li>Following nodes comparing data from each node to parameter …</li><li>... if found updating next node and returning TRUE</li><li>… if end of list returning FALSE</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating new LinkedList object</li>
+<li>Calling InsertNode() five times with correct data in correct order</li>
+<li>Calling RemoveNode(30) and calling Traverse() and store/output the return value, before RemoveNode() and</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main(args As String())
+    Dim CreateList As LinkedList = New LinkedList()
+    Dim ReturnValue1 As String
+    Dim ReturnValue2 As String
+
+ University Press &amp; Assessment 2025                       Page 44 of 45
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   May/June 2025
+
+    CreateList.InsertNode(10)
+    CreateList.InsertNode(20)
+    CreateList.InsertNode(30)
+    CreateList.InsertNode(40)
+    CreateList.InsertNode(50)
+    ReturnValue1 = (CreateList.Traverse())
+    CreateList.RemoveNode(30)
+    ReturnValue2 = (CreateList.Traverse())
+    Console.ReadLine()
+ End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>CreateList = LinkedList()
+
+ CreateList.InsertNode(10)
+ CreateList.InsertNode(20)
+ CreateList.InsertNode(30)
+ CreateList.InsertNode(40)
+ CreateList.InsertNode(50)
+ ReturnValue1 = (CreateList.Traverse())
+ CreateList.RemoveNode(30)
+ ReturnValue2 = (CreateList.Traverse())</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating new LinkedList object</li><li>Calling InsertNode() five times with correct data in correct order</li><li>Calling RemoveNode(30) and calling Traverse() and store/output the return value, before RemoveNode() and</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(c)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Output of linked list with 50 40 30 20 10</li>
+<li>Output of 2nd linked list with 50 40 20 10</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Output of linked list with 50 40 30 20 10</li><li>Output of 2nd linked list with 50 40 20 10</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>

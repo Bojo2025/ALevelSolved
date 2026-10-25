@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9618/43 · October/November 2025 · Worked solutions</title>
+<style>
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+.q h2{margin:0 0 10px;font-size:1.12rem}
+.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
+.diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
+.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
+.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
+.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
+pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
+.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
+.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
+.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
+.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>9618/43 · October/November 2025 · Worked solutions</h1>
+  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+</div></header>
+<main class="wrap">
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a></nav>
+  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked43/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
+        <section class="part">
+          <p class="part-label">Part 1(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate)</li>
+<li>Declaring Code as string and Value as integer</li>
+<li>Constructor header (and end where appropriate) within class …</li>
+<li>… taking two parameters …</li>
+<li>… assigning parameters to attributes</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Class BoardObject
+                     Private Code As String
+                     Private Value As Integer
+                     Sub New(pCode, pValue)
+                          Code = pCode
+                          Value = pValue
+                     End Sub
+                End Class</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>class BoardObject():
+                     def __init__(self, Code, Value):
+                         self.Code = Code #string
+                         self.Value = Value # integer
+
+ University Press &amp; Assessment 2025                       Page 7 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate)</li><li>Declaring Code as string and Value as integer</li><li>Constructor header (and end where appropriate) within class …</li><li>… taking two parameters …</li><li>… assigning parameters to attributes</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>1 get header (and end where appropriate) with no parameter …</li>
+<li>… returning correct value without overriding</li>
+<li>2nd correct get method</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetCode()
+                    Return Code
+                End Function
+
+                Function GetValue()
+                    Return Value
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetCode(self):
+                     return self.Code
+
+                def GetValue(self):
+                    return self.Value
+
+ University Press &amp; Assessment 2025                       Page 8 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>1 get header (and end where appropriate) with no parameter …</li><li>… returning correct value without overriding</li><li>2nd correct get method</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(a)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating one instance of BoardObject and storing in correct variable …</li>
+<li>… with correct parameters</li>
+<li>Remaining four created correctly and stored</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Object1 As BoardObject = New BoardObject(&quot;A&quot;, 2)
+                Dim Object2 As BoardObject = New BoardObject(&quot;B&quot;, 3)
+                Dim Object3 As BoardObject = New BoardObject(&quot;C&quot;, 5)
+                Dim Object4 As BoardObject = New BoardObject(&quot;D&quot;, 2)
+                Dim Object5 As BoardObject = New BoardObject(&quot;E&quot;, 7)</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Object1 = BoardObject(&quot;A&quot;,2)
+                Object2 = BoardObject(&quot;B&quot;,3)
+                Object3 = BoardObject(&quot;C&quot;,5)
+                Object4 = BoardObject(&quot;D&quot;,2)
+                Object5 = BoardObject(&quot;E&quot;,7)
+
+ University Press &amp; Assessment 2025                       Page 9 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating one instance of BoardObject and storing in correct variable …</li><li>… with correct parameters</li><li>Remaining four created correctly and stored</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Class header (and end where appropriate)</li>
+<li>Constructor header (and end where appropriate) within class</li>
+<li>Declaration of 2D array with 10  10 elements of type BoardObject</li>
+<li>Storing BoardObject object with Code &quot;-&quot; and Value 0 in each array element</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Public Class Board
+                     Private TheBoard(9, 9) As BoardObject
+                     Sub New()
+                          For x = 0 To 9
+                              For y = 0 To 9
+                                  TheBoard(x, y) = New BoardObject(&quot;-&quot;, 0)
+                              Next
+                          Next
+                     End Sub
+
+                End Class
+
+ University Press &amp; Assessment 2025                       Page 10 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Class header (and end where appropriate)</li><li>Constructor header (and end where appropriate) within class</li><li>Declaration of 2D array with 10  10 elements of type BoardObject</li><li>Storing BoardObject object with Code &quot;-&quot; and Value 0 in each array element</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>self.TheBoard = [] #type BoardObject</li>
+<li>TempList = []</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>class Board():
+                     def __init__(self):
+                         self.TheBoard = [] #type BoardObject
+                         for x in range(10):
+                             TempList = []
+                             for y in range(10):
+                                 TempList.append(BoardObject(&quot;-&quot;,0))
+                             self.TheBoard.append(TempList)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>self.TheBoard = [] #type BoardObject</li><li>TempList = []</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Get method header taking 2 (integer) parameters …</li>
+<li>… returning the BoardObject at Board position of parameters</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function GetObject(Rowpos, Columnpos)
+                     Return TheBoard(Rowpos, Columnpos)
+                 End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def GetObject(self, Rowpos, Columnpos):
+                        return self.TheBoard[Rowpos][Columnpos]
+
+ University Press &amp; Assessment 2025                       Page 11 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Get method header taking 2 (integer) parameters …</li><li>… returning the BoardObject at Board position of parameters</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Set method header taking three parameters (TheObject, row, column) …</li>
+<li>… storing parameter TheObject in TheBoard at parameters row and column</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub SetObject(TheObject, Rowpos, Columnpos)
+                     TheBoard(Rowpos, Columnpos) = TheObject
+                End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def SetObject(self, TheObject, Rowpos, Columnpos):
+                        self.TheBoard[Rowpos][Columnpos] = TheObject
+
+ University Press &amp; Assessment 2025                       Page 12 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Set method header taking three parameters (TheObject, row, column) …</li><li>… storing parameter TheObject in TheBoard at parameters row and column</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Method DisplayBoard() header (and end where appropriate) and using GetCode()</li>
+<li>Outputting Code of all BoardObject elements in both indices (10  10)</li>
+<li>… with each row on one line and space between each value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub DisplayBoard()
+                    Dim OutputLine As String
+                    For x = 0 To 9
+                        OutputLine = &quot;&quot;
+                        For y = 0 To 9
+                            OutputLine = OutputLine &amp; TheBoard(x, y).GetCode() &amp; &quot; &quot;
+                        Next
+                        Console.WriteLine(OutputLine)
+                    Next
+                End Sub
+
+ University Press &amp; Assessment 2025                       Page 13 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Method DisplayBoard() header (and end where appropriate) and using GetCode()</li><li>Outputting Code of all BoardObject elements in both indices (10  10)</li><li>… with each row on one line and space between each value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>OutputLine = &quot;&quot;</li>
+<li>OutputLine = OutputLine + str(self.TheBoard[x][y].GetCode()) + &quot; &quot;</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def DisplayBoard(self):
+
+                             for x in range(10):
+                                 OutputLine = &quot;&quot;
+                                 for y in range(10):
+                                     OutputLine = OutputLine + str(self.TheBoard[x][y].GetCode()) + &quot; &quot;
+                                 print(OutputLine)
+
+ University Press &amp; Assessment 2025                       Page 14 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>OutputLine = &quot;&quot;</li><li>OutputLine = OutputLine + str(self.TheBoard[x][y].GetCode()) + &quot; &quot;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Creating instance of Board and storing it</li>
+<li>Storing all 5 objects in correct positions</li>
+<li>Calling DisplayBoard()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim GameBoard As Board = New Board()
+                 Dim Object1 As BoardObject = New BoardObject(&quot;A&quot;, 2)
+                 Dim Object2 As BoardObject = New BoardObject(&quot;B&quot;, 3)
+                 Dim Object3 As BoardObject = New BoardObject(&quot;C&quot;, 5)
+                 Dim Object4 As BoardObject = New BoardObject(&quot;D&quot;, 2)
+                 Dim Object5 As BoardObject = New BoardObject(&quot;E&quot;, 7)
+
+                 GameBoard.SetObject(Object1, 0, 0)
+                 GameBoard.SetObject(Object2, 9, 9)
+                 GameBoard.SetObject(Object3, 4, 5)
+                 GameBoard.SetObject(Object4, 2, 2)
+                 GameBoard.SetObject(Object5, 8, 7)
+                 GameBoard.DisplayBoard()
+
+ University Press &amp; Assessment 2025                       Page 15 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Creating instance of Board and storing it</li><li>Storing all 5 objects in correct positions</li><li>Calling DisplayBoard()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>GameBoard = Board()</li>
+<li>Object1 = BoardObject(&quot;A&quot;,2)</li>
+<li>Object2 = BoardObject(&quot;B&quot;,3)</li>
+<li>Object3 = BoardObject(&quot;C&quot;,5)</li>
+<li>Object4 = BoardObject(&quot;D&quot;,2)</li>
+<li>Object5 = BoardObject(&quot;E&quot;,7)</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>GameBoard = Board()
+                Object1 = BoardObject(&quot;A&quot;,2)
+                Object2 = BoardObject(&quot;B&quot;,3)
+                Object3 = BoardObject(&quot;C&quot;,5)
+                Object4 = BoardObject(&quot;D&quot;,2)
+                Object5 = BoardObject(&quot;E&quot;,7)
+                GameBoard.SetObject(Object1, 0, 0)
+                GameBoard.SetObject(Object2, 9, 9)
+                GameBoard.SetObject(Object3, 4, 5)
+                GameBoard.SetObject(Object4, 2, 2)
+                GameBoard.SetObject(Object5, 8, 7)
+                GameBoard.DisplayBoard()</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>GameBoard = Board()</li><li>Object1 = BoardObject(&quot;A&quot;,2)</li><li>Object2 = BoardObject(&quot;B&quot;,3)</li><li>Object3 = BoardObject(&quot;C&quot;,5)</li><li>Object4 = BoardObject(&quot;D&quot;,2)</li><li>Object5 = BoardObject(&quot;E&quot;,7)</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(c)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing board contents  1
+
+  Example
+
+ University Press &amp; Assessment 2025  Page 16 of 39
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Taking x-axis and y-axis as input repeatedly until each value is between 0 and 9 (inclusive)</li>
+<li>Calling Board.GetObject() with input x-axis and y-axis values …</li>
+<li>… checking if object exists e.g. if Code is &quot;-&quot;</li>
+<li>… outputting &quot;Miss&quot; if no BoardObject and outputting Code and Value in an appropriate message if there is a</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim InputRow, InputColumn As Integer
+                InputRow = -1
+                InputColumn = -1
+                While InputRow &lt; 0 Or InputRow &gt; 9
+                     Console.WriteLine(&quot;Enter the row position between 0 and 9 &quot;)
+                     InputRow = Console.ReadLine()
+                End While
+
+ University Press &amp; Assessment 2025                       Page 17 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Taking x-axis and y-axis as input repeatedly until each value is between 0 and 9 (inclusive)</li><li>Calling Board.GetObject() with input x-axis and y-axis values …</li><li>… checking if object exists e.g. if Code is &quot;-&quot;</li><li>… outputting &quot;Miss&quot; if no BoardObject and outputting Code and Value in an appropriate message if there is a</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>InputColumn = Console.ReadLine()</li>
+<li>Dim GuessObject As BoardObject = GameBoard.GetObject(InputRow, InputColumn)</li>
+<li>If GuessObject.GetCode() = &quot;-&quot; Then</li>
+<li>InputRow = -1</li>
+<li>InputRow = int(input(&quot;Enter the row position between 0 and 9 &quot;))</li>
+<li>InputColumn = -1</li>
+<li>InputColumn = int(input(&quot;Enter the column position between 0 and 9 &quot;))</li>
+<li>GuessObject = GameBoard.GetObject(InputRow, InputColumn)</li>
+<li>if GuessObject.GetCode() == &quot;-&quot;:</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>InputRow = -1
+                while InputRow &lt; 0 or InputRow &gt; 9:
+                     InputRow = int(input(&quot;Enter the row position between 0 and 9 &quot;))
+
+                InputColumn = -1
+                while InputColumn &lt; 0 or InputColumn &gt; 9:
+                    InputColumn = int(input(&quot;Enter the column position between 0 and 9 &quot;))
+
+                GuessObject = GameBoard.GetObject(InputRow, InputColumn)
+                if GuessObject.GetCode() == &quot;-&quot;:
+                    print(&quot;Miss&quot;)
+                else:
+                    print(&quot;You found &quot; + str(GuessObject.GetCode()) + &quot; with value &quot; +
+                str(GuessObject.GetValue()))
+
+ University Press &amp; Assessment 2025                       Page 18 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>InputColumn = Console.ReadLine()</li><li>Dim GuessObject As BoardObject = GameBoard.GetObject(InputRow, InputColumn)</li><li>If GuessObject.GetCode() = &quot;-&quot; Then</li><li>InputRow = -1</li><li>InputRow = int(input(&quot;Enter the row position between 0 and 9 &quot;))</li><li>InputColumn = -1</li><li>InputColumn = int(input(&quot;Enter the column position between 0 and 9 &quot;))</li><li>GuessObject = GameBoard.GetObject(InputRow, InputColumn)</li><li>if GuessObject.GetCode() == &quot;-&quot;:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 1(d)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing inputs and correct output  1
+  Row 10 4
+  Column -1 5
+  Output C 5
+
+  Example
+
+ University Press &amp; Assessment 2025  Page 19 of 39
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked43/page-09.jpg" alt="Paper page 9 for Q2"><div class="cap">Original paper page 9</div></div>
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Queue declared as a (global) 1D array of 100 string elements all initialised to &quot;&quot;</li>
+<li>QueueHead and QueueTail initialised with –1, NumberItems initialised to 0</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Queue(99) As String
+                    Dim QueueHead As Integer
+                    Dim QueueTail As Integer
+                    Dim NumberItems As Integer
+                For x = 0 To 99
+                      Queue(x) = &quot;&quot;
+                 Next
+                 QueueHead = -1
+                 QueueTail = -1
+                 NumberItems = 0
+
+ University Press &amp; Assessment 2025                       Page 20 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Queue declared as a (global) 1D array of 100 string elements all initialised to &quot;&quot;</li><li>QueueHead and QueueTail initialised with –1, NumberItems initialised to 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(a) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Queue = []</li>
+<li>QueueHead = -1</li>
+<li>QueueTail = -1</li>
+<li>NumberItems = 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>global Queue, QueueHead, QueueTail, NumberItems
+                Queue = []
+                     for x in range(100):
+                         Queue.append(&quot;&quot;)
+                     QueueHead = -1
+                     QueueTail = -1
+                     NumberItems = 0
+
+ University Press &amp; Assessment 2025                       Page 21 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Queue = []</li><li>QueueHead = -1</li><li>QueueTail = -1</li><li>NumberItems = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end where appropriate) taking one (string) parameter and checking full and returning FALSE</li>
+<li>(otherwise) Storing parameter in QueueTail + 1</li>
+<li>Incrementing QueueTail and NumberItems</li>
+<li>(Dealing with first element) If QueueHead = –1 store 0 in QueueHead / increment QueueHead</li>
+<li>Return TRUE in all cases when inserted</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end where appropriate) taking one (string) parameter and checking full and returning FALSE</li><li>(otherwise) Storing parameter in QueueTail + 1</li><li>Incrementing QueueTail and NumberItems</li><li>(Dealing with first element) If QueueHead = –1 store 0 in QueueHead / increment QueueHead</li><li>Return TRUE in all cases when inserted</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(b) — solution</p>
+          <div class="solution">
+            <ol>
+<li>If QueueHead = -1 Then</li>
+<li>Queue(0) = TheData</li>
+<li>QueueHead = 0</li>
+<li>QueueTail = 0</li>
+<li>NumberItems += 1</li>
+<li>ElseIf QueueTail &gt;= 99 Then</li>
+<li>Queue(QueueTail + 1) = TheData</li>
+<li>QueueTail += 1</li>
+<li>NumberItems += 1</li>
+<li>if(QueueHead == -1){</li>
+<li>Queue[0] = TheData</li>
+<li>QueueHead = 0</li>
+<li>QueueTail = 0</li>
+<li>NumberItems +=1</li>
+<li>elif QueueTail &gt;= 99:</li>
+<li>Queue[QueueTail+1] = TheData</li>
+<li>QueueTail +=1</li>
+<li>NumberItems +=1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Enqueue(TheData)
+                    If QueueHead = -1 Then
+                        Queue(0) = TheData
+                        QueueHead = 0
+                        QueueTail = 0
+                        NumberItems += 1
+                        Return True
+                    ElseIf QueueTail &gt;= 99 Then
+                        Queue(QueueTail + 1) = TheData
+                        QueueTail += 1
+                        NumberItems += 1
+                        Return True
+                    Else
+                        Return False
+                    End If
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Enqueue(TheData):
+                     global Queue, QueueHead, QueueTail, NumberItems
+                     if(QueueHead == -1){
+                           Queue[0] = TheData
+                           QueueHead = 0
+                           QueueTail = 0
+                           NumberItems +=1
+                           return True
+                     elif QueueTail &gt;= 99:
+                         Queue[QueueTail+1] = TheData
+                         QueueTail +=1
+                         NumberItems +=1
+                         return True
+                     else:
+                         return False
+
+ University Press &amp; Assessment 2025                       Page 23 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme          October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>If QueueHead = -1 Then</li><li>Queue(0) = TheData</li><li>QueueHead = 0</li><li>QueueTail = 0</li><li>NumberItems += 1</li><li>ElseIf QueueTail &gt;= 99 Then</li><li>Queue(QueueTail + 1) = TheData</li><li>QueueTail += 1</li><li>NumberItems += 1</li><li>if(QueueHead == -1){</li><li>Queue[0] = TheData</li><li>QueueHead = 0</li><li>QueueTail = 0</li><li>NumberItems +=1</li><li>elif QueueTail &gt;= 99:</li><li>Queue[QueueTail+1] = TheData</li><li>QueueTail +=1</li><li>NumberItems +=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end), checking if Queue is empty (NumberItems = 0 or QueueHead &gt; QueueTail) and</li>
+<li>(otherwise) returning Queue[QueueHead]</li>
+<li>Incrementing QueueHead, decrementing NumberItems</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function Dequeue()
+
+                      If NumberItems = 0 Then
+                          Return &quot;False&quot;
+                      Else
+                          Dequeue = Queue(QueueHead)
+                          QueueHead += 1
+                          NumberItems -= 1
+
+                    End If
+                End Function
+
+ University Press &amp; Assessment 2025                       Page 24 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end), checking if Queue is empty (NumberItems = 0 or QueueHead &gt; QueueTail) and</li><li>(otherwise) returning Queue[QueueHead]</li><li>Incrementing QueueHead, decrementing NumberItems</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(c) — solution</p>
+          <div class="solution">
+            <ol>
+<li>if NumberItems == 0:</li>
+<li>ReturnData = Queue[QueueHead]</li>
+<li>QueueHead += 1</li>
+<li>NumberItems -=1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def Dequeue():
+                     global Queue, QueueHead, QueueTail, NumberItems
+                     if NumberItems == 0:
+                         return &quot;False&quot;
+                     else:
+                         ReturnData = Queue[QueueHead]
+                         QueueHead += 1
+                         NumberItems -=1
+                         return ReturnData
+
+ University Press &amp; Assessment 2025                       Page 25 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme           October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>if NumberItems == 0:</li><li>ReturnData = Queue[QueueHead]</li><li>QueueHead += 1</li><li>NumberItems -=1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate)</li>
+<li>Opening the file and closing the file (in appropriate place)</li>
+<li>Looping until EOF // looping through each line …</li>
+<li>… read in each value …</li>
+<li>… calling Enqueue() with read in value and store/use return value</li>
+<li>Exception handling with try except and appropriate output with all file access within try</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate)</li><li>Opening the file and closing the file (in appropriate place)</li><li>Looping until EOF // looping through each line …</li><li>… read in each value …</li><li>… calling Enqueue() with read in value and store/use return value</li><li>Exception handling with try except and appropriate output with all file access within try</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(d) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim FinishLoop As Boolean = True</li>
+<li>Do Until DataReader.EndOfStream Or FinishLoop = False</li>
+<li>ReturnValue = Enqueue(DataReader.ReadLine())</li>
+<li>If ReturnValue = False Then</li>
+<li>FinishLoop = False</li>
+<li>TheFile = open(&quot;BinaryData.txt&quot;)</li>
+<li>ReturnValue = Enqueue(Line.strip())</li>
+<li>if ReturnValue == False:</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub ReadData()
+                     Dim ReturnValue As String
+                     Dim DataReader As New System.IO.StreamReader(&quot;BinaryData.txt&quot;)
+                     Dim FinishLoop As Boolean = True
+                     Do Until DataReader.EndOfStream Or FinishLoop = False
+                          ReturnValue = Enqueue(DataReader.ReadLine())
+                          If ReturnValue = False Then
+                              FinishLoop = False
+                          End If
+                     Loop
+                     DataReader.Close()
+                 End Sub</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def ReadData():
+
+                      TheFile = open(&quot;BinaryData.txt&quot;)
+                      for Line in TheFile:
+                          ReturnValue = Enqueue(Line.strip())
+                          if ReturnValue == False:
+                              break
+
+                      TheFile.close()
+
+ University Press &amp; Assessment 2025                       Page 27 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme                   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim FinishLoop As Boolean = True</li><li>Do Until DataReader.EndOfStream Or FinishLoop = False</li><li>ReturnValue = Enqueue(DataReader.ReadLine())</li><li>If ReturnValue = False Then</li><li>FinishLoop = False</li><li>TheFile = open(&quot;BinaryData.txt&quot;)</li><li>ReturnValue = Enqueue(Line.strip())</li><li>if ReturnValue == False:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Procedure header (and end where appropriate), storing final string compressed data in global variable</li>
+<li>Call Dequeue() and storing return value …</li>
+<li>… repeatedly until the return value == &quot;False&quot;</li>
+<li>Comparing new value with previous …</li>
+<li>… maintaining counter of number of occurrences …</li>
+<li>… appending digit and number of occurrences to a string without overriding</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Procedure header (and end where appropriate), storing final string compressed data in global variable</li><li>Call Dequeue() and storing return value …</li><li>… repeatedly until the return value == &quot;False&quot;</li><li>Comparing new value with previous …</li><li>… maintaining counter of number of occurrences …</li><li>… appending digit and number of occurrences to a string without overriding</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(e) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim First As String = Dequeue()</li>
+<li>Dim NewLine As String = &quot;&quot;</li>
+<li>Count = 1</li>
+<li>NextChar = Dequeue()</li>
+<li>While NextChar = First</li>
+<li>Count += 1</li>
+<li>First = NextChar</li>
+<li>NextChar = Dequeue()</li>
+<li>NewLine = First &amp; Count</li>
+<li>NewString = NewString &amp; NewLine</li>
+<li>First = NextChar</li>
+<li>First = Dequeue()</li>
+<li>NewString = &quot;&quot;</li>
+<li>while NumberItems &gt; 0 and First != &quot;False&quot;:</li>
+<li>Count = 1</li>
+<li>NextChar = Dequeue()</li>
+<li>while NextChar == First:</li>
+<li>Count += 1</li>
+<li>First = NextChar</li>
+<li>NextChar = Dequeue()</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Compress()
+                     Dim First As String = Dequeue()
+                     Dim NewLine As String = &quot;&quot;
+                     Dim Count As Integer
+                     Dim NextChar As String
+                     While NumberItems &gt; 0 And First &lt;&gt; &quot;False&quot;
+                         Count = 1
+                         NextChar = Dequeue()
+
+                              While NextChar = First
+                                  Count += 1
+                                  First = NextChar
+                                  NextChar = Dequeue()
+                              End While
+
+                            NewLine = First &amp; Count
+                            NewString = NewString &amp; NewLine
+                            First = NextChar
+                        End While</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def Compress():
+                     global NewString
+                     First = Dequeue()
+                     NewString = &quot;&quot;
+                     while NumberItems &gt; 0 and First != &quot;False&quot;:
+                         Count = 1
+                         NextChar = Dequeue()
+                         while NextChar == First:
+                             Count += 1
+                             First = NextChar
+                             NextChar = Dequeue()
+                         NewLine = First + str(Count)
+                         NewString = NewString + NewLine
+                         First = NextChar
+
+ University Press &amp; Assessment 2025                       Page 29 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim First As String = Dequeue()</li><li>Dim NewLine As String = &quot;&quot;</li><li>Count = 1</li><li>NextChar = Dequeue()</li><li>While NextChar = First</li><li>Count += 1</li><li>First = NextChar</li><li>NextChar = Dequeue()</li><li>NewLine = First &amp; Count</li><li>NewString = NewString &amp; NewLine</li><li>First = NextChar</li><li>First = Dequeue()</li><li>NewString = &quot;&quot;</li><li>while NumberItems &gt; 0 and First != &quot;False&quot;:</li><li>Count = 1</li><li>NextChar = Dequeue()</li><li>while NextChar == First:</li><li>Count += 1</li><li>First = NextChar</li><li>NextChar = Dequeue()</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling ReadData() then Compress()</li>
+<li>Outputting compressed string</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Sub Main()
+                     NewString = &quot;&quot;
+                     For x = 0 To 99
+                       Queue(x) = &quot;&quot;
+                     Next
+                     QueueHead = -1
+                     QueueTail = -1
+                     NumberItems = 0
+
+                     ReadData()
+                     Compress()
+                     Console.WriteLine(NewString)
+                     Console.ReadLine()
+                 End Sub
+
+ University Press &amp; Assessment 2025                       Page 30 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling ReadData() then Compress()</li><li>Outputting compressed string</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>NewString = &quot;&quot;</li>
+<li>Queue = []</li>
+<li>QueueHead = -1</li>
+<li>QueueTail = -1</li>
+<li>NumberItems = 0</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>NewString = &quot;&quot;
+                Queue = []
+                for x in range(100):
+                        Queue.append(&quot;&quot;)
+                QueueHead = -1
+                QueueTail = -1
+                NumberItems = 0
+                ReadData()
+                Compress()
+                print(NewString)</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>NewString = &quot;&quot;</li><li>Queue = []</li><li>QueueHead = -1</li><li>QueueTail = -1</li><li>NumberItems = 0</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 2(f)(ii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing output  1
+
+  Example
+
+ University Press &amp; Assessment 2025  Page 31 of 39
+
+9618/43  Cambridge International AS &amp; A Level – Mark Scheme  October/November 2025</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked43/page-12.jpg" alt="Paper page 12 for Q3"><div class="cap">Original paper page 12</div></div>
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header (and end) taking three parameters</li>
+<li>Checking number of elements for 0 and returning 0 (e.g. ArrayCopy = [] // len(ArrayCopy) == 0)</li>
+<li>(otherwise) comparing first array element to parameter DataToFind …</li>
+<li>… if match return recursive call adding 1</li>
+<li>… if no match return recursive call without adding 1</li>
+<li>… all recursive calls have array without first element, NumberElements-1 and DataToFind</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header (and end) taking three parameters</li><li>Checking number of elements for 0 and returning 0 (e.g. ArrayCopy = [] // len(ArrayCopy) == 0)</li><li>(otherwise) comparing first array element to parameter DataToFind …</li><li>… if match return recursive call adding 1</li><li>… if no match return recursive call without adding 1</li><li>… all recursive calls have array without first element, NumberElements-1 and DataToFind</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>For x = 1 To NumberElements - 1</li>
+<li>NewArray(x - 1) = ArrayCopy(x)</li>
+<li>If ArrayCopy(0) = DataToFind Then</li>
+<li>NewArray = ArrayCopy[1:]</li>
+<li>if ArrayCopy[0] == DataToFind:</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function RecursiveCount(DataToFind As Integer, ArrayCopy() As Integer, NumberElements As
+                Integer)
+
+                      If NumberElements &gt; 0 Then
+                          Dim NewArray(NumberElements - 1) As Integer
+                          For x = 1 To NumberElements - 1
+                              NewArray(x - 1) = ArrayCopy(x)
+                          Next x
+
+                             If ArrayCopy(0) = DataToFind Then
+                                 Return 1 + RecursiveCount(DataToFind, NewArray, NumberElements - 1)
+                             Else
+                                 Return RecursiveCount(DataToFind, NewArray, NumberElements - 1)
+
+                          End If
+                      Else
+                          Return 0
+
+                    End If
+                End Function</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>def RecursiveCount(DataToFind, ArrayCopy, NumberElements):
+                     if NumberElements &gt; 0:
+                         NewArray = ArrayCopy[1:]
+                         if ArrayCopy[0] == DataToFind:
+                             return 1 + RecursiveCount(DataToFind, NewArray, NumberElements - 1)
+                         else:
+                             return RecursiveCount(DataToFind, NewArray, NumberElements - 1)
+                     else:
+                         return 0
+
+ University Press &amp; Assessment 2025                       Page 33 of 39
+
+9618/43                                           Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>For x = 1 To NumberElements - 1</li><li>NewArray(x - 1) = ArrayCopy(x)</li><li>If ArrayCopy(0) = DataToFind Then</li><li>NewArray = ArrayCopy[1:]</li><li>if ArrayCopy[0] == DataToFind:</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Storing the correct data in an array</li>
+<li>Calling RecursiveCount() with the correct parameters</li>
+<li>Outputting the return value</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim MyArray() As Integer = {0, 5, 1, 2, 5, 9, 9, 6, 5, 0}
+
+                Console.WriteLine(RecursiveCount(0, MyArray, 10))</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>MyArray = [0,5,1,2,5,9,9,6,5,0]
+                print(RecursiveCount(0, MyArray, 10))</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Storing the correct data in an array</li><li>Calling RecursiveCount() with the correct parameters</li><li>Outputting the return value</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(a)(iii) — solution</p>
+          <div class="solution">
+            <div class='ms-raw'>1 mark for screenshot showing correct output of 2  1
+
+  Example</div>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(i) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Code As String = &quot;x=0;y=1;x=x+y;y++;&quot;</li>
+<li>Code = &quot;x=0;y=1;x=x+y;y++;&quot;</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Code As String = &quot;x=0;y=1;x=x+y;y++;&quot;</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Code = &quot;x=0;y=1;x=x+y;y++;&quot;
+
+ University Press &amp; Assessment 2025                        Page 34 of 39
+
+9618/43                                            Cambridge International AS &amp; A Level – Mark Scheme      October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Code As String = &quot;x=0;y=1;x=x+y;y++;&quot;</li><li>Code = &quot;x=0;y=1;x=x+y;y++;&quot;</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Function header, taking one string parameter</li>
+<li>Loop e.g. four times/through each character in parameter</li>
+<li>Comparing character from parameter to &#x27;;&#x27; …</li>
+<li>… concatenate current character to a string until &#x27;;&#x27; is found</li>
+<li>… when &#x27;;&#x27; found storing string in array</li>
+<li>Returning string array without semicolons</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Function header, taking one string parameter</li><li>Loop e.g. four times/through each character in parameter</li><li>Comparing character from parameter to &#x27;;&#x27; …</li><li>… concatenate current character to a string until &#x27;;&#x27; is found</li><li>… when &#x27;;&#x27; found storing string in array</li><li>Returning string array without semicolons</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Dim Count As Integer = 0</li>
+<li>Dim TempString As String = &quot;&quot;</li>
+<li>Dim Character As String = &quot;&quot;</li>
+<li>Dim LastElement As Integer = 0</li>
+<li>For x = 0 To 3</li>
+<li>TempString = &quot;&quot;</li>
+<li>Character = DataString(Count)</li>
+<li>TempString = TempString + Character</li>
+<li>Count = Count + 1</li>
+<li>Character = DataString(Count)</li>
+<li>SplitDataArray(LastElement) = TempString</li>
+<li>LastElement = LastElement + 1</li>
+<li>Count = Count + 1</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Function SplitData(DataString)
+                     Dim SplitDataArray(10) As String
+                     Dim Count As Integer = 0
+                     Dim TempString As String = &quot;&quot;
+                     Dim Character As String = &quot;&quot;
+                     Dim LastElement As Integer = 0
+
+                        For x = 0 To 3
+                            TempString = &quot;&quot;
+                            Try
+                                Character = DataString(Count)
+
+                                     While Character &lt;&gt; &quot;;&quot;
+                                         TempString = TempString + Character
+                                         Count = Count + 1
+                                         Character = DataString(Count)
+
+                                     End While
+
+                                   SplitDataArray(LastElement) = TempString
+                                   LastElement = LastElement + 1
+                               Catch
+                                   Console.WriteLine(&quot;No more character&quot;)
+                               End Try
+                               Count = Count + 1
+                        Next
+
+                     Return SplitDataArray
+                 End Function
+
+ University Press &amp; Assessment 2025                       Page 36 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Dim Count As Integer = 0</li><li>Dim TempString As String = &quot;&quot;</li><li>Dim Character As String = &quot;&quot;</li><li>Dim LastElement As Integer = 0</li><li>For x = 0 To 3</li><li>TempString = &quot;&quot;</li><li>Character = DataString(Count)</li><li>TempString = TempString + Character</li><li>Count = Count + 1</li><li>Character = DataString(Count)</li><li>SplitDataArray(LastElement) = TempString</li><li>LastElement = LastElement + 1</li><li>Count = Count + 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(ii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>SplitDataArray = []</li>
+<li>Count = 0</li>
+<li>TempString = &quot;&quot;</li>
+<li>Character = DataString[Count]</li>
+<li>while Character != &quot;;&quot;:</li>
+<li>TempString = TempString + (Character)</li>
+<li>Count += 1</li>
+<li>Character = DataString[Count]</li>
+<li>Count += 1</li>
+</ol>
+<p><strong>Python</strong></p>
+<pre class='code'>def SplitData(DataString):
+                     SplitDataArray = []
+                     Count = 0
+                     for x in range(4):
+                         TempString = &quot;&quot;
+                         try:
+                             Character = DataString[Count]
+                             while Character != &quot;;&quot;:
+                                 TempString = TempString + (Character)
+                                 Count += 1
+                                 Character = DataString[Count]
+                             SplitDataArray.append(TempString)
+                         except:
+                             print(&quot;No more characters&quot;)
+                         Count += 1
+                     return SplitDataArray
+
+ University Press &amp; Assessment 2025                       Page 37 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>SplitDataArray = []</li><li>Count = 0</li><li>TempString = &quot;&quot;</li><li>Character = DataString[Count]</li><li>while Character != &quot;;&quot;:</li><li>TempString = TempString + (Character)</li><li>Count += 1</li><li>Character = DataString[Count]</li><li>Count += 1</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iii) — solution</p>
+          <div class="solution">
+            <ol>
+<li>Calling SplitData() with array as argument and storing/using return value</li>
+<li>Outputting each element of the returned array on a new line</li>
+</ol>
+<p><strong>Visual Basic (VB.NET)</strong></p>
+<pre class='code'>Dim Code As String = &quot;x=0;y=1;x=x+y;y++;&quot;
+                 Dim SplitDataArray() As String = SplitData(Code)
+
+                 For x = 0 To 3
+                      Console.WriteLine(SplitDataArray(x))
+                 Next</pre>
+<p><strong>Python</strong></p>
+<pre class='code'>Code = &quot;x=0;y=1;x=x+y;y++;&quot;
+                SplitDataArray = SplitData(Code)
+                for x in range(4):
+                     print(SplitDataArray[x])
+
+ University Press &amp; Assessment 2025                       Page 38 of 39
+
+9618/43                                          Cambridge International AS &amp; A Level – Mark Scheme   October/November 2025</pre>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>Calling SplitData() with array as argument and storing/using return value</li><li>Outputting each element of the returned array on a new line</li></ul></div>
+          </div>
+        </section>
+
+        <section class="part">
+          <p class="part-label">Part 3(b)(iv) — solution</p>
+          <div class="solution">
+            <ol>
+<li>x=x+y</li>
+</ol>
+            <div class="markpoints"><h4>Mark points</h4><ul><li>x=x+y</li></ul></div>
+          </div>
+        </section>
+</article>
+</main>
+</body></html>
