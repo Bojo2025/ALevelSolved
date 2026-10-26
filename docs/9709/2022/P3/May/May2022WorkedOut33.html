@@ -5,918 +5,248 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>9709/33 · May/June 2022 · Worked solutions</title>
 <style>
-:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
-header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
-main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+header{background:#163a7a;color:#fff;padding:22px 20px}
+.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}
+header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px;overflow-wrap:anywhere}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none;white-space:nowrap}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
 .q h2{margin:0 0 10px;font-size:1.12rem}
-.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
-.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
 .diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
-.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
-.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
-.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
-.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
-pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
-.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
-.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
-.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
-.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
-.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+.diagram img{max-width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.part{margin:0 0 12px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 6px;font-size:.95rem;color:var(--brand);font-weight:700}
+.eq{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.final{color:var(--ok);font-weight:700;margin:8px 0 0}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>9709/33 · May/June 2022 · Worked solutions</h1>
-  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+  <p>Mathematics Paper 3 (Pure Mathematics 3)</p>
 </div></header>
 <main class="wrap">
-  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q12">Q12</a> <a href="#q32">Q32</a> <a href="#q62">Q62</a></nav>
-  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked33/page-03.jpg" alt="Paper page 3 for Q1"><div class="cap">Original paper page 3</div></div>
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] e.g.  6 x  2a 2   2 x  3a 2 or 32x2 + 12xa  5a2 = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] e.g.  6 x  2a 2   2 x  3a 2 or 32x2 + 12xa  5a2 = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: 5</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 5</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> B1</p>
-<ol>
-<li>Obtain critical value x =    a from a graphical method, or by solving a</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Obtain critical value x =    a from a graphical method, or by solving a</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3</p>
-<ol>
-<li>+      tan θ = 3 tan θ</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>+      tan θ = 3 tan θ</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>cos2 θ =  3                 (1  cos θ)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>cos2 θ =  3                 (1  cos θ)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>(1  sin2 θ) =  3       3       sin θ</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>(1  sin2 θ) =  3       3       sin θ</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: 6 3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 6 3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] At least one line of trigonometric working is required from</li>
-<li>[M1] A1 M1 A0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] At least one line of trigonometric working is required from</li><li>[M1] A1 M1 A0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] [0.262 M1 A0]</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] [0.262 M1 A0]</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 1</p>
-<ol>
-<li>arg u = tan–1  (or arg u =  tan–1 ), needed if use first</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>arg u = tan–1  (or arg u =  tan–1 ), needed if use first</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] 2 tan A          1                 3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 2 tan A          1                 3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Do not ISW</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Do not ISW</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] OE Allow omission of dx</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] OE Allow omission of dx</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] 1 1 3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] 1 1 3</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<ol>
-<li>[M1] Apply general rules for solving quadratic equation by</li>
-<li>[M0] Obtain/use: {formula} = 0 and try to solve for a then</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Apply general rules for solving quadratic equation by</li><li>[M0] Obtain/use: {formula} = 0 and try to solve for a then</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] cos θ cos 60 + sin θ sin 60 = 3 sin θ</li>
-<li>[M1] 1          3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] cos θ cos 60 + sin θ sin 60 = 3 sin θ</li><li>[M1] 1          3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>  
-   3</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>  2 
-  </div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] cos θ cos 60 + sin θ sin 60 = 3 sin θ</li>
-<li>[M1] Obtain/use: Correct method for finding tan  from pcos  qsin  0</li>
-<li>[A1] 76.8° or 1.34 radians (may be more accurate)</li>
-<li>[A1] May be more accurate, allow value rounding to 13. 2°</li>
-<li>[A1] FT May be more accurate. Allow value rounding to 193.2°</li>
-<li>[M1] Obtain/use: FT is on previous value of θ, must have scored</li>
-<li>[A0] but 13.2 + 360 = 346.8 A1 FT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] cos θ cos 60 + sin θ sin 60 = 3 sin θ</li><li>[M1] Obtain/use: Correct method for finding tan  from pcos  qsin  0</li><li>[A1] 76.8° or 1.34 radians (may be more accurate)</li><li>[A1] May be more accurate, allow value rounding to 13. 2°</li><li>[A1] FT May be more accurate. Allow value rounding to 193.2°</li><li>[M1] Obtain/use: FT is on previous value of θ, must have scored</li><li>[A0] but 13.2 + 360 = 346.8 A1 FT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] CAO. 2 dp required</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] CAO. 2 dp required</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] e 4 x sec 2 x  tanx (4e 4 x )</li>
-<li>[M1] tan x                          sin x cos x</li>
-<li>[M1] is independent of previous M1, but expression must be of</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] e 4 x sec 2 x  tanx (4e 4 x )</li><li>[M1] tan x                          sin x cos x</li><li>[M1] is independent of previous M1, but expression must be of</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2 2</p>
-<ol>
-<li>[M1] for correct method for non-exact value</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] for correct method for non-exact value</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>
-   1           ...</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>  2   2   2  
-  Bx  C  2 x  2
-  
-  1    ...</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<ol>
-<li>[M1] Obtain/use: 1     x then multiply by Bx + C up to the terms in x2, where BC  0                       Allow a slip in multiplication for</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 1     x then multiply by Bx + C up to the terms in x2, where BC  0                       Allow a slip in multiplication for</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] OE Ignore position of k</li>
-<li>[B1] OE Ignore position of k</li>
-<li>[M1]                      0.2 </li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] OE Ignore position of k</li><li>[B1] OE Ignore position of k</li><li>[M1]                      0.2 </li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] OE ISW</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] OE ISW</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>1  1  1  1
-  50ksin0.02t        k  50sin0.02t  
-  N  5  N  2  10
-   1   2 N  20
-  50sin  t     
-   50   kN  100 k</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 100 1</p>
-<ol>
-<li>[A1] Obtain/use: Accept answers between 1209 and 1215</li>
-<li>[B1] Obtain/use: SC N = … not seen but correct numerical answer</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Accept answers between 1209 and 1215</li><li>[B1] Obtain/use: SC N = … not seen but correct numerical answer</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2 2</p>
-<ol>
-<li>[A1] Obtain/use:         8</li>
-<li>[A1] Obtain/use: x  3, y  3, z  8</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use:         8</li><li>[A1] Obtain/use: x  3, y  3, z  8</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked33/page-05.jpg" alt="Paper page 5 for Q3"><div class="cap">Original paper page 5</div></div>
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>cos   2  2
-  or 0.9736 or sin    or 0.2281</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] log3(2x + 1) = 1 + log3(x  1)2</li>
-<li>[B1] log3(2x + 1) = log 3 3 + 2log3(x  1)</li>
-<li>[M0] B0 due to combining logs</li>
-<li>[B1] Obtain/use: allow log3 (…) = c leading to (...) = 3c</li>
-<li>[A1] OE 3 terms only and = 0 required</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] log3(2x + 1) = 1 + log3(x  1)2</li><li>[B1] log3(2x + 1) = log 3 3 + 2log3(x  1)</li><li>[M0] B0 due to combining logs</li><li>[B1] Obtain/use: allow log3 (…) = c leading to (...) = 3c</li><li>[A1] OE 3 terms only and = 0 required</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] 4  10</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 4  10</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3</p>
-<ol>
-<li>[M1] Obtain/use: expression in</li>
-<li>[M1] Obtain/use: second expression in</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: expression in</li><li>[M1] Obtain/use: second expression in</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: Justify the given statement correctly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Justify the given statement correctly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>So 2A = tan1     = arg    and A = tan1 = arg u*</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>So 2A = tan1     = arg    and A = tan1 = arg u*</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use:             with expansion to</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use:             with expansion to</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>= (k cos 0.02t) dt Allow without integral signs</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>= (k cos 0.02t) dt Allow without integral signs</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Note: (4, 1, 0) or (4, 1, 1), for 4i + k is not MR, but M1</li>
-<li>[M1] (3 – λ, – 5 + 2λ, – 5 + 3λ).( 1, 2, 3) = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Note: (4, 1, 0) or (4, 1, 1), for 4i + k is not MR, but M1</li><li>[M1] (3 – λ, – 5 + 2λ, – 5 + 3λ).( 1, 2, 3) = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] 1 3       1            1</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] 1 3       1            1</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 9 9 · a3</p>
-<div class='ms-raw'>9  9
-  a3
-  numerical error, but 0 may be absent or expressed as  ln1 .</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 9 9</li><li>Correct result: a3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>1 1    1 1
-  Allow   ax3  and    .</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: Obtain given result correctly</li>
-<li>[A0] Obtain/use: After substitution, any errors even if corrected</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Obtain given result correctly</li><li>[A0] Obtain/use: After substitution, any errors even if corrected</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>2022  Page 23 of 23</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
-        <section class="part">
-          <p class="part-label">Part 4(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] e 4 x sec 2 x  tanx(ke 4 x )</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] e 4 x sec 2 x  tanx(ke 4 x )</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] 1              1      1</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 1              1      1</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Correct answer with no working scores 0/3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Correct answer with no working scores 0/3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: 8           3    6</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 8           3    6</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Correct answer with no working scores 0/3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Correct answer with no working scores 0/3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>hence arg      = 2 arg u*</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>hence arg      = 2 arg u*</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Form the equation of the tangent at y = 0 or find c</li>
-<li>[A1] OE e.g. y  2 ( x  2 ) ISW</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Form the equation of the tangent at y = 0 or find c</li><li>[A1] OE e.g. y  2 ( x  2 ) ISW</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q5"><div class="cap">Original paper page 8</div></div>
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Do not condone ⩽ for &lt; in the final answer</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Do not condone ⩽ for &lt; in the final answer</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] gained, then</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] gained, then</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> B2</p>
-<ol>
-<li>Obtain critical value x =  a similarly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Obtain critical value x =  a similarly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] gained, then</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] gained, then</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] u = 3  i, u* = 3 + i Ignore labels</li>
-<li>[B1] 2i. Scale only on Imaginary axis is sufficient for this mark</li>
-<li>[B1] Ignore ‘quadrilateral’. Allow ‘trapezium’ from correct work</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] u = 3  i, u* = 3 + i Ignore labels</li><li>[B1] 2i. Scale only on Imaginary axis is sufficient for this mark</li><li>[B1] Ignore ‘quadrilateral’. Allow ‘trapezium’ from correct work</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Can have missing term and arithmetic errors but need</li>
-<li>[A1] Obtain/use: Obtain numerator 8 + 6i or denominator 10</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Can have missing term and arithmetic errors but need</li><li>[A1] Obtain/use: Obtain numerator 8 + 6i or denominator 10</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] 3 = 3x + y and 1 =  x + 3y</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] 3 = 3x + y and 1 =  x + 3y</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5(c) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: u*</li>
-<li>[A1] Obtain/use: Justify the given statement correctly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: u*</li><li>[A1] Obtain/use: Justify the given statement correctly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Expression must contain a + bksin 0.02t , ( N )±n, where</li>
-<li>[M0] Obtain/use: If invert term by term when 3 terms shown then</li>
-<li>[A1] Must evaluate sin1. Degrees k = 0.138 M1 A0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Expression must contain a + bksin 0.02t , ( N )±n, where</li><li>[M0] Obtain/use: If invert term by term when 3 terms shown then</li><li>[A1] Must evaluate sin1. Degrees k = 0.138 M1 A0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> OR –0.3(8) and 0.2(4) &lt; 0, &gt; 0 or change of sign.</p>
-<ol>
-<li>[M1] Obtain/use: 10(b)       Calculate the values of a relevant expression or pair of expressions at</li>
-<li>[M1] (numerical question)</li>
-<li>[A1] 2.4 &lt; 2.7(8) and 2.8 &gt; 2.5(6) sign change here insufficient</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 10(b)       Calculate the values of a relevant expression or pair of expressions at</li><li>[M1] (numerical question)</li><li>[A1] 2.4 &lt; 2.7(8) and 2.8 &gt; 2.5(6) sign change here insufficient</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q6"><div class="cap">Original paper page 10</div></div>
-        <section class="part">
-          <p class="part-label">Part 6 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: May solve for x but must find y  to gain</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: May solve for x but must find y  to gain</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] dy      1 d</li>
-<li>[M1] Obtain/use: = sec t tan t (from List of Formulae MF19)</li>
-<li>[M1] Obtain/use: If     =  sec t tan t</li>
-<li>[A1] OE e.g. sin t (cos t)–2</li>
-<li>[A1] Obtain/use: dy   sec 2t</li>
-<li>[M1] Allow even if previous M0 scored, but must be using</li>
-<li>[A1] dy      dy     dx</li>
-<li>[A0] Obtain/use: Obtain given answer                                                                AG After     =       ÷       used, any notation error</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] dy      1 d</li><li>[M1] Obtain/use: = sec t tan t (from List of Formulae MF19)</li><li>[M1] Obtain/use: If     =  sec t tan t</li><li>[A1] OE e.g. sin t (cos t)–2</li><li>[A1] Obtain/use: dy   sec 2t</li><li>[M1] Allow even if previous M0 scored, but must be using</li><li>[A1] dy      dy     dx</li><li>[A0] Obtain/use: Obtain given answer                                                                AG After     =       ÷       used, any notation error</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: 1</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: 1</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked33/page-12.jpg" alt="Paper page 12 for Q7"><div class="cap">Original paper page 12</div></div>
-        <section class="part">
-          <p class="part-label">Part 7(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] A      Bx  C           A          C</li>
-<li>[B0] Obtain/use: State or imply the form       +                                                      If 1     +            or           +</li>
-<li>[M1] A1 (for A = 3) still possible</li>
-<li>[M1] Obtain/use: Use a correct method for finding a constant</li>
-<li>[A1] Allow all A marks obtained even if method would give errors</li>
-<li>[A1] Obtain/use: Obtain a second value</li>
-<li>[A1] Obtain/use: Obtain the third value</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] A      Bx  C           A          C</li><li>[B0] Obtain/use: State or imply the form       +                                                      If 1     +            or           +</li><li>[M1] A1 (for A = 3) still possible</li><li>[M1] Obtain/use: Use a correct method for finding a constant</li><li>[A1] Allow all A marks obtained even if method would give errors</li><li>[A1] Obtain/use: Obtain a second value</li><li>[A1] Obtain/use: Obtain the third value</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 7(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Symbolic binomial coefficients not sufficient for the M1</li>
-<li>[A1] FT The FT is on A, B and C</li>
-<li>[A1] FT   A   x  (1)(2)  x </li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Symbolic binomial coefficients not sufficient for the M1</li><li>[A1] FT The FT is on A, B and C</li><li>[A1] FT   A   x  (1)(2)  x </li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked33/page-14.jpg" alt="Paper page 14 for Q8"><div class="cap">Original paper page 14</div></div>
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] maximum 2 out of 4</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] maximum 2 out of 4</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 4</p>
-<div class='ms-raw'>4
-
-  Alternative method for question 1</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Do not condone ⩽ for &lt; in the final answer</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Do not condone ⩽ for &lt; in the final answer</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] maximum 2 out of 4</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] maximum 2 out of 4</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: Separate variables correctly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: Separate variables correctly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8(c) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Anything of the form N = c(d  ek sin 0.02t)2, where c, d and</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Anything of the form N = c(d  ek sin 0.02t)2, where c, d and</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked33/page-16.jpg" alt="Paper page 16 for Q9"><div class="cap">Original paper page 16</div></div>
-        <section class="part">
-          <p class="part-label">Part 9(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] (1, 5, 6).( 1, 2, 3) = 1.1 + 5.2 + 6.3 = – 1 + 10 + 18</li>
-<li>[M1] Their scalar product ÷ [(12 + 52 + 62)((1)2 + 22 + 32)]</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] (1, 5, 6).( 1, 2, 3) = 1.1 + 5.2 + 6.3 = – 1 + 10 + 18</li><li>[M1] Their scalar product ÷ [(12 + 52 + 62)((1)2 + 22 + 32)]</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 9(c) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] For all methods, allow a sign error in one component only</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] For all methods, allow a sign error in one component only</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q10"><h2>Question 10</h2><div class="diagram"><img src="worked33/page-18.jpg" alt="Paper page 18 for Q10"><div class="cap">Original paper page 18</div></div>
-        <section class="part">
-          <p class="part-label">Part 10 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] May be more accurate, allow value rounding to 13. 2°</li>
-<li>[A1] FT May be more accurate. Allow value rounding to 193.2°</li>
-<li>[M1] Obtain/use: FT is on previous value of θ, must have scored</li>
-<li>[A0] but 13.2 + 360 = 346.8 A1 FT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] May be more accurate, allow value rounding to 13. 2°</li><li>[A1] FT May be more accurate. Allow value rounding to 193.2°</li><li>[M1] Obtain/use: FT is on previous value of θ, must have scored</li><li>[A0] but 13.2 + 360 = 346.8 A1 FT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 10(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Allow omission of dx</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Allow omission of dx</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 10(c) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: 1</li>
-<li>[A1] Must be 2 dp</li>
-<li>[A1] 2.635     (35/(3lna  1))1/3 a = 0.0029(4) &gt; 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 1</li><li>[A1] Must be 2 dp</li><li>[A1] 2.635     (35/(3lna  1))1/3 a = 0.0029(4) &gt; 0</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q12"><h2>Question 12</h2>
-        <section class="part">
-          <p class="part-label">Part 12 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] FT        – their 2 x                             </li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] FT        – their 2 x                             </li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 12 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2 2</p>
-<ol>
-<li>[M1] for x</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] for x</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q32"><h2>Question 32</h2>
-        <section class="part">
-          <p class="part-label">Part 32 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] λ = 2</li>
-<li>[A1] Obtain/use: State that the position vector OP* of the foot is 2i + 4j + 7k</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] λ = 2</li><li>[A1] Obtain/use: State that the position vector OP* of the foot is 2i + 4j + 7k</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q62"><h2>Question 62</h2>
-        <section class="part">
-          <p class="part-label">Part 62 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 14</p>
-<ol>
-<li>[A1] AWRT 23.6°</li>
-<li>[A0] (0.4117…)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT 23.6°</li><li>[A0] (0.4117…)</li></ul></div>
-          </div>
-        </section>
-</article>
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a></nav>
+
+  <article class="q" id="q1">
+    <h2>Question 1 [4]</h2>
+    <p>Find, in terms of a, the set of values of x satisfying 2|3x + a| &lt; |2x + 3a|, where a is a positive constant.</p>
+    <div class="diagram"><img src="worked33/page-03.jpg" alt="Paper page 3 for Q1" loading="lazy"><div class="cap">Original paper page 3</div></div>
+    <section class="part">
+      <div class="eq">Square both sides: 4(3x + a)² &lt; (2x + 3a)²
+36x² + 24ax + 4a² &lt; 4x² + 12ax + 9a²
+32x² + 12ax − 5a² &lt; 0
+Roots: x = (−12a ± 28a)/64  →  x = a/4, x = −5a/8</div>
+      <p class="final">−5a/8 &lt; x &lt; a/4</p>
+    </section>
+  </article>
+
+  <article class="q" id="q2">
+    <h2>Question 2 [5]</h2>
+    <p>Solve cos(θ − 60°) = 3 sin θ, for 0° ≤ θ ≤ 360°.</p>
+    <div class="diagram"><img src="worked33/page-04.jpg" alt="Paper page 4 for Q2" loading="lazy"><div class="cap">Original paper page 4</div></div>
+    <section class="part">
+      <div class="eq">½cosθ + (√3/2)sinθ = 3sinθ
+½cosθ = (3 − √3/2)sinθ
+tanθ = 1/(6 − √3) = 0.2343  →  θ = 13.2° or 193.2°</div>
+      <p class="final">θ = 13.2°, 193.2°</p>
+    </section>
+  </article>
+
+  <article class="q" id="q3">
+    <h2>Question 3 [3 + 2]</h2>
+    <div class="diagram"><img src="worked33/page-05.jpg" alt="Paper page 5 for Q3" loading="lazy"><div class="cap">Original paper page 5</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] Show that log₃(2x + 1) = 1 + 2log₃(x − 1) can be written as a quadratic equation in x.</p>
+      <div class="eq">1 + 2log₃(x − 1) = log₃(3(x − 1)²)
+2x + 1 = 3(x − 1)²  →  3x² − 8x + 2 = 0</div>
+      <p class="final">3x² − 8x + 2 = 0</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [2] Hence solve log₃(4y + 1) = 1 + 2log₃(2y − 1), giving the answer to 2 d.p.</p>
+      <div class="eq">Put x = 2y: 3(2y)² − 8(2y) + 2 = 0  →  6y² − 8y + 1 = 0
+y = (4 ± √10)/6 = 1.19 or 0.140
+Need 2y − 1 &gt; 0, so y = 1.19</div>
+      <p class="final">y = 1.19</p>
+    </section>
+  </article>
+
+  <article class="q" id="q4">
+    <h2>Question 4 [4 + 3]</h2>
+    <p>The curve y = e^(−4x) tan x has two stationary points in the interval 0 ≤ x &lt; ½π.</p>
+    <div class="diagram"><img src="worked33/page-06.jpg" alt="Paper page 6 for Q4" loading="lazy"><div class="cap">Original paper page 6</div></div>
+    <section class="part">
+      <p class="part-label">(a) [4] Obtain dy/dx and show it can be written as sec²x(a + b sin 2x)e^(−4x).</p>
+      <div class="eq">dy/dx = e^(−4x)(sec²x − 4 tan x)
+= sec²x(1 − 4 sin x cos x)e^(−4x)
+= sec²x(1 − 2 sin 2x)e^(−4x)</div>
+      <p class="final">a = 1, b = −2</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-07.jpg" alt="Paper page 7 for Q4(b)" loading="lazy"><div class="cap">Original paper page 7</div></div>
+    <section class="part">
+      <p class="part-label">(b) [3] Hence find the exact x-coordinates of the two stationary points.</p>
+      <div class="eq">1 − 2 sin 2x = 0  →  sin 2x = ½
+2x = π/6 or 5π/6  →  x = π/12, 5π/12</div>
+      <p class="final">x = π/12, x = 5π/12</p>
+    </section>
+  </article>
+
+  <article class="q" id="q5">
+    <h2>Question 5 [3 + 3 + 3]</h2>
+    <p>The complex number 3 − i is denoted by u.</p>
+    <div class="diagram"><img src="worked33/page-08.jpg" alt="Paper page 8 for Q5" loading="lazy"><div class="cap">Original paper page 8</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] Show on an Argand diagram the points A, B, C representing u, u*, u* − u. State the type of quadrilateral formed by O, A, B, C.</p>
+      <div class="eq">A = (3, −1), B = (3, 1), C = (0, 2)
+OA = (3, −1) and CB = (3, −1) are equal, so OA ∥ CB; AB = (0, 2) and OC = (0, 2) are equal, so AB ∥ OC.</div>
+      <p class="final">Parallelogram</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [3] Express u*/u in the form x + iy.</p>
+      <div class="eq">u*/u = (3 + i)/(3 − i) = (3 + i)²/10 = (8 + 6i)/10</div>
+      <p class="final">u*/u = 4/5 + (3/5)i</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-09.jpg" alt="Paper page 9 for Q5(c)" loading="lazy"><div class="cap">Original paper page 9</div></div>
+    <section class="part">
+      <p class="part-label">(c) [2] By considering the argument of u*/u, or otherwise, prove that tan⁻¹(3/4) = 2 tan⁻¹(1/3).</p>
+      <div class="eq">arg(u*/u) = 2 arg(u*) = 2 tan⁻¹(1/3)
+arg(u*/u) = tan⁻¹((3/5)/(4/5)) = tan⁻¹(3/4)</div>
+      <p class="final">tan⁻¹(3/4) = 2 tan⁻¹(1/3)</p>
+    </section>
+  </article>
+
+  <article class="q" id="q6">
+    <h2>Question 6 [5 + 3]</h2>
+    <p>The parametric equations of a curve are x = 1/cos t, y = ln tan t, where 0 &lt; t &lt; ½π.</p>
+    <div class="diagram"><img src="worked33/page-10.jpg" alt="Paper page 10 for Q6" loading="lazy"><div class="cap">Original paper page 10</div></div>
+    <section class="part">
+      <p class="part-label">(a) [5] Show that dy/dx = cos t / sin²t.</p>
+      <div class="eq">dx/dt = sec t tan t,  dy/dt = 1/(sin t cos t)
+dy/dx = (1/(sin t cos t)) ÷ (sin t/cos²t) = cos t / sin²t</div>
+      <p class="final">Shown</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-11.jpg" alt="Paper page 11 for Q6(b)" loading="lazy"><div class="cap">Original paper page 11</div></div>
+    <section class="part">
+      <p class="part-label">(b) [3] Find the equation of the tangent at the point where y = 0.</p>
+      <div class="eq">y = 0 → tan t = 1 → t = π/4
+x = √2, dy/dx = (√2/2)/(1/2) = √2
+y = √2(x − √2) → y = √2x − 2</div>
+      <p class="final">y = √2 x − 2</p>
+    </section>
+  </article>
+
+  <article class="q" id="q7">
+    <h2>Question 7 [5 + 4 + 2]</h2>
+    <p>Let f(x) = (5x² + 8x − 3)/((x − 2)(2x² + 3)).</p>
+    <div class="diagram"><img src="worked33/page-12.jpg" alt="Paper page 12 for Q7" loading="lazy"><div class="cap">Original paper page 12</div></div>
+    <section class="part">
+      <p class="part-label">(a) [5] Express f(x) in partial fractions.</p>
+      <div class="eq">f(x) = A/(x − 2) + (Bx + C)/(2x² + 3)
+A = 33/11 = 3
+5x² + 8x − 3 = 3(2x² + 3) + (Bx + C)(x − 2)  →  B = −1, C = 6</div>
+      <p class="final">f(x) = 3/(x − 2) + (6 − x)/(2x² + 3)</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-13.jpg" alt="Paper page 13 for Q7(b)" loading="lazy"><div class="cap">Original paper page 13</div></div>
+    <section class="part">
+      <p class="part-label">(b) [4] Hence obtain the expansion of f(x) in ascending powers of x, up to and including the term in x².</p>
+      <div class="eq">3/(x − 2) = −(3/2)(1 + x/2 + x²/4 + …) = −3/2 − (3/4)x − (3/8)x²
+(6 − x)/(2x² + 3) = 2 − x/3 − (4/3)x² + …
+Sum: ½ − (13/12)x − (41/24)x²</div>
+      <p class="final">½ − (13/12)x − (41/24)x²</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [2] State the range of values of x for which this expansion is valid.</p>
+      <div class="eq">1/(x − 2) needs |x| &lt; 2; 1/(2x² + 3) needs |2x²/3| &lt; 1, i.e. |x| &lt; √(3/2). The stricter condition applies.</div>
+      <p class="final">|x| &lt; √(3/2)</p>
+    </section>
+  </article>
+
+  <article class="q" id="q8">
+    <h2>Question 8 [5 + 2 + 3]</h2>
+    <p>At time t days, the number of insects N satisfies dN/dt = kN^(2/3) cos 0.02t, where k is a constant. When t = 0, N = 100.</p>
+    <div class="diagram"><img src="worked33/page-14.jpg" alt="Paper page 14 for Q8" loading="lazy"><div class="cap">Original paper page 14</div></div>
+    <section class="part">
+      <p class="part-label">(a) [5] Solve the differential equation, obtaining a relation between N, k and t.</p>
+      <div class="eq">∫N^(−2/3) dN = ∫k cos 0.02t dt
+3N^(1/3) = 50k sin 0.02t + C
+At t = 0, N = 100: C = 3·100^(1/3)</div>
+      <p class="final">3N^(1/3) − 3·100^(1/3) = 50k sin 0.02t</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-15.jpg" alt="Paper page 15 for Q8(b),(c)" loading="lazy"><div class="cap">Original paper page 15</div></div>
+    <section class="part">
+      <p class="part-label">(b) [2] Given also that N = 625 when t = 50, find k.</p>
+      <div class="eq">3(625)^(1/3) − 3(100)^(1/3) = 50k sin 1
+25.649 − 13.925 = 42.07k  →  k = 0.279</div>
+      <p class="final">k = 0.279</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [3] Obtain an expression for N in terms of t, and find the greatest value of N predicted by this model.</p>
+      <div class="eq">N^(1/3) = 100^(1/3) + (50k/3) sin 0.02t
+Greatest when sin 0.02t = 1: N^(1/3) = 4.642 + 4.645 = 9.287
+N_max = 801</div>
+      <p class="final">N = (4.642 + 4.645 sin 0.02t)³, greatest N = 801</p>
+    </section>
+  </article>
+
+  <article class="q" id="q9">
+    <h2>Question 9 [3 + 4 + 2]</h2>
+    <p>With respect to the origin O, the point A has position vector i + 5j + 6k. The line l has vector equation r = 4i + k + λ(−i + 2j + 3k).</p>
+    <div class="diagram"><img src="worked33/page-16.jpg" alt="Paper page 16 for Q9" loading="lazy"><div class="cap">Original paper page 16</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] Find, in degrees, the acute angle between the directions of OA and l.</p>
+      <div class="eq">cos θ = (1 + 10 + 18)/(√62 · √14) = 27/29.47 = 0.9163
+θ = 23.6°</div>
+      <p class="final">23.6°</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [4] Find the position vector of the foot of the perpendicular from A to l.</p>
+      <div class="eq">Point on l: P = (4 − λ, 2λ, 1 + 3λ). AP·d = 0:
+−(3 − λ) + 2(2λ − 5) + 3(3λ − 5) = 0  →  λ = 2
+P = (2, 4, 7)</div>
+      <p class="final">2i + 4j + 7k</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-17.jpg" alt="Paper page 17 for Q9(c)" loading="lazy"><div class="cap">Original paper page 17</div></div>
+    <section class="part">
+      <p class="part-label">(c) [2] Hence find the position vector of the reflection of A in l.</p>
+      <div class="eq">Reflection = 2P − A = (4 − 1, 8 − 5, 14 − 6)</div>
+      <p class="final">3i + 3j + 8k</p>
+    </section>
+  </article>
+
+  <article class="q" id="q10">
+    <h2>Question 10 [5 + 2 + 3]</h2>
+    <p>The constant a is such that ∫₁ᵃ x² ln x dx = 4.</p>
+    <div class="diagram"><img src="worked33/page-18.jpg" alt="Paper page 18 for Q10(a)" loading="lazy"><div class="cap">Original paper page 18</div></div>
+    <section class="part">
+      <p class="part-label">(a) [5] Show that a = (35/(3 ln a − 1))^(1/3).</p>
+      <div class="eq">∫x² ln x dx = (x³/3) ln x − x³/9
+[(a³/3) ln a − a³/9] − [0 − 1/9] = 4
+3a³ ln a − a³ + 1 = 36  →  a³(3 ln a − 1) = 35</div>
+      <p class="final">Shown</p>
+    </section>
+    <div class="diagram"><img src="worked33/page-19.jpg" alt="Paper page 19 for Q10(b),(c)" loading="lazy"><div class="cap">Original paper page 19</div></div>
+    <section class="part">
+      <p class="part-label">(b) [2] Verify by calculation that a lies between 2.4 and 2.8.</p>
+      <div class="eq">g(a) = a³(3 ln a − 1) − 35
+g(2.4) = 13.824 × 1.6265 − 35 = −12.5 &lt; 0
+g(2.8) = 21.952 × 2.0888 − 35 = 10.9 &gt; 0</div>
+      <p class="final">Sign change, so 2.4 &lt; a &lt; 2.8</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [3] Use an iterative formula based on part (a) to find a correct to 2 d.p. Give each iteration to 4 d.p.</p>
+      <div class="eq">a₀ = 2.6
+a₁ = 2.6571
+a₂ = 2.6262
+a₃ = 2.6404
+a₄ = 2.6350 ... converges to 2.6357</div>
+      <p class="final">a = 2.64</p>
+    </section>
+  </article>
 </main>
-</body></html>
+</body>
+</html>
