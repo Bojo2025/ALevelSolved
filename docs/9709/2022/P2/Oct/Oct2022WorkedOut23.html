@@ -5,310 +5,162 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>9709/23 · October/November 2022 · Worked solutions</title>
 <style>
-:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
-header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
-main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+header{background:#163a7a;color:#fff;padding:22px 20px}
+.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}
+header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px;overflow-wrap:anywhere}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none;white-space:nowrap}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
 .q h2{margin:0 0 10px;font-size:1.12rem}
-.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
-.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
 .diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
-.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
-.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
-.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
-.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
-pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
-.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
-.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
-.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
-.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
-.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+.diagram img{max-width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.part{margin:0 0 12px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 6px;font-size:.95rem;color:var(--brand);font-weight:700}
+.eq{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.final{color:var(--ok);font-weight:700;margin:8px 0 0}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>9709/23 · October/November 2022 · Worked solutions</h1>
-  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+  <p>Mathematics Paper 2 (Pure Mathematics 2)</p>
 </div></header>
 <main class="wrap">
-  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q17">Q17</a></nav>
-  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked23/page-03.jpg" alt="Paper page 3 for Q1"><div class="cap">Original paper page 3</div></div>
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: Solve 2x − 5 = x to obtain x = 5</li>
-<li>[M1] Obtain/use: Attempt solution of linear equation where signs of 2x and x are different</li>
-<li>[A1] Obtain/use: Obtain x = 53</li>
-<li>[A1] Must be 2 separate inequalities</li>
-<li>[B1] Obtain/use: State or imply non-modulus equation (2 x − 5) 2 = x 2</li>
-<li>[M1] Obtain/use: Attempt solution of 3-term quadratic equation</li>
-<li>[A1] Obtain/use: Obtain 53 and 5</li>
-<li>[A1] Must be 2 separate inequalities</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: Solve 2x − 5 = x to obtain x = 5</li><li>[M1] Obtain/use: Attempt solution of linear equation where signs of 2x and x are different</li><li>[A1] Obtain/use: Obtain x = 53</li><li>[A1] Must be 2 separate inequalities</li><li>[B1] Obtain/use: State or imply non-modulus equation (2 x − 5) 2 = x 2</li><li>[M1] Obtain/use: Attempt solution of 3-term quadratic equation</li><li>[A1] Obtain/use: Obtain 53 and 5</li><li>[A1] Must be 2 separate inequalities</li></ul></div>
-          </div>
-        </section>
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a></nav>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: Obtain − 53 or exact equivalent only</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Obtain − 53 or exact equivalent only</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q2"><div class="cap">Original paper page 4</div></div>
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Apply logarithms correctly to both sides and apply power law at least once             *</li>
-<li>[A1] OE with x no longer part of a power</li>
-<li>[DM1] Must have ln14 − ln 5 = x ( 2 + ln 5)</li>
-<li>[A1] Obtain/use: Obtain 0.285</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Apply logarithms correctly to both sides and apply power law at least once             *</li><li>[A1] OE with x no longer part of a power</li><li>[DM1] Must have ln14 − ln 5 = x ( 2 + ln 5)</li><li>[A1] Obtain/use: Obtain 0.285</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q1">
+    <h2>Question 1 [4]</h2>
+    <div class="diagram"><img src="worked23/page-03.jpg" alt="Paper page 3 for Q1" loading="lazy"><div class="cap">Original paper page 3</div></div>
+    <section class="part">
+      <p class="part-label">Solve the inequality |2x − 5| &gt; x.</p>
+      <div class="eq">Square: (2x − 5)² &gt; x²  →  3x² − 20x + 25 &gt; 0  →  (3x − 5)(x − 5) &gt; 0
+So x &lt; 5/3 or x &gt; 5 (all x &lt; 0 also satisfy the inequality since x is negative)</div>
+      <p class="final">x &lt; 5/3 or x &gt; 5</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: Substitute x = 1 to obtain 12</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: Substitute x = 1 to obtain 12</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q2">
+    <h2>Question 2 [4]</h2>
+    <div class="diagram"><img src="worked23/page-04.jpg" alt="Paper page 4 for Q2" loading="lazy"><div class="cap">Original paper page 4</div></div>
+    <section class="part">
+      <p class="part-label">Use logarithms to solve 14e⁻²ˣ = 5ˣ⁺¹ to 3 s.f.</p>
+      <div class="eq">ln14 − 2x = (x + 1)ln5
+ln14 − ln5 = x(2 + ln5)
+x = ln(2.8)/(2 + ln5) = 1.02962/3.60944</div>
+      <p class="final">x = 0.285</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] AG – necessary detail needed</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AG – necessary detail needed</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q3">
+    <h2>Question 3 [4]</h2>
+    <div class="diagram"><img src="worked23/page-05.jpg" alt="Paper page 5 for Q3" loading="lazy"><div class="cap">Original paper page 5</div></div>
+    <section class="part">
+      <p class="part-label">sec θ = √17 where 0 &lt; θ &lt; π/2. Find the exact value of tan(θ + π/4).</p>
+      <div class="eq">cosθ = 1/√17, sinθ = 4/√17, so tanθ = 4
+tan(θ + π/4) = (tanθ + 1)/(1 − tanθ) = 5/(−3)</div>
+      <p class="final">tan(θ + π/4) = −5/3</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: ln 3 or 0.2197</li>
-<li>[M1] Obtain/use: Use correct formula, or equivalent, with h = 1</li>
-<li>[A1] Obtain/use: Obtain 0.31</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: ln 3 or 0.2197</li><li>[M1] Obtain/use: Use correct formula, or equivalent, with h = 1</li><li>[A1] Obtain/use: Obtain 0.31</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q4">
+    <h2>Question 4 [2 + 3]</h2>
+    <div class="diagram"><img src="worked23/page-06.jpg" alt="Paper page 6 for Q4" loading="lazy"><div class="cap">Original paper page 6</div></div>
+    <section class="part">
+      <p class="part-label">(a) [2] By sketching a suitable pair of graphs, show that e⁻ˣ/² = x⁵ has exactly one real root.</p>
+      <div class="eq">y = e^(−x/2) is positive and decreasing; y = x⁵ is increasing and negative for x &lt; 0.
+They meet only once, for x &gt; 0.</div>
+      <p class="final">Exactly one real root.</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [3] Use x_(n+1) = (e^(−x_n/2))^(1/5) to find the root to 4 s.f. (6 s.f. for each iteration).</p>
+      <div class="eq">x₀ = 0.9
+x₁ = 0.913931,  x₂ = 0.912659,  x₃ = 0.912773,  x₄ = 0.912762,  x₅ = 0.912763</div>
+      <p class="final">x = 0.9128</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>2022  Page 12 of 12</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked23/page-05.jpg" alt="Paper page 5 for Q3"><div class="cap">Original paper page 5</div></div>
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Use identity sec2  = 1 + tan 2  to find value of tan</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Use identity sec2  = 1 + tan 2  to find value of tan</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q5">
+    <h2>Question 5 [5]</h2>
+    <div class="diagram"><img src="worked23/page-07.jpg" alt="Paper page 7 for Q5" loading="lazy"><div class="cap">Original paper page 7</div></div>
+    <section class="part">
+      <p class="part-label">A curve has equation 4e²ˣy + y² = 21. Find the gradient at (0, −7).</p>
+      <div class="eq">Differentiate: 8e²ˣy + 4e²ˣ dy/dx + 2y dy/dx = 0
+At (0, −7): −56 + (4 − 14) dy/dx = 0  →  dy/dx = −56/10</div>
+      <p class="final">Gradient = −28/5 = −5.6</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>7(c)  Use y-values [0], 72 ln 2 or 0.1980 and 10</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q6">
+    <h2>Question 6 [3 + 6]</h2>
+    <div class="diagram"><img src="worked23/page-08.jpg" alt="Paper page 8 for Q6" loading="lazy"><div class="cap">Original paper page 8</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] p(x) = 12x³ − 9x² + 8x − 4. Find the quotient when divided by (4x − 3) and show the remainder is 2.</p>
+      <div class="eq">12x³ − 9x² + 8x − 4 = (4x − 3)(3x² + 2) + 2</div>
+      <p class="final">Quotient 3x² + 2, remainder 2</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [6] Hence find ∫₂¹² (p(x)/(4x − 3) − 3x²) dx in the form a + ln b.</p>
+      <div class="eq">p(x)/(4x − 3) − 3x² = 2 + 2/(4x − 3)
+∫ = [2x + (1/2)ln(4x − 3)]₂¹²
+  = (24 + ½ln45) − (4 + ½ln5) = 20 + ½ln9 = 20 + ln3</div>
+      <p class="final">a = 20, b = 3</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q7">
+    <h2>Question 7 [3 + 3 + 3]</h2>
+    <div class="diagram"><img src="worked23/page-10.jpg" alt="Paper page 10 for Q7" loading="lazy"><div class="cap">Original paper page 10</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] y = 2lnx/(3x + 1). The curve crosses the x-axis at A. Find the gradient at A.</p>
+      <div class="eq">A is (1, 0). dy/dx = [2(3x + 1)/x − 6lnx]/(3x + 1)²
+At x = 1: (2·4)/16 = 1/2</div>
+      <p class="final">Gradient at A = 1/2</p>
+    </section>
+    <div class="diagram"><img src="worked23/page-11.jpg" alt="Paper page 11 for Q7(b),(c)" loading="lazy"><div class="cap">Original paper page 11</div></div>
+    <section class="part">
+      <p class="part-label">(b) [3] Show by calculation that the x-coordinate of the maximum point B lies between 3.0 and 3.1.</p>
+      <div class="eq">At B: 2(3x + 1) − 6x lnx = 0. Let h(x) = 2(3x + 1) − 6x lnx
+h(3.0) = 20 − 18ln3 = +0.225
+h(3.1) = 20.6 − 18.6ln3.1 = −0.444
+Sign change → x-coordinate of B in (3.0, 3.1)</div>
+      <p class="final">Shown</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [3] Use the trapezium rule with two intervals to approximate the shaded area (between x = 1 and x = 3).</p>
+      <div class="eq">h = 1: y(1) = 0, y(2) = 2ln2/7 = 0.19804, y(3) = 2ln3/10 = 0.21972
+Area ≈ ½[0 + 2(0.19804) + 0.21972] = 0.3079</div>
+      <p class="final">Area ≈ 0.31</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] any non-zero constant k1</li>
-<li>[A1] condone absence of ... + c</li>
-<li>[M1] any non-zero constants k2 , k3</li>
-<li>[A1] condone absence of ... + c</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] any non-zero constant k1</li><li>[A1] condone absence of ... + c</li><li>[M1] any non-zero constants k2 , k3</li><li>[A1] condone absence of ... + c</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked23/page-06.jpg" alt="Paper page 6 for Q4"><div class="cap">Original paper page 6</div></div>
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] with some curve in second quadrant as well as first</li>
-<li>[B1] with some curve in third quadrant as well as first</li>
-<li>[B1] Obtain/use: Draw approximately correct sketch of y = 5ln x or y = ln x</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] with some curve in second quadrant as well as first</li><li>[B1] with some curve in third quadrant as well as first</li><li>[B1] Obtain/use: Draw approximately correct sketch of y = 5ln x or y = ln x</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Use iteration process correctly at least once</li>
-<li>[A1] answer required to exactly 4 s.f</li>
-<li>[A1] Obtain/use: Show sufficient iterations to 6 s.f. to justify answer or show sign change in</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Use iteration process correctly at least once</li><li>[A1] answer required to exactly 4 s.f</li><li>[A1] Obtain/use: Show sufficient iterations to 6 s.f. to justify answer or show sign change in</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q5"><h2>Question 5</h2><div class="diagram"><img src="worked23/page-07.jpg" alt="Paper page 7 for Q5"><div class="cap">Original paper page 7</div></div>
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Must have intersection in the 4th quadrant</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Must have intersection in the 4th quadrant</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Use product rule to differentiate 4e 2 x y</li>
-<li>[A1] Obtain/use: dy</li>
-<li>[B1] Obtain/use:                   dy      dy</li>
-<li>[M1] Obtain/use: dy</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Use product rule to differentiate 4e 2 x y</li><li>[A1] Obtain/use: dy</li><li>[B1] Obtain/use:                   dy      dy</li><li>[M1] Obtain/use: dy</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked23/page-08.jpg" alt="Paper page 8 for Q6"><div class="cap">Original paper page 8</div></div>
-        <section class="part">
-          <p class="part-label">Part 6(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] where k should be zero</li>
-<li>[A1] Obtain/use: Obtain quotient 3x 2 + 2</li>
-<li>[A1] AG – necessary detail needed</li>
-<li>[B1] if remainder</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] where k should be zero</li><li>[A1] Obtain/use: Obtain quotient 3x 2 + 2</li><li>[A1] AG – necessary detail needed</li><li>[B1] if remainder</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] FT FT their quotient</li>
-<li>[M1] Obtain/use: Integrate to obtain at least k ln(4 x − 3) term                                   *</li>
-<li>[A1] Obtain/use: Obtain correct 2x + 12 ln(4x − 3)</li>
-<li>[DM1] Obtain/use: Apply limits correctly</li>
-<li>[M1] Must be in the form k ln ( 4 x − 3)</li>
-<li>[A1] Obtain/use: Obtain 20 + ln3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT FT their quotient</li><li>[M1] Obtain/use: Integrate to obtain at least k ln(4 x − 3) term                                   *</li><li>[A1] Obtain/use: Obtain correct 2x + 12 ln(4x − 3)</li><li>[DM1] Obtain/use: Apply limits correctly</li><li>[M1] Must be in the form k ln ( 4 x − 3)</li><li>[A1] Obtain/use: Obtain 20 + ln3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q7"><h2>Question 7</h2>
-        <section class="part">
-          <p class="part-label">Part 7(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Differentiate using quotient rule (or product rule)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Differentiate using quotient rule (or product rule)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 7(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] May be implied</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] May be implied</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q8"><div class="cap">Original paper page 12</div></div>
-        <section class="part">
-          <p class="part-label">Part 8(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: Use correct identity for sin 2 or cos2 (or both)</li>
-<li>[A1] Obtain/use: Obtain 6sin 2 + 8cos 2    ( +8)</li>
-<li>[B1] FT FT their a sin 2 + b cos2 form</li>
-<li>[M1] Allow 0.927</li>
-<li>[A1] Obtain/use: Obtain 10cos(2 − 0.6435) + 8</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: Use correct identity for sin 2 or cos2 (or both)</li><li>[A1] Obtain/use: Obtain 6sin 2 + 8cos 2    ( +8)</li><li>[B1] FT FT their a sin 2 + b cos2 form</li><li>[M1] Allow 0.927</li><li>[A1] Obtain/use: Obtain 10cos(2 − 0.6435) + 8</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] FT FT their R,  and k provided RHS less than 1</li>
-<li>[M1] 0.547</li>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT FT their R,  and k provided RHS less than 1</li><li>[M1] 0.547</li><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q17"><h2>Question 17</h2>
-        <section class="part">
-          <p class="part-label">Part 17 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 17</p>
-<ol>
-<li>[A1] Condone inclusion of tan = −4</li>
-<li>[M1] Obtain/use: tan  + tan 14 </li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Condone inclusion of tan = −4</li><li>[M1] Obtain/use: tan  + tan 14 </li></ul></div>
-          </div>
-        </section>
-</article>
+  <article class="q" id="q8">
+    <h2>Question 8 [5 + 3 + 2]</h2>
+    <div class="diagram"><img src="worked23/page-12.jpg" alt="Paper page 12 for Q8(a),(b)" loading="lazy"><div class="cap">Original paper page 12</div></div>
+    <section class="part">
+      <p class="part-label">(a) [5] f(θ) = 12sinθcosθ + 16cos²θ. Express as R cos(2θ − α) + k, with R &gt; 0 and 0 &lt; α &lt; π/2.</p>
+      <div class="eq">f(θ) = 6sin2θ + 8cos2θ + 8
+R = √(6² + 8²) = 10, with cosα = 0.8, sinα = 0.6 → α = 0.6435 rad
+So f(θ) = 10cos(2θ − 0.6435) + 8</div>
+      <p class="final">R = 10, k = 8, α = 0.6435</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [3] Find the smallest positive θ with f(θ) = 17.</p>
+      <div class="eq">10cos(2θ − 0.6435) = 9  →  cos(2θ − 0.6435) = 0.9
+2θ − 0.6435 = −0.4510  →  2θ = 0.1925  →  θ = 0.0963</div>
+      <p class="final">θ = 0.0963</p>
+    </section>
+    <div class="diagram"><img src="worked23/page-13.jpg" alt="Paper page 13 for Q8(c)" loading="lazy"><div class="cap">Original paper page 13</div></div>
+    <section class="part">
+      <p class="part-label">(c) [2] Find ∫ f(θ) dθ.</p>
+      <div class="eq">∫(6sin2θ + 8cos2θ + 8) dθ = −3cos2θ + 4sin2θ + 8θ + c</div>
+      <p class="final">−3cos2θ + 4sin2θ + 8θ + c</p>
+    </section>
+  </article>
 </main>
-</body></html>
+</body>
+</html>
