@@ -185,3 +185,4 @@ h2 { font-size: 1.25rem; margin: 1.4em 0 0.5em; }
 .seo-crumbs span { margin: 0 6px; }
 .redirect-note { max-width: 640px; margin: 60px auto; padding: 0 20px; font-family: "Segoe UI", system-ui, sans-serif; }
 @media (max-width: 640px) { .paper-table tbody th { width: auto; } .subject-hero h1 { font-size: 1.35rem; } }
+.chip.review { background: #fff4d6; color: #7a4b00; border: 1px solid #e6b94f; }
