@@ -54,7 +54,7 @@
       if (!s) return "";
       var c = countSubject(s);
       if (!c.qps && !c.worked) return "";
-      return '<a class="card" href="#/subject/' + code + '">' +
+      return '<a class="card" href="/' + code + '/">' +
         '<h3>' + esc(s.name) + '</h3>' +
         '<p class="codes">Syllabus ' + esc(code) + '</p>' +
         '<p class="muted">' + c.years + ' year(s) · ' + c.qps + ' papers · ' + c.worked + ' worked solutions</p>' +
