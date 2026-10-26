@@ -186,3 +186,13 @@ h2 { font-size: 1.25rem; margin: 1.4em 0 0.5em; }
 .redirect-note { max-width: 640px; margin: 60px auto; padding: 0 20px; font-family: "Segoe UI", system-ui, sans-serif; }
 @media (max-width: 640px) { .paper-table tbody th { width: auto; } .subject-hero h1 { font-size: 1.35rem; } }
 .chip.review { background: #fff4d6; color: #7a4b00; border: 1px solid #e6b94f; }
+/* variant rows */
+.variant-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.variant-row:last-child { border-bottom: none; }
+.vnum { min-width: 86px; font-size: 0.9rem; }
+.btn-ws, .btn-review, .btn-qp, .btn-ms { display: inline-block; padding: 4px 11px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.btn-ws { background: var(--brand2); color: #fff; }
+.btn-ws:hover { background: var(--brand); text-decoration: none; }
+.btn-review { background: #fff4d6; color: #7a4b00; border: 1px solid #e6b94f; }
+.btn-qp { background: #fff; color: var(--brand); border: 1px solid var(--brand2); }
+.btn-ms { background: #f3f5f9; color: var(--muted); border: 1px solid var(--line); }
