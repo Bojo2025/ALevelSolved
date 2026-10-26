@@ -5,724 +5,242 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>9709/13 · October/November 2022 · Worked solutions</title>
 <style>
-:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
-header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
-main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+header{background:#163a7a;color:#fff;padding:22px 20px}
+.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}
+header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px;overflow-wrap:anywhere}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none;white-space:nowrap}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
 .q h2{margin:0 0 10px;font-size:1.12rem}
-.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
-.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
 .diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
-.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
-.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
-.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
-.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
-pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
-.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
-.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
-.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
-.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
-.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+.diagram img{max-width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.part{margin:0 0 12px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 6px;font-size:.95rem;color:var(--brand);font-weight:700}
+.eq{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.final{color:var(--ok);font-weight:700;margin:8px 0 0}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>9709/13 · October/November 2022 · Worked solutions</h1>
-  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+  <p>Mathematics Paper 3 (Pure Mathematics 3)</p>
 </div></header>
 <main class="wrap">
-  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q15">Q15</a> <a href="#q17">Q17</a> <a href="#q21">Q21</a> <a href="#q25">Q25</a> <a href="#q27">Q27</a> <a href="#q50">Q50</a></nav>
-  <article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked13/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>(  )</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a></nav>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Operations correct. Allow sign errors. FT their</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Operations correct. Allow sign errors. FT their</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q1">
+    <h2>Question 1 [3]</h2>
+    <div class="diagram"><img src="worked13/page-02.jpg" alt="Paper page 2 for Q1" loading="lazy"><div class="cap">Original paper page 2</div></div>
+    <section class="part">
+      <p class="part-label">Solve 8sin²θ + 6cosθ + 1 = 0 for 0° &lt; θ &lt; 180°.</p>
+      <div class="eq">8(1 − cos²θ) + 6cosθ + 1 = 0  →  8cos²θ − 6cosθ − 9 = 0
+(4cosθ + 3)(2cosθ − 3) = 0
+cosθ = −3/4 (cosθ = 3/2 has no solution)</div>
+      <p class="final">θ = 138.6°</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Correct use of the conversion factors</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Correct use of the conversion factors</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q2">
+    <h2>Question 2 [2 + 1 + 3]</h2>
+    <div class="diagram"><img src="worked13/page-03.jpg" alt="Paper page 3 for Q2" loading="lazy"><div class="cap">Original paper page 3</div></div>
+    <section class="part">
+      <p class="part-label">(a) [2] f(x) = −2x² − 8x − 13 (x &lt; −3). Express f(x) in the form −2(x + a)² + b.</p>
+      <div class="eq">−2x² − 8x − 13 = −2(x² + 4x) − 13 = −2(x + 2)² + 8 − 13</div>
+      <p class="final">f(x) = −2(x + 2)² − 5</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [1] Find the range of f.</p>
+      <div class="eq">For x &lt; −3, (x + 2)² &gt; 1, so −2(x + 2)² &lt; −2 and f(x) &lt; −7</div>
+      <p class="final">f(x) &lt; −7</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [3] Find an expression for f⁻¹(x).</p>
+      <div class="eq">y = −2(x + 2)² − 5  →  (x + 2)² = −(y + 5)/2
+x &lt; −3 so x + 2 &lt; −1:  x = −2 − √(−(y + 5)/2)</div>
+      <p class="final">f⁻¹(x) = −2 − √(−(x + 5)/2)</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: 100</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 100</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q3">
+    <h2>Question 3 [2 + 2 + 2]</h2>
+    <div class="diagram"><img src="worked13/page-04.jpg" alt="Paper page 4 for Q3" loading="lazy"><div class="cap">Original paper page 4</div></div>
+    <section class="part">
+      <p class="part-label">(a) [2] First three terms of (1 + 2x)⁵ in ascending powers of x.</p>
+      <div class="eq">(1 + 2x)⁵ = 1 + 5(2x) + 10(2x)² + …  =  1 + 10x + 40x²</div>
+      <p class="final">1 + 10x + 40x²</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [2] First three terms of (1 − 3x)⁴ in ascending powers of x.</p>
+      <div class="eq">(1 − 3x)⁴ = 1 + 4(−3x) + 6(−3x)² + …  =  1 − 12x + 54x²</div>
+      <p class="final">1 − 12x + 54x²</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [2] Hence find the coefficient of x² in (1 + 2x)⁵(1 − 3x)⁴.</p>
+      <div class="eq">1 × 54 + 10 × (−12) + 40 × 1 = 54 − 120 + 40</div>
+      <p class="final">−26</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Ignore any description</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Ignore any description</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q4">
+    <h2>Question 4 [5]</h2>
+    <div class="diagram"><img src="worked13/page-05.jpg" alt="Paper page 5 for Q4" loading="lazy"><div class="cap">Original paper page 5</div></div>
+    <section class="part">
+      <p class="part-label">A tank has volume V = 243 − (1/3)(9 − x)³ m³ at depth x m. Water enters at 3.6 m³ per hour. Find the rate of increase of depth when x = 4, in cm per minute.</p>
+      <div class="eq">dV/dx = (9 − x)²  →  at x = 4: dV/dx = 25 m²
+dx/dt = (dV/dt)/(dV/dx) = 3.6/25 = 0.144 m per hour
+0.144 m/h = 14.4 cm/h = 14.4/60 = 0.24 cm/min</div>
+      <p class="final">0.24 cm per minute</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] B1 Ignore any description. Allow vector notation and</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] B1 Ignore any description. Allow vector notation and</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q5">
+    <h2>Question 5 [1 + 1 + 2 + 2]</h2>
+    <div class="diagram"><img src="worked13/page-06.jpg" alt="Paper page 6 for Q5" loading="lazy"><div class="cap">Original paper page 6</div></div>
+    <section class="part">
+      <p class="part-label">(a) [1] State the scale factor of the stretch in the y-direction.</p>
+      <div class="eq">Original circle radius 2 → maximum offset 6 from centre, so scale factor 3</div>
+      <p class="final">3</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [1] State the radius of the original circle.</p>
+      <div class="eq">Original circle radius = 2</div>
+      <p class="final">2</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [2] Centre after the translation (7, −3) but before the stretch.</p>
+      <div class="eq">Final centre (8, 6) is obtained from centre after translation (8, 2) by stretching ×3 in y</div>
+      <p class="final">(8, 2)</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(d) [2] State the coordinates of the centre of the original circle.</p>
+      <div class="eq">(8, 2) − (7, −3) = (1, 5)</div>
+      <p class="final">(1, 5)</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] A1 Allow ‘x =’</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] A1 Allow ‘x =’</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q6">
+    <h2>Question 6 [5]</h2>
+    <div class="diagram"><img src="worked13/page-07.jpg" alt="Paper page 7 for Q6" loading="lazy"><div class="cap">Original paper page 7</div></div>
+    <section class="part">
+      <p class="part-label">Given θ = cos⁻¹(8/17), find the exact value of 1/sinθ + 1/tanθ without using trigonometric functions on the calculator.</p>
+      <div class="eq">Triangle with adjacent 8, hypotenuse 17: opposite = 15
+sinθ = 15/17,  tanθ = 15/8
+1/sinθ + 1/tanθ = 17/15 + 8/15 = 25/15</div>
+      <p class="final">5/3</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Allow ‘y =’</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Allow ‘y =’</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q7">
+    <h2>Question 7 [4 + 3]</h2>
+    <div class="diagram"><img src="worked13/page-08.jpg" alt="Paper page 8 for Q7" loading="lazy"><div class="cap">Original paper page 8</div></div>
+    <section class="part">
+      <p class="part-label">(a) [4] The curve y = f(x) has f′(x) = −3/(x + 2)⁴. The tangent at x = a has gradient −16/27. Find the possible values of a.</p>
+      <div class="eq">−3/(a + 2)⁴ = −16/27  →  (a + 2)⁴ = 81/16  →  (a + 2)² = 9/4
+a + 2 = ±3/2  →  a = −1/2 or a = −7/2</div>
+      <p class="final">a = −1/2 or a = −7/2</p>
+    </section>
+    <div class="diagram"><img src="worked13/page-09.jpg" alt="Paper page 9 for Q7(b)" loading="lazy"><div class="cap">Original paper page 9</div></div>
+    <section class="part">
+      <p class="part-label">(b) [3] Find f(x) given the curve passes through (−1, 5).</p>
+      <div class="eq">f(x) = (x + 2)⁻³ + c
+f(−1) = 1 + c = 5  →  c = 4</div>
+      <p class="final">f(x) = 1/(x + 2)³ + 4</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<div class='ms-raw'>2
-  r or 0.25 r 2 .</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 2</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q8">
+    <h2>Question 8 [4 + 3]</h2>
+    <div class="diagram"><img src="worked13/page-10.jpg" alt="Paper page 10 for Q8" loading="lazy"><div class="cap">Original paper page 10</div></div>
+    <section class="part">
+      <p class="part-label">(a) [4] Two identical circles of radius r with centres P and Q, PQ = (5/3)r, intersect at A and B. Find the perimeter of the shaded region in terms of r.</p>
+      <div class="eq">cos(∠APQ) = (PQ/2)/r = (5/6)  →  ∠APQ = cos⁻¹(5/6) = 0.5857 rad
+∠APB = 2 × 0.5857 = 1.1713 rad
+Perimeter = 2 arcs of radius r, each subtending ∠APB: 2r(1.1713) = 2.34r</div>
+      <p class="final">Perimeter ≈ 2.34r</p>
+    </section>
+    <div class="diagram"><img src="worked13/page-11.jpg" alt="Paper page 11 for Q8(b)" loading="lazy"><div class="cap">Original paper page 11</div></div>
+    <section class="part">
+      <p class="part-label">(b) [3] Find the area of the shaded region in terms of r.</p>
+      <div class="eq">Shaded region = two equal segments. Each segment = ½r²(θ − sinθ), θ = 1.1713
+Sector area = ½r²(1.1713) = 0.5857r²;  triangle area = ½r²sin(1.1713) = 0.4606r²
+Segment = 0.5857r² − 0.4606r² = 0.1250r²;  total = 2 × 0.1250r²</div>
+      <p class="final">Area ≈ 0.250r²</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>− their⅔</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked13/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
-        <section class="part">
-          <p class="part-label">Part 2(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>f ( x )  = −2 ( x + 2 )</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>f ( x )  = −2 ( x + 2 )</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q9">
+    <h2>Question 9 [3 + 6]</h2>
+    <div class="diagram"><img src="worked13/page-12.jpg" alt="Paper page 12 for Q9(a)" loading="lazy"><div class="cap">Original paper page 12</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] The first term of a GP is 216 and the fourth term is 64. Find the sum to infinity.</p>
+      <div class="eq">216r³ = 64  →  r³ = 8/27  →  r = 2/3 (|r| &lt; 1)
+S∞ = 216 / (1 − 2/3) = 648</div>
+      <p class="final">S∞ = 648</p>
+    </section>
+    <div class="diagram"><img src="worked13/page-13.jpg" alt="Paper page 13 for Q9(b)" loading="lazy"><div class="cap">Original paper page 13</div></div>
+    <section class="part">
+      <p class="part-label">(b) [6] The second term of the GP equals the second term of an AP; the third term of the GP equals the fifth term of that AP. Find the sum of the first 21 terms of the AP.</p>
+      <div class="eq">GP: 2nd term = 144, 3rd term = 96
+AP: a + d = 144,  a + 4d = 96  →  d = −16, a = 160
+S₂₁ = (21/2)(2(160) + 20(−16)) = (21/2)(0)</div>
+      <p class="final">S₂₁ = 0</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use:  − 5</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use:  − 5</li></ul></div>
-          </div>
-        </section>
+  <article class="q" id="q10">
+    <h2>Question 10 [4 + 4 + 2]</h2>
+    <div class="diagram"><img src="worked13/page-14.jpg" alt="Paper page 14 for Q10" loading="lazy"><div class="cap">Original paper page 14</div></div>
+    <section class="part">
+      <p class="part-label">(a) [4] The circle x² + y² = 2 and the line y = 2x − 1 meet at A and B. Find the coordinates of A.</p>
+      <div class="eq">x² + (2x − 1)² = 2  →  5x² − 4x − 1 = 0  →  (5x + 1)(x − 1) = 0
+x = 1 gives y = 1;  x = −1/5 gives B</div>
+      <p class="final">A = (1, 1)</p>
+    </section>
+    <div class="diagram"><img src="worked13/page-15.jpg" alt="Paper page 15 for Q10(b),(c)" loading="lazy"><div class="cap">Original paper page 15</div></div>
+    <section class="part">
+      <p class="part-label">(b) [4] Find the volume of revolution of the shaded region (between x = 1 and x = √2, under the circle, above the x-axis) about the x-axis.</p>
+      <div class="eq">V = π∫₁^√2 (2 − x²) dx = π[2x − x³/3]₁^√2
+  = π[(2√2 − 2√2/3) − (2 − 1/3)] = π(4√2 − 5)/3</div>
+      <p class="final">V = (π/3)(4√2 − 5)</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [2] Find an exact expression for the perimeter of the shaded region.</p>
+      <div class="eq">Boundary: AD = 1, x-axis from D(1, 0) to (√2, 0) = √2 − 1, and arc from A to (√2, 0), angle π/4, radius √2 → arc = π√2/4
+Perimeter = 1 + (√2 − 1) + π√2/4</div>
+      <p class="final">√2 + π√2/4 = √2(1 + π/4)</p>
+    </section>
+  </article>
 
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Allow y  −7 ,  −7, ( −, −7 ) or less than − 7</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow y  −7 ,  −7, ( −, −7 ) or less than − 7</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>→                                                               quadratic from (a)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>→                                                               quadratic from (a)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Operations correct. Allow sign errors. FT their</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Operations correct. Allow sign errors. FT their</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: − ( x + 5)                   ( x + 5)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: − ( x + 5)                   ( x + 5)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>2  −2</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0 14 must be simplified to 1, allow if the ‘1’ is seen</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0 14 must be simplified to 1, allow if the ‘1’ is seen</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Forming exactly 3 products correctly using their</li>
-<li>[A1] Allow −26 x 2 If in a list with other terms it must be</li>
-<li>[A0] Obtain/use: clear this is the required term otherwise</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Forming exactly 3 products correctly using their</li><li>[A1] Allow −26 x 2 If in a list with other terms it must be</li><li>[A0] Obtain/use: clear this is the required term otherwise</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Expect 25</li>
-<li>[M1] Correct use of the chain rule, ignore incorrect</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Expect 25</li><li>[M1] Correct use of the chain rule, ignore incorrect</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 4 2</p>
-<div class='ms-raw'>4  2</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 4 2</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] FT SOI, may be implied in the use of 96 = 144 + 3d</li>
-<li>[M1] No working may be seen</li>
-<li>[A1] Both required</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT SOI, may be implied in the use of 96 = 144 + 3d</li><li>[M1] No working may be seen</li><li>[A1] Both required</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] A1 Or 5 y2 + 2 y − 7 = 0</li>
-<li>[DM1] May see factors or formula or completing square</li>
-<li>[A1] May be implied on the diagram</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] A1 Or 5 y2 + 2 y − 7 = 0</li><li>[DM1] May see factors or formula or completing square</li><li>[A1] May be implied on the diagram</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Apply limits 1 → √2</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Apply limits 1 → √2</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>p 2 − p − 6 = − 4 p 2 − 30 p + 50    ) → 5 p − 31p + 44 ( = 0)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>p 2 − p − 6 = − 4 p 2 − 30 p + 50    ) → 5 p − 31p + 44 ( = 0)</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked13/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0 15 must be simplified to 1, allow if the ‘1’ is seen</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0 15 must be simplified to 1, allow if the ‘1’ is seen</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 15</p>
-<ol>
-<li>Extra answers from sinα = −    are allowed</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Extra answers from sinα = −    are allowed</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> A1</p>
-<div class='ms-raw'>( ) 2 2 −
-     −  2 − 1  )
-    3    3
-    
-
-    
-  ( 4 2 − 5)  ( 2 8 − 5) , must be in given form.
-  A1
-  CAO, allow</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: A1</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked13/page-05.jpg" alt="Paper page 5 for Q4"><div class="cap">Original paper page 5</div></div>
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Allow unsimplified forms</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow unsimplified forms</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>=−                                                                            Equate first derivative and −      and move term in</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>=−                                                                            Equate first derivative and −      and move term in</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Allow unsimplified form and ‘y =’</li>
-<li>[M1] Sub x = −1, y = 5 into an integral</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow unsimplified form and ‘y =’</li><li>[M1] Sub x = −1, y = 5 into an integral</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Any sector with their appropriate angle. It must be</li>
-<li>[M1] e.g. Area APB = ½r 2  sin ( 2  their 0.5857 )</li>
-<li>[A1] Obtain/use: Shaded area [ = 2  0.1250r 2 ] = 0.250 r 2</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Any sector with their appropriate angle. It must be</li><li>[M1] e.g. Area APB = ½r 2  sin ( 2  their 0.5857 )</li><li>[A1] Obtain/use: Shaded area [ = 2  0.1250r 2 ] = 0.250 r 2</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3</p>
-<div class='ms-raw'>3
-
-  Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Must be exact</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Must be exact</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: 11(b)(ii)   Mid-point of AB = (7½, ½)</li>
-<li>[M1] Obtain/use:  50                                                                   *</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: 11(b)(ii)   Mid-point of AB = (7½, ½)</li><li>[M1] Obtain/use:  50                                                                   *</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: x 2 + y 2 − 15 x − y + 44 = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: x 2 + y 2 − 15 x − y + 44 = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>2022  Page 14 of 14</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q5"><h2>Question 5</h2>
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Ignore any description</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Ignore any description</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5(d) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] FT FT each coordinate, (their8 – 7, their2 + 3) Allow</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT FT each coordinate, (their8 – 7, their2 + 3) Allow</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Correct answer with no working shown scores 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Correct answer with no working shown scores 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>completing square must be seen.</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked13/page-07.jpg" alt="Paper page 7 for Q6"><div class="cap">Original paper page 7</div></div>
-        <section class="part">
-          <p class="part-label">Part 6 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Or Pythagoras seen (may quote 8, 15, 17 triple)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Or Pythagoras seen (may quote 8, 15, 17 triple)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked13/page-08.jpg" alt="Paper page 8 for Q7"><div class="cap">Original paper page 8</div></div>
-        <section class="part">
-          <p class="part-label">Part 7(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: −3               16</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: −3               16</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked13/page-10.jpg" alt="Paper page 10 for Q8"><div class="cap">Original paper page 10</div></div>
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Expect 8cos2 − 6cos − 9 = 0</li>
-<li>[A1] Factors or formula or completing square must be</li>
-<li>[A1] AWRT, ignore solutions outside the given range,</li>
-<li>[A0] Obtain/use: answer in radians</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Expect 8cos2 − 6cos − 9 = 0</li><li>[A1] Factors or formula or completing square must be</li><li>[A1] AWRT, ignore solutions outside the given range,</li><li>[A0] Obtain/use: answer in radians</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Dealing with reciprocals and addition of fractions</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Dealing with reciprocals and addition of fractions</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] May use cosine rule to find APB. Stating APQ or</li>
-<li>[M0] Obtain/use: r                                                                      APB as an incorrect multiple of  is</li>
-<li>[A1] Accept 0.586 or 33.6° or APB (1.171 or 67.1o)</li>
-<li>[DM1] A1 Must use a numerical value of their angle</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] May use cosine rule to find APB. Stating APQ or</li><li>[M0] Obtain/use: r                                                                      APB as an incorrect multiple of  is</li><li>[A1] Accept 0.586 or 33.6° or APB (1.171 or 67.1o)</li><li>[DM1] A1 Must use a numerical value of their angle</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 4</p>
-<ol>
-<li>[B1] FT Must be exact, do not allow inverse trig functions</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT Must be exact, do not allow inverse trig functions</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>30 p = 80 → p = oe</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>30 p = 80 → p = oe</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked13/page-12.jpg" alt="Paper page 12 for Q9"><div class="cap">Original paper page 12</div></div>
-        <section class="part">
-          <p class="part-label">Part 9 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Solve for ( a + 2 ) or ( x + 2 )</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Solve for ( a + 2 ) or ( x + 2 )</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 9(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Allow decimal to 3sf (AWRT)</li>
-<li>[M1] A1 M1 depends on their |r| &lt; 1</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Allow decimal to 3sf (AWRT)</li><li>[M1] A1 M1 depends on their |r| &lt; 1</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 9(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] FT SOI, may be implied in the use of 96 = 144 + 3d</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] FT SOI, may be implied in the use of 96 = 144 + 3d</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q10"><h2>Question 10</h2>
-        <section class="part">
-          <p class="part-label">Part 10(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>x2 + ( 2x − 1) − 2= 0 → 5x2 − 4 x − 1 = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>x2 + ( 2x − 1) − 2= 0 → 5x2 − 4 x − 1 = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 10(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] A1 Attempt integration of y 2 , allow</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] A1 Attempt integration of y 2 , allow</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q11"><h2>Question 11</h2><div class="diagram"><img src="worked13/page-16.jpg" alt="Paper page 16 for Q11"><div class="cap">Original paper page 16</div></div>
-        <section class="part">
-          <p class="part-label">Part 11(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] A1 Allow one sign error for M mark only</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] A1 Allow one sign error for M mark only</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 11(b)(i) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Allow a sign error</li>
-<li>[M1] Use of m1m2 = -1 with their mAC and mBC</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Allow a sign error</li><li>[M1] Use of m1m2 = -1 with their mAC and mBC</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 11 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Factors ( p − 4 )( 5 p − 11) , or formula or</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Factors ( p − 4 )( 5 p − 11) , or formula or</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q15"><h2>Question 15</h2>
-        <section class="part">
-          <p class="part-label">Part 15 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> A1</p>
-<ol>
-<li>sinα =</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>sinα =</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q17"><h2>Question 17</h2>
-        <section class="part">
-          <p class="part-label">Part 17 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use: 15</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use: 15</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q21"><h2>Question 21</h2>
-        <section class="part">
-          <p class="part-label">Part 21 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<ol>
-<li>320 + 20 ( −16) = 0                                                                 Or use of</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>320 + 20 ( −16) = 0                                                                 Or use of</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 21 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<div class='ms-raw'>2
-  ( a+u21).</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 2</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q25"><h2>Question 25</h2>
-        <section class="part">
-          <p class="part-label">Part 25 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Allow 2.67 AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Allow 2.67 AWRT</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q27"><h2>Question 27</h2>
-        <section class="part">
-          <p class="part-label">Part 27 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 27</p>
-<div class='ms-raw'>27
-  a (or x) into the numerator.</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 27</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q50"><h2>Question 50</h2>
-        <section class="part">
-          <p class="part-label">Part 50 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Must use r 2 not r or d or d 2</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Must use r 2 not r or d or d 2</li></ul></div>
-          </div>
-        </section>
-</article>
+  <article class="q" id="q11">
+    <h2>Question 11 [3 + 4 + 4]</h2>
+    <div class="diagram"><img src="worked13/page-16.jpg" alt="Paper page 16 for Q11" loading="lazy"><div class="cap">Original paper page 16</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] A(5, −2), B(10, 3), C(2p, p). Given AC = BC, find p.</p>
+      <div class="eq">(5 − 2p)² + (p + 2)² = (10 − 2p)² + (3 − p)²
+25 − 20p + 5p² + 4p + 4 = 109 − 46p + 5p²
+30p = 80</div>
+      <p class="final">p = 8/3</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b)(i) [4] AC is perpendicular to BC and p is an integer. Find p.</p>
+      <div class="eq">(p + 2)/(2p − 5) × (p − 3)/(2p − 10) = −1
+p² − p − 6 = −(4p² − 30p + 50)  →  5p² − 31p + 44 = 0  →  (p − 4)(5p − 11) = 0</div>
+      <p class="final">p = 4</p>
+    </section>
+    <div class="diagram"><img src="worked13/page-17.jpg" alt="Paper page 17 for Q11(b)(ii)" loading="lazy"><div class="cap">Original paper page 17</div></div>
+    <section class="part">
+      <p class="part-label">(b)(ii) [4] Find the equation of the circle through A, B and C = (8, 4), in the form x² + y² + ax + by + c = 0.</p>
+      <div class="eq">Centre = midpoint of AB = (7.5, 0.5) (AB is a diameter since ∠ACB = 90°)
+r² = (2.5)² + (2.5)² = 12.5
+(x − 7.5)² + (y − 0.5)² = 12.5  →  x² + y² − 15x − y + 44 = 0</div>
+      <p class="final">x² + y² − 15x − y + 44 = 0</p>
+    </section>
+  </article>
 </main>
-</body></html>
+</body>
+</html>
