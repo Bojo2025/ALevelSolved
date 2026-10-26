@@ -54,7 +54,8 @@
       if (!s) return "";
       var c = countSubject(s);
       if (!c.qps && !c.worked) return "";
-      return '<a class="card" href="/' + code + '/">' +
+      var slug = String(s.name).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      return '<a class="card" href="/' + slug + '-' + code + '/">' +
         '<h3>' + esc(s.name) + '</h3>' +
         '<p class="codes">Syllabus ' + esc(code) + '</p>' +
         '<p class="muted">' + c.years + ' year(s) · ' + c.qps + ' papers · ' + c.worked + ' worked solutions</p>' +

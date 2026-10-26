@@ -158,3 +158,30 @@ h2 { font-size: 1.25rem; margin: 1.4em 0 0.5em; }
   padding: 28px;
   color: var(--muted);
 }
+
+/* seo-v2 */
+.subject-hero { background: linear-gradient(135deg, #0c3a74, #1a6fd0); color: #fff; border-radius: var(--radius); padding: 30px 28px; margin-bottom: 26px; }
+.subject-hero h1 { margin: 0 0 8px; font-size: 1.7rem; }
+.subject-hero p { margin: 0 0 6px; max-width: 760px; color: #e3eefc; }
+.subject-stats { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+.subject-stats span { background: rgba(255,255,255,0.14); border-radius: 999px; padding: 5px 13px; font-size: 0.88rem; font-weight: 600; }
+.legend { font-size: 0.88rem; color: var(--muted); margin: 6px 0 18px; }
+.legend .chip { margin-right: 4px; }
+.year-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 0 0 18px; }
+.year-card h2 { margin: 0 0 12px; font-size: 1.25rem; color: var(--brand); }
+.paper-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.paper-table th, .paper-table td { text-align: left; padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+.paper-table thead th { border-top: none; color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.paper-table tbody th { width: 110px; color: var(--ink); font-weight: 700; }
+.chip { display: inline-block; min-width: 34px; text-align: center; padding: 4px 9px; margin: 2px 4px 2px 0; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+.chip.worked { background: var(--brand2); color: #fff; }
+.chip.worked:hover { background: var(--brand); text-decoration: none; }
+.chip.qp { background: #fff; color: var(--brand); border: 1px solid var(--brand2); }
+.chip.qp:hover { background: #eef5ff; text-decoration: none; }
+.empty-cell { color: #9aa4b5; }
+.other-list { margin: 0; padding-left: 18px; }
+.seo-crumbs { font-size: 0.85rem; color: var(--muted); padding: 10px 20px; background: #fff; border-bottom: 1px solid var(--line); }
+.seo-crumbs a { color: var(--muted); }
+.seo-crumbs span { margin: 0 6px; }
+.redirect-note { max-width: 640px; margin: 60px auto; padding: 0 20px; font-family: "Segoe UI", system-ui, sans-serif; }
+@media (max-width: 640px) { .paper-table tbody th { width: auto; } .subject-hero h1 { font-size: 1.35rem; } }
