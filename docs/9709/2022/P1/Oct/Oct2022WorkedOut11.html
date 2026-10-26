@@ -5,963 +5,236 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>9709/11 · October/November 2022 · Worked solutions</title>
 <style>
-:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36;--mark:#7a4b00}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-header{background:#163a7a;color:#fff;padding:22px 20px}.wrap{max-width:920px;margin:0 auto}
-header h1{margin:0 0 6px;font-size:1.35rem}header p{margin:0;opacity:.9}
-main.wrap{padding:22px 20px 48px}.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
+:root{--ink:#1c2430;--muted:#5b6575;--line:#d7dde8;--bg:#f4f6fa;--card:#fff;--brand:#1f5fbf;--ok:#1b6b36}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+header{background:#163a7a;color:#fff;padding:22px 20px}
+.wrap{max-width:920px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.35rem}
+header p{margin:0;opacity:.9}
+main.wrap{padding:22px 20px 48px;overflow-wrap:anywhere}
+.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none;white-space:nowrap}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 16px}
 .q h2{margin:0 0 10px;font-size:1.12rem}
-.part{margin:0 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
-.part-label{margin:0 0 8px;font-size:1rem;color:var(--brand);font-weight:700}
 .diagram{margin:10px 0;text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fafbfd}
-.diagram img{max-width:100%;height:auto}.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
-.solution{margin-top:4px}.solution h3{margin:0 0 8px;color:var(--ok);font-size:.95rem}
-.markpoints{background:#fff9ef;border:1px solid #f0dfb8;border-radius:8px;padding:12px 14px;margin-top:10px}
-.markpoints h4{margin:0 0 8px;color:var(--mark)}.markpoints ul{margin:0;padding-left:1.2rem}
-pre.code{background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;white-space:pre-wrap}
-.toc{margin:0 0 18px}.toc a{margin-right:10px;color:var(--brand);text-decoration:none}
-.qstem{white-space:pre-wrap;background:#f8fafc;border-left:4px solid var(--brand);padding:10px 14px;border-radius:0 8px 8px 0;margin:0 0 12px}
-.answer{background:#eef7ff;border-left:4px solid var(--brand);padding:8px 12px;margin:8px 0;border-radius:4px}
-.solution ol,.solution ul{margin:0 0 10px;padding-left:1.3rem}.solution li{margin-bottom:6px}
-.ms-raw{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.45;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0}
+.diagram img{max-width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);margin-top:4px}
+.part{margin:0 0 12px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe}
+.part-label{margin:0 0 6px;font-size:.95rem;color:var(--brand);font-weight:700}
+.eq{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;background:#f7f8fb;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.final{color:var(--ok);font-weight:700;margin:8px 0 0}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <h1>9709/11 · October/November 2022 · Worked solutions</h1>
-  <p>Step-by-step solutions based on the mark scheme (not a mark-scheme dump).</p>
+  <p>Mathematics Paper 1 (Pure Mathematics 1)</p>
 </div></header>
 <main class="wrap">
-  <nav class="toc"><strong>Jump to:</strong> <a href="#q0">Q0</a> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a> <a href="#q12">Q12</a> <a href="#q14">Q14</a> <a href="#q15">Q15</a> <a href="#q20">Q20</a> <a href="#q40">Q40</a> <a href="#q50">Q50</a> <a href="#q64">Q64</a> <a href="#q70">Q70</a></nav>
-  <article class="q" id="q0"><h2>Question 0</h2>
-        <section class="part">
-          <p class="part-label">Part 0 — solution</p>
-          <div class="solution">
-            <ol>
-<li>= a ( 9 ) 2 − 2  − 2 = 0  a = 12</li>
-<li>Substitute x = 9 and     = 0 into their derivative and</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>= a ( 9 ) 2 − 2  − 2 = 0  a = 12</li><li>Substitute x = 9 and     = 0 into their derivative and</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q1"><h2>Question 1</h2><div class="diagram"><img src="worked11/page-02.jpg" alt="Paper page 2 for Q1"><div class="cap">Original paper page 2</div></div>
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Multiply by denominator and obtain a quadratic</li>
-<li>[M1] Solve by factorising, formula or completing the square</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Multiply by denominator and obtain a quadratic</li><li>[M1] Solve by factorising, formula or completing the square</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3 · OR evaluates c = − using (6, 4) and gradient . ISW</p>
-<ol>
-<li>OR evaluates c = −                                                                   using (6, 4) and gradient . ISW</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>OR evaluates c = −                                                                   using (6, 4) and gradient . ISW</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Must have +c</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Must have +c</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>expression. May be unsimplified.
-  −3</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>+5
-  2  </div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 1</p>
-<ol>
-<li>[M1] Obtain/use: a</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: a</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>or Area =  62  their − 2   6 sin their  6cos their                                     Sector area – 2(half triangle area)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>or Area =  62  their − 2   6 sin their  6cos their                                     Sector area – 2(half triangle area)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>sin2 </li>
-<li>[A1] OE In the given form</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>sin2 </li><li>[A1] OE In the given form</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Must be to the nearest mm (not 247.1)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Must be to the nearest mm (not 247.1)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M0] Obtain/use: − their 0.8                                                                            Substituting a value of n into the sum formula</li>
-<li>[A1] Obtain/use: = 250</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M0] Obtain/use: − their 0.8                                                                            Substituting a value of n into the sum formula</li><li>[A1] Obtain/use: = 250</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0 FT FT on their x + 3 or h = 3</li>
-<li>[B2] , 1, 0 FT FT on their 2 or k = 2</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0 FT FT on their x + 3 or h = 3</li><li>[B2] , 1, 0 FT FT on their 2 or k = 2</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] A1 Attempt at differentiating one function</li>
-<li>[A1] if both correct</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] A1 Attempt at differentiating one function</li><li>[A1] if both correct</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Evaluate two gradients using x = 4</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Evaluate two gradients using x = 4</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 1 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Equate tangent and normal and solve for x</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Equate tangent and normal and solve for x</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q2"><h2>Question 2</h2><div class="diagram"><img src="worked11/page-03.jpg" alt="Paper page 3 for Q2"><div class="cap">Original paper page 3</div></div>
-        <section class="part">
-          <p class="part-label">Part 2(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: −4</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: −4</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] OE Must see ‘ y = ’ or ‘ f ( x ) = ’ in the working</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] OE Must see ‘ y = ’ or ‘ f ( x ) = ’ in the working</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Obtain/use:  a = 12</li>
-<li>[A1] FT FT on their a</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Obtain/use:  a = 12</li><li>[A1] FT FT on their a</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Accept with x 2 present. Must evaluate 6C2</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Accept with x 2 present. Must evaluate 6C2</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>+ 15 p 2 = 70</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>+ 15 p 2 = 70</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> A1 6</p>
-<ol>
-<li>p = 2 ,                                                                                        OE e.g.    or AWRT 0.816</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>p = 2 ,                                                                                        OE e.g.    or AWRT 0.816</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] For 6 read their 6</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] For 6 read their 6</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>3 2  3
-  For 6 read their 6 .</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Use of sum to infinity formula with their r SOI</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use of sum to infinity formula with their r SOI</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>&gt; 0 Hence increasing function  B1FT Correct conclusion from their f  ( x ) .</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>(( x + 1)  + 5)</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] In correct form. B0 if contradiction</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] In correct form. B0 if contradiction</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Use inverse tan to find angles then subtract</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use inverse tan to find angles then subtract</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> OR cosine rule using intercepts or proportion.</p>
-<ol>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Substitute equation of line into equation of circle</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Substitute equation of line into equation of circle</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li> = 20 or mx + 10 = 20 − x</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li> = 20 or mx + 10 = 20 − x</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2 2</p>
-<ol>
-<li>[A1] Collect terms into a 3 term quadratic</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Collect terms into a 3 term quadratic</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2 2</p>
-<ol>
-<li>[DM1] Use b2 − 4ac = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Use b2 − 4ac = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Two values for m</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Two values for m</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Sub their m into their quadratic in x or y or restart with</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Sub their m into their quadratic in x or y or restart with</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Correct solutions or one correct pair (x, y)</li>
-<li>[A1] Two correct points with x and y paired correctly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Correct solutions or one correct pair (x, y)</li><li>[A1] Two correct points with x and y paired correctly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>x + 10 = − x         or   −2 x + 10 =     x</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>x + 10 = − x         or   −2 x + 10 =     x</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 2</p>
-<ol>
-<li>[A1] Two correct x -values or one correct pair (x, y)</li>
-<li>[A1] Two correct points with x and y paired correctly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Two correct x -values or one correct pair (x, y)</li><li>[A1] Two correct points with x and y paired correctly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 2 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Calculate two lengths in triangle BCD</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Calculate two lengths in triangle BCD</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q3"><h2>Question 3</h2><div class="diagram"><img src="worked11/page-04.jpg" alt="Paper page 4 for Q3"><div class="cap">Original paper page 4</div></div>
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3</p>
-<div class='ms-raw'>3
-
-  Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Correct result: 3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] 3    1                     3</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] 3    1                     3</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>dy 1 − 2</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 3</p>
-<ol>
-<li>[M1] DM1 DM0, allow SC B1 for 4 correct values</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] DM1 DM0, allow SC B1 for 4 correct values</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Use formula or complete the square to solve a quadratic</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use formula or complete the square to solve a quadratic</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>7(b)
-  (</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Form horizontal equation. Sign errors only, no</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Form horizontal equation. Sign errors only, no</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: May go directly to 4 y = p −     OE</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: May go directly to 4 y = p −     OE</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Factorise out  4  x or  4 y</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Factorise out  4  x or  4 y</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Make x (or y ) the subject</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Make x (or y ) the subject</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 3 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>2022  Page 17 of 17</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q4"><h2>Question 4</h2><div class="diagram"><img src="worked11/page-05.jpg" alt="Paper page 5 for Q4"><div class="cap">Original paper page 5</div></div>
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] Allow 1.33</li>
-<li>[M1] M0, SC B1 possible for two correct answers</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] Allow 1.33</li><li>[M1] M0, SC B1 possible for two correct answers</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>4  2  4</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Guidance</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Sector area – whole triangle area</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Sector area – whole triangle area</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] A1 FT AWRT; A1 for either solution correct</li>
-<li>[A1] FT for 540 ‒ (first value)</li>
-<li>[M0] , allow SC B1 B1FT similarly</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] A1 FT AWRT; A1 for either solution correct</li><li>[A1] FT for 540 ‒ (first value)</li><li>[M0] , allow SC B1 B1FT similarly</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>xy − 8 x = py − 2 p − 3  4 x ( y − 2 ) = p ( y − 2 ) − 3 or 4 x = −          +p</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>xy − 8 x = py − 2 p − 3  4 x ( y − 2 ) = p ( y − 2 ) − 3 or 4 x = −          +p</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>( y − 2 )   4 4 y − 8 
-  x  or</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] OE in correct form (must be in terms of x)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] OE in correct form (must be in terms of x)</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 4 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: 8(c)        p =8</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: 8(c)        p =8</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q5"><h2>Question 5</h2>
-        <section class="part">
-          <p class="part-label">Part 5(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use:  2r + 8 = 20   r = 6</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use:  2r + 8 = 20   r = 6</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>10(b)  dy  −</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 5 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] ODB or angle between CD and the vertical from D</li>
-<li>[DM1] Obtain/use: Calculate a second angle at D  = 13.28 and subtract both from 90</li>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] ODB or angle between CD and the vertical from D</li><li>[DM1] Obtain/use: Calculate a second angle at D  = 13.28 and subtract both from 90</li><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q6"><h2>Question 6</h2><div class="diagram"><img src="worked11/page-08.jpg" alt="Paper page 8 for Q6"><div class="cap">Original paper page 8</div></div>
-        <section class="part">
-          <p class="part-label">Part 6 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 4</p>
-<ol>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 6(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Use common denominator and equate to 1</li>
-<li>[DM1] Multiply by common denominator and replace cos2  by</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use common denominator and equate to 1</li><li>[DM1] Multiply by common denominator and replace cos2  by</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q7"><h2>Question 7</h2><div class="diagram"><img src="worked11/page-10.jpg" alt="Paper page 10 for Q7"><div class="cap">Original paper page 10</div></div>
-        <section class="part">
-          <p class="part-label">Part 7(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: r = 0.8</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: r = 0.8</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 7 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[A1] AG Two terms correct + conclusion (mention of 9th</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[A1] AG Two terms correct + conclusion (mention of 9th</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q8"><h2>Question 8</h2><div class="diagram"><img src="worked11/page-12.jpg" alt="Paper page 12 for Q8"><div class="cap">Original paper page 12</div></div>
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: *</li>
-<li>[M0] Assume triangle is equilateral</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: *</li><li>[M0] Assume triangle is equilateral</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>impact or u9 somewhere in the solution).
-  Statement that one is &lt;10 (and the other &gt;10) is
-  insufficient unless it mentions 9th impact or u9.
-
-  Alternative method for final two marks: Logarithm method</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 8(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B2] , 1, 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B2] , 1, 0</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q9"><h2>Question 9</h2><div class="diagram"><img src="worked11/page-14.jpg" alt="Paper page 14 for Q9"><div class="cap">Original paper page 14</div></div>
-        <section class="part">
-          <p class="part-label">Part 9(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[B1] Obtain/use: ( x − 2 )2 + 5</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[B1] Obtain/use: ( x − 2 )2 + 5</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q10"><h2>Question 10</h2>
-        <section class="part">
-          <p class="part-label">Part 10(a) — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use: 1                                  *</li>
-<li>[B2] , 1, 0 OE Coefficients may be unsimplified</li>
-<li>[DM1]  (F(4) – F(0)) using their integral(s)</li>
-<li>[A1] Depends on all previous marks</li>
-<li>[M1] B2 DM0 and limits stated, SC B1 for +8</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use: 1                                  *</li><li>[B2] , 1, 0 OE Coefficients may be unsimplified</li><li>[DM1]  (F(4) – F(0)) using their integral(s)</li><li>[A1] Depends on all previous marks</li><li>[M1] B2 DM0 and limits stated, SC B1 for +8</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 10 — solution</p>
-          <div class="solution">
-            <p class='answer'><strong>Answer:</strong> 10 20</p>
-<ol>
-<li>[DM1] Strategy involving doubling</li>
-<li>[A1] AWRT</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Strategy involving doubling</li><li>[A1] AWRT</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q11"><h2>Question 11</h2>
-        <section class="part">
-          <p class="part-label">Part 11(a) — solution</p>
-          <div class="solution">
-            <div class='ms-raw'> y − 10 </div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 11(b) — solution</p>
-          <div class="solution">
-            <ol>
-<li>(1 + 2 ) x  20 ( 2) x + 80 = 0  5x  40x + 80 = 0</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>(1 + 2 ) x  20 ( 2) x + 80 = 0  5x  40x + 80 = 0</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 11(c) — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>Method 1: Using angle at circumference</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q12"><h2>Question 12</h2>
-        <section class="part">
-          <p class="part-label">Part 12 — solution</p>
-          <div class="solution">
-            <ol>
-<li>  6 − 1 = 12 ( 2 ) =                                                         Substitute x = 6 into</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>  6 − 1 = 12 ( 2 ) =                                                         Substitute x = 6 into</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 12 — solution</p>
-          <div class="solution">
-            <ol>
-<li>   6 − 1                                                                          Substitute y = 4, x = 6 and solve for c in an integrated</li>
-<li>4=      2                   +c  4 = −8  2−3 + c   c = 5</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>   6 − 1                                                                          Substitute y = 4, x = 6 and solve for c in an integrated</li><li>4=      2                   +c  4 = −8  2−3 + c   c = 5</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q14"><h2>Question 14</h2>
-        <section class="part">
-          <p class="part-label">Part 14 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'> 14 − 4 ( 3)(8)</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q15"><h2>Question 15</h2>
-        <section class="part">
-          <p class="part-label">Part 15 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Forming a 3-term equation in p (or another variable)</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Forming a 3-term equation in p (or another variable)</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q20"><h2>Question 20</h2>
-        <section class="part">
-          <p class="part-label">Part 20 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] OE Use of formula with their r SOI</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] OE Use of formula with their r SOI</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 20 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Use a trig function in triangle AOB</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Use a trig function in triangle AOB</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q40"><h2>Question 40</h2>
-        <section class="part">
-          <p class="part-label">Part 40 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Forming an equation in p with their coefficients, the</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Forming an equation in p with their coefficients, the</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q50"><h2>Question 50</h2>
-        <section class="part">
-          <p class="part-label">Part 50 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Evaluate 8th or 9th term in GP</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Evaluate 8th or 9th term in GP</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 50 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[M1] Obtain/use:  ( their 0.8)  10  ( their 0.8)  0.5</li>
-<li>[A1] AG Need conclusion that mentions 9th impact or u9</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[M1] Obtain/use:  ( their 0.8)  10  ( their 0.8)  0.5</li><li>[A1] AG Need conclusion that mentions 9th impact or u9</li></ul></div>
-          </div>
-        </section>
-
-        <section class="part">
-          <p class="part-label">Part 50 — solution</p>
-          <div class="solution">
-            <div class='ms-raw'>1 − ( their 0.8 )</div>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>Include the ideas shown in the solution above.</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q64"><h2>Question 64</h2>
-        <section class="part">
-          <p class="part-label">Part 64 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Use cosine rule with their lengths</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Use cosine rule with their lengths</li></ul></div>
-          </div>
-        </section>
-</article><article class="q" id="q70"><h2>Question 70</h2>
-        <section class="part">
-          <p class="part-label">Part 70 — solution</p>
-          <div class="solution">
-            <ol>
-<li>[DM1] Attempt to solve 3-term quartic (or quadratic in another</li>
-</ol>
-            <div class="markpoints"><h4>Mark points</h4><ul><li>[DM1] Attempt to solve 3-term quartic (or quadratic in another</li></ul></div>
-          </div>
-        </section>
-</article>
+  <nav class="toc"><strong>Jump to:</strong> <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a> <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a> <a href="#q11">Q11</a></nav>
+
+  <article class="q" id="q1">
+    <h2>Question 1 [3]</h2>
+    <div class="diagram"><img src="worked11/page-02.jpg" alt="Paper page 2 for Q1" loading="lazy"><div class="cap">Original paper page 2</div></div>
+    <section class="part">
+      <p class="part-label">Solve the equation 3x + 2 = 2/(x − 1).</p>
+      <div class="eq">(3x + 2)(x − 1) = 2   so   3x² − x − 4 = 0   so   (3x − 4)(x + 1) = 0</div>
+      <p class="final">x = −1 or x = 4/3</p>
+    </section>
+  </article>
+
+  <article class="q" id="q2">
+    <h2>Question 2 [2 + 4]</h2>
+    <div class="diagram"><img src="worked11/page-03.jpg" alt="Paper page 3 for Q2" loading="lazy"><div class="cap">Original paper page 3</div></div>
+    <section class="part">
+      <p class="part-label">(a) [2] dy/dx = 12(½x − 1)⁻⁴ and the curve passes through P(6, 4). Find the tangent at P.</p>
+      <div class="eq">At x = 6: dy/dx = 12(2)⁻⁴ = 12/16 = ¾
+y − 4 = ¾(x − 6)</div>
+      <p class="final">y = ¾x − ½</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [4] Find the equation of the curve.</p>
+      <div class="eq">y = ∫12(½x − 1)⁻⁴ dx = −8(½x − 1)⁻³ + c
+At (6, 4): −8(2)⁻³ + c = 4   so   −1 + c = 4   so   c = 5</div>
+      <p class="final">y = −8(½x − 1)⁻³ + 5</p>
+    </section>
+  </article>
+
+  <article class="q" id="q3">
+    <h2>Question 3 [5]</h2>
+    <div class="diagram"><img src="worked11/page-04.jpg" alt="Paper page 4 for Q3" loading="lazy"><div class="cap">Original paper page 4</div></div>
+    <section class="part">
+      <p class="part-label">The curve y = a x^½ − 2x (x > 0) has a stationary point P with x = 9. Find the y-coordinate of P.</p>
+      <div class="eq">dy/dx = ½a x^(−½) − 2 = 0 at x = 9: ½a(1/3) = 2   so   a = 12
+y = 12(3) − 2(9) = 36 − 18</div>
+      <p class="final">y = 18</p>
+    </section>
+  </article>
+
+  <article class="q" id="q4">
+    <h2>Question 4 [6]</h2>
+    <div class="diagram"><img src="worked11/page-05.jpg" alt="Paper page 5 for Q4" loading="lazy"><div class="cap">Original paper page 5</div></div>
+    <section class="part">
+      <p class="part-label">The coefficient of x² in (1 + (2/p)x)⁵ + (1 + px)⁶ is 70. Find the possible values of p.</p>
+      <div class="eq">C(5,2)(2/p)² + C(6,2)p² = 70
+40/p² + 15p² = 70   so   15p⁴ − 70p² + 40 = 0   so   (3p² − 2)(p² − 4) = 0</div>
+      <p class="final">p = ±2 or p = ±√(2/3) (≈ ±0.816)</p>
+    </section>
+  </article>
+
+  <article class="q" id="q5">
+    <h2>Question 5 [4 + 2]</h2>
+    <div class="diagram"><img src="worked11/page-06.jpg" alt="Paper page 6 for Q5" loading="lazy"><div class="cap">Original paper page 6</div></div>
+    <div class="diagram"><img src="worked11/page-07.jpg" alt="Paper page 7 for Q5" loading="lazy"><div class="cap">Original paper page 7</div></div>
+    <section class="part">
+      <p class="part-label">(a) [4] Sector OAB of a circle, centre O. Arc AB = 8 cm. Perimeter of the sector = 20 cm. Find the perimeter of the shaded segment.</p>
+      <div class="eq">2r + 8 = 20   so   r = 6
+Angle AOB = 8/6 = 4/3 rad
+AB = 2(6)sin(2/3) = 7.42
+Perimeter of segment = 7.42 + 8</div>
+      <p class="final">15.4 cm</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [2] Find the area of the shaded segment.</p>
+      <div class="eq">Area = ½r²(θ − sin θ) = ½(36)(4/3 − sin(4/3)) = 18(1.3333 − 0.9719)</div>
+      <p class="final">6.51 cm²</p>
+    </section>
+  </article>
+
+  <article class="q" id="q6">
+    <h2>Question 6 [3 + 3]</h2>
+    <div class="diagram"><img src="worked11/page-08.jpg" alt="Paper page 8 for Q6" loading="lazy"><div class="cap">Original paper page 8</div></div>
+    <div class="diagram"><img src="worked11/page-09.jpg" alt="Paper page 9 for Q6" loading="lazy"><div class="cap">Original paper page 9</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] Show that 1/(sin θ + cos θ) + 1/(sin θ − cos θ) = 1 may be written as a sin²θ + b sin θ + c = 0.</p>
+      <div class="eq">[(sin θ − cos θ) + (sin θ + cos θ)] / (sin²θ − cos²θ) = 1
+2 sin θ = sin²θ − (1 − sin²θ) = 2sin²θ − 1</div>
+      <p class="final">2sin²θ − 2sin θ − 1 = 0 (a = 2, b = −2, c = −1)</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [3] Hence solve the equation for 0° ≤ θ ≤ 360°.</p>
+      <div class="eq">sin θ = (2 ± √12)/4 = (1 ± √3)/2
+(1 + √3)/2 > 1 is rejected, so sin θ = (1 − √3)/2 ≈ −0.366
+θ = 180° + 21.5° and 360° − 21.5°</div>
+      <p class="final">θ = 201.5° or 338.5°</p>
+    </section>
+  </article>
+
+  <article class="q" id="q7">
+    <h2>Question 7 [3 + 2 + 2]</h2>
+    <div class="diagram"><img src="worked11/page-10.jpg" alt="Paper page 10 for Q7" loading="lazy"><div class="cap">Original paper page 10</div></div>
+    <div class="diagram"><img src="worked11/page-11.jpg" alt="Paper page 11 for Q7" loading="lazy"><div class="cap">Original paper page 11</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] Impacts sink the post 50 mm, 40 mm and 32 mm (geometric). Verify that the 9th impact is the first that sinks it less than 10 mm.</p>
+      <div class="eq">r = 0.8, u₁ = 50
+u₈ = 50(0.8)⁷ = 10.5 (not less than 10)
+u₉ = 50(0.8)⁸ = 8.39 (less than 10)</div>
+      <p class="final">The 9th impact is the first to sink it less than 10 mm.</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [2] Find the total depth after 20 impacts, to the nearest mm.</p>
+      <div class="eq">S₂₀ = 50(1 − 0.8²⁰)/(1 − 0.8) = 250(1 − 0.01153) = 247.1</div>
+      <p class="final">247 mm</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [2] Find the greatest total depth theoretically achievable.</p>
+      <div class="eq">S∞ = 50/(1 − 0.8) = 250</div>
+      <p class="final">250 mm</p>
+    </section>
+  </article>
+
+  <article class="q" id="q8">
+    <h2>Question 8 [3 + 4 + 1]</h2>
+    <div class="diagram"><img src="worked11/page-12.jpg" alt="Paper page 12 for Q8" loading="lazy"><div class="cap">Original paper page 12</div></div>
+    <div class="diagram"><img src="worked11/page-13.jpg" alt="Paper page 13 for Q8" loading="lazy"><div class="cap">Original paper page 13</div></div>
+    <section class="part">
+      <p class="part-label">(a) [3] f(x) = 2 − 3/(4x − p) for x > p/4. Find f′(x) and determine whether f is increasing or decreasing.</p>
+      <div class="eq">f′(x) = 12/(4x − p)² > 0 for all x > p/4</div>
+      <p class="final">f is an increasing function</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [4] Express f⁻¹(x) in the form p/a − b/(cx − d).</p>
+      <div class="eq">y = 2 − 3/(4x − p) → 4x − p = 3/(2 − y) → x = p/4 − 3/(4(y − 2))
+Swap x and y: f⁻¹(x) = p/4 − 3/(4x − 8)</div>
+      <p class="final">a = 4, b = 3, c = 4, d = 8</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [1] Hence state the value of p for which f⁻¹(x) ≡ f(x).</p>
+      <div class="eq">p/4 − 3/(4x − 8) = 2 − 3/(4x − p) requires p = 8</div>
+      <p class="final">p = 8</p>
+    </section>
+  </article>
+
+  <article class="q" id="q9">
+    <h2>Question 9 [1 + 2 + 1 + 4]</h2>
+    <div class="diagram"><img src="worked11/page-14.jpg" alt="Paper page 14 for Q9" loading="lazy"><div class="cap">Original paper page 14</div></div>
+    <div class="diagram"><img src="worked11/page-15.jpg" alt="Paper page 15 for Q9" loading="lazy"><div class="cap">Original paper page 15</div></div>
+    <section class="part">
+      <p class="part-label">f(x) = x² − 4x + 9, g(x) = 2x² + 4x + 12. (a) [1] Express f(x) in the form (x − a)² + b.</p>
+      <div class="eq">x² − 4x + 9 = (x − 2)² + 5</div>
+      <p class="final">a = 2, b = 5</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [2] Express g(x) in the form 2[(x + c)² + d].</p>
+      <div class="eq">2x² + 4x + 12 = 2[(x + 1)² + 5]</div>
+      <p class="final">c = 1, d = 5</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [1] Express g(x) in the form k f(x + h).</p>
+      <div class="eq">f(x + 3) = (x + 1)² + 5, so g(x) = 2f(x + 3)</div>
+      <p class="final">k = 2, h = 3</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(d) [4] Describe fully the two transformations taking y = f(x) to y = g(x).</p>
+      <div class="eq">f(x) → f(x + 3): translation of 3 units in the negative x-direction
+then → 2f(x + 3): stretch parallel to the y-axis, scale factor 2</div>
+      <p class="final">Translation (−3, 0), then stretch parallel to the y-axis with scale factor 2</p>
+    </section>
+  </article>
+
+  <article class="q" id="q10">
+    <h2>Question 10 [5 + 5]</h2>
+    <div class="diagram"><img src="worked11/page-16.jpg" alt="Paper page 16 for Q10" loading="lazy"><div class="cap">Original paper page 16</div></div>
+    <div class="diagram"><img src="worked11/page-17.jpg" alt="Paper page 17 for Q10" loading="lazy"><div class="cap">Original paper page 17</div></div>
+    <section class="part">
+      <p class="part-label">Curves y = 2x^½ + 1 and y = ½x² − x + 1 meet at A(0, 1) and B(4, 5). (a) [5] Find the area of the region between the two curves.</p>
+      <div class="eq">At x = 1 the upper curve is y = 3 and the lower is ½. Upper minus lower:
+∫₀⁴ (2√x − ½x² + x) dx = [(4/3)x^(3/2) − x³/6 + x²/2]₀⁴
+= 32/3 − 32/3 + 8</div>
+      <p class="final">Area = 8</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [5] The acute angle between the tangents at B is α°. Find α.</p>
+      <div class="eq">Gradient of y = 2x^½ + 1 at x = 4: x^(−½) = ½
+Gradient of y = ½x² − x + 1 at x = 4: x − 1 = 3
+tan α = |3 − ½| / (1 + 3 × ½) = 2.5 / 2.5 = 1</div>
+      <p class="final">α = 45</p>
+    </section>
+  </article>
+
+  <article class="q" id="q11">
+    <h2>Question 11 [4 + 3 + 3]</h2>
+    <div class="diagram"><img src="worked11/page-18.jpg" alt="Paper page 18 for Q11" loading="lazy"><div class="cap">Original paper page 18</div></div>
+    <div class="diagram"><img src="worked11/page-19.jpg" alt="Paper page 19 for Q11" loading="lazy"><div class="cap">Original paper page 19</div></div>
+    <section class="part">
+      <p class="part-label">Circle x² + y² = 20; tangents from A(0, 10) touch the circle at B and C. (a) [4] Let the tangent be y = mx + 10. Find the two possible values of m.</p>
+      <div class="eq">Distance from O to the line mx − y + 10 = 0 equals √20:
+10/√(m² + 1) = √20   so   m² + 1 = 5   so   m² = 4</div>
+      <p class="final">m = 2 or m = −2</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(b) [3] Find the coordinates of B and C.</p>
+      <div class="eq">Point of contact for y = mx + 10: (−10m/(1 + m²), 10/(1 + m²)) = (−4, 2) for m = 2 and (4, 2) for m = −2</div>
+      <p class="final">B(−4, 2), C(4, 2)</p>
+    </section>
+    <section class="part">
+      <p class="part-label">(c) [3] D is where the circle crosses the positive x-axis. Find angle BDC.</p>
+      <div class="eq">D = (2√5, 0). DB = (−4 − 2√5, 2), DC = (4 − 2√5, 2)
+DB · DC = 8, |DB||DC| = √320 = 8√5
+cos BDC = 8/(8√5) = 1/√5, so tan BDC = 2</div>
+      <p class="final">Angle BDC ≈ 63.4°</p>
+    </section>
+  </article>
 </main>
-</body></html>
+</body>
+</html>
