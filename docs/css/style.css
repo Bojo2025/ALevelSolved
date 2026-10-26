@@ -196,3 +196,8 @@ h2 { font-size: 1.25rem; margin: 1.4em 0 0.5em; }
 .btn-review { background: #fff4d6; color: #7a4b00; border: 1px solid #e6b94f; }
 .btn-qp { background: #fff; color: var(--brand); border: 1px solid var(--brand2); }
 .btn-ms { background: #f3f5f9; color: var(--muted); border: 1px solid var(--line); }
+/* seo-v3: variant rows match paper view */
+.variant-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.variant-row:last-child { border-bottom: none; }
+.variant-row .vnum { min-width: 110px; }
+.variant-row .resources { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
